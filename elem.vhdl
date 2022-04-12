@@ -6,14 +6,21 @@ use ieee.numeric_std.all;
 -- Package Declarations
 package elem is
     component register is
-        generic(dataSize:integer);
+        generic(dataSize: integer := 16);
         port(   clock, wr_enable, clear: in std_logic;
                 din: in std_logic_vector(dataSize-1 downto 0);
                 dout: out std_logic_vector(dataSize-1 downto 0));
     end component;
+    component sign_extender is
+        generic(inSize: integer;
+                outSize: integer);
+        port(   inp: in std_logic_vector(inSize-1 downto 0);
+                outp: out std_logic_vector(outSize-1 downto 0));
+    end component;
 end package;
 
 -- Entity and Architecture Declarations
+-- Register
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -37,3 +44,23 @@ begin
         end if;
     end process;
 end regArch;
+
+-- Sign Extender
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity sign_extender is
+    generic(inSize: integer;
+            outSize: integer);
+    port(   inp: in std_logic_vector(inSize-1 downto 0);
+            outp: out std_logic_vector(outSize-1 downto 0));
+end entity;
+
+architecture beh of sign_extender is
+begin
+    outp(inSize-1 downto 0) <= inp;
+    padding: for i in inSize to outSize-1 generate
+        outp(i) <= inp(inSize-1);
+    end generate;
+end beh;
