@@ -2,6 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.math_real.all;
 use ieee.numeric_std.all;
+use ieee.std_logic_misc.all;
 
 -- Package Declarations
 package elem is
@@ -65,3 +66,5 @@ begin
         outp(i) <= inp(inSize-1);
     end generate;
 end beh;
+
+-- Left Shift
