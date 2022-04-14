@@ -1,0 +1,438 @@
+Analysis & Synthesis report for Risc_Multicycle_Quartus
+Thu Apr 14 12:05:42 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |registerFile
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Apr 14 12:05:42 2022       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; Risc_Multicycle_Quartus                     ;
+; Top-level Entity Name           ; registerFile                                ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 60                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                  ;
++---------------------------------------------------------------------------------+--------------------+-------------------------+
+; Option                                                                          ; Setting            ; Default Value           ;
++---------------------------------------------------------------------------------+--------------------+-------------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                         ;
+; Top-level entity name                                                           ; registerFile       ; Risc_Multicycle_Quartus ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V               ;
+; Use smart compilation                                                           ; Off                ; Off                     ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                      ;
+; Enable compact report table                                                     ; Off                ; Off                     ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto                    ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                     ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                     ;
+; Preserve fewer node names                                                       ; On                 ; On                      ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable                  ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001            ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993               ;
+; State Machine Processing                                                        ; Auto               ; Auto                    ;
+; Safe State Machine                                                              ; Off                ; Off                     ;
+; Extract Verilog State Machines                                                  ; On                 ; On                      ;
+; Extract VHDL State Machines                                                     ; On                 ; On                      ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                     ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000                    ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                     ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                      ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                      ;
+; Parallel Synthesis                                                              ; On                 ; On                      ;
+; DSP Block Balancing                                                             ; Auto               ; Auto                    ;
+; NOT Gate Push-Back                                                              ; On                 ; On                      ;
+; Power-Up Don't Care                                                             ; On                 ; On                      ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                     ;
+; Remove Duplicate Registers                                                      ; On                 ; On                      ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                     ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                     ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                     ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                     ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                     ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                      ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                     ;
+; Optimization Technique                                                          ; Balanced           ; Balanced                ;
+; Carry Chain Length                                                              ; 70                 ; 70                      ;
+; Auto Carry Chains                                                               ; On                 ; On                      ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                      ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                     ;
+; Auto ROM Replacement                                                            ; On                 ; On                      ;
+; Auto RAM Replacement                                                            ; On                 ; On                      ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                      ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto                    ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto                    ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                      ;
+; Strict RAM Replacement                                                          ; Off                ; Off                     ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                      ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                     ;
+; Auto Resource Sharing                                                           ; Off                ; Off                     ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                     ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                     ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                     ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                      ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                     ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                      ;
+; Report Parameter Settings                                                       ; On                 ; On                      ;
+; Report Source Assignments                                                       ; On                 ; On                      ;
+; Report Connectivity Checks                                                      ; On                 ; On                      ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                     ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                       ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation      ;
+; HDL message level                                                               ; Level2             ; Level2                  ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                     ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000                    ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000                    ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                     ;
+; Clock MUX Protection                                                            ; On                 ; On                      ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                     ;
+; Block Design Naming                                                             ; Auto               ; Auto                    ;
+; SDC constraint protection                                                       ; Off                ; Off                     ;
+; Synthesis Effort                                                                ; Auto               ; Auto                    ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                      ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                     ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium                  ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto                    ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                      ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                      ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                     ;
++---------------------------------------------------------------------------------+--------------------+-------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                       ;
++----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
+; elem.vhd                         ; yes             ; User VHDL File  ; /home/aayush/Desktop/Test/elem.vhd          ;         ;
+; register_file.vhd                ; yes             ; User VHDL File  ; /home/aayush/Desktop/Test/register_file.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
+
+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+; Estimate of Logic utilization (ALMs needed) ; 0                ;
+;                                             ;                  ;
+; Combinational ALUT usage for logic          ; 0                ;
+;     -- 7 input functions                    ; 0                ;
+;     -- 6 input functions                    ; 0                ;
+;     -- 5 input functions                    ; 0                ;
+;     -- 4 input functions                    ; 0                ;
+;     -- <=3 input functions                  ; 0                ;
+;                                             ;                  ;
+; Dedicated logic registers                   ; 0                ;
+;                                             ;                  ;
+; I/O pins                                    ; 60               ;
+;                                             ;                  ;
+; Total DSP Blocks                            ; 0                ;
+;                                             ;                  ;
+; Maximum fan-out node                        ; data_in[0]~input ;
+; Maximum fan-out                             ; 2                ;
+; Total fan-out                               ; 92               ;
+; Average fan-out                             ; 0.77             ;
++---------------------------------------------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
+; |registerFile              ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 60   ; 0            ; |registerFile       ; registerFile ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |registerFile ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; dataSize       ; 16    ; Signed Integer                                      ;
+; numRegs        ; 8     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 60                              ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Apr 14 12:05:35 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Risc_Multicycle_Quartus -c Risc_Multicycle_Quartus
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 5 design units, including 2 entities, in source file elem.vhd
+    Info (12022): Found design unit 1: elem File: /home/aayush/Desktop/Test/elem.vhd Line: 8
+    Info (12022): Found design unit 2: register_file-regArch File: /home/aayush/Desktop/Test/elem.vhd Line: 36
+    Info (12022): Found design unit 3: sign_extender-beh File: /home/aayush/Desktop/Test/elem.vhd Line: 62
+    Info (12023): Found entity 1: register_file File: /home/aayush/Desktop/Test/elem.vhd Line: 29
+    Info (12023): Found entity 2: sign_extender File: /home/aayush/Desktop/Test/elem.vhd Line: 55
+Info (12021): Found 2 design units, including 1 entities, in source file register_file.vhd
+    Info (12022): Found design unit 1: registerFile-beh File: /home/aayush/Desktop/Test/register_file.vhd Line: 22
+    Info (12023): Found entity 1: registerFile File: /home/aayush/Desktop/Test/register_file.vhd Line: 9
+Info (12127): Elaborating entity "registerFile" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at register_file.vhd(31): signal "data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/aayush/Desktop/Test/register_file.vhd Line: 31
+Warning (10492): VHDL Process Statement warning at register_file.vhd(31): signal "addr_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/aayush/Desktop/Test/register_file.vhd Line: 31
+Warning (14026): LATCH primitive "registers~0" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~1" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~2" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~3" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~4" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~5" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~6" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~7" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~8" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~9" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~10" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~11" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~12" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~13" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~14" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~15" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~16" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~17" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~18" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~19" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~20" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~21" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~22" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~23" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~24" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~25" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~26" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~27" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~28" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~29" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~30" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~31" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~32" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~33" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~34" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~35" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~36" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~37" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~38" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~39" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~40" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~41" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~42" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~43" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~44" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~45" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~46" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~47" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~48" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~49" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~50" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~51" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~52" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~53" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~54" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~55" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~56" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~57" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~58" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~59" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~60" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~61" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~62" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~63" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~64" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~65" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~66" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~67" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~68" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~69" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~70" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~71" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~72" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~73" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~74" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~75" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~76" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~77" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~78" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~79" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~80" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~81" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~82" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~83" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~84" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~85" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~86" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~87" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~88" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~89" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~90" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~91" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~92" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~93" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~94" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~95" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~96" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~97" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~98" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~99" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~100" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~101" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~102" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~103" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~104" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~105" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~106" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~107" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~108" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~109" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~110" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~111" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~112" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~113" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~114" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~115" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~116" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~117" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~118" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~119" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~120" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~121" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~122" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~123" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~124" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~125" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~126" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Warning (14026): LATCH primitive "registers~127" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 12 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clock" File: /home/aayush/Desktop/Test/register_file.vhd Line: 18
+    Warning (15610): No output dependent on input pin "clear" File: /home/aayush/Desktop/Test/register_file.vhd Line: 18
+    Warning (15610): No output dependent on input pin "wr_enable" File: /home/aayush/Desktop/Test/register_file.vhd Line: 18
+    Warning (15610): No output dependent on input pin "addr_in[0]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
+    Warning (15610): No output dependent on input pin "addr_in[1]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
+    Warning (15610): No output dependent on input pin "addr_in[2]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
+    Warning (15610): No output dependent on input pin "addr_out1[0]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
+    Warning (15610): No output dependent on input pin "addr_out1[1]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
+    Warning (15610): No output dependent on input pin "addr_out1[2]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
+    Warning (15610): No output dependent on input pin "addr_out2[0]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
+    Warning (15610): No output dependent on input pin "addr_out2[1]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
+    Warning (15610): No output dependent on input pin "addr_out2[2]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
+Info (21057): Implemented 60 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 28 input pins
+    Info (21059): Implemented 32 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 144 warnings
+    Info: Peak virtual memory: 483 megabytes
+    Info: Processing ended: Thu Apr 14 12:05:42 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:19
+
+
