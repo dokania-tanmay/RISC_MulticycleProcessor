@@ -42,23 +42,34 @@ architecture beh of alu is
 				sum(operand_width) := carry(operand_width-1);
 			return sum;
 	end function add;
+	
+
 
 	signal add_temp : std_logic_vector(operand_width downto 0);
-	add_temp <= add(opr1, opr2);
+   signal dest_temp : std_logic_vector(operand_width-1 downto 0); --(Aayush) directly using or reduce is giving some error for zero flag 
+                                                                  -- added a signal for that
 begin
+	add_temp <= add(opr1, opr2);
+
 	main: process(opr1,opr2,sel)
 	begin
 		if unsigned(sel) = 0 then
 			dest <= opr1 nand opr2;
+			dest_temp <= opr1 nand opr2;
+
 		elsif unsigned(sel) = 1 then
 			dest <= opr1 xor opr2;
+			dest_temp <= opr1 xor opr2;
+
 		elsif unsigned(sel) = 2 then
 			dest <= add_temp(operand_width-1 downto 0);-- ADD
+			dest_temp <= add_temp(operand_width-1 downto 0);-- ADD
+
 			C <= add_temp(operand_width);
 		end if;
 
 	end process;
 
 -- OR all bits and write in Z
-	Z <= or_reduce(dest);
+	Z <= or_reduce(dest_temp);
 end beh;
