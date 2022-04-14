@@ -27,8 +27,8 @@ end alu;
 
 architecture beh of alu is
 	--- Addition Function
-	function add(A: in std_logic_vector(operand_width-1 downto 0); B: in std_logic_vector(operand_width-1 downto 0))
-		return std_logic_vector is
+	function add(A: in std_logic_vector(operand_width-1 downto 0); B: in std_logic_vector(operand_width-1 downto 0)) 
+	return std_logic_vector is
 				variable sum: std_logic_vector(operand_width downto 0);
 				variable carry: std_logic_vector(operand_width-1 downto 0);
 				variable i : integer;
@@ -41,16 +41,20 @@ architecture beh of alu is
 				end loop;
 				sum(operand_width) := carry(operand_width-1);
 			return sum;
-	end add;
-	
-	process(opr1,opr2,sel)
+	end function add;
+
+	signal add_temp : std_logic_vector(operand_width downto 0);
+	add_temp <= add(opr1, opr2);
+begin
+	main: process(opr1,opr2,sel)
 	begin
 		if unsigned(sel) = 0 then
 			dest <= opr1 nand opr2;
 		elsif unsigned(sel) = 1 then
 			dest <= opr1 xor opr2;
 		elsif unsigned(sel) = 2 then
-			dest <= ;-- ADD
+			dest <= add_temp(operand_width-1 downto 0);-- ADD
+			C <= add_temp(operand_width);
 		end if;
 
 	end process;
