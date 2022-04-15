@@ -93,15 +93,24 @@ architecture flow of data_path is
     -- 16 bit
     signal ram_dout, ram_din, ram_addr, ir_din, ir_dout, se9, se6, ls7_out, rf_dout1, rf_dout2, rf_din, r7_out, t1_din, t1_dout, t2_din, t2_dout, t3_din, t3_dout, t4_din, t4_dout, alu_a, alu_b, alu_c : std_logic_vector(15 downto 0);
     -- 3 bit
-    signal rf_add1, rf_add2, rf_addin : std_logic_vector(2 downto 0);
+    signal rf_add1, rf_add2, rf_addin, ls_add : std_logic_vector(2 downto 0);
     -- 2 bit
     signal alu_sel : std_logic_vector(1 downto 0);
     -- 1 bit
-    signal ram_wr, ir_wr, rf_wr, ir_clr, rf_clr, alu_ena, C, Z, lsm_inc, lsm_rst, lsm_vld, lsm_wr : std_logic;
+    signal ram_wr, ir_wr, rf_wr, ir_clr, rf_clr, alu_ena, C, Z, lsm_inc, lsm_rst, lsm_vld, lsm_wr, t1_wr, t2_wr, t3_wr, t4_wr, t1_clr, t2_clr, t3_clr, t4_clr : std_logic;
 begin
     ins_register: register
         generic map(16)
         port map(clock => clock, wr_enable => ir_wr, clear => ir_clr, din => ir_din, dout => ir_dout);
+    
+    temp1 : register
+        port map(clock => clock, wr_enable => t1_wr, clear => t1_clr, din => t1_din, dout => t1_dout);
+    temp2 : register
+        port map(clock => clock, wr_enable => t2_wr, clear => t2_clr, din => t2_din, dout => t2_dout);
+    temp3 : register
+        port map(clock => clock, wr_enable => t3_wr, clear => t3_clr, din => t3_din, dout => t3_dout);
+    temp4 : register
+        port map(clock => clock, wr_enable => t4_wr, clear => t4_clr, din => t4_din, dout => t4_dout);
     
     reg_file : registerFile
         generic map(16,8)
@@ -118,6 +127,9 @@ begin
     left7 : left_shift
         port map(inp => ir_dout(8 downto 0), outp => ls7_out);
     
+    alu_ent : alu
+        port map(opr1 => alu_a, opr2 => alu_b, dest => alu_c, sel => alu_sel, enable => alu_ena, C => C, Z => Z);
 
-
+    lsm_hw : lsm
+        port map(inc => lsm_inc, reset => lsm_rst, clock => clock, insReg => ir_dout(7 downto 0), valid => lsm_vld, wr => lsm_wr, addr => ls_add);
 end flow;
