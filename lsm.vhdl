@@ -17,20 +17,20 @@ use work.elem.all;
 -- Address      =   3-bit address corresponding to each register
 -- wr           =   1 bit to enable write operation to the register file
 
-entity ls is
+entity lsm is
     port (
         inc, reset, clock : in std_logic;
         insReg : in std_logic_vector(7 downto 0);
         valid, wr : out std_logic;
         addr : out std_logic_vector(2 downto 0)
     );
-end ls;
+end lsm;
 
-architecture beh of ls is
+architecture beh of lsm is
     signal num : std_logic_vector(2 downto 0);
 begin
     addr <= num;
-    inc_num : process (inc) is
+    inc_num : process (inc, reset) is
     begin
         if (inc = '1') then
             if unsigned(num) = 7 then
@@ -41,12 +41,9 @@ begin
                 valid <= '1';
             end if;
         end if;
-    end process;
-    wr <= insReg(to_integer(unsigned(num)));
-    rst : process(reset) is
-    begin
         if (reset = '1') then
-                num <= std_logic_vector( to_unsigned( 0,3));
+            num <= std_logic_vector( to_unsigned( 0,3));
         end if;
     end process;
+    wr <= insReg(to_integer(unsigned(num)));
 end beh;
