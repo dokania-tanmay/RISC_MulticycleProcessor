@@ -9,7 +9,7 @@ use work.add.all;
 
 entity data_path is
   port (
-    
+    clock : in std_logic;
   ) ;
 end data_path;
 --- Control Signals
@@ -45,8 +45,8 @@ architecture flow of data_path is
             output_length: integer := 16;      -- 16 bit output to be stored in the register
             shift_length: integer :=7);        -- 7 bit left shifter      
         port(
-            input: in std_logic_vector(input_length-1 downto 0);   
-            output: out std_logic_vector(output_length-1 downto 0)
+            inp: in std_logic_vector(input_length-1 downto 0);   
+            outp: out std_logic_vector(output_length-1 downto 0)
                 );           
     end component;
 
@@ -90,7 +90,34 @@ architecture flow of data_path is
     -- Define RAM component
     -- Define Signals
     
+    -- 16 bit
+    signal ram_dout, ram_din, ram_addr, ir_din, ir_dout, se9, se6, ls7_out, rf_dout1, rf_dout2, rf_din, r7_out, t1_din, t1_dout, t2_din, t2_dout, t3_din, t3_dout, t4_din, t4_dout, alu_a, alu_b, alu_c : std_logic_vector(15 downto 0);
+    -- 3 bit
+    signal rf_add1, rf_add2, rf_addin : std_logic_vector(2 downto 0);
+    -- 2 bit
+    signal alu_sel : std_logic_vector(1 downto 0);
+    -- 1 bit
+    signal ram_wr, ir_wr, rf_wr, ir_clr, rf_clr, alu_ena, C, Z, lsm_inc, lsm_rst, lsm_vld, lsm_wr : std_logic;
 begin
+    ins_register: register
+        generic map(16)
+        port map(clock => clock, wr_enable => ir_wr, clear => ir_clr, din => ir_din, dout => ir_dout);
+    
+    reg_file : registerFile
+        generic map(16,8)
+        port map(addr_out1 => rf_add1, addr_out2 => rf_add2, addr_in => rf_addin, data_out1=> rf_dout1, data_out2 => rf_dout2, reg7_out => r7_out, data_in => rf_din, clock => clock, wr_enable => rf_wr, clear => rf_clr);
+    
+    se6_ent : sign_extender 
+        generic map(6,16)
+        port map(inp => ir_dout(5 downto 0), outp => se6);
+    
+    se9_ent : sign_extender 
+        generic map(9,16)
+        port map(inp => ir_dout(8 downto 0), outp => se9);
+
+    left7 : left_shift
+        port map(inp => ir_dout(8 downto 0), outp => ls7_out);
+    
 
 
 end flow;
