@@ -21,6 +21,7 @@ entity alu is
 		opr2: in std_logic_vector(operand_width-1 downto 0);
 		dest: out std_logic_vector(operand_width-1 downto 0);
 		sel: in std_logic_vector(operand_width-1 downto 0);
+		enable: in std_logic;
 		C, Z: out std_logic
 	);
 end alu;
@@ -68,30 +69,33 @@ begin
 	add_temp <= add(opr1, opr2);
 	adl_temp <= adl(opr1, opr2);
 
-	main: process(opr1,opr2,sel)
+	main: process(opr1, opr2, sel, enable)
 	begin
-		-- NAND
-		if unsigned(sel) = 0 then
-			dest <= opr1 nand opr2;
-			dest_temp <= opr1 nand opr2;
-		-- XOR
-		elsif unsigned(sel) = 1 then
-			dest <= opr1 xor opr2;
-			dest_temp <= opr1 xor opr2;
-		-- ADD
-		elsif unsigned(sel) = 2 then
-			dest <= add_temp(operand_width-1 downto 0);
-			dest_temp <= add_temp(operand_width-1 downto 0);
-			C <= add_temp(operand_width);
-		--- ADL
-		elsif unsigned(sel) = 3 then
-			dest <= adl_temp(operand_width-1 downto 0);
-			dest_temp <= adl_temp(operand_width-1 downto 0);
-			C <= adl_temp(operand_width);
+		if enable = '1' then
+			-- NAND
+			if unsigned(sel) = 0 then
+				dest <= opr1 nand opr2;
+				dest_temp <= opr1 nand opr2;
+			-- XOR
+			elsif unsigned(sel) = 1 then
+				dest <= opr1 xor opr2;
+				dest_temp <= opr1 xor opr2;
+			-- ADD
+			elsif unsigned(sel) = 2 then
+				dest <= add_temp(operand_width-1 downto 0);
+				dest_temp <= add_temp(operand_width-1 downto 0);
+				C <= add_temp(operand_width);
+			--- ADL
+			elsif unsigned(sel) = 3 then
+				dest <= adl_temp(operand_width-1 downto 0);
+				dest_temp <= adl_temp(operand_width-1 downto 0);
+				C <= adl_temp(operand_width);
+			end if;
+			-- OR all bits and write in Z
+			Z <= or_reduce(dest_temp);
 		end if;
-
 	end process;
 
--- OR all bits and write in Z
-	Z <= or_reduce(dest_temp);
+
+	
 end beh;
