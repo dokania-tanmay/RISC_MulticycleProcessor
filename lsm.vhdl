@@ -8,14 +8,14 @@ library work;
 use work.elem.all;
 
 -- Input
--- Inc          =   Increase to the next register value
--- IR(7 to 0)   =   8 bit information regarding each register 
--- RESET        =   Reset all parameters to 0
+    -- Inc          =   Increase to the next register value
+    -- IR(7 to 0)   =   8 bit information regarding each register 
+    -- RESET        =   Reset all parameters to 0
 
 -- Output
--- Valid        =   1 bit flag. Loop execution is going on (valid = 1) or loop has completed (valid = 0)
--- Address      =   3-bit address corresponding to each register
--- wr           =   1 bit to enable write operation to the register file
+    -- Valid        =   1 bit flag. Loop execution is going on (valid = 1) or loop has completed (valid = 0)
+    -- Address      =   3-bit address corresponding to each register
+    -- wr           =   1 bit to enable write operation to the register file
 
 entity lsm is
     port (
