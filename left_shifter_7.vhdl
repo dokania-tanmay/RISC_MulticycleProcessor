@@ -21,7 +21,7 @@ entity left_shift is
 		
 	port(
 		input: in std_logic_vector(input_length-1 downto 0);   
-		output: out std_logic_vector(output_length-1 downto 0);
+		output: out std_logic_vector(output_length-1 downto 0)
             );
             
 end entity;

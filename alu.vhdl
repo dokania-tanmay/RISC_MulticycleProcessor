@@ -20,7 +20,7 @@ entity alu is
 		opr1: in std_logic_vector(operand_width-1 downto 0);
 		opr2: in std_logic_vector(operand_width-1 downto 0);
 		dest: out std_logic_vector(operand_width-1 downto 0);
-		sel: in std_logic_vector(operand_width-1 downto 0);
+		sel: in std_logic_vector(sel_line-1 downto 0);
 		enable: in std_logic;
 		C, Z: out std_logic
 	);
