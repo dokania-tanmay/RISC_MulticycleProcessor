@@ -42,6 +42,11 @@ begin
             end if;
         end if;
     end process;
-    
-    
+    wr <= insReg(unsigned(num));
+    rst : process(reset) is
+    begin
+        if (reset = '1') then
+            num <= std_logic_vector(0);
+        end if;
+    end process;
 end beh;
