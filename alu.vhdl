@@ -10,7 +10,7 @@ use work.elem.all;
 --- 00 = NAND
 --- 01 = XOR
 --- 10 = ADD
---- 11 = Not assigned
+--- 11 = ADL
 entity alu is 
 	generic(
 		operand_width : integer:= 16;
@@ -42,30 +42,52 @@ architecture beh of alu is
 				sum(operand_width) := carry(operand_width-1);
 			return sum;
 	end function add;
+	function adl(A: in std_logic_vector(operand_width-1 downto 0); B: in std_logic_vector(operand_width-1 downto 0)) 
+	return std_logic_vector is
+				variable sumL: std_logic_vector(operand_width downto 0);
+				variable carryL: std_logic_vector(operand_width-1 downto 0);
+				variable i : integer;
+		begin --- After leftshift, addition will be A(0) + 0, A(1) + B(0), ...
+				sumL(0) := A(0);
+				carryL(0) := 0;
+				summingBitwise: for i in 1 to operand_width-1 loop
+					sumL(i) := ( A(i) xor B(i-1) ) xor carryL(i-1);
+					carryL(i) := (A(i) and B(i-1) ) or (B(i-1) and carryL(i-1) ) or ( A(i) and carryL(i-1) );
+				end loop;
+				sumL(operand_width) := B(operand_width-1) xor carryL(operand_width-1);
+			return sumL;
+	end function adl;
 	
 
 
 	signal add_temp : std_logic_vector(operand_width downto 0);
-   signal dest_temp : std_logic_vector(operand_width-1 downto 0); --(Aayush) directly using or reduce is giving some error for zero flag 
-                                                                  -- added a signal for that
+	signal adl_temp : std_logic_vector(operand_width downto 0);
+	signal dest_temp : std_logic_vector(operand_width-1 downto 0); --(Aayush) directly using or reduce is giving some error for zero flag 
+                                                                 -- added a signal for that
 begin
 	add_temp <= add(opr1, opr2);
+	adl_temp <= adl(opr1, opr2);
 
 	main: process(opr1,opr2,sel)
 	begin
+		-- NAND
 		if unsigned(sel) = 0 then
 			dest <= opr1 nand opr2;
 			dest_temp <= opr1 nand opr2;
-
+		-- XOR
 		elsif unsigned(sel) = 1 then
 			dest <= opr1 xor opr2;
 			dest_temp <= opr1 xor opr2;
-
+		-- ADD
 		elsif unsigned(sel) = 2 then
-			dest <= add_temp(operand_width-1 downto 0);-- ADD
-			dest_temp <= add_temp(operand_width-1 downto 0);-- ADD
-
+			dest <= add_temp(operand_width-1 downto 0);
+			dest_temp <= add_temp(operand_width-1 downto 0);
 			C <= add_temp(operand_width);
+		--- ADL
+		elsif unsigned(sel) = 3 then
+			dest <= adl_temp(operand_width-1 downto 0);
+			dest_temp <= adl_temp(operand_width-1 downto 0);
+			C <= adl_temp(operand_width);
 		end if;
 
 	end process;
