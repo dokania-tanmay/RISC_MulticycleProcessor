@@ -1,0 +1,5 @@
+T(0) 	: 	RAM Memory Address select
+		0 = T3_dout
+		1 = R7_dout
+T(1)	:	RAM write enable (to be made)
+T(2)	:	

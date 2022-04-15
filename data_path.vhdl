@@ -9,20 +9,10 @@ use work.add.all;
 
 entity data_path is
   port (
-    clock : in std_logic;
+    clock : in std_logic,
+    T : in std_logic_vector( ?? downto 0)
   ) ;
 end data_path;
---- Control Signals
-
--- Instruction Register
------ wr_enable in
-
--- LSM
------ INC       in
------ RESET     in
------ wr        out
------ valid     out
-
 
 architecture flow of data_path is
     component sign_extender is
@@ -89,7 +79,7 @@ architecture flow of data_path is
 
     -- Define RAM component
     -- Define Signals
-    
+---
     -- 16 bit
     signal ram_dout, ram_din, ram_addr, ir_din, ir_dout, se9, se6, ls7_out, rf_dout1, rf_dout2, rf_din, r7_out, t1_din, t1_dout, t2_din, t2_dout, t3_din, t3_dout, t4_din, t4_dout, alu_a, alu_b, alu_c : std_logic_vector(15 downto 0);
     -- 3 bit
@@ -132,4 +122,17 @@ begin
 
     lsm_hw : lsm
         port map(inc => lsm_inc, reset => lsm_rst, clock => clock, insReg => ir_dout(7 downto 0), valid => lsm_vld, wr => lsm_wr, addr => ls_add);
+    -- RAM to be added
+
+
+--- Need to map register clears
+--- Register File has no clear operation yet
+    ram_din <= t3_dout when (T(0) = "0") else
+               r7_out;
+    
+
+
+
+
+
 end flow;
