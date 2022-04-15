@@ -34,7 +34,7 @@ begin
     begin
         if (inc = '1') then
             if unsigned(num) = 7 then
-                num <= std_logic_vector(0);
+                num <= std_logic_vector( to_unsigned( 0,3));
                 valid <= '0';
             else 
                 num <= std_logic_vector(unsigned(num)+1);
@@ -42,11 +42,11 @@ begin
             end if;
         end if;
     end process;
-    wr <= insReg(unsigned(num));
+    wr <= insReg(to_integer(unsigned(num)));
     rst : process(reset) is
     begin
         if (reset = '1') then
-            num <= std_logic_vector(0);
+                num <= std_logic_vector( to_unsigned( 0,3));
         end if;
     end process;
 end beh;
