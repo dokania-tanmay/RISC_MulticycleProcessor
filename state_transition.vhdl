@@ -26,6 +26,171 @@ begin
 	end process;
 	
 	
+	controller_design:
+	process(opcode, CS)
+	begin
+		T <= (others => '0');
+		case CS is
+		  
+		  when S0 =>
+		      T(21 downto 20) <= "10"; --T1 din select r7_out
+		      T(0) <= '1';	        -- RAM Memory Address select R7_dout
+		      T(28) <= '1';            -- Instruction Register write enable 
+	    
+	          when S1 => 
+	              
+		      T(13) <= '1';
+		      T(15) <= '0';
+		      T(16) <= '1';
+		      T(19) <= '1';
+		      T(18 downto 17) <= "00";
+		      T(27 downto 26) <= "10";
+		      
+		  when S2 =>
+		     
+		      T(8 downto 7) <= "11";
+		      T(10 downto 9) <= "00";
+		      
+		  when S3 =>
+		     
+		      T(23 downto 22) <= "00";
+		      T(21 downto 20) <= "00";
+		      T(11) <= '1';
+		      T(6) <= '1';
+		      T(12) <= '1';
+		      T(14) <= '1';
+		      
+		  when S4 =>
+		      T(13) <= '1';
+		      T(15) <= '0';
+		      T(16) <= '1';
+		      T(19) <= '1';
+		      T(18 downto 17) <= "11";
+		      
+		  when S5 =>
+		      T(8 downto 7) <= "00";
+		      T(10 downto 9) <= "00";
+		      T(5) <= '1';
+		    
+		      
+		      
+		      
+	          when S7 =>
+		      T(18 downto 17) <= "01";
+		      T(27 downto 26) <= "10";
+		      T(19) <= '1';
+		      T(15) <= '0';
+		      T(16) <= '1';
+		      T(13) <= '1'; 
+		      
+		  when S20 =>
+		  
+		      T(13) <= '1'; 
+		      T(19) <= '0'; 
+		      T(24) <= '1'; 
+		      
+	          when S21 =>
+		      T(21 downto 20) <= "01";
+		      T(23 downto 22) <= "10";
+		      T(0) <= '0';
+		      T(11) <= '1';
+		      T(14) <= '1';
+		  
+	          when S22 =>
+		      T(27 downto 26) <= "10";
+		      T(18 downto 17) <= "00";
+		      T(10 downto 9) <= "01";
+		      T(8 downto 7) <= "10";
+		      T(15) <= '0';
+		      T(19) <= '1';
+		      T(13) <= '1';
+		      T(4) <= '1';
+		      T(25) <= '1';
+	          
+	          when S23 =>
+		      T(23 downto 22) <= "01";
+		      T(6) <= '0';
+		      T(14) <= '1';
+		      
+		  when S24 =>
+		      T(21 downto 20) <= "01";
+		      T(3) <= '0';
+		      T(1) <= '1';
+		      T(0) <= '0';
+		      T(11) <= '1';
+		      
+		      
+	          when S25 =>
+		      T(27 downto 26) <= "10";
+		      T(18 downto 17) <= "00";
+		      T(15) <= '0';
+		      T(16) <= '1';
+		      T(13) <= '1';
+		      T(19) <= '1';
+		      
+		  when SU =>
+		      T(10 downto 9) <= "10";
+		      T (8 downto 7) <= "01";
+		      
+		  when SK =>
+		   
+		      T(8 downto 7)  <= "11"
+		      T(29) <= "0";
+		      T(10 downto 9) <= "01"
+		      T(14) <= "1";
+		      
+		  when S8 =>
+		      T(5) <= "1";
+		      T(10 downto 9) <= "00";
+		      T(8 downto 7) <= "11";
+		      
+		  when S9 =>
+		  
+		      T(2) <= '1';
+		      T(3) <= '1';
+		      T(0) <= '0';
+		      
+		  when S2p =>
+		     
+		      T(8 downto 7) <= "11";
+		      T(10 downto 9) <= "00";
+		      
+		  when S11 =>
+		      T(29) <= "0";
+		      T(8 downto 7) <= "11";
+		      T(10 downto 9) <= "11";
+		      
+		  when S13 =>
+		      T(15) <= "0";
+		      T(18 downto 17) <= "10";
+		      T(19) <= "1";
+		      T(11) <= "1";
+		  
+		  when SL4 =>
+		      T(29) <= "0";
+		      T(8 downto 7) <= "01";
+		      T(10 downto 9) <= "00";
+		      T(13) <= "1";
+		      
+		  when SL3 =>
+		  
+		   
+		      
+		      
+		  
+	              
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	state_transition_table:
 	process(CS, opcode, valid, C, Z, valid, reset)
