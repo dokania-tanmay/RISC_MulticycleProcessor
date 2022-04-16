@@ -11,7 +11,7 @@ entity data_path is
   port (
     clock : in std_logic,
     T : in std_logic_vector( ?? downto 0),
-    c, z, valid: out std_logic_vector
+    O: out std_logic_vector(2 downto 0)
   ) ;
 end data_path;
 
@@ -190,5 +190,10 @@ begin
     lsm_rst <= T(24);
     lsm_inc <= T(25);
     alu_sel <= T(27 downto 26);
+    rf_add1 <= ir_dout(11 downto 9);
+
+    Z <= O(2);
+    C <= O(1);
+    lsm_vld <= O(0);
 
 end flow;
