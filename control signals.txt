@@ -27,7 +27,7 @@ T(29) & T(8 downto 7)	: Register File A3 Select
 T(10 downto 9) : Resgister File D3 select
 			00 = T3_dout
 			01 = T4_dout
-			10 = LS_out
+			10 = LS7_out
 			11 = IR(8 downto 6)	
 
 T(11) : T1 write enable
@@ -42,7 +42,7 @@ T(13) : T3 write enable
 T(14) : T4 write enable
 		0 = do not write
 		1 = write						
-T(15) : ALU_A Select
+T--Redundant//(15) : ALU_A Select
 		0 = T1_dout
 		1 = None
 T(16) : ALU enable
@@ -77,3 +77,4 @@ T(27 downto 26) : ALU OP Mode
 					10 = ADD
 					11 = ADL
 T(28) : IR write_enable
+

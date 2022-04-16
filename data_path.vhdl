@@ -157,15 +157,38 @@ begin
     
     rf_add2 <= ls_add (when T(6) = "0") else
                 ir_dout(8 downto 6);
-    rf_addin <= ir_dout(5 downto 3) (when T(29) & T(8 downto 7) == "000")
+    rf_addin <= ir_dout(5 downto 3) (when T(29) & T(8 downto 7) = "000")
                 else
-                    ir_dout(11 downto 9) (when T(29) & T(8 downto 7) == "001" )
+                    ir_dout(11 downto 9) (when T(29) & T(8 downto 7) = "001" )
                 else
-                    "111" (when T(29) & T(8 downto 7) == "011" )
+                    "111" (when T(29) & T(8 downto 7) = "011" )
                 else
-                    ls_add (when T(29) & T(8 downto 7) == "010" )
+                    ls_add (when T(29) & T(8 downto 7) = "010" )
                 else 
                     ir_dout(8 downto 6);
-    rf_din <=                 
+    rf_din <=   t3_dout (when T(10 downto 9) ="00") else
+                t4_dout (when T(10 downto 9) = "01") else
+                ls7_out (when T(10 downto 9) = "10") else
+                ir_dout(8 downto 6); 
+    t1_wr <= T(11); 
+    t2_wr <= T(12);                                     
+    t3_wr <= T(13);
+    t4_wr <= T(14);
+    alu_ena <= T(16);
+    alu_b <= "1" (when T( 18 downton 17) = "00") else
+                se6 (when T( 18 downton 17) = "01") else
+                se9 (when T( 18 downton 17) = "10") else
+                t2_dout; 
+    t3_din <= rf_dout1 (when T(19) = "00") else
+                alu_c;
+    t1_din <= rf_dout1 (when T(21 downto 20) = "00") else
+                t3_dout (when T(21 downto 20) = "01") else
+                r7_out;
+    t4_din <= t3_dout (when T(23 downto 22) = "00") else
+               rf_dout2 (when T(23 downto 22) = "01") else
+               ram_dout;
+    lsm_rst <= T(24);
+    lsm_inc <= T(25);
+    alu_sel <= T(27 downto 26);
 
 end flow;
