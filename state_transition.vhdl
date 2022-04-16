@@ -176,6 +176,7 @@ begin
 		  
 		   
 		      
+		  -- SL3 left and need to correct T(8 downto 7) wherever required
 		      
 		  
 	              
