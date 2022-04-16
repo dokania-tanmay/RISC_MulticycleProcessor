@@ -31,13 +31,13 @@ architecture flow of data_path is
 
     component left_shift is
         generic(
-            input_length: integer := 9;        -- 9 bit input taken from immediate-9 field of the instruction  
+            input_length: integer := 9;        -- 9 bit input taken from immediate-9 field of the instruction
             output_length: integer := 16;      -- 16 bit output to be stored in the register
-            shift_length: integer :=7);        -- 7 bit left shifter      
+            shift_length: integer :=7);        -- 7 bit left shifter
         port(
-            inp: in std_logic_vector(input_length-1 downto 0);   
+            inp: in std_logic_vector(input_length-1 downto 0);
             outp: out std_logic_vector(output_length-1 downto 0)
-                );           
+                );
     end component;
 
     component registerFile is
@@ -53,7 +53,7 @@ architecture flow of data_path is
         );
     end component;
 
-    component alu is 
+    component alu is
         generic(
             operand_width : integer:= 16;
             sel_line: integer:= 2
@@ -76,12 +76,12 @@ architecture flow of data_path is
             addr : out std_logic_vector(2 downto 0)
         );
     end component;
-        
+
     component ram_mem is
         port(
-        clock: IN   std_logic;
+        cclock: IN   std_logic;
         ram_data_in:  IN   std_logic_vector (15 DOWNTO 0);
-        ram_address:  IN   RANGE INTEGER 0 TO 65535;
+        ram_address:  IN   std_logic_vector(ceil(log2(real(numRegs))))-1 downto 0);
         ram_write_enable:    IN   std_logic;
         ram_data_out:     OUT  std_logic_vector (15 DOWNTO 0));
     -- Define RAM component
@@ -89,7 +89,7 @@ architecture flow of data_path is
     end component;
 
     -- 16 bit
-    signal ram_dout, ram_din, ram_addr, ir_din, ir_dout, se9, se6, ls7_out, rf_dout1, rf_dout2, rf_din, r7_out, t1_din, 
+    signal ram_dout, ram_din, ram_addr, ir_din, ir_dout, se9, se6, ls7_out, rf_dout1, rf_dout2, rf_din, r7_out, t1_din,
             t1_dout, t2_din, t2_dout, t3_din, t3_dout, t4_din, t4_dout, alu_a, alu_b, alu_c : std_logic_vector(15 downto 0);
     -- 3 bit
     signal rf_add1, rf_add2, rf_addin, ls_add : std_logic_vector(2 downto 0);
@@ -102,7 +102,7 @@ begin
     ins_register: register
         generic map(16)
         port map(clock => clock, wr_enable => ir_wr, clear => ir_clr, din => ir_din, dout => ir_dout);
-    
+
     temp1 : register
         port map(clock => clock, wr_enable => t1_wr, clear => t1_clr, din => t1_din, dout => t1_dout);
     temp2 : register
@@ -111,30 +111,36 @@ begin
         port map(clock => clock, wr_enable => t3_wr, clear => t3_clr, din => t3_din, dout => t3_dout);
     temp4 : register
         port map(clock => clock, wr_enable => t4_wr, clear => t4_clr, din => t4_din, dout => t4_dout);
-    
+
     reg_file : registerFile
         generic map(16,8)
-        port map(addr_out1 => rf_add1, addr_out2 => rf_add2, addr_in => rf_addin, data_out1=> rf_dout1, data_out2 => rf_dout2, reg7_out => r7_out, data_in => rf_din, clock => clock, wr_enable => rf_wr, clear => rf_clr);
-    
-    se6_ent : sign_extender 
+        port map(addr_out1 => rf_add1, addr_out2 => rf_add2, addr_in => rf_addin, data_out1=> rf_dout1,
+                data_out2 => rf_dout2, reg7_out => r7_out, data_in => rf_din, clock => clock, wr_enable => rf_wr, clear => rf_clr);
+
+    se6_ent : sign_extender
         generic map(6,16)
         port map(inp => ir_dout(5 downto 0), outp => se6);
-    
-    se9_ent : sign_extender 
+
+    se9_ent : sign_extender
         generic map(9,16)
         port map(inp => ir_dout(8 downto 0), outp => se9);
 
     left7 : left_shift
         port map(inp => ir_dout(8 downto 0), outp => ls7_out);
-    
+
     alu_ent : alu
         port map(opr1 => alu_a, opr2 => alu_b, dest => alu_c, sel => alu_sel, enable => alu_ena, C => C, Z => Z);
 
     lsm_hw : lsm
         port map(inc => lsm_inc, reset => lsm_rst, clock => clock, insReg => ir_dout(7 downto 0), valid => lsm_vld, wr => lsm_wr, addr => ls_add);
-    
+
     ram_memory : ram_mem
-        port map(clock => clock, ram_data_in => ram_din, ram_address => ram_addr, ram_write_enable => ram_wr, ram_data_out => ram_dout);
+        port map(ram_data_out => ram_dout, clock => clock, ram_data_in => ram_din, ram_write_enable => ram_wr, ram_address => ram_addr);
+
+
+
+
+
 
 --- Need to map register clears
 --- Register File has no clear operation yet

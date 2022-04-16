@@ -5,7 +5,7 @@ ENTITY ram_mem IS
    (
     clock: IN   std_logic;
     ram_data_in:  IN   std_logic_vector (15 DOWNTO 0);
-    ram_address:  IN   RANGE INTEGER 0 TO 65535;
+    ram_address:  IN   std_logic_vector(ceil(log2(real(numRegs))))-1 downto 0);
     ram_write_enable:    IN   std_logic;
     ram_data_out:     OUT  std_logic_vector (15 DOWNTO 0));
    );
@@ -18,10 +18,10 @@ BEGIN
    PROCESS (clock)
    BEGIN
       IF (clock'event AND clock = '1') THEN
-         IF (we = '1') THEN
-            ram_block(address) <= ram_data_in;
+         IF (ram_write_enable = '1') THEN
+            ram_block(to_integer(unsigned(ram_address))) <= ram_data_in;
          END IF;
-         ram_data_out <= ram_block(address);
       END IF;
    END PROCESS;
+   ram_data_out <= ram_block(to_integer(unsigned(ram_address)));
 END beh;
