@@ -169,7 +169,7 @@ begin
     rf_din <=   t3_dout (when T(10 downto 9) ="00") else
                 t4_dout (when T(10 downto 9) = "01") else
                 ls7_out (when T(10 downto 9) = "10") else
-                ir_dout(8 downto 6); 
+                t2_dout; 
     t1_wr <= T(11); 
     t2_wr <= T(12);                                     
     t3_wr <= T(13);
@@ -195,6 +195,6 @@ begin
     Z <= O(2);
     C <= O(1);
     lsm_vld <= O(0);
-    
+
 
 end flow;

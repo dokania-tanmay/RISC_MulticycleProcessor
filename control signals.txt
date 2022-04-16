@@ -28,7 +28,7 @@ T(10 downto 9) : Resgister File D3 select
 			00 = T3_dout
 			01 = T4_dout
 			10 = LS7_out
-			11 = IR(8 downto 6)	
+			11 = t2_out
 
 T(11) : T1 write enable
 		0 = do not write
