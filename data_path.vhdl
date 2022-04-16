@@ -10,7 +10,8 @@ use work.add.all;
 entity data_path is
   port (
     clock : in std_logic,
-    T : in std_logic_vector( ?? downto 0)
+    T : in std_logic_vector( ?? downto 0),
+    c, z, valid: out std_logic_vector
   ) ;
 end data_path;
 
@@ -79,7 +80,7 @@ architecture flow of data_path is
 
     component ram_mem is
         port(
-        cclock: IN   std_logic;
+        clock: IN   std_logic;
         ram_data_in:  IN   std_logic_vector (15 DOWNTO 0);
         ram_address:  IN   std_logic_vector(ceil(log2(real(numRegs))))-1 downto 0);
         ram_write_enable:    IN   std_logic;
