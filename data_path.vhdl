@@ -133,7 +133,8 @@ begin
     lsm_hw : lsm
         port map(inc => lsm_inc, reset => lsm_rst, clock => clock, insReg => ir_dout(7 downto 0), valid => lsm_vld, wr => lsm_wr, addr => ls_add);
     -- RAM to be added
-
+    ram_memory : ram_mem
+        port map();
 
 --- Need to map register clears
 --- Register File has no clear operation yet

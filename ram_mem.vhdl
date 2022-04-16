@@ -19,9 +19,9 @@ BEGIN
    BEGIN
       IF (clock'event AND clock = '1') THEN
          IF (we = '1') THEN
-            ram_block(address) <= data;
+            ram_block(address) <= ram_data_in;
          END IF;
-         q <= ram_block(address);
+         ram_data_out <= ram_block(address);
       END IF;
    END PROCESS;
 END beh;
