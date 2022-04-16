@@ -63,3 +63,9 @@ T(21) = T4_din_select
 T(22) : LSM Reset
 
 T(23) : LSM INC
+
+T(25 downto 24) : ALU OP Mode
+					00 = NAND
+					01 = XOR
+					10 = ADD
+					11 = ADL
