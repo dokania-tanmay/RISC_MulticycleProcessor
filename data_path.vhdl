@@ -131,7 +131,7 @@ begin
 
     alu_ent : alu
         port map(opr1 => alu_a, opr2 => alu_b, dest => alu_c, sel => alu_sel, enable => alu_ena, C => C, Z => Z);
-
+ 
     lsm_hw : lsm
         port map(inc => lsm_inc, reset => lsm_rst, clock => clock, insReg => ir_dout(7 downto 0), valid => lsm_vld, wr => lsm_wr, addr => ls_add);
 
@@ -153,6 +153,10 @@ begin
                t3_dout;
     rf_wr   <= T(5) (when T(4) = "0") else
                lsm_wr;
+    rf_add1 <= ir_dout(11 downto 9);
+    
+    rf_add2 <= ls_add (when T(6) = "0") else
+                ir_dout(8 downto 6);
 
 
 

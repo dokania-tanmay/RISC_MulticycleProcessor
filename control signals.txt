@@ -12,56 +12,54 @@ T(4)	: Register File Write Enable Select
 		 	0 = T(5)
 			1 = LSM_write_enable
 T(5)	: Register File write enable (works if T(4) == 0)
-T(6)	: Register file A1 select
-			0 = IR_data_out( 11 downto 9)
-			1 = None
-T(7)	: Resgister File A2 select
+
+T(6)	: Resgister File A2 select
 			0 = LSM_Add_Out
 			1 = IR_data_out(8 downto 6)
-T(9 downto 8)	: Register File A3 Select
+T(8 downto 7)	: Register File A3 Select
 			00 = IR_data_out(5 downto 3)
 			01 = IR_data_out(11 downto 9)
 			10 = LSM_Add_Out
-T(11 downto 10) : Resgister File D3 select
+T(10 downto 9) : Resgister File D3 select
 			00 = T3_dout_2
 			01 = T4_dout
 			10 = LS_out
 			11 = IR(8 downto 6)	
 
-T(12) : T1 write enable
+T(11) : T1 write enable
 		0 = do not write
 		1 = write
-T(13) : T2 write enable
+T(12) : T2 write enable
 		0 = do not write
 		1 = write
-T(14) : T3 write enable
+T(13) : T3 write enable
 		0 = do not write
 		1 = write
-T(15) : T4 write enable
+T(14) : T4 write enable
 		0 = do not write
 		1 = write						
-T(16) : ALU_A Select
+T(15) : ALU_A Select
 		0 = T1_dout
 		1 = None
-T(17) : ALU enable
+T(16) : ALU enable
 
-T(19 downto 18) : ALU_B Select
+T(18 downto 17) : ALU_B Select
 					00 = 1
 					01 = SE6_dout
 					10 = SE_9_dout
 					11 = T2_dout
-T(20) : T3_Din_select
+T(19) : T3_Din_select
 		0 = RF_d1
 		1 = ALU_C
 
-T(21) = T1 din select
+T(20) = T1 din select
 		0 = RF_d1
 		1 = T3_dout
 
-T(22) = T4_din_select
+T(21) = T4_din_select
 	0 = T3_dout
 	1 = RF_D2
 
-T(23) : LSM Reset
+T(22) : LSM Reset
 
-T(24) : LSM INC
+T(23) : LSM INC
