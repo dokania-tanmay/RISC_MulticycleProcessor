@@ -5,7 +5,7 @@ ENTITY ram_mem IS
    (
     clock: IN   std_logic;
     ram_data_in:  IN   std_logic_vector (15 DOWNTO 0);
-    ram_address:  IN   std_logic_vector(ceil(log2(real(numRegs))))-1 downto 0);
+    ram_address:  IN   std_logic_vector(ceil(log2(real(numRegs)))-1 downto 0);
     ram_write_enable:    IN   std_logic;
     ram_data_out:     OUT  std_logic_vector (15 DOWNTO 0));
    );
