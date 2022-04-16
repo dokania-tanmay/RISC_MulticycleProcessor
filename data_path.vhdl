@@ -134,15 +134,18 @@ begin
         port map(inc => lsm_inc, reset => lsm_rst, clock => clock, insReg => ir_dout(7 downto 0), valid => lsm_vld, wr => lsm_wr, addr => ls_add);
     
     ram_memory : ram_mem
-        port map(clock => clock, ram_data_in => ram_din, ram_address => ram_addr, ram_write_enable => T(1), ram_data_out => ram_dout);
+        port map(clock => clock, ram_data_in => ram_din, ram_address => ram_addr, ram_write_enable => ram_wr, ram_data_out => ram_dout);
 
 --- Need to map register clears
 --- Register File has no clear operation yet
     ram_addr <= t3_dout when (T(0) = "0") else
                 r7_out;
-    
-    ram_din <= t2_dout when (T(2) = "0") else
+    ram_wr  <= T(2) (when T(1) = "0") else
+               lsm_wr;
+    ram_din <= t2_dout when (T(3) = "0") else
                t3_dout;
+    rf_wr   <= T(5) (when T(4) = "0") else
+               lsm_wr;
 
 
 
