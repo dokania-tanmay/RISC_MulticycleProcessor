@@ -16,13 +16,16 @@ T(5)	: Register File write enable (works if T(4) == 0)
 T(6)	: Resgister File A2 select
 			0 = LSM_Add_Out
 			1 = IR_data_out(8 downto 6)
-T(8 downto 7)	: Register File A3 Select
-			00 = IR_data_out(5 downto 3)
-			01 = IR_data_out(11 downto 9)
-			10 = LSM_Add_Out
-			11 = "111"
+T(29) & T(8 downto 7)	: Register File A3 Select
+			000 = IR_data_out(5 downto 3)
+			001 = IR_data_out(11 downto 9)
+			010 = LSM_Add_Out
+			011 = "111"
+			100 = IR(8 downto 6)
+
+
 T(10 downto 9) : Resgister File D3 select
-			00 = T3_dout_2
+			00 = T3_dout
 			01 = T4_dout
 			10 = LS_out
 			11 = IR(8 downto 6)	
@@ -73,3 +76,4 @@ T(27 downto 26) : ALU OP Mode
 					01 = XOR
 					10 = ADD
 					11 = ADL
+T(28) : IR write_enable

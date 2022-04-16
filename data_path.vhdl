@@ -157,8 +157,15 @@ begin
     
     rf_add2 <= ls_add (when T(6) = "0") else
                 ir_dout(8 downto 6);
-
-
-
+    rf_addin <= ir_dout(5 downto 3) (when T(29) & T(8 downto 7) == "000")
+                else
+                    ir_dout(11 downto 9) (when T(29) & T(8 downto 7) == "001" )
+                else
+                    "111" (when T(29) & T(8 downto 7) == "011" )
+                else
+                    ls_add (when T(29) & T(8 downto 7) == "010" )
+                else 
+                    ir_dout(8 downto 6);
+    rf_din <=                 
 
 end flow;
