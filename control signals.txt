@@ -52,19 +52,22 @@ T(19) : T3_Din_select
 		0 = RF_d1
 		1 = ALU_C
 
-T(20) = T1 din select
-		0 = RF_d1
-		1 = T3_dout
+T(21 downto 20) : T1 din select
+		00 = RF_d1
+		01 = T3_dout
+		10 = r7_out
+		11 = unassigned
 
-T(21) = T4_din_select
-	0 = T3_dout
-	1 = RF_D2
+T(23 downto 22) : T4_din_select
+	00 = T3_dout
+	01 = RF_D2
+	10 = Memout
 
-T(22) : LSM Reset
+T(24) : LSM Reset
 
-T(23) : LSM INC
+T(25) : LSM INC
 
-T(25 downto 24) : ALU OP Mode
+T(27 downto 26) : ALU OP Mode
 					00 = NAND
 					01 = XOR
 					10 = ADD
