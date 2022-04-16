@@ -133,7 +133,7 @@ begin
 
     lsm_hw : lsm
         port map(inc => lsm_inc, reset => lsm_rst, clock => clock, insReg => ir_dout(7 downto 0), valid => lsm_vld, wr => lsm_wr, addr => ls_add);
-    -- RAM to be added
+    
     ram_memory : ram_mem
         port map(ram_data_out => ram_dout, clock => clock, ram_data_in => ram_din, ram_write_enable => ram_wr, ram_address => ram_addr); 
     
@@ -144,7 +144,7 @@ begin
 
 --- Need to map register clears
 --- Register File has no clear operation yet
-    ram_din <= t3_dout when (T(0) = "0") else
-               r7_out;
+    ram_addr <= t3_dout when (T(0) = "0") else
+                r7_out;
     
 end flow;
