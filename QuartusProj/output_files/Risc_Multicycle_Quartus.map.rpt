@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Risc_Multicycle_Quartus
-Thu Apr 14 12:05:42 2022
+Sun Apr 17 02:33:48 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,11 +13,25 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |registerFile
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: reg:ins_register
+ 13. Parameter Settings for User Entity Instance: reg:temp1
+ 14. Parameter Settings for User Entity Instance: reg:temp2
+ 15. Parameter Settings for User Entity Instance: reg:temp3
+ 16. Parameter Settings for User Entity Instance: reg:temp4
+ 17. Parameter Settings for User Entity Instance: registerFile:reg_file
+ 18. Parameter Settings for User Entity Instance: sign_extender:se6_ent
+ 19. Parameter Settings for User Entity Instance: sign_extender:se9_ent
+ 20. Parameter Settings for User Entity Instance: left_shift:left7
+ 21. Parameter Settings for User Entity Instance: alu:alu_ent
+ 22. Port Connectivity Checks: "reg:temp1"
+ 23. Port Connectivity Checks: "reg:ins_register"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -44,14 +58,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Apr 14 12:05:42 2022       ;
+; Analysis & Synthesis Status     ; Successful - Sun Apr 17 02:33:48 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Risc_Multicycle_Quartus                     ;
-; Top-level Entity Name           ; registerFile                                ;
+; Top-level Entity Name           ; data_path                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 60                                          ;
+; Total pins                      ; 34                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -70,7 +84,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value           ;
 +---------------------------------------------------------------------------------+--------------------+-------------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                         ;
-; Top-level entity name                                                           ; registerFile       ; Risc_Multicycle_Quartus ;
+; Top-level entity name                                                           ; data_path          ; Risc_Multicycle_Quartus ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V               ;
 ; Use smart compilation                                                           ; Off                ; Off                     ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                      ;
@@ -160,58 +174,125 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                       ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
-; elem.vhd                         ; yes             ; User VHDL File  ; /home/aayush/Desktop/Test/elem.vhd          ;         ;
-; register_file.vhd                ; yes             ; User VHDL File  ; /home/aayush/Desktop/Test/register_file.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
+; registerFile.vhdl                ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl ;         ;
+; data_path.vhdl                   ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl    ;         ;
+; ram_mem.vhdl                     ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl      ;         ;
+; lsm.vhdl                         ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl          ;         ;
+; left_shift.vhdl                  ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl   ;         ;
+; alu.vhdl                         ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl          ;         ;
+; elem.vhd                         ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd          ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                    ;
-+---------------------------------------------+------------------+
-; Resource                                    ; Usage            ;
-+---------------------------------------------+------------------+
-; Estimate of Logic utilization (ALMs needed) ; 0                ;
-;                                             ;                  ;
-; Combinational ALUT usage for logic          ; 0                ;
-;     -- 7 input functions                    ; 0                ;
-;     -- 6 input functions                    ; 0                ;
-;     -- 5 input functions                    ; 0                ;
-;     -- 4 input functions                    ; 0                ;
-;     -- <=3 input functions                  ; 0                ;
-;                                             ;                  ;
-; Dedicated logic registers                   ; 0                ;
-;                                             ;                  ;
-; I/O pins                                    ; 60               ;
-;                                             ;                  ;
-; Total DSP Blocks                            ; 0                ;
-;                                             ;                  ;
-; Maximum fan-out node                        ; data_in[0]~input ;
-; Maximum fan-out                             ; 2                ;
-; Total fan-out                               ; 92               ;
-; Average fan-out                             ; 0.77             ;
-+---------------------------------------------+------------------+
++-------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                       ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Estimate of Logic utilization (ALMs needed) ; 5                   ;
+;                                             ;                     ;
+; Combinational ALUT usage for logic          ; 10                  ;
+;     -- 7 input functions                    ; 0                   ;
+;     -- 6 input functions                    ; 0                   ;
+;     -- 5 input functions                    ; 0                   ;
+;     -- 4 input functions                    ; 2                   ;
+;     -- <=3 input functions                  ; 8                   ;
+;                                             ;                     ;
+; Dedicated logic registers                   ; 0                   ;
+;                                             ;                     ;
+; I/O pins                                    ; 34                  ;
+;                                             ;                     ;
+; Total DSP Blocks                            ; 0                   ;
+;                                             ;                     ;
+; Maximum fan-out node                        ; lsm:lsm_hw|num[0]~2 ;
+; Maximum fan-out                             ; 4                   ;
+; Total fan-out                               ; 66                  ;
+; Average fan-out                             ; 0.85                ;
++---------------------------------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
-; |registerFile              ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 60   ; 0            ; |registerFile       ; registerFile ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name    ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
+; |data_path                 ; 10 (0)              ; 0 (0)                     ; 0                 ; 0          ; 34   ; 0            ; |data_path             ; data_path   ; work         ;
+;    |alu:alu_ent|           ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |data_path|alu:alu_ent ; alu         ; work         ;
+;    |lsm:lsm_hw|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |data_path|lsm:lsm_hw  ; lsm         ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; lsm:lsm_hw|valid                                    ; T[25]               ; yes                    ;
+; alu:alu_ent|Z                                       ; T[16]               ; yes                    ;
+; lsm:lsm_hw|num[0]                                   ; T[25]               ; yes                    ;
+; lsm:lsm_hw|num[1]                                   ; T[25]               ; yes                    ;
+; lsm:lsm_hw|num[2]                                   ; T[25]               ; yes                    ;
+; alu:alu_ent|dest_temp[0]                            ; T[16]               ; yes                    ;
+; alu:alu_ent|dest_temp[1]                            ; T[16]               ; yes                    ;
+; alu:alu_ent|dest_temp[2]                            ; T[16]               ; yes                    ;
+; alu:alu_ent|dest_temp[3]                            ; T[16]               ; yes                    ;
+; alu:alu_ent|dest_temp[4]                            ; T[16]               ; yes                    ;
+; alu:alu_ent|dest_temp[5]                            ; T[16]               ; yes                    ;
+; alu:alu_ent|dest_temp[6]                            ; T[16]               ; yes                    ;
+; alu:alu_ent|dest_temp[7]                            ; T[16]               ; yes                    ;
+; alu:alu_ent|dest_temp[8]                            ; T[16]               ; yes                    ;
+; alu:alu_ent|dest_temp[9]                            ; T[16]               ; yes                    ;
+; alu:alu_ent|dest_temp[10]                           ; T[16]               ; yes                    ;
+; alu:alu_ent|dest_temp[11]                           ; T[16]               ; yes                    ;
+; alu:alu_ent|dest_temp[12]                           ; T[16]               ; yes                    ;
+; alu:alu_ent|dest_temp[13]                           ; T[16]               ; yes                    ;
+; alu:alu_ent|dest_temp[14]                           ; T[16]               ; yes                    ;
+; alu:alu_ent|dest_temp[15]                           ; T[16]               ; yes                    ;
+; Number of user-specified and inferred latches = 21  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++----------------------------------------+---------------------------------------------+
+; Register name                          ; Reason for Removal                          ;
++----------------------------------------+---------------------------------------------+
+; reg:temp2|dout[0]                      ; Lost fanout                                 ;
+; reg:ins_register|dout[0]               ; Lost fanout                                 ;
+; reg:temp2|dout[1]                      ; Stuck at GND due to stuck port data_in      ;
+; reg:ins_register|dout[1]               ; Stuck at GND due to stuck port clock_enable ;
+; reg:temp2|dout[2]                      ; Stuck at GND due to stuck port data_in      ;
+; reg:ins_register|dout[2]               ; Stuck at GND due to stuck port clock_enable ;
+; reg:temp2|dout[3]                      ; Stuck at GND due to stuck port data_in      ;
+; reg:ins_register|dout[3]               ; Stuck at GND due to stuck port clock_enable ;
+; reg:temp2|dout[4]                      ; Stuck at GND due to stuck port data_in      ;
+; reg:ins_register|dout[4]               ; Stuck at GND due to stuck port clock_enable ;
+; reg:temp2|dout[5]                      ; Stuck at GND due to stuck port data_in      ;
+; reg:ins_register|dout[5]               ; Stuck at GND due to stuck port clock_enable ;
+; reg:temp2|dout[6]                      ; Stuck at GND due to stuck port data_in      ;
+; reg:ins_register|dout[6]               ; Stuck at GND due to stuck port clock_enable ;
+; reg:temp2|dout[7]                      ; Stuck at GND due to stuck port data_in      ;
+; reg:ins_register|dout[7]               ; Stuck at GND due to stuck port clock_enable ;
+; reg:temp2|dout[8]                      ; Stuck at GND due to stuck port data_in      ;
+; reg:ins_register|dout[8]               ; Stuck at GND due to stuck port clock_enable ;
+; reg:temp2|dout[9..15]                  ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 25 ;                                             ;
++----------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -229,27 +310,157 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |registerFile ;
-+----------------+-------+-----------------------------------------------------+
-; Parameter Name ; Value ; Type                                                ;
-+----------------+-------+-----------------------------------------------------+
-; dataSize       ; 16    ; Signed Integer                                      ;
-; numRegs        ; 8     ; Signed Integer                                      ;
-+----------------+-------+-----------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |data_path|alu_b[0]            ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |data_path|alu:alu_ent|dest[1] ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |data_path|alu_b[6]            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:ins_register ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; datasize       ; 16    ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:temp1 ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; datasize       ; 16    ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:temp2 ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; datasize       ; 16    ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:temp3 ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; datasize       ; 16    ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reg:temp4 ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; datasize       ; 16    ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registerFile:reg_file ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; datasize       ; 16    ; Signed Integer                            ;
+; numregs        ; 8     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sign_extender:se6_ent ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; insize         ; 6     ; Signed Integer                            ;
+; outsize        ; 16    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sign_extender:se9_ent ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; insize         ; 9     ; Signed Integer                            ;
+; outsize        ; 16    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: left_shift:left7 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; input_length   ; 9     ; Signed Integer                       ;
+; output_length  ; 16    ; Signed Integer                       ;
+; shift_length   ; 7     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:alu_ent ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; operand_width  ; 16    ; Signed Integer                  ;
+; sel_line       ; 2     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg:temp1"                                                                          ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; dout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg:ins_register"                                                                           ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; dout[15..12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 60                              ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 11                          ;
+;     normal            ; 11                          ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 2                           ;
+; boundary_port         ; 34                          ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.55                        ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -267,172 +478,296 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Apr 14 12:05:35 2022
+    Info: Processing started: Sun Apr 17 02:33:33 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Risc_Multicycle_Quartus -c Risc_Multicycle_Quartus
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file registerfile.vhdl
+    Info (12022): Found design unit 1: registerFile-beh File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 22
+    Info (12023): Found entity 1: registerFile File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file data_path.vhdl
+    Info (12022): Found design unit 1: data_path-flow File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 17
+    Info (12023): Found entity 1: data_path File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file ram_mem.vhdl
+    Info (12022): Found design unit 1: ram_mem-beh File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 19
+    Info (12023): Found entity 1: ram_mem File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file lsm.vhdl
+    Info (12022): Found design unit 1: lsm-beh File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl Line: 29
+    Info (12023): Found entity 1: lsm File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl Line: 20
+Info (12021): Found 2 design units, including 1 entities, in source file left_shift.vhdl
+    Info (12022): Found design unit 1: left_shift-shift_7 File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl Line: 29
+    Info (12023): Found entity 1: left_shift File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhdl
+    Info (12022): Found design unit 1: alu-beh File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 29
+    Info (12023): Found entity 1: alu File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 14
 Info (12021): Found 5 design units, including 2 entities, in source file elem.vhd
-    Info (12022): Found design unit 1: elem File: /home/aayush/Desktop/Test/elem.vhd Line: 8
-    Info (12022): Found design unit 2: register_file-regArch File: /home/aayush/Desktop/Test/elem.vhd Line: 36
-    Info (12022): Found design unit 3: sign_extender-beh File: /home/aayush/Desktop/Test/elem.vhd Line: 62
-    Info (12023): Found entity 1: register_file File: /home/aayush/Desktop/Test/elem.vhd Line: 29
-    Info (12023): Found entity 2: sign_extender File: /home/aayush/Desktop/Test/elem.vhd Line: 55
-Info (12021): Found 2 design units, including 1 entities, in source file register_file.vhd
-    Info (12022): Found design unit 1: registerFile-beh File: /home/aayush/Desktop/Test/register_file.vhd Line: 22
-    Info (12023): Found entity 1: registerFile File: /home/aayush/Desktop/Test/register_file.vhd Line: 9
-Info (12127): Elaborating entity "registerFile" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at register_file.vhd(31): signal "data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/aayush/Desktop/Test/register_file.vhd Line: 31
-Warning (10492): VHDL Process Statement warning at register_file.vhd(31): signal "addr_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/aayush/Desktop/Test/register_file.vhd Line: 31
-Warning (14026): LATCH primitive "registers~0" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~1" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~2" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~3" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~4" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~5" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~6" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~7" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~8" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~9" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~10" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~11" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~12" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~13" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~14" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~15" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~16" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~17" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~18" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~19" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~20" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~21" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~22" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~23" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~24" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~25" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~26" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~27" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~28" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~29" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~30" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~31" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~32" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~33" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~34" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~35" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~36" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~37" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~38" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~39" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~40" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~41" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~42" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~43" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~44" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~45" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~46" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~47" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~48" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~49" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~50" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~51" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~52" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~53" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~54" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~55" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~56" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~57" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~58" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~59" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~60" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~61" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~62" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~63" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~64" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~65" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~66" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~67" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~68" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~69" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~70" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~71" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~72" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~73" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~74" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~75" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~76" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~77" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~78" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~79" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~80" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~81" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~82" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~83" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~84" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~85" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~86" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~87" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~88" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~89" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~90" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~91" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~92" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~93" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~94" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~95" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~96" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~97" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~98" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~99" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~100" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~101" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~102" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~103" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~104" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~105" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~106" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~107" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~108" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~109" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~110" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~111" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~112" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~113" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~114" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~115" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~116" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~117" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~118" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~119" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~120" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~121" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~122" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~123" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~124" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~125" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~126" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
-Warning (14026): LATCH primitive "registers~127" is permanently enabled File: /home/aayush/Desktop/Test/register_file.vhd Line: 24
+    Info (12022): Found design unit 1: elem File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd Line: 8
+    Info (12022): Found design unit 2: reg-regArch File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd Line: 36
+    Info (12022): Found design unit 3: sign_extender-beh File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd Line: 62
+    Info (12023): Found entity 1: reg File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd Line: 29
+    Info (12023): Found entity 2: sign_extender File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd Line: 55
+Info (12127): Elaborating entity "data_path" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at data_path.vhdl(92): used implicit default value for signal "ir_din" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 92
+Warning (10036): Verilog HDL or VHDL warning at data_path.vhdl(93): object "t1_dout" assigned a value but never read File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 93
+Warning (10541): VHDL Signal Declaration warning at data_path.vhdl(92): used implicit default value for signal "t2_din" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 92
+Warning (10541): VHDL Signal Declaration warning at data_path.vhdl(92): used implicit default value for signal "alu_a" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 92
+Warning (10541): VHDL Signal Declaration warning at data_path.vhdl(99): used implicit default value for signal "ir_wr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 99
+Warning (10541): VHDL Signal Declaration warning at data_path.vhdl(99): used implicit default value for signal "ir_clr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 99
+Warning (10541): VHDL Signal Declaration warning at data_path.vhdl(99): used implicit default value for signal "rf_clr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 99
+Warning (10541): VHDL Signal Declaration warning at data_path.vhdl(99): used implicit default value for signal "t1_clr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 99
+Warning (10541): VHDL Signal Declaration warning at data_path.vhdl(99): used implicit default value for signal "t2_clr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 99
+Warning (10541): VHDL Signal Declaration warning at data_path.vhdl(99): used implicit default value for signal "t3_clr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 99
+Warning (10541): VHDL Signal Declaration warning at data_path.vhdl(99): used implicit default value for signal "t4_clr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 99
+Info (12128): Elaborating entity "reg" for hierarchy "reg:ins_register" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 102
+Warning (10492): VHDL Process Statement warning at elem.vhd(40): signal "wr_enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd Line: 40
+Info (12128): Elaborating entity "registerFile" for hierarchy "registerFile:reg_file" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 115
+Warning (10492): VHDL Process Statement warning at registerFile.vhdl(32): signal "data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 32
+Warning (10492): VHDL Process Statement warning at registerFile.vhdl(32): signal "addr_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 32
+Warning (10631): VHDL Process Statement warning at registerFile.vhdl(29): inferring latch(es) for signal or variable "registers", which holds its previous value in one or more paths through the process File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[7][0]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[7][1]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[7][2]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[7][3]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[7][4]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[7][5]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[7][6]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[7][7]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[7][8]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[7][9]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[7][10]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[7][11]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[7][12]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[7][13]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[7][14]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[7][15]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[6][0]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[6][1]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[6][2]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[6][3]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[6][4]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[6][5]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[6][6]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[6][7]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[6][8]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[6][9]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[6][10]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[6][11]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[6][12]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[6][13]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[6][14]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[6][15]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[5][0]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[5][1]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[5][2]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[5][3]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[5][4]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[5][5]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[5][6]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[5][7]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[5][8]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[5][9]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[5][10]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[5][11]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[5][12]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[5][13]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[5][14]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[5][15]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[4][0]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[4][1]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[4][2]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[4][3]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[4][4]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[4][5]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[4][6]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[4][7]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[4][8]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[4][9]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[4][10]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[4][11]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[4][12]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[4][13]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[4][14]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[4][15]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[3][0]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[3][1]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[3][2]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[3][3]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[3][4]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[3][5]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[3][6]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[3][7]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[3][8]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[3][9]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[3][10]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[3][11]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[3][12]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[3][13]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[3][14]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[3][15]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[2][0]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[2][1]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[2][2]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[2][3]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[2][4]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[2][5]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[2][6]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[2][7]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[2][8]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[2][9]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[2][10]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[2][11]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[2][12]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[2][13]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[2][14]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[2][15]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[1][0]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[1][1]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[1][2]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[1][3]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[1][4]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[1][5]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[1][6]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[1][7]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[1][8]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[1][9]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[1][10]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[1][11]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[1][12]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[1][13]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[1][14]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[1][15]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[0][0]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[0][1]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[0][2]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[0][3]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[0][4]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[0][5]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[0][6]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[0][7]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[0][8]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[0][9]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[0][10]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[0][11]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[0][12]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[0][13]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[0][14]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (10041): Inferred latch for "registers[0][15]" at registerFile.vhdl(29) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 29
+Info (12128): Elaborating entity "sign_extender" for hierarchy "sign_extender:se6_ent" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 120
+Info (12128): Elaborating entity "sign_extender" for hierarchy "sign_extender:se9_ent" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 124
+Info (12128): Elaborating entity "left_shift" for hierarchy "left_shift:left7" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 128
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_ent" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 131
+Warning (10492): VHDL Process Statement warning at alu.vhdl(85): signal "add_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 85
+Warning (10492): VHDL Process Statement warning at alu.vhdl(86): signal "add_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 86
+Warning (10492): VHDL Process Statement warning at alu.vhdl(87): signal "add_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 87
+Warning (10492): VHDL Process Statement warning at alu.vhdl(90): signal "adl_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 90
+Warning (10492): VHDL Process Statement warning at alu.vhdl(91): signal "adl_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 91
+Warning (10492): VHDL Process Statement warning at alu.vhdl(92): signal "adl_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 92
+Warning (10492): VHDL Process Statement warning at alu.vhdl(95): signal "dest_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 95
+Warning (10631): VHDL Process Statement warning at alu.vhdl(72): inferring latch(es) for signal or variable "dest", which holds its previous value in one or more paths through the process File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Warning (10631): VHDL Process Statement warning at alu.vhdl(72): inferring latch(es) for signal or variable "dest_temp", which holds its previous value in one or more paths through the process File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Warning (10631): VHDL Process Statement warning at alu.vhdl(72): inferring latch(es) for signal or variable "C", which holds its previous value in one or more paths through the process File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Warning (10631): VHDL Process Statement warning at alu.vhdl(72): inferring latch(es) for signal or variable "Z", which holds its previous value in one or more paths through the process File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "Z" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "C" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[0]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[1]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[2]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[3]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[4]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[5]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[6]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[7]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[8]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[9]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[10]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[11]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[12]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[13]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[14]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[15]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[0]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[1]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[2]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[3]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[4]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[5]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[6]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[7]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[8]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[9]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[10]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[11]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[12]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[13]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[14]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[15]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (12128): Elaborating entity "lsm" for hierarchy "lsm:lsm_hw" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 134
+Warning (10492): VHDL Process Statement warning at lsm.vhdl(36): signal "num" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl Line: 36
+Warning (10492): VHDL Process Statement warning at lsm.vhdl(40): signal "num" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl Line: 40
+Warning (10631): VHDL Process Statement warning at lsm.vhdl(33): inferring latch(es) for signal or variable "num", which holds its previous value in one or more paths through the process File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl Line: 33
+Warning (10631): VHDL Process Statement warning at lsm.vhdl(33): inferring latch(es) for signal or variable "valid", which holds its previous value in one or more paths through the process File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl Line: 33
+Info (10041): Inferred latch for "valid" at lsm.vhdl(33) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl Line: 33
+Info (10041): Inferred latch for "num[0]" at lsm.vhdl(33) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl Line: 33
+Info (10041): Inferred latch for "num[1]" at lsm.vhdl(33) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl Line: 33
+Info (10041): Inferred latch for "num[2]" at lsm.vhdl(33) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl Line: 33
+Info (12128): Elaborating entity "ram_mem" for hierarchy "ram_mem:ram_memory" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 137
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "alu:alu_ent|dest_temp[2]" merged with LATCH primitive "alu:alu_ent|dest_temp[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "alu:alu_ent|dest_temp[3]" merged with LATCH primitive "alu:alu_ent|dest_temp[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "alu:alu_ent|dest_temp[4]" merged with LATCH primitive "alu:alu_ent|dest_temp[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "alu:alu_ent|dest_temp[5]" merged with LATCH primitive "alu:alu_ent|dest_temp[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "alu:alu_ent|dest_temp[6]" merged with LATCH primitive "alu:alu_ent|dest_temp[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "alu:alu_ent|dest_temp[7]" merged with LATCH primitive "alu:alu_ent|dest_temp[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "alu:alu_ent|dest_temp[8]" merged with LATCH primitive "alu:alu_ent|dest_temp[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "alu:alu_ent|dest_temp[9]" merged with LATCH primitive "alu:alu_ent|dest_temp[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "alu:alu_ent|dest_temp[10]" merged with LATCH primitive "alu:alu_ent|dest_temp[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "alu:alu_ent|dest_temp[11]" merged with LATCH primitive "alu:alu_ent|dest_temp[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "alu:alu_ent|dest_temp[12]" merged with LATCH primitive "alu:alu_ent|dest_temp[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "alu:alu_ent|dest_temp[13]" merged with LATCH primitive "alu:alu_ent|dest_temp[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "alu:alu_ent|dest_temp[14]" merged with LATCH primitive "alu:alu_ent|dest_temp[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "alu:alu_ent|dest_temp[15]" merged with LATCH primitive "alu:alu_ent|dest_temp[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "alu:alu_ent|dest_temp[1]" merged with LATCH primitive "alu:alu_ent|dest_temp[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "O[1]" is stuck at GND File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 13
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 12 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock" File: /home/aayush/Desktop/Test/register_file.vhd Line: 18
-    Warning (15610): No output dependent on input pin "clear" File: /home/aayush/Desktop/Test/register_file.vhd Line: 18
-    Warning (15610): No output dependent on input pin "wr_enable" File: /home/aayush/Desktop/Test/register_file.vhd Line: 18
-    Warning (15610): No output dependent on input pin "addr_in[0]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
-    Warning (15610): No output dependent on input pin "addr_in[1]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
-    Warning (15610): No output dependent on input pin "addr_in[2]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
-    Warning (15610): No output dependent on input pin "addr_out1[0]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
-    Warning (15610): No output dependent on input pin "addr_out1[1]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
-    Warning (15610): No output dependent on input pin "addr_out1[2]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
-    Warning (15610): No output dependent on input pin "addr_out2[0]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
-    Warning (15610): No output dependent on input pin "addr_out2[1]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
-    Warning (15610): No output dependent on input pin "addr_out2[2]" File: /home/aayush/Desktop/Test/register_file.vhd Line: 15
-Info (21057): Implemented 60 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 28 input pins
-    Info (21059): Implemented 32 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 144 warnings
-    Info: Peak virtual memory: 483 megabytes
-    Info: Processing ended: Thu Apr 14 12:05:42 2022
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:19
+Warning (21074): Design contains 26 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "T[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[1]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[2]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[3]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[4]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[5]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[6]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[7]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[8]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[9]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[10]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[11]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[13]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[14]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[15]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[19]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[20]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[21]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[22]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[23]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[28]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[29]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[17]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "T[18]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+    Warning (15610): No output dependent on input pin "clock" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 11
+    Warning (15610): No output dependent on input pin "T[12]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 12
+Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 31 input pins
+    Info (21059): Implemented 3 output pins
+    Info (21061): Implemented 10 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
+    Info: Peak virtual memory: 4845 megabytes
+    Info: Processing ended: Sun Apr 17 02:33:48 2022
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:35
 
 

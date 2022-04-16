@@ -6,7 +6,7 @@ use ieee.std_logic_misc.all;
 
 -- Package Declarations
 package elem is
-    component register_file is  --(Aayush) register name is a keyword
+    component reg is  --(Aayush) register name is a keyword
         generic(dataSize: integer := 16);
         port(   clock, wr_enable, clear: in std_logic;
                 din: in std_logic_vector(dataSize-1 downto 0);
@@ -26,14 +26,14 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity register_file is  --(Aayush) register name is a keyword
+entity reg is  --(Aayush) register name is a keyword
     generic(dataSize: integer := 16); --(Aayush) Specified a value for testing
     port(   clock, wr_enable, clear: in std_logic;
             din: in std_logic_vector(dataSize-1 downto 0);
             dout: out std_logic_vector(dataSize-1 downto 0));
 end entity;
 -- To write on a register, set wr_enable pin and the value on din will written on dout on the next rising edge.
-architecture regArch of register_file is -- (Aayush) need to check if reg is the same this as register_file used above
+architecture regArch of reg is -- (Aayush) need to check if reg is the same this as register_file used above
 begin
     process(clock, clear)
     begin -- Check

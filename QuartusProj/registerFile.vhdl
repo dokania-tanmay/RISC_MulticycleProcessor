@@ -13,7 +13,7 @@ entity registerFile is
     );
     port(
             addr_out1, addr_out2, addr_in: in std_logic_vector(integer(ceil(log2(real(numRegs))))-1 downto 0);
-            data_out1, data_out2 : out std_logic_vector(dataSize-1 downto 0);
+            data_out1, data_out2, reg7_out : out std_logic_vector(dataSize-1 downto 0);
             data_in : in std_logic_vector(dataSize-1 downto 0);
             clock, wr_enable, clear: in std_logic
     );
@@ -25,6 +25,7 @@ architecture beh of registerFile is
 begin
     data_out1 <= registers(to_integer(unsigned(addr_out1)));
     data_out2 <= registers(to_integer(unsigned(addr_out2)));
+    reg7_out <= registers(numRegs-1);
     regProcess : process (clock, wr_enable) is
     begin
         if(wr_enable = '1') then
