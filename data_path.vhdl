@@ -79,9 +79,9 @@ architecture flow of data_path is
         
     component ram_mem is
         port(
-        clock: IN   std_logic;
+        cclock: IN   std_logic;
         ram_data_in:  IN   std_logic_vector (15 DOWNTO 0);
-        ram_address:  IN   RANGE INTEGER 0 TO 65535;
+        ram_address:  IN   std_logic_vector(ceil(log2(real(numRegs))))-1 downto 0);
         ram_write_enable:    IN   std_logic;
         ram_data_out:     OUT  std_logic_vector (15 DOWNTO 0));
     -- Define RAM component
@@ -114,7 +114,8 @@ begin
     
     reg_file : registerFile
         generic map(16,8)
-        port map(addr_out1 => rf_add1, addr_out2 => rf_add2, addr_in => rf_addin, data_out1=> rf_dout1, data_out2 => rf_dout2, reg7_out => r7_out, data_in => rf_din, clock => clock, wr_enable => rf_wr, clear => rf_clr);
+        port map(addr_out1 => rf_add1, addr_out2 => rf_add2, addr_in => rf_addin, data_out1=> rf_dout1, 
+                data_out2 => rf_dout2, reg7_out => r7_out, data_in => rf_din, clock => clock, wr_enable => rf_wr, clear => rf_clr);
     
     se6_ent : sign_extender 
         generic map(6,16)
@@ -134,16 +135,16 @@ begin
         port map(inc => lsm_inc, reset => lsm_rst, clock => clock, insReg => ir_dout(7 downto 0), valid => lsm_vld, wr => lsm_wr, addr => ls_add);
     -- RAM to be added
     ram_memory : ram_mem
-        port map();
+        port map(ram_data_out => ram_dout, clock => clock, ram_data_in => ram_din, ram_write_enable => ram_wr, ram_address => ram_addr); 
+    
+        
+
+
+
 
 --- Need to map register clears
 --- Register File has no clear operation yet
     ram_din <= t3_dout when (T(0) = "0") else
                r7_out;
     
-
-
-
-
-
 end flow;
