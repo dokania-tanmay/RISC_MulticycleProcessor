@@ -20,6 +20,7 @@ T(8 downto 7)	: Register File A3 Select
 			00 = IR_data_out(5 downto 3)
 			01 = IR_data_out(11 downto 9)
 			10 = LSM_Add_Out
+			11 = "111"
 T(10 downto 9) : Resgister File D3 select
 			00 = T3_dout_2
 			01 = T4_dout
