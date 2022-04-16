@@ -1,5 +1,14 @@
 T(0) 	: 	RAM Memory Address select
 		0 = T3_dout
 		1 = R7_dout
-T(1)	:	RAM write enable
-T(2)	:	
+T(1)	:	RAM write enable select
+		0 = T(2)
+		1 = LS_write_enable
+T(2)	:	RAM write enable (works if T(1) == 0)
+T(3)	:	RAM Din select
+		0 = T2_dout
+		1 = T3_dout
+T(4)	:	Register File Write Enable Select
+		0 = T(5)
+		1 = LS_write_enable
+T(5)	:	Register File 

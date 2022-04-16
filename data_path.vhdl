@@ -138,10 +138,11 @@ begin
 
 --- Need to map register clears
 --- Register File has no clear operation yet
-    ram_din <= t3_dout when (T(0) = "0") else
-               r7_out;
+    ram_addr <= t3_dout when (T(0) = "0") else
+                r7_out;
     
-
+    ram_din <= t2_dout when (T(2) = "0") else
+               t3_dout;
 
 
 
