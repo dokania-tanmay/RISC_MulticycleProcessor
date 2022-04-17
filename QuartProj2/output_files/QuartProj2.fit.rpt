@@ -1,0 +1,955 @@
+Fitter report for QuartProj2
+Sun Apr 17 18:40:39 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Fitter Resource Usage Summary
+  6. Input Pins
+  7. Output Pins
+  8. I/O Bank Usage
+  9. All Package Pins
+ 10. Output Pin Default Load For Reported TCO
+ 11. I/O Assignment Warnings
+ 12. Fitter Resource Utilization by Entity
+ 13. Delay Chain Summary
+ 14. Fitter Device Options
+ 15. Fitter Messages
+ 16. Fitter Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------+
+; Fitter Summary                                                      ;
++-----------------------+---------------------------------------------+
+; Fitter Status         ; Failed - Sun Apr 17 18:40:39 2022           ;
+; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name         ; QuartProj2                                  ;
+; Top-level Entity Name ; risc_processor                              ;
+; Family                ; MAX V                                       ;
+; Device                ; 5M1270ZT144C5                               ;
+; Timing Models         ; Final                                       ;
+; Total logic elements  ; 0 / 1,270 ( 0 % )                           ;
+; Total pins            ; 130 / 114 ( 114 % )                         ;
+; Total virtual pins    ; 0                                           ;
+; UFM blocks            ; 0 / 1 ( 0 % )                               ;
++-----------------------+---------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                                                      ;
++--------------------------------------------------------------------+--------------------------------+--------------------------------+
+; Option                                                             ; Setting                        ; Default Value                  ;
++--------------------------------------------------------------------+--------------------------------+--------------------------------+
+; Device                                                             ; 5M1270ZT144C5                  ;                                ;
+; Minimum Core Junction Temperature                                  ; 0                              ;                                ;
+; Maximum Core Junction Temperature                                  ; 85                             ;                                ;
+; Fit Attempts to Skip                                               ; 0                              ; 0.0                            ;
+; Use smart compilation                                              ; Off                            ; Off                            ;
+; Enable parallel Assembler and Timing Analyzer during compilation   ; On                             ; On                             ;
+; Enable compact report table                                        ; Off                            ; Off                            ;
+; Router Timing Optimization Level                                   ; Normal                         ; Normal                         ;
+; Placement Effort Multiplier                                        ; 1.0                            ; 1.0                            ;
+; Router Effort Multiplier                                           ; 1.0                            ; 1.0                            ;
+; Always Enable Input Buffers                                        ; Off                            ; Off                            ;
+; Optimize Hold Timing                                               ; IO Paths and Minimum TPD Paths ; IO Paths and Minimum TPD Paths ;
+; Optimize Multi-Corner Timing                                       ; Off                            ; Off                            ;
+; Guarantee I/O Paths Have Zero Hold Time at Fast Corner             ; On                             ; On                             ;
+; Power Optimization During Fitting                                  ; Normal compilation             ; Normal compilation             ;
+; Optimize Timing                                                    ; Normal compilation             ; Normal compilation             ;
+; Optimize Timing for ECOs                                           ; Off                            ; Off                            ;
+; Regenerate Full Fit Report During ECO Compiles                     ; Off                            ; Off                            ;
+; Optimize IOC Register Placement for Timing                         ; Normal                         ; Normal                         ;
+; Limit to One Fitting Attempt                                       ; Off                            ; Off                            ;
+; Final Placement Optimizations                                      ; Automatically                  ; Automatically                  ;
+; Fitter Aggressive Routability Optimizations                        ; Automatically                  ; Automatically                  ;
+; Fitter Initial Placement Seed                                      ; 1                              ; 1                              ;
+; Periphery to Core Placement and Routing Optimization               ; Off                            ; Off                            ;
+; Slow Slew Rate                                                     ; Off                            ; Off                            ;
+; PCI I/O                                                            ; Off                            ; Off                            ;
+; Weak Pull-Up Resistor                                              ; Off                            ; Off                            ;
+; Enable Bus-Hold Circuitry                                          ; Off                            ; Off                            ;
+; Auto Delay Chains                                                  ; On                             ; On                             ;
+; Auto Delay Chains for High Fanout Input Pins                       ; Off                            ; Off                            ;
+; Perform Physical Synthesis for Combinational Logic for Performance ; Off                            ; Off                            ;
+; Perform Register Duplication for Performance                       ; Off                            ; Off                            ;
+; Perform Register Retiming for Performance                          ; Off                            ; Off                            ;
+; Perform Asynchronous Signal Pipelining                             ; Off                            ; Off                            ;
+; Fitter Effort                                                      ; Auto Fit                       ; Auto Fit                       ;
+; Physical Synthesis Effort Level                                    ; Normal                         ; Normal                         ;
+; Logic Cell Insertion - Logic Duplication                           ; Auto                           ; Auto                           ;
+; Auto Register Duplication                                          ; Auto                           ; Auto                           ;
+; Auto Global Clock                                                  ; On                             ; On                             ;
+; Auto Global Register Control Signals                               ; On                             ; On                             ;
+; Force Fitter to Avoid Periphery Placement Warnings                 ; Off                            ; Off                            ;
++--------------------------------------------------------------------+--------------------------------+--------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------+
+; Fitter Resource Usage Summary                                ;
++----------------------------------------+---------------------+
+; Resource                               ; Usage               ;
++----------------------------------------+---------------------+
+; Total logic elements                   ; Not available       ;
+;                                        ;                     ;
+; Total LABs                             ; Not available       ;
+; Logic elements in carry chains         ; 0                   ;
+; Virtual pins                           ; 0                   ;
+; I/O pins                               ; 130 / 114 ( 114 % ) ;
+;     -- Clock pins                      ; 0 / 4 ( 0 % )       ;
+;                                        ;                     ;
+; UFM blocks                             ; 0 / 1 ( 0 % )       ;
+;                                        ;                     ;
+;     -- Total Fixed Point DSP Blocks    ; 0                   ;
+;     -- Total Floating Point DSP Blocks ; 0                   ;
+;                                        ;                     ;
+; Global signals                         ; 0                   ;
+;     -- Global clocks                   ; 0 / 4 ( 0 % )       ;
+; JTAGs                                  ; 0 / 1 ( 0 % )       ;
++----------------------------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                             ;
++-------+------------+----------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
+; Name  ; Pin #      ; I/O Bank ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Location assigned by ; Slow Slew Rate ;
++-------+------------+----------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
+; clock ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; reset ; Unassigned ; --       ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
++-------+------------+----------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                ;
++-----------------+------------+----------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
+; Name            ; Pin #      ; I/O Bank ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
++-----------------+------------+----------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
+; regs_out[0][0]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[0][10] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[0][11] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[0][12] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[0][13] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[0][14] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[0][15] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[0][1]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[0][2]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[0][3]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[0][4]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[0][5]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[0][6]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[0][7]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[0][8]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[0][9]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[1][0]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[1][10] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[1][11] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[1][12] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[1][13] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[1][14] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[1][15] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[1][1]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[1][2]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[1][3]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[1][4]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[1][5]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[1][6]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[1][7]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[1][8]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[1][9]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[2][0]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[2][10] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[2][11] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[2][12] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[2][13] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[2][14] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[2][15] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[2][1]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[2][2]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[2][3]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[2][4]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[2][5]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[2][6]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[2][7]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[2][8]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[2][9]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[3][0]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[3][10] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[3][11] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[3][12] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[3][13] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[3][14] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[3][15] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[3][1]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[3][2]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[3][3]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[3][4]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[3][5]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[3][6]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[3][7]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[3][8]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[3][9]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[4][0]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[4][10] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[4][11] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[4][12] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[4][13] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[4][14] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[4][15] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[4][1]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[4][2]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[4][3]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[4][4]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[4][5]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[4][6]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[4][7]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[4][8]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[4][9]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[5][0]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[5][10] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[5][11] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[5][12] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[5][13] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[5][14] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[5][15] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[5][1]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[5][2]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[5][3]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[5][4]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[5][5]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[5][6]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[5][7]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[5][8]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[5][9]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[6][0]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[6][10] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[6][11] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[6][12] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[6][13] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[6][14] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[6][15] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[6][1]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[6][2]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[6][3]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[6][4]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[6][5]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[6][6]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[6][7]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[6][8]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[6][9]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[7][0]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[7][10] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[7][11] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[7][12] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[7][13] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[7][14] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[7][15] ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[7][1]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[7][2]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[7][3]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[7][4]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[7][5]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[7][6]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[7][7]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[7][8]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; regs_out[7][9]  ; Unassigned ; --       ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; Default          ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
++-----------------+------------+----------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
+
+
++----------------------------------------------------------+
+; I/O Bank Usage                                           ;
++----------+----------------+---------------+--------------+
+; I/O Bank ; Usage          ; VCCIO Voltage ; VREF Voltage ;
++----------+----------------+---------------+--------------+
+; 1        ; 0 / 25 ( 0 % ) ; 3.3V          ; --           ;
+; 2        ; 0 / 30 ( 0 % ) ; 3.3V          ; --           ;
+; 3        ; 0 / 29 ( 0 % ) ; 3.3V          ; --           ;
+; 4        ; 0 / 30 ( 0 % ) ; 3.3V          ; --           ;
+; Unknown  ; 130            ; --            ;              ;
++----------+----------------+---------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                                                             ;
++----------+------------+----------+----------------+--------+--------------+---------+------------+-----------------+----------+--------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage ; I/O Type   ; User Assignment ; Bus Hold ; Weak Pull Up ;
++----------+------------+----------+----------------+--------+--------------+---------+------------+-----------------+----------+--------------+
+; 1        ; 2          ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 2        ; 3          ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 3        ; 5          ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 4        ; 7          ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 5        ; 9          ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 6        ; 10         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 7        ; 14         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 8        ; 15         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 9        ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 10       ;            ;          ; GNDIO          ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 11       ;            ;          ; GNDIO          ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 12       ; 21         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 13       ; 22         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 14       ; 23         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 15       ; 24         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 16       ; 25         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 17       ;            ;          ; GNDINT         ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 18       ; 26         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 19       ;            ;          ; VCCINT         ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
+; 20       ; 27         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 21       ; 28         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 22       ; 29         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 23       ; 30         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 24       ; 31         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 25       ;            ; 1        ; VCCIO1         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 26       ;            ;          ; GNDIO          ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 27       ; 33         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 28       ; 36         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 29       ; 37         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 30       ; 41         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 31       ; 44         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 32       ; 47         ; 1        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 33       ; 50         ; 1        ; #TMS           ; input  ;              ;         ; --         ;                 ; --       ; --           ;
+; 34       ; 51         ; 1        ; #TDI           ; input  ;              ;         ; --         ;                 ; --       ; --           ;
+; 35       ; 52         ; 1        ; #TCK           ; input  ;              ;         ; --         ;                 ; --       ; --           ;
+; 36       ; 53         ; 1        ; #TDO           ; output ;              ;         ; --         ;                 ; --       ; --           ;
+; 37       ; 56         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 38       ; 57         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 39       ; 60         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 40       ; 62         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 41       ; 63         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 42       ; 67         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 43       ; 68         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 44       ; 69         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 45       ; 74         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 46       ;            ; 4        ; VCCIO4         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 47       ;            ;          ; GNDIO          ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 48       ; 75         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 49       ; 76         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 50       ; 77         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 51       ; 78         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 52       ; 79         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 53       ; 80         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 54       ;            ;          ; GNDINT         ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 55       ; 81         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 56       ;            ;          ; VCCINT         ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
+; 57       ; 82         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 58       ; 83         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 59       ; 84         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 60       ; 85         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 61       ; 86         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 62       ; 87         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 63       ; 88         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 64       ;            ; 4        ; VCCIO4         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 65       ;            ;          ; GNDIO          ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 66       ; 91         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 67       ; 92         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 68       ; 95         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 69       ; 98         ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 70       ; 101        ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 71       ; 104        ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 72       ; 107        ; 4        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 73       ; 111        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 74       ; 112        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 75       ; 113        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 76       ; 115        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 77       ; 118        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 78       ;            ;          ; GNDIO          ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 79       ; 123        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 80       ; 124        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 81       ; 127        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 82       ;            ; 3        ; VCCIO3         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 83       ;            ;          ; GNDIO          ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 84       ; 129        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 85       ; 130        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 86       ; 131        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 87       ; 132        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 88       ; 133        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 89       ; 134        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 90       ;            ;          ; VCCINT         ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
+; 91       ; 135        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 92       ;            ;          ; GNDINT         ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 93       ; 136        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 94       ; 137        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 95       ; 138        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 96       ; 139        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 97       ; 140        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 98       ; 141        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 99       ;            ;          ; GNDIO          ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 100      ;            ; 3        ; VCCIO3         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 101      ; 142        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 102      ; 146        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 103      ; 147        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 104      ; 151        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 105      ; 152        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 106      ; 154        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 107      ; 156        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 108      ; 158        ; 3        ; GND*           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 109      ; 164        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 110      ; 165        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 111      ; 166        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 112      ; 171        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 113      ; 174        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 114      ; 177        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 115      ;            ;          ; GNDIO          ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 116      ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 117      ; 180        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 118      ; 181        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 119      ; 182        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 120      ; 183        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 121      ; 184        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 122      ; 185        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 123      ; 186        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 124      ; 187        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 125      ; 188        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 126      ;            ;          ; VCCINT         ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
+; 127      ; 189        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 128      ;            ;          ; GNDINT         ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 129      ; 190        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 130      ; 191        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 131      ; 192        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 132      ; 193        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 133      ; 194        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 134      ; 195        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 135      ;            ;          ; GNDIO          ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 136      ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 137      ; 199        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 138      ; 200        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 139      ; 201        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 140      ; 204        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 141      ; 205        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 142      ; 208        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 143      ; 212        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 144      ; 215        ; 2        ; GND*           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
++----------+------------+----------+----------------+--------+--------------+---------+------------+-----------------+----------+--------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++-------------------------------------------------------------+
+; Output Pin Default Load For Reported TCO                    ;
++----------------------------+-------+------------------------+
+; I/O Standard               ; Load  ; Termination Resistance ;
++----------------------------+-------+------------------------+
+; 3.3-V LVTTL                ; 10 pF ; Not Available          ;
+; 3.3-V LVCMOS               ; 10 pF ; Not Available          ;
+; 2.5 V                      ; 10 pF ; Not Available          ;
+; 1.8 V                      ; 10 pF ; Not Available          ;
+; 1.5 V                      ; 10 pF ; Not Available          ;
+; 3.3V Schmitt Trigger Input ; 10 pF ; Not Available          ;
+; 2.5V Schmitt Trigger Input ; 10 pF ; Not Available          ;
+; 1.2 V                      ; 10 pF ; Not Available          ;
+; LVDS_E_3R                  ; 10 pF ; Not Available          ;
+; RSDS_E_3R                  ; 10 pF ; Not Available          ;
+; 3.3-V PCI                  ; 10 pF ; 25 Ohm (Parallel)      ;
++----------------------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++-----------------------------------------------+
+; I/O Assignment Warnings                       ;
++-----------------+-----------------------------+
+; Pin Name        ; Reason                      ;
++-----------------+-----------------------------+
+; regs_out[7][0]  ; Missing location assignment ;
+; regs_out[7][1]  ; Missing location assignment ;
+; regs_out[7][2]  ; Missing location assignment ;
+; regs_out[7][3]  ; Missing location assignment ;
+; regs_out[7][4]  ; Missing location assignment ;
+; regs_out[7][5]  ; Missing location assignment ;
+; regs_out[7][6]  ; Missing location assignment ;
+; regs_out[7][7]  ; Missing location assignment ;
+; regs_out[7][8]  ; Missing location assignment ;
+; regs_out[7][9]  ; Missing location assignment ;
+; regs_out[7][10] ; Missing location assignment ;
+; regs_out[7][11] ; Missing location assignment ;
+; regs_out[7][12] ; Missing location assignment ;
+; regs_out[7][13] ; Missing location assignment ;
+; regs_out[7][14] ; Missing location assignment ;
+; regs_out[7][15] ; Missing location assignment ;
+; regs_out[6][0]  ; Missing location assignment ;
+; regs_out[6][1]  ; Missing location assignment ;
+; regs_out[6][2]  ; Missing location assignment ;
+; regs_out[6][3]  ; Missing location assignment ;
+; regs_out[6][4]  ; Missing location assignment ;
+; regs_out[6][5]  ; Missing location assignment ;
+; regs_out[6][6]  ; Missing location assignment ;
+; regs_out[6][7]  ; Missing location assignment ;
+; regs_out[6][8]  ; Missing location assignment ;
+; regs_out[6][9]  ; Missing location assignment ;
+; regs_out[6][10] ; Missing location assignment ;
+; regs_out[6][11] ; Missing location assignment ;
+; regs_out[6][12] ; Missing location assignment ;
+; regs_out[6][13] ; Missing location assignment ;
+; regs_out[6][14] ; Missing location assignment ;
+; regs_out[6][15] ; Missing location assignment ;
+; regs_out[5][0]  ; Missing location assignment ;
+; regs_out[5][1]  ; Missing location assignment ;
+; regs_out[5][2]  ; Missing location assignment ;
+; regs_out[5][3]  ; Missing location assignment ;
+; regs_out[5][4]  ; Missing location assignment ;
+; regs_out[5][5]  ; Missing location assignment ;
+; regs_out[5][6]  ; Missing location assignment ;
+; regs_out[5][7]  ; Missing location assignment ;
+; regs_out[5][8]  ; Missing location assignment ;
+; regs_out[5][9]  ; Missing location assignment ;
+; regs_out[5][10] ; Missing location assignment ;
+; regs_out[5][11] ; Missing location assignment ;
+; regs_out[5][12] ; Missing location assignment ;
+; regs_out[5][13] ; Missing location assignment ;
+; regs_out[5][14] ; Missing location assignment ;
+; regs_out[5][15] ; Missing location assignment ;
+; regs_out[4][0]  ; Missing location assignment ;
+; regs_out[4][1]  ; Missing location assignment ;
+; regs_out[4][2]  ; Missing location assignment ;
+; regs_out[4][3]  ; Missing location assignment ;
+; regs_out[4][4]  ; Missing location assignment ;
+; regs_out[4][5]  ; Missing location assignment ;
+; regs_out[4][6]  ; Missing location assignment ;
+; regs_out[4][7]  ; Missing location assignment ;
+; regs_out[4][8]  ; Missing location assignment ;
+; regs_out[4][9]  ; Missing location assignment ;
+; regs_out[4][10] ; Missing location assignment ;
+; regs_out[4][11] ; Missing location assignment ;
+; regs_out[4][12] ; Missing location assignment ;
+; regs_out[4][13] ; Missing location assignment ;
+; regs_out[4][14] ; Missing location assignment ;
+; regs_out[4][15] ; Missing location assignment ;
+; regs_out[3][0]  ; Missing location assignment ;
+; regs_out[3][1]  ; Missing location assignment ;
+; regs_out[3][2]  ; Missing location assignment ;
+; regs_out[3][3]  ; Missing location assignment ;
+; regs_out[3][4]  ; Missing location assignment ;
+; regs_out[3][5]  ; Missing location assignment ;
+; regs_out[3][6]  ; Missing location assignment ;
+; regs_out[3][7]  ; Missing location assignment ;
+; regs_out[3][8]  ; Missing location assignment ;
+; regs_out[3][9]  ; Missing location assignment ;
+; regs_out[3][10] ; Missing location assignment ;
+; regs_out[3][11] ; Missing location assignment ;
+; regs_out[3][12] ; Missing location assignment ;
+; regs_out[3][13] ; Missing location assignment ;
+; regs_out[3][14] ; Missing location assignment ;
+; regs_out[3][15] ; Missing location assignment ;
+; regs_out[2][0]  ; Missing location assignment ;
+; regs_out[2][1]  ; Missing location assignment ;
+; regs_out[2][2]  ; Missing location assignment ;
+; regs_out[2][3]  ; Missing location assignment ;
+; regs_out[2][4]  ; Missing location assignment ;
+; regs_out[2][5]  ; Missing location assignment ;
+; regs_out[2][6]  ; Missing location assignment ;
+; regs_out[2][7]  ; Missing location assignment ;
+; regs_out[2][8]  ; Missing location assignment ;
+; regs_out[2][9]  ; Missing location assignment ;
+; regs_out[2][10] ; Missing location assignment ;
+; regs_out[2][11] ; Missing location assignment ;
+; regs_out[2][12] ; Missing location assignment ;
+; regs_out[2][13] ; Missing location assignment ;
+; regs_out[2][14] ; Missing location assignment ;
+; regs_out[2][15] ; Missing location assignment ;
+; regs_out[1][0]  ; Missing location assignment ;
+; regs_out[1][1]  ; Missing location assignment ;
+; regs_out[1][2]  ; Missing location assignment ;
+; regs_out[1][3]  ; Missing location assignment ;
+; regs_out[1][4]  ; Missing location assignment ;
+; regs_out[1][5]  ; Missing location assignment ;
+; regs_out[1][6]  ; Missing location assignment ;
+; regs_out[1][7]  ; Missing location assignment ;
+; regs_out[1][8]  ; Missing location assignment ;
+; regs_out[1][9]  ; Missing location assignment ;
+; regs_out[1][10] ; Missing location assignment ;
+; regs_out[1][11] ; Missing location assignment ;
+; regs_out[1][12] ; Missing location assignment ;
+; regs_out[1][13] ; Missing location assignment ;
+; regs_out[1][14] ; Missing location assignment ;
+; regs_out[1][15] ; Missing location assignment ;
+; regs_out[0][0]  ; Missing location assignment ;
+; regs_out[0][1]  ; Missing location assignment ;
+; regs_out[0][2]  ; Missing location assignment ;
+; regs_out[0][3]  ; Missing location assignment ;
+; regs_out[0][4]  ; Missing location assignment ;
+; regs_out[0][5]  ; Missing location assignment ;
+; regs_out[0][6]  ; Missing location assignment ;
+; regs_out[0][7]  ; Missing location assignment ;
+; regs_out[0][8]  ; Missing location assignment ;
+; regs_out[0][9]  ; Missing location assignment ;
+; regs_out[0][10] ; Missing location assignment ;
+; regs_out[0][11] ; Missing location assignment ;
+; regs_out[0][12] ; Missing location assignment ;
+; regs_out[0][13] ; Missing location assignment ;
+; regs_out[0][14] ; Missing location assignment ;
+; regs_out[0][15] ; Missing location assignment ;
+; clock           ; Missing location assignment ;
+; reset           ; Missing location assignment ;
++-----------------+-----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                 ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name    ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+----------------+--------------+
+; |risc_processor            ; 0 (0)       ; 0            ; 0          ; 130  ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |risc_processor     ; risc_processor ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------+
+; Delay Chain Summary                        ;
++-----------------+----------+---------------+
+; Name            ; Pin Type ; Pad to Core 0 ;
++-----------------+----------+---------------+
+; regs_out[7][0]  ; Output   ; --            ;
+; regs_out[7][1]  ; Output   ; --            ;
+; regs_out[7][2]  ; Output   ; --            ;
+; regs_out[7][3]  ; Output   ; --            ;
+; regs_out[7][4]  ; Output   ; --            ;
+; regs_out[7][5]  ; Output   ; --            ;
+; regs_out[7][6]  ; Output   ; --            ;
+; regs_out[7][7]  ; Output   ; --            ;
+; regs_out[7][8]  ; Output   ; --            ;
+; regs_out[7][9]  ; Output   ; --            ;
+; regs_out[7][10] ; Output   ; --            ;
+; regs_out[7][11] ; Output   ; --            ;
+; regs_out[7][12] ; Output   ; --            ;
+; regs_out[7][13] ; Output   ; --            ;
+; regs_out[7][14] ; Output   ; --            ;
+; regs_out[7][15] ; Output   ; --            ;
+; regs_out[6][0]  ; Output   ; --            ;
+; regs_out[6][1]  ; Output   ; --            ;
+; regs_out[6][2]  ; Output   ; --            ;
+; regs_out[6][3]  ; Output   ; --            ;
+; regs_out[6][4]  ; Output   ; --            ;
+; regs_out[6][5]  ; Output   ; --            ;
+; regs_out[6][6]  ; Output   ; --            ;
+; regs_out[6][7]  ; Output   ; --            ;
+; regs_out[6][8]  ; Output   ; --            ;
+; regs_out[6][9]  ; Output   ; --            ;
+; regs_out[6][10] ; Output   ; --            ;
+; regs_out[6][11] ; Output   ; --            ;
+; regs_out[6][12] ; Output   ; --            ;
+; regs_out[6][13] ; Output   ; --            ;
+; regs_out[6][14] ; Output   ; --            ;
+; regs_out[6][15] ; Output   ; --            ;
+; regs_out[5][0]  ; Output   ; --            ;
+; regs_out[5][1]  ; Output   ; --            ;
+; regs_out[5][2]  ; Output   ; --            ;
+; regs_out[5][3]  ; Output   ; --            ;
+; regs_out[5][4]  ; Output   ; --            ;
+; regs_out[5][5]  ; Output   ; --            ;
+; regs_out[5][6]  ; Output   ; --            ;
+; regs_out[5][7]  ; Output   ; --            ;
+; regs_out[5][8]  ; Output   ; --            ;
+; regs_out[5][9]  ; Output   ; --            ;
+; regs_out[5][10] ; Output   ; --            ;
+; regs_out[5][11] ; Output   ; --            ;
+; regs_out[5][12] ; Output   ; --            ;
+; regs_out[5][13] ; Output   ; --            ;
+; regs_out[5][14] ; Output   ; --            ;
+; regs_out[5][15] ; Output   ; --            ;
+; regs_out[4][0]  ; Output   ; --            ;
+; regs_out[4][1]  ; Output   ; --            ;
+; regs_out[4][2]  ; Output   ; --            ;
+; regs_out[4][3]  ; Output   ; --            ;
+; regs_out[4][4]  ; Output   ; --            ;
+; regs_out[4][5]  ; Output   ; --            ;
+; regs_out[4][6]  ; Output   ; --            ;
+; regs_out[4][7]  ; Output   ; --            ;
+; regs_out[4][8]  ; Output   ; --            ;
+; regs_out[4][9]  ; Output   ; --            ;
+; regs_out[4][10] ; Output   ; --            ;
+; regs_out[4][11] ; Output   ; --            ;
+; regs_out[4][12] ; Output   ; --            ;
+; regs_out[4][13] ; Output   ; --            ;
+; regs_out[4][14] ; Output   ; --            ;
+; regs_out[4][15] ; Output   ; --            ;
+; regs_out[3][0]  ; Output   ; --            ;
+; regs_out[3][1]  ; Output   ; --            ;
+; regs_out[3][2]  ; Output   ; --            ;
+; regs_out[3][3]  ; Output   ; --            ;
+; regs_out[3][4]  ; Output   ; --            ;
+; regs_out[3][5]  ; Output   ; --            ;
+; regs_out[3][6]  ; Output   ; --            ;
+; regs_out[3][7]  ; Output   ; --            ;
+; regs_out[3][8]  ; Output   ; --            ;
+; regs_out[3][9]  ; Output   ; --            ;
+; regs_out[3][10] ; Output   ; --            ;
+; regs_out[3][11] ; Output   ; --            ;
+; regs_out[3][12] ; Output   ; --            ;
+; regs_out[3][13] ; Output   ; --            ;
+; regs_out[3][14] ; Output   ; --            ;
+; regs_out[3][15] ; Output   ; --            ;
+; regs_out[2][0]  ; Output   ; --            ;
+; regs_out[2][1]  ; Output   ; --            ;
+; regs_out[2][2]  ; Output   ; --            ;
+; regs_out[2][3]  ; Output   ; --            ;
+; regs_out[2][4]  ; Output   ; --            ;
+; regs_out[2][5]  ; Output   ; --            ;
+; regs_out[2][6]  ; Output   ; --            ;
+; regs_out[2][7]  ; Output   ; --            ;
+; regs_out[2][8]  ; Output   ; --            ;
+; regs_out[2][9]  ; Output   ; --            ;
+; regs_out[2][10] ; Output   ; --            ;
+; regs_out[2][11] ; Output   ; --            ;
+; regs_out[2][12] ; Output   ; --            ;
+; regs_out[2][13] ; Output   ; --            ;
+; regs_out[2][14] ; Output   ; --            ;
+; regs_out[2][15] ; Output   ; --            ;
+; regs_out[1][0]  ; Output   ; --            ;
+; regs_out[1][1]  ; Output   ; --            ;
+; regs_out[1][2]  ; Output   ; --            ;
+; regs_out[1][3]  ; Output   ; --            ;
+; regs_out[1][4]  ; Output   ; --            ;
+; regs_out[1][5]  ; Output   ; --            ;
+; regs_out[1][6]  ; Output   ; --            ;
+; regs_out[1][7]  ; Output   ; --            ;
+; regs_out[1][8]  ; Output   ; --            ;
+; regs_out[1][9]  ; Output   ; --            ;
+; regs_out[1][10] ; Output   ; --            ;
+; regs_out[1][11] ; Output   ; --            ;
+; regs_out[1][12] ; Output   ; --            ;
+; regs_out[1][13] ; Output   ; --            ;
+; regs_out[1][14] ; Output   ; --            ;
+; regs_out[1][15] ; Output   ; --            ;
+; regs_out[0][0]  ; Output   ; --            ;
+; regs_out[0][1]  ; Output   ; --            ;
+; regs_out[0][2]  ; Output   ; --            ;
+; regs_out[0][3]  ; Output   ; --            ;
+; regs_out[0][4]  ; Output   ; --            ;
+; regs_out[0][5]  ; Output   ; --            ;
+; regs_out[0][6]  ; Output   ; --            ;
+; regs_out[0][7]  ; Output   ; --            ;
+; regs_out[0][8]  ; Output   ; --            ;
+; regs_out[0][9]  ; Output   ; --            ;
+; regs_out[0][10] ; Output   ; --            ;
+; regs_out[0][11] ; Output   ; --            ;
+; regs_out[0][12] ; Output   ; --            ;
+; regs_out[0][13] ; Output   ; --            ;
+; regs_out[0][14] ; Output   ; --            ;
+; regs_out[0][15] ; Output   ; --            ;
+; clock           ; Input    ; --            ;
+; reset           ; Input    ; --            ;
++-----------------+----------+---------------+
+
+
++-------------------------------------------------------------------------+
+; Fitter Device Options                                                   ;
++----------------------------------------------+--------------------------+
+; Option                                       ; Setting                  ;
++----------------------------------------------+--------------------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off                      ;
+; Enable device-wide reset (DEV_CLRn)          ; Off                      ;
+; Enable device-wide output enable (DEV_OE)    ; Off                      ;
+; Enable INIT_DONE output                      ; Off                      ;
+; Configuration scheme                         ; Passive Serial           ;
+; Reserve all unused pins                      ; As output driving ground ;
++----------------------------------------------+--------------------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (119006): Selected device 5M1270ZT144C5 for design "QuartProj2"
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
+Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
+    Info (176445): Device 5M240ZT144C5 is compatible
+    Info (176445): Device 5M240ZT144I5 is compatible
+    Info (176445): Device 5M570ZT144C5 is compatible
+    Info (176445): Device 5M570ZT144I5 is compatible
+    Info (176445): Device 5M1270ZT144I5 is compatible
+Critical Warning (169085): No exact pin location assignment(s) for 130 pins of 130 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'QuartProj2.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332144): No user constrained base clocks found in the design
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332128): Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
+    Info (332127): Assuming a default timing requirement
+Info (332159): No clocks to report
+Warning (332068): No clocks defined in design.
+Info (186079): Completed User Assigned Global Signals Promotion Operation
+Error (186219): Project requires 130 general-purpose I/O pins and 0 reserved I/O pins, but target device can contain only 114 general-purpose I/O pins
+Info (186079): Completed Auto Global Promotion Operation
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Error (171000): Can't fit design in device
+Warning (169069): Following 124 pins have nothing, GND, or VCC driving datain port -- changes to this connectivity may change fitting results
+    Info (169070): Pin regs_out[7][4] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[7][5] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[7][6] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[7][7] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[7][8] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[7][9] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[7][10] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[7][11] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[7][12] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[7][13] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[7][14] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[7][15] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[6][0] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[6][1] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[6][2] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[6][3] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[6][4] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[6][5] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[6][6] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[6][7] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[6][8] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[6][9] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[6][10] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[6][11] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[6][12] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[6][13] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[6][14] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[6][15] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[5][0] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[5][1] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[5][2] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[5][3] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[5][4] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[5][5] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[5][6] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[5][7] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[5][8] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[5][9] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[5][10] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[5][11] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[5][12] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[5][13] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[5][14] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[5][15] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[4][0] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[4][1] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[4][2] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[4][3] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[4][4] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[4][5] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[4][6] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[4][7] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[4][8] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[4][9] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[4][10] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[4][11] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[4][12] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[4][13] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[4][14] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[4][15] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[3][0] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[3][1] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[3][2] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[3][3] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[3][4] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[3][5] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[3][6] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[3][7] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[3][8] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[3][9] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[3][10] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[3][11] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[3][12] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[3][13] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[3][14] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[3][15] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[2][0] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[2][1] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[2][2] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[2][3] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[2][4] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[2][5] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[2][6] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[2][7] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[2][8] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[2][9] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[2][10] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[2][11] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[2][12] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[2][13] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[2][14] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[2][15] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[1][0] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[1][1] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[1][2] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[1][3] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[1][4] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[1][5] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[1][6] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[1][7] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[1][8] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[1][9] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[1][10] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[1][11] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[1][12] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[1][13] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[1][14] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[1][15] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[0][0] has VCC driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[0][1] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[0][2] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[0][3] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[0][4] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[0][5] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[0][6] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[0][7] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[0][8] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[0][9] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[0][10] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[0][11] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[0][12] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[0][13] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[0][14] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+    Info (169070): Pin regs_out[0][15] has GND driving its datain port File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/risc_processor.vhdl Line: 12
+Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
+Info (144001): Generated suppressed messages file D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/output_files/QuartProj2.fit.smsg
+Error: Quartus Prime Fitter was unsuccessful. 2 errors, 8 warnings
+    Error: Peak virtual memory: 4890 megabytes
+    Error: Processing ended: Sun Apr 17 18:40:39 2022
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:01
+
+
++----------------------------+
+; Fitter Suppressed Messages ;
++----------------------------+
+The suppressed messages can be found in D:/Files/EE309/project/RISC_MulticycleProcessor/QuartProj2/output_files/QuartProj2.fit.smsg.
+
+
