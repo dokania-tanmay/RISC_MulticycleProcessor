@@ -1,6 +1,10 @@
 library ieee;
-use ieee.numeric_std.all;
 use ieee.std_logic_1164.all;
+use ieee.math_real.all;
+use ieee.numeric_std.all;
+
+library work;
+use work.elem.all;
 
 entity state_transition is
 	port(
@@ -43,9 +47,9 @@ begin
 	          when S1 => 
 	              
 		      T(13) <= '1';
-		      T(15) <= '0';
+		      T(15) <= '0';  
 		      T(16) <= '1';
-		      T(19) <= '1';
+		      T(19) <= '1';  
 		      T(18 downto 17) <= "00";
 		      T(27 downto 26) <= "10";
 		      
@@ -65,7 +69,7 @@ begin
 		      
 		  when S4 =>
 		      T(13) <= '1';
-		      T(15) <= '0';
+		      T(15) <= '0';  
 		      T(16) <= '1';
 		      T(19) <= '1';
 		      T(18 downto 17) <= "11";
@@ -92,6 +96,7 @@ begin
 		      T(13) <= '1'; 
 		      T(19) <= '0'; 
 		      T(24) <= '1'; 
+		      T(15) <= '0';
 		      
 	          when S21 =>
 		      T(21 downto 20) <= "01";
@@ -181,10 +186,11 @@ begin
 
 		      
 		  when SL3 =>
-		  
+		      T(13) <= '1';
+		      T(15) <= '1';
 		   
 		      
-		  -- SL3 left and need to correct T(8 downto 7) wherever required
+		  
 		      
 		  
 	   end case;
@@ -307,9 +313,16 @@ begin
 	              case opcode is when "0000" => NS <= S8;
 	              when "1000" => NS <= S3;
 	              when "0101" => NS <= S9;
-	              when "0111" => NS <= SL3;
+	              when "0111" => NS <= S21;
 					  when others =>
-	          end case;	
+	          end case;
+	          
+	          when S21 =>
+	              case opcode is when "1100" => NS <= S22;
+	              when "0111" => NS <= SL3;
+
+		      when others =>
+	          end case;
 				 
 	          when S8 =>  NS <= S0;
 	          when S9 =>  NS <= S0;
@@ -318,8 +331,7 @@ begin
 	          when SU => NS <= S0;
 	          when SK => NS <= S0;
 	          when SL3 =>  NS <= SL4;
-	          when S21 =>  NS <= S22;
-	          when S23 => NS <= S24;
+                  when S23 => NS <= S24;
 	          when S24 => NS <= S25;
 	          when S2p => NS <= S0;	          	          
 	          when S20 =>

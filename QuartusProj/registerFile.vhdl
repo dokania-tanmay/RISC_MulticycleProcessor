@@ -21,6 +21,7 @@ entity registerFile is
 end entity;
 --- Writing is done at clock edges and changes to wr_enable signal
 architecture beh of registerFile is
+    type regBank is array(0 to numRegs-1) of std_logic_vector(dataSize-1 downto 0);
     signal registers : regBank;
 begin
     data_out1 <= registers(to_integer(unsigned(addr_out1)));

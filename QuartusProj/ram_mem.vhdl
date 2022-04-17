@@ -19,14 +19,14 @@ ENTITY ram_mem IS
 END ram_mem;
 
 ARCHITECTURE beh OF ram_mem IS
-   TYPE mem IS ARRAY(0 TO 31) OF std_logic_vector(15 DOWNTO 0);
+   TYPE mem IS ARRAY(0 TO 65535) OF std_logic_vector(15 DOWNTO 0);
    SIGNAL ram_block : mem;
 BEGIN
    PROCESS (clock)
    BEGIN
       IF (clock'event AND clock = '1') THEN
          IF (ram_write_enable = '1') THEN
-            ram_block(to_integer(unsigned(ram_address(4 downto 0)))) <= ram_data_in;
+            ram_block(to_integer(unsigned(ram_address))) <= ram_data_in;
          END IF;
       END IF;
 		 if(reset = '1') then

@@ -44,17 +44,16 @@ architecture flow of data_path is
     end component;
 
     component registerFile is
-    generic(
-            dataSize: integer := 16;
-            numRegs: integer := 8
-    );
-    port(
-            addr_out1, addr_out2, addr_in: in std_logic_vector(integer(ceil(log2(real(numRegs))))-1 downto 0);
-            data_out1, data_out2, reg7_out : out std_logic_vector(dataSize-1 downto 0);
-            data_in : in std_logic_vector(dataSize-1 downto 0);
-            clock, wr_enable, clear: in std_logic;
-            regbank_out : out regBank
-    );
+        generic(
+                dataSize: integer := 16;
+                numRegs: integer := 8
+        );
+        port(
+                addr_out1, addr_out2, addr_in: in std_logic_vector(integer(ceil(log2(real(numRegs))))-1 downto 0);
+                data_out1, data_out2, reg7_out : out std_logic_vector(dataSize-1 downto 0);
+                data_in : in std_logic_vector(dataSize-1 downto 0);
+                clock, wr_enable, clear: in std_logic
+        );
     end component;
 
     component alu is
