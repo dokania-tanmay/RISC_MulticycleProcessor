@@ -1,13 +1,13 @@
-Fitter Status : Successful - Sun Apr 17 15:46:06 2022
+Fitter Status : Successful - Sun Apr 17 22:40:38 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Risc_Multicycle_Quartus
-Top-level Entity Name : data_path
+Top-level Entity Name : risc_processor
 Family : Cyclone V
 Device : 5CGXFC7C7F23C8
 Timing Models : Final
-Logic utilization (in ALMs) : 387 / 56,480 ( < 1 % )
-Total registers : 544
-Total pins : 168 / 268 ( 63 % )
+Logic utilization (in ALMs) : 1 / 56,480 ( < 1 % )
+Total registers : 0
+Total pins : 130 / 268 ( 49 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 7,024,640 ( 0 % )
 Total RAM Blocks : 0 / 686 ( 0 % )
