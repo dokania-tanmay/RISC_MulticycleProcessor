@@ -52,10 +52,10 @@ T(18 downto 17) : ALU_B Select
 					01 = SE6_dout
 					10 = SE_9_dout
 					11 = T2_dout
-T(19) : T3_Din_select
-		0 = RF_d1
-		1 = ALU_C
-
+T(15) & T(19) : T3_Din_select
+		00 = RF_d1
+		01 = ALU_C
+		10 = t4_dout
 T(21 downto 20) : T1 din select
 		00 = RF_d1
 		01 = T3_dout
