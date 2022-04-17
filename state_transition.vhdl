@@ -7,7 +7,8 @@ entity state_transition is
 		reset, clk: in std_logic; 
 		opcode: in std_logic_vector(3 downto 0);
                 T: out std_logic_vector(25 downto 0);
-		C, Z, valid: in std_logic);
+		C, Z, valid: in std_logic
+		condition: in std_logic_vector (1 downto 0)) ; 
 end entity;
 
 architecture state_definition of state_transition is
@@ -47,7 +48,7 @@ begin
 		      T(27 downto 26) <= "10";
 		      
 		  when S2 =>
-		     
+		      T(29) <= '0';
 		      T(8 downto 7) <= "11";
 		      T(10 downto 9) <= "00";
 		      
@@ -68,6 +69,7 @@ begin
 		      T(18 downto 17) <= "11";
 		      
 		  when S5 =>
+		      T(29) <= '0';
 		      T(8 downto 7) <= "00";
 		      T(10 downto 9) <= "00";
 		      T(5) <= '1';
@@ -97,6 +99,7 @@ begin
 		      T(14) <= '1';
 		  
 	          when S22 =>
+		      T(29) <= '0';
 		      T(27 downto 26) <= "10";
 		      T(18 downto 17) <= "00";
 		      T(10 downto 9) <= "01";
@@ -129,20 +132,22 @@ begin
 		      T(19) <= '1';
 		      
 		  when SU =>
+		      T(29) <= '0';
 		      T(10 downto 9) <= "10";
 		      T (8 downto 7) <= "01";
 		      
 		  when SK =>
 		   
-		      T(8 downto 7)  <= "11"
-		      T(29) <= "0";
-		      T(10 downto 9) <= "01"
-		      T(14) <= "1";
+		      T(8 downto 7)  <= "11";
+		      T(29) <= '0';
+		      T(10 downto 9) <= "01";
+
 		      
 		  when S8 =>
-		      T(5) <= "1";
+		      T(29) <= '1';
+		      T(5) <= '1';
 		      T(10 downto 9) <= "00";
-		      T(8 downto 7) <= "11";
+		      T(8 downto 7) <= "00";
 		      
 		  when S9 =>
 		  
@@ -151,26 +156,27 @@ begin
 		      T(0) <= '0';
 		      
 		  when S2p =>
-		     
+		      T(29) <= '0';
 		      T(8 downto 7) <= "11";
 		      T(10 downto 9) <= "00";
 		      
 		  when S11 =>
-		      T(29) <= "0";
+		      T(29) <= '0';
 		      T(8 downto 7) <= "11";
 		      T(10 downto 9) <= "11";
+
 		      
 		  when S13 =>
-		      T(15) <= "0";
+		      T(15) <= '0';
 		      T(18 downto 17) <= "10";
-		      T(19) <= "1";
-		      T(11) <= "1";
+		      T(19) <= '1';
+		      T(13) <= '1';
 		  
 		  when SL4 =>
-		      T(29) <= "0";
+		      T(29) <= '0';
 		      T(8 downto 7) <= "01";
 		      T(10 downto 9) <= "00";
-		      T(13) <= "1";
+
 		      
 		  when SL3 =>
 		  
@@ -179,7 +185,8 @@ begin
 		  -- SL3 left and need to correct T(8 downto 7) wherever required
 		      
 		  
-	              
+	   end case;
+	end process;
 	
 	
 	
@@ -194,7 +201,7 @@ begin
 	
 	
 	state_transition_table:
-	process(CS, opcode, valid, C, Z, valid, reset)
+	process(CS, opcode, C, Z, valid, reset, condition) 
 	begin	         
 
 	      
@@ -211,115 +218,144 @@ begin
 	           when S1 => NS <= S2;
 	           
 	           when S2 =>
-	              case opcode is when "00000" => NS <= S3;
-	              case opcode is when "00011" => NS <= S3;
-	              case opcode is when "00100" => NS <= S3;
-	              case opcode is when "00101" => NS <= S3;
-	              case opcode is when "00001" => 
-	                      if (C ='1') then NS <= S3;
+	              case opcode is when "0001" => 
+	                      if (condition ="00") then NS <= S3;
 	                      
 	                      end if;
-	              case opcode is when "00110" =>
-	                      if (C = '1') then NS <= S3;
+	              case opcode is when "0001" => 
+	                      if (condition ="11") then NS <= S3;
+	                      
+	                      end if;    
+	              case opcode is when "0000" => NS <= S3;
+	              case opcode is when "0010" => 
+	                      if (condition ="00") then NS <= S3;
 	                      
 	                      end if;
-	              case opcode is when "00010" =>  
-	                      if (Z = '1') then NS <= S3;
+	              case opcode is when "0001" => 
+	                      if (C ='1' ) and (condition ="10")  then NS <= S3;
+	                      
+	                      end if;
+	              case opcode is when "0010" =>
+	                      if (C = '1') and (condition ="10") then  NS <= S3;
+	                      
+	                      end if;
+	              case opcode is when "0001" =>  
+	                      if (Z = '1') and (condition ="01") then NS <= S3;
 	                      
 	                      end if;	                      	                      
-	              case opcode is when "00111" =>  
-	                      if (Z = '1') then NS <= S3;
+	              case opcode is when "0010" =>  
+	                      if (Z = '1') and (condition ="01") then NS <= S3;
 	                      
 	                      end if;
-	              case opcode is when "01111" => NS <= S3; 
-	              case opcode is when "01110" => NS <= S3; 
-	              case opcode is when "01101" => NS <= S7; 
-	              case opcode is when "01011" => NS <= S20;
-	              case opcode is when "01100" => NS <= S20;
-	              case opcode is when "00001" => 
-	                      if (C = '0') then NS <= S0;
+	              case opcode is when "1010" => NS <= SL4; 
+	              case opcode is when "1001" => NS <= SL4; 
+	              case opcode is when "1000" => NS <= S7; 
+	              case opcode is when "1100" => NS <= S20;
+	              case opcode is when "1101" => NS <= S20;
+	              case opcode is when "1011" => NS <= S3;
+	              case opcode is when "0001" => 
+	                      if (C = '0') and (condition ="10") then NS <= S0;
 	                      
 	                      end if;
-	              case opcode is when "00110" =>
-	                      if (C = '0') then NS <= S0;
+	              case opcode is when "0010" =>
+	                      if (C = '0') and (condition ="10") then NS <= S0;
 	                      
 	                      end if;
-	              case opcode is when "00010" =>  
-	                      if (Z = '0') then NS <= S0;
+	              case opcode is when "0001" =>  
+	                      if (Z = '0') and (condition ="01") then NS <= S0;
 	                      
 	                      end if;	                      	                      
-	              case opcode is when "00111" =>  
-	                      if (Z = '0') then NS <= S0;
+	              case opcode is when "0010" =>  
+	                      if (Z = '0') and (condition ="01") then NS <= S0;
 	                      
 	                      end if;
-                 case opcode is when "01000" => NS <= SU; 
+                 case opcode is when "0100" => NS <= SU; 
 	              
 	          end case;
 	          
 	          when S3 =>
-	              case opcode is when "10000" => NS <= S13;
-	              case opcode is when "01001" => NS <= S7;
-	              case opcode is when "01010" => NS <= S7;
-	              case opcode is when "00100" => NS <= S7;
-	              case opcode is when "01101" =>  
+	              case opcode is when "1011" => NS <= S13;
+	              case opcode is when "0111" => NS <= S7;
+	              case opcode is when "0101" => NS <= S7;
+	              case opcode is when "0000" => NS <= S7;
+	              case opcode is when "1010" => NS <= S11;
+	              case opcode is when "1000" =>  
 	                      if (Z = '0') then NS <= S0;
 	                      
 	                      end if;
-	              case opcode is when "01101" =>  
+	              case opcode is when "1000" =>  
 	                      if (Z = '1') then NS <= SK;
 	                      
 	                      end if;
-	              case opcode is when "00001" => 
-	                      if (C = '1') then NS <= S4;
+	              case opcode is when "0001" => 
+	                      if (C = '1') and (condition ="10") then NS <= S4;
 	                      
 	                      end if;
-	              case opcode is when "00110" =>
-	                      if (C = '1') then NS <= S4;
+	              case opcode is when "0010" =>
+	                      if (C = '1') and (condition ="10") then NS <= S4;
 	                      
 	                      end if;
-	              case opcode is when "00010" =>  
-	                      if (Z = '1') then NS <= S4;
+	              case opcode is when "0001" =>  
+	                      if (Z = '1') and (condition ="01") then NS <= S4;
 	                      
 	                      end if;	                      	                      
-	              case opcode is when "00111" =>  
-	                      if (Z = '1') then NS <= S4;
+	              case opcode is when "0010" =>  
+	                      if (Z = '1') and (condition ="01") then NS <= S4;
 	                      
 	                      end if;
-	              case opcode is when "00000" => NS <= S4;	                
-	              case opcode is when "00011" => NS <= S4;
-	              case opcode is when "00101" => NS <= S4;
+	              case opcode is when "0001" => 
+	                      if (condition ="00") then NS <= S4;
+	                      
+	                      end if;
+	              case opcode is when "0001" => 
+	                      if (condition ="11") then NS <= S4;
+	                      
+	                      end if;
+	              case opcode is when "0010" => 
+	                      if (condition ="00") then NS <= S4;
+	                      
+	                      end if;
               end case;					  
 	          when S4 =>
 
-	              case opcode is when "00001" => 
-	                      if (C = '1') then NS <= S5;
+	              case opcode is when "0001" => 
+	                      if (C = '1') and (condition ="10") then NS <= S5;
 	                      
 	                      end if;
-	              case opcode is when "00110" =>
-	                      if (C = '1') then NS <= S5;
+	              case opcode is when "0010" =>
+	                      if (C = '1') and (condition ="10") then NS <= S5;
 	                      
 	                      end if;
-	              case opcode is when "00010" =>  
-	                      if (Z = '1') then NS <= S5;
+	              case opcode is when "0001" =>  
+	                      if (Z = '1') and (condition ="01") then NS <= S5;
 	                      
 	                      end if;	                      	                      
-	              case opcode is when "00111" =>  
-	                      if (Z = '1') then NS <= S5;
+	              case opcode is when "0010" =>  
+	                      if (Z = '1') and (condition ="01") then NS <= S5;
 	                      
 	                      end if;
-	              case opcode is when "00000" => NS <= S5;	                
-	              case opcode is when "00011" => NS <= S5;
-	              case opcode is when "00101" => NS <= S5;
+	              case opcode is when "0001" => 
+	                      if (condition ="00") then NS <= S5;
+	                      
+	                      end if;
+	              case opcode is when "0001" => 
+	                      if (condition ="11") then NS <= S5;
+	                      
+	                      end if;
+	              case opcode is when "0010" => 
+	                      if (condition ="00") then NS <= S5;
+	                      
+	                      end if;
 	              end case;	
 	              -- recheck S4-S11 case 
 	              
 	          when S5 =>  NS <= S0;
 	          
 	          when S7 =>
-	              case opcode is when "00100" => NS <= S8;
-	              case opcode is when "01101" => NS <= S3;
-	              case opcode is when "01010" => NS <= S9;
-	              case opcode is when "01001" => NS <= SL3;
+	              case opcode is when "0000" => NS <= S8;
+	              case opcode is when "1000" => NS <= S3;
+	              case opcode is when "0101" => NS <= S9;
+	              case opcode is when "0111" => NS <= SL3;
 	          end case;	
 				 
 	          when S8 =>  NS <= S0;
@@ -334,21 +370,21 @@ begin
 	          when S24 => NS <= S25;
 	          when S2p => NS <= S0;	          	          
 	          when S20 =>
-	              case opcode is when "01011" => NS <= S21;
-	              case opcode is when "01100" => NS <= S23;
+	              case opcode is when "1100" => NS <= S21;
+	              case opcode is when "1101" => NS <= S23;
                 end case;		              
 	          when SL4 =>
-	              case opcode is when "01110" => NS <= S11;
-	              case opcode is when "01001" => NS <= S0;
-	              case opcode is when "01111" => NS <= S13;
+	              case opcode is when "1010" => NS <= S3;
+	              case opcode is when "0111" => NS <= S0;
+	              case opcode is when "1001" => NS <= S13;
                end case;	
 	          when S22 =>
 
-	              case opcode is when "01011" => 
+	              case opcode is when "1100" => 
 	                      if (valid = '1') then NS <= S21;
 	                      
 	                      end if;
-	              case opcode is when "01011" =>
+	              case opcode is when "1100" =>
 	                      if (valid = '1') then NS <= S0;
 	                      
 	                      end if;
@@ -356,11 +392,11 @@ begin
 						 
 	          when S25 =>
 
-	              case opcode is when "01100" => 
+	              case opcode is when "1101" => 
 	                      if (valid = '1') then NS <= S23;
 	                      
 	                      end if;
-	              case opcode is when "01100" =>
+	              case opcode is when "1101" =>
 	                      if (valid = '1') then NS <= S0;
 	                      
 	                      end if;
