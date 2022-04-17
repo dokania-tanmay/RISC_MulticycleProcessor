@@ -66,5 +66,3 @@ begin
         outp(i) <= inp(inSize-1);
     end generate;
 end beh;
-
--- Left Shift

@@ -26,10 +26,20 @@ begin
     data_out1 <= registers(to_integer(unsigned(addr_out1)));
     data_out2 <= registers(to_integer(unsigned(addr_out2)));
     reg7_out <= registers(numRegs-1);
-    regProcess : process (clock, wr_enable) is
+    regProcess : process (clock, wr_enable, clear) is
     begin
         if(wr_enable = '1') then
             registers(to_integer(unsigned(addr_in))) <= data_in;
+        end if;
+		  if(clear = '1') then
+            registers(0) <= (others => '0');
+            registers(1) <= (others => '0');
+            registers(2) <= (others => '0');
+            registers(3) <= (others => '0');
+            registers(4) <= (others => '0');
+            registers(5) <= (others => '0');
+            registers(6) <= (others => '0');
+            registers(7) <= (others => '0');
         end if;
     end process;
 end beh;

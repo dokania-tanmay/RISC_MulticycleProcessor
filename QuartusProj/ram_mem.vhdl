@@ -12,7 +12,9 @@ ENTITY ram_mem IS
     ram_data_in:  IN   std_logic_vector (15 DOWNTO 0);
     ram_address:  IN   std_logic_vector(15 downto 0);
     ram_write_enable:    IN   std_logic;
-    ram_data_out:     OUT  std_logic_vector (15 DOWNTO 0));
+    ram_data_out:     OUT  std_logic_vector (15 DOWNTO 0);
+	 reset : in std_logic
+	 );
    
 END ram_mem;
 
@@ -27,6 +29,18 @@ BEGIN
             ram_block(to_integer(unsigned(ram_address))) <= ram_data_in;
          END IF;
       END IF;
+		 if(reset = '1') then
+            ram_block(0) <= (others => '0');
+            ram_block(1) <= (others => '0');
+            ram_block(2) <= (others => '0');
+            ram_block(3) <= (others => '0');
+            ram_block(4) <= (others => '0');
+            ram_block(5) <= (others => '0');
+            ram_block(6) <= (others => '0');
+            ram_block(7) <= (others => '0');
+        end if;
    END PROCESS;
+	
    ram_data_out <= ram_block(to_integer(unsigned(ram_address)));
+	-- The instructions can be written below and upon reset, the following instructions will be loaded to RAM.
 END beh;

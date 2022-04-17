@@ -6,9 +6,14 @@ entity state_transition is
 	port(
 		reset, clk: in std_logic; 
 		opcode: in std_logic_vector(3 downto 0);
+<<<<<<< Updated upstream
                 T: out std_logic_vector(25 downto 0);
 		C, Z, valid: in std_logic
 		condition: in std_logic_vector (1 downto 0)) ; 
+=======
+                T: out std_logic_vector(29 downto 0);
+		C, Z, valid: in std_logic);
+>>>>>>> Stashed changes
 end entity;
 
 architecture state_definition of state_transition is

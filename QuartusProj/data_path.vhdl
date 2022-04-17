@@ -10,7 +10,9 @@ entity data_path is
   port (
     clock : in std_logic;
     T : in std_logic_vector(29 downto 0);
-    O: out std_logic_vector(2 downto 0)
+    flags: out std_logic_vector(2 downto 0);
+	 op_code: out std_logic_vector(3 downto 0);
+	 condition: out std_logic_vector(1 downto 0)
   ) ;
 end data_path;
 
@@ -191,9 +193,12 @@ begin
     alu_sel <= T(27 downto 26);
     rf_add1 <= ir_dout(11 downto 9);
 
-    O(2) <= Z;
-    O(1) <= C;
-    O(0) <= lsm_vld;
+    flags(2) <= Z;
+    flags(1) <= C;
+    flags(0) <= lsm_vld;
+	 
+	 op_code <= ir_dout(15 downto 12);
+	 condition <= ir_dout(1 downto 0);
     
 
 end flow;
