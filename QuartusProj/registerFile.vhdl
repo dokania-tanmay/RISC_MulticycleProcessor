@@ -15,17 +15,18 @@ entity registerFile is
             addr_out1, addr_out2, addr_in: in std_logic_vector(integer(ceil(log2(real(numRegs))))-1 downto 0);
             data_out1, data_out2, reg7_out : out std_logic_vector(dataSize-1 downto 0);
             data_in : in std_logic_vector(dataSize-1 downto 0);
-            clock, wr_enable, clear: in std_logic
+            clock, wr_enable, clear: in std_logic;
+            regbank_out : out regBank
     );
 end entity;
 --- Writing is done at clock edges and changes to wr_enable signal
 architecture beh of registerFile is
-    type regBank is array(0 to numRegs-1) of std_logic_vector(dataSize-1 downto 0);
     signal registers : regBank;
 begin
     data_out1 <= registers(to_integer(unsigned(addr_out1)));
     data_out2 <= registers(to_integer(unsigned(addr_out2)));
     reg7_out <= registers(numRegs-1);
+    regbank_out <= registers;
     regProcess : process (clock, wr_enable, clear) is
     begin
         if(wr_enable = '1') then

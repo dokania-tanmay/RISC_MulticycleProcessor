@@ -50,7 +50,7 @@ architecture beh of alu is
 				variable i : integer;
 		begin --- After leftshift, addition will be A(0) + 0, A(1) + B(0), ...
 				sumL(0) := A(0);
-				carryL(0) := 0;
+				carryL(0) := '0';
 				summingBitwise: for i in 1 to operand_width-1 loop
 					sumL(i) := ( A(i) xor B(i-1) ) xor carryL(i-1);
 					carryL(i) := (A(i) and B(i-1) ) or (B(i-1) and carryL(i-1) ) or ( A(i) and carryL(i-1) );

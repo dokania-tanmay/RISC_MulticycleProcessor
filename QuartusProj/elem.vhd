@@ -18,6 +18,7 @@ package elem is
         port(   inp: in std_logic_vector(inSize-1 downto 0);
                 outp: out std_logic_vector(outSize-1 downto 0));
     end component;
+	 type regBank is array(0 to 7) of std_logic_vector(15 downto 0);
 end package;
 
 -- Entity and Architecture Declarations

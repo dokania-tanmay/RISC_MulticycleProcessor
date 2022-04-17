@@ -11,8 +11,9 @@ entity data_path is
     clock : in std_logic;
     T : in std_logic_vector(29 downto 0);
     flags: out std_logic_vector(2 downto 0);
-	 op_code: out std_logic_vector(3 downto 0);
-	 condition: out std_logic_vector(1 downto 0)
+	op_code: out std_logic_vector(3 downto 0);
+	condition: out std_logic_vector(1 downto 0);
+    regs_out : out regBank
   ) ;
 end data_path;
 
@@ -43,16 +44,17 @@ architecture flow of data_path is
     end component;
 
     component registerFile is
-        generic(
-                dataSize: integer := 16;
-                numRegs: integer := 8
-        );
-        port(
-                addr_out1, addr_out2, addr_in: in std_logic_vector(integer(ceil(log2(real(numRegs))))-1 downto 0);
-                data_out1, data_out2, reg7_out : out std_logic_vector(dataSize-1 downto 0);
-                data_in : in std_logic_vector(dataSize-1 downto 0);
-                clock, wr_enable, clear: in std_logic
-        );
+    generic(
+            dataSize: integer := 16;
+            numRegs: integer := 8
+    );
+    port(
+            addr_out1, addr_out2, addr_in: in std_logic_vector(integer(ceil(log2(real(numRegs))))-1 downto 0);
+            data_out1, data_out2, reg7_out : out std_logic_vector(dataSize-1 downto 0);
+            data_in : in std_logic_vector(dataSize-1 downto 0);
+            clock, wr_enable, clear: in std_logic;
+            regbank_out : out regBank
+    );
     end component;
 
     component alu is
@@ -117,7 +119,7 @@ begin
     reg_file : registerFile
         generic map(16,8)
         port map(addr_out1 => rf_add1, addr_out2 => rf_add2, addr_in => rf_addin, data_out1=> rf_dout1,
-                data_out2 => rf_dout2, reg7_out => r7_out, data_in => rf_din, clock => clock, wr_enable => rf_wr, clear => rf_clr);
+                data_out2 => rf_dout2, reg7_out => r7_out, data_in => rf_din, clock => clock, wr_enable => rf_wr, clear => rf_clr, regbank_out => regs_out);
 
     se6_ent : sign_extender
         generic map(6,16)
