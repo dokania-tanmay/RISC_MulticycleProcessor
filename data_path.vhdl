@@ -5,10 +5,10 @@ use ieee.numeric_std.all;
 
 library work;
 use work.elem.all;
-
+---- Reset mapping needs to be done
 entity data_path is
   port (
-    clock : in std_logic;
+    clock, reset : in std_logic;
     T : in std_logic_vector(29 downto 0);
     flags: out std_logic_vector(2 downto 0);
 	op_code: out std_logic_vector(3 downto 0);
@@ -49,11 +49,12 @@ architecture flow of data_path is
                 numRegs: integer := 8
         );
         port(
-                addr_out1, addr_out2, addr_in: in std_logic_vector(integer(ceil(log2(real(numRegs))))-1 downto 0);
-                data_out1, data_out2, reg7_out : out std_logic_vector(dataSize-1 downto 0);
-                data_in : in std_logic_vector(dataSize-1 downto 0);
-                clock, wr_enable, clear: in std_logic
-        );
+            addr_out1, addr_out2, addr_in: in std_logic_vector(integer(ceil(log2(real(numRegs))))-1 downto 0);
+            data_out1, data_out2, reg7_out : out std_logic_vector(dataSize-1 downto 0);
+            data_in : in std_logic_vector(dataSize-1 downto 0);
+            clock, wr_enable, clear: in std_logic;
+            regbank_out : out regBank
+    );
     end component;
 
     component alu is

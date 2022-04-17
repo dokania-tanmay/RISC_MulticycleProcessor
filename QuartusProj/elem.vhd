@@ -6,6 +6,7 @@ use ieee.std_logic_misc.all;
 
 -- Package Declarations
 package elem is
+    type regBank is array(0 to 7) of std_logic_vector(15 downto 0);
     component reg is  --(Aayush) register name is a keyword
         generic(dataSize: integer := 16);
         port(   clock, wr_enable, clear: in std_logic;
