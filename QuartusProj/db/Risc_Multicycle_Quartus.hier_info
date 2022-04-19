@@ -1,139 +1,224 @@
-|risc_processor
+|DUT
+input_vector[0] => risc_processor:add_instance.reset
+input_vector[1] => risc_processor:add_instance.clock
+output_vector[0] <= risc_processor:add_instance.r0[0]
+output_vector[1] <= risc_processor:add_instance.r0[1]
+output_vector[2] <= risc_processor:add_instance.r0[2]
+output_vector[3] <= risc_processor:add_instance.r0[3]
+output_vector[4] <= risc_processor:add_instance.r0[4]
+output_vector[5] <= risc_processor:add_instance.r0[5]
+output_vector[6] <= risc_processor:add_instance.r0[6]
+output_vector[7] <= risc_processor:add_instance.r0[7]
+output_vector[8] <= risc_processor:add_instance.r0[8]
+output_vector[9] <= risc_processor:add_instance.r0[9]
+output_vector[10] <= risc_processor:add_instance.r0[10]
+output_vector[11] <= risc_processor:add_instance.r0[11]
+output_vector[12] <= risc_processor:add_instance.r0[12]
+output_vector[13] <= risc_processor:add_instance.r0[13]
+output_vector[14] <= risc_processor:add_instance.r0[14]
+output_vector[15] <= risc_processor:add_instance.r0[15]
+output_vector[16] <= risc_processor:add_instance.r1[0]
+output_vector[17] <= risc_processor:add_instance.r1[1]
+output_vector[18] <= risc_processor:add_instance.r1[2]
+output_vector[19] <= risc_processor:add_instance.r1[3]
+output_vector[20] <= risc_processor:add_instance.r1[4]
+output_vector[21] <= risc_processor:add_instance.r1[5]
+output_vector[22] <= risc_processor:add_instance.r1[6]
+output_vector[23] <= risc_processor:add_instance.r1[7]
+output_vector[24] <= risc_processor:add_instance.r1[8]
+output_vector[25] <= risc_processor:add_instance.r1[9]
+output_vector[26] <= risc_processor:add_instance.r1[10]
+output_vector[27] <= risc_processor:add_instance.r1[11]
+output_vector[28] <= risc_processor:add_instance.r1[12]
+output_vector[29] <= risc_processor:add_instance.r1[13]
+output_vector[30] <= risc_processor:add_instance.r1[14]
+output_vector[31] <= risc_processor:add_instance.r1[15]
+output_vector[32] <= risc_processor:add_instance.r2[0]
+output_vector[33] <= risc_processor:add_instance.r2[1]
+output_vector[34] <= risc_processor:add_instance.r2[2]
+output_vector[35] <= risc_processor:add_instance.r2[3]
+output_vector[36] <= risc_processor:add_instance.r2[4]
+output_vector[37] <= risc_processor:add_instance.r2[5]
+output_vector[38] <= risc_processor:add_instance.r2[6]
+output_vector[39] <= risc_processor:add_instance.r2[7]
+output_vector[40] <= risc_processor:add_instance.r2[8]
+output_vector[41] <= risc_processor:add_instance.r2[9]
+output_vector[42] <= risc_processor:add_instance.r2[10]
+output_vector[43] <= risc_processor:add_instance.r2[11]
+output_vector[44] <= risc_processor:add_instance.r2[12]
+output_vector[45] <= risc_processor:add_instance.r2[13]
+output_vector[46] <= risc_processor:add_instance.r2[14]
+output_vector[47] <= risc_processor:add_instance.r2[15]
+output_vector[48] <= risc_processor:add_instance.r3[0]
+output_vector[49] <= risc_processor:add_instance.r3[1]
+output_vector[50] <= risc_processor:add_instance.r3[2]
+output_vector[51] <= risc_processor:add_instance.r3[3]
+output_vector[52] <= risc_processor:add_instance.r3[4]
+output_vector[53] <= risc_processor:add_instance.r3[5]
+output_vector[54] <= risc_processor:add_instance.r3[6]
+output_vector[55] <= risc_processor:add_instance.r3[7]
+output_vector[56] <= risc_processor:add_instance.r3[8]
+output_vector[57] <= risc_processor:add_instance.r3[9]
+output_vector[58] <= risc_processor:add_instance.r3[10]
+output_vector[59] <= risc_processor:add_instance.r3[11]
+output_vector[60] <= risc_processor:add_instance.r3[12]
+output_vector[61] <= risc_processor:add_instance.r3[13]
+output_vector[62] <= risc_processor:add_instance.r3[14]
+output_vector[63] <= risc_processor:add_instance.r3[15]
+output_vector[64] <= risc_processor:add_instance.r7[0]
+output_vector[65] <= risc_processor:add_instance.r7[1]
+output_vector[66] <= risc_processor:add_instance.r7[2]
+output_vector[67] <= risc_processor:add_instance.r7[3]
+output_vector[68] <= risc_processor:add_instance.r7[4]
+output_vector[69] <= risc_processor:add_instance.r7[5]
+output_vector[70] <= risc_processor:add_instance.r7[6]
+output_vector[71] <= risc_processor:add_instance.r7[7]
+output_vector[72] <= risc_processor:add_instance.r7[8]
+output_vector[73] <= risc_processor:add_instance.r7[9]
+output_vector[74] <= risc_processor:add_instance.r7[10]
+output_vector[75] <= risc_processor:add_instance.r7[11]
+output_vector[76] <= risc_processor:add_instance.r7[12]
+output_vector[77] <= risc_processor:add_instance.r7[13]
+output_vector[78] <= risc_processor:add_instance.r7[14]
+output_vector[79] <= risc_processor:add_instance.r7[15]
+
+
+|DUT|risc_processor:add_instance
 clock => data_path:prim_datapath.clock
 clock => state_transition:control_logic.clk
 reset => data_path:prim_datapath.reset
 reset => state_transition:control_logic.reset
-regs_out[7][0] <= data_path:prim_datapath.regs_out[7][0]
-regs_out[7][1] <= data_path:prim_datapath.regs_out[7][1]
-regs_out[7][2] <= data_path:prim_datapath.regs_out[7][2]
-regs_out[7][3] <= data_path:prim_datapath.regs_out[7][3]
-regs_out[7][4] <= data_path:prim_datapath.regs_out[7][4]
-regs_out[7][5] <= data_path:prim_datapath.regs_out[7][5]
-regs_out[7][6] <= data_path:prim_datapath.regs_out[7][6]
-regs_out[7][7] <= data_path:prim_datapath.regs_out[7][7]
-regs_out[7][8] <= data_path:prim_datapath.regs_out[7][8]
-regs_out[7][9] <= data_path:prim_datapath.regs_out[7][9]
-regs_out[7][10] <= data_path:prim_datapath.regs_out[7][10]
-regs_out[7][11] <= data_path:prim_datapath.regs_out[7][11]
-regs_out[7][12] <= data_path:prim_datapath.regs_out[7][12]
-regs_out[7][13] <= data_path:prim_datapath.regs_out[7][13]
-regs_out[7][14] <= data_path:prim_datapath.regs_out[7][14]
-regs_out[7][15] <= data_path:prim_datapath.regs_out[7][15]
-regs_out[6][0] <= data_path:prim_datapath.regs_out[6][0]
-regs_out[6][1] <= data_path:prim_datapath.regs_out[6][1]
-regs_out[6][2] <= data_path:prim_datapath.regs_out[6][2]
-regs_out[6][3] <= data_path:prim_datapath.regs_out[6][3]
-regs_out[6][4] <= data_path:prim_datapath.regs_out[6][4]
-regs_out[6][5] <= data_path:prim_datapath.regs_out[6][5]
-regs_out[6][6] <= data_path:prim_datapath.regs_out[6][6]
-regs_out[6][7] <= data_path:prim_datapath.regs_out[6][7]
-regs_out[6][8] <= data_path:prim_datapath.regs_out[6][8]
-regs_out[6][9] <= data_path:prim_datapath.regs_out[6][9]
-regs_out[6][10] <= data_path:prim_datapath.regs_out[6][10]
-regs_out[6][11] <= data_path:prim_datapath.regs_out[6][11]
-regs_out[6][12] <= data_path:prim_datapath.regs_out[6][12]
-regs_out[6][13] <= data_path:prim_datapath.regs_out[6][13]
-regs_out[6][14] <= data_path:prim_datapath.regs_out[6][14]
-regs_out[6][15] <= data_path:prim_datapath.regs_out[6][15]
-regs_out[5][0] <= data_path:prim_datapath.regs_out[5][0]
-regs_out[5][1] <= data_path:prim_datapath.regs_out[5][1]
-regs_out[5][2] <= data_path:prim_datapath.regs_out[5][2]
-regs_out[5][3] <= data_path:prim_datapath.regs_out[5][3]
-regs_out[5][4] <= data_path:prim_datapath.regs_out[5][4]
-regs_out[5][5] <= data_path:prim_datapath.regs_out[5][5]
-regs_out[5][6] <= data_path:prim_datapath.regs_out[5][6]
-regs_out[5][7] <= data_path:prim_datapath.regs_out[5][7]
-regs_out[5][8] <= data_path:prim_datapath.regs_out[5][8]
-regs_out[5][9] <= data_path:prim_datapath.regs_out[5][9]
-regs_out[5][10] <= data_path:prim_datapath.regs_out[5][10]
-regs_out[5][11] <= data_path:prim_datapath.regs_out[5][11]
-regs_out[5][12] <= data_path:prim_datapath.regs_out[5][12]
-regs_out[5][13] <= data_path:prim_datapath.regs_out[5][13]
-regs_out[5][14] <= data_path:prim_datapath.regs_out[5][14]
-regs_out[5][15] <= data_path:prim_datapath.regs_out[5][15]
-regs_out[4][0] <= data_path:prim_datapath.regs_out[4][0]
-regs_out[4][1] <= data_path:prim_datapath.regs_out[4][1]
-regs_out[4][2] <= data_path:prim_datapath.regs_out[4][2]
-regs_out[4][3] <= data_path:prim_datapath.regs_out[4][3]
-regs_out[4][4] <= data_path:prim_datapath.regs_out[4][4]
-regs_out[4][5] <= data_path:prim_datapath.regs_out[4][5]
-regs_out[4][6] <= data_path:prim_datapath.regs_out[4][6]
-regs_out[4][7] <= data_path:prim_datapath.regs_out[4][7]
-regs_out[4][8] <= data_path:prim_datapath.regs_out[4][8]
-regs_out[4][9] <= data_path:prim_datapath.regs_out[4][9]
-regs_out[4][10] <= data_path:prim_datapath.regs_out[4][10]
-regs_out[4][11] <= data_path:prim_datapath.regs_out[4][11]
-regs_out[4][12] <= data_path:prim_datapath.regs_out[4][12]
-regs_out[4][13] <= data_path:prim_datapath.regs_out[4][13]
-regs_out[4][14] <= data_path:prim_datapath.regs_out[4][14]
-regs_out[4][15] <= data_path:prim_datapath.regs_out[4][15]
-regs_out[3][0] <= data_path:prim_datapath.regs_out[3][0]
-regs_out[3][1] <= data_path:prim_datapath.regs_out[3][1]
-regs_out[3][2] <= data_path:prim_datapath.regs_out[3][2]
-regs_out[3][3] <= data_path:prim_datapath.regs_out[3][3]
-regs_out[3][4] <= data_path:prim_datapath.regs_out[3][4]
-regs_out[3][5] <= data_path:prim_datapath.regs_out[3][5]
-regs_out[3][6] <= data_path:prim_datapath.regs_out[3][6]
-regs_out[3][7] <= data_path:prim_datapath.regs_out[3][7]
-regs_out[3][8] <= data_path:prim_datapath.regs_out[3][8]
-regs_out[3][9] <= data_path:prim_datapath.regs_out[3][9]
-regs_out[3][10] <= data_path:prim_datapath.regs_out[3][10]
-regs_out[3][11] <= data_path:prim_datapath.regs_out[3][11]
-regs_out[3][12] <= data_path:prim_datapath.regs_out[3][12]
-regs_out[3][13] <= data_path:prim_datapath.regs_out[3][13]
-regs_out[3][14] <= data_path:prim_datapath.regs_out[3][14]
-regs_out[3][15] <= data_path:prim_datapath.regs_out[3][15]
-regs_out[2][0] <= data_path:prim_datapath.regs_out[2][0]
-regs_out[2][1] <= data_path:prim_datapath.regs_out[2][1]
-regs_out[2][2] <= data_path:prim_datapath.regs_out[2][2]
-regs_out[2][3] <= data_path:prim_datapath.regs_out[2][3]
-regs_out[2][4] <= data_path:prim_datapath.regs_out[2][4]
-regs_out[2][5] <= data_path:prim_datapath.regs_out[2][5]
-regs_out[2][6] <= data_path:prim_datapath.regs_out[2][6]
-regs_out[2][7] <= data_path:prim_datapath.regs_out[2][7]
-regs_out[2][8] <= data_path:prim_datapath.regs_out[2][8]
-regs_out[2][9] <= data_path:prim_datapath.regs_out[2][9]
-regs_out[2][10] <= data_path:prim_datapath.regs_out[2][10]
-regs_out[2][11] <= data_path:prim_datapath.regs_out[2][11]
-regs_out[2][12] <= data_path:prim_datapath.regs_out[2][12]
-regs_out[2][13] <= data_path:prim_datapath.regs_out[2][13]
-regs_out[2][14] <= data_path:prim_datapath.regs_out[2][14]
-regs_out[2][15] <= data_path:prim_datapath.regs_out[2][15]
-regs_out[1][0] <= data_path:prim_datapath.regs_out[1][0]
-regs_out[1][1] <= data_path:prim_datapath.regs_out[1][1]
-regs_out[1][2] <= data_path:prim_datapath.regs_out[1][2]
-regs_out[1][3] <= data_path:prim_datapath.regs_out[1][3]
-regs_out[1][4] <= data_path:prim_datapath.regs_out[1][4]
-regs_out[1][5] <= data_path:prim_datapath.regs_out[1][5]
-regs_out[1][6] <= data_path:prim_datapath.regs_out[1][6]
-regs_out[1][7] <= data_path:prim_datapath.regs_out[1][7]
-regs_out[1][8] <= data_path:prim_datapath.regs_out[1][8]
-regs_out[1][9] <= data_path:prim_datapath.regs_out[1][9]
-regs_out[1][10] <= data_path:prim_datapath.regs_out[1][10]
-regs_out[1][11] <= data_path:prim_datapath.regs_out[1][11]
-regs_out[1][12] <= data_path:prim_datapath.regs_out[1][12]
-regs_out[1][13] <= data_path:prim_datapath.regs_out[1][13]
-regs_out[1][14] <= data_path:prim_datapath.regs_out[1][14]
-regs_out[1][15] <= data_path:prim_datapath.regs_out[1][15]
-regs_out[0][0] <= data_path:prim_datapath.regs_out[0][0]
-regs_out[0][1] <= data_path:prim_datapath.regs_out[0][1]
-regs_out[0][2] <= data_path:prim_datapath.regs_out[0][2]
-regs_out[0][3] <= data_path:prim_datapath.regs_out[0][3]
-regs_out[0][4] <= data_path:prim_datapath.regs_out[0][4]
-regs_out[0][5] <= data_path:prim_datapath.regs_out[0][5]
-regs_out[0][6] <= data_path:prim_datapath.regs_out[0][6]
-regs_out[0][7] <= data_path:prim_datapath.regs_out[0][7]
-regs_out[0][8] <= data_path:prim_datapath.regs_out[0][8]
-regs_out[0][9] <= data_path:prim_datapath.regs_out[0][9]
-regs_out[0][10] <= data_path:prim_datapath.regs_out[0][10]
-regs_out[0][11] <= data_path:prim_datapath.regs_out[0][11]
-regs_out[0][12] <= data_path:prim_datapath.regs_out[0][12]
-regs_out[0][13] <= data_path:prim_datapath.regs_out[0][13]
-regs_out[0][14] <= data_path:prim_datapath.regs_out[0][14]
-regs_out[0][15] <= data_path:prim_datapath.regs_out[0][15]
+r0[0] <= data_path:prim_datapath.regs_out[0][0]
+r0[1] <= data_path:prim_datapath.regs_out[0][1]
+r0[2] <= data_path:prim_datapath.regs_out[0][2]
+r0[3] <= data_path:prim_datapath.regs_out[0][3]
+r0[4] <= data_path:prim_datapath.regs_out[0][4]
+r0[5] <= data_path:prim_datapath.regs_out[0][5]
+r0[6] <= data_path:prim_datapath.regs_out[0][6]
+r0[7] <= data_path:prim_datapath.regs_out[0][7]
+r0[8] <= data_path:prim_datapath.regs_out[0][8]
+r0[9] <= data_path:prim_datapath.regs_out[0][9]
+r0[10] <= data_path:prim_datapath.regs_out[0][10]
+r0[11] <= data_path:prim_datapath.regs_out[0][11]
+r0[12] <= data_path:prim_datapath.regs_out[0][12]
+r0[13] <= data_path:prim_datapath.regs_out[0][13]
+r0[14] <= data_path:prim_datapath.regs_out[0][14]
+r0[15] <= data_path:prim_datapath.regs_out[0][15]
+r1[0] <= data_path:prim_datapath.regs_out[1][0]
+r1[1] <= data_path:prim_datapath.regs_out[1][1]
+r1[2] <= data_path:prim_datapath.regs_out[1][2]
+r1[3] <= data_path:prim_datapath.regs_out[1][3]
+r1[4] <= data_path:prim_datapath.regs_out[1][4]
+r1[5] <= data_path:prim_datapath.regs_out[1][5]
+r1[6] <= data_path:prim_datapath.regs_out[1][6]
+r1[7] <= data_path:prim_datapath.regs_out[1][7]
+r1[8] <= data_path:prim_datapath.regs_out[1][8]
+r1[9] <= data_path:prim_datapath.regs_out[1][9]
+r1[10] <= data_path:prim_datapath.regs_out[1][10]
+r1[11] <= data_path:prim_datapath.regs_out[1][11]
+r1[12] <= data_path:prim_datapath.regs_out[1][12]
+r1[13] <= data_path:prim_datapath.regs_out[1][13]
+r1[14] <= data_path:prim_datapath.regs_out[1][14]
+r1[15] <= data_path:prim_datapath.regs_out[1][15]
+r2[0] <= data_path:prim_datapath.regs_out[2][0]
+r2[1] <= data_path:prim_datapath.regs_out[2][1]
+r2[2] <= data_path:prim_datapath.regs_out[2][2]
+r2[3] <= data_path:prim_datapath.regs_out[2][3]
+r2[4] <= data_path:prim_datapath.regs_out[2][4]
+r2[5] <= data_path:prim_datapath.regs_out[2][5]
+r2[6] <= data_path:prim_datapath.regs_out[2][6]
+r2[7] <= data_path:prim_datapath.regs_out[2][7]
+r2[8] <= data_path:prim_datapath.regs_out[2][8]
+r2[9] <= data_path:prim_datapath.regs_out[2][9]
+r2[10] <= data_path:prim_datapath.regs_out[2][10]
+r2[11] <= data_path:prim_datapath.regs_out[2][11]
+r2[12] <= data_path:prim_datapath.regs_out[2][12]
+r2[13] <= data_path:prim_datapath.regs_out[2][13]
+r2[14] <= data_path:prim_datapath.regs_out[2][14]
+r2[15] <= data_path:prim_datapath.regs_out[2][15]
+r3[0] <= data_path:prim_datapath.regs_out[3][0]
+r3[1] <= data_path:prim_datapath.regs_out[3][1]
+r3[2] <= data_path:prim_datapath.regs_out[3][2]
+r3[3] <= data_path:prim_datapath.regs_out[3][3]
+r3[4] <= data_path:prim_datapath.regs_out[3][4]
+r3[5] <= data_path:prim_datapath.regs_out[3][5]
+r3[6] <= data_path:prim_datapath.regs_out[3][6]
+r3[7] <= data_path:prim_datapath.regs_out[3][7]
+r3[8] <= data_path:prim_datapath.regs_out[3][8]
+r3[9] <= data_path:prim_datapath.regs_out[3][9]
+r3[10] <= data_path:prim_datapath.regs_out[3][10]
+r3[11] <= data_path:prim_datapath.regs_out[3][11]
+r3[12] <= data_path:prim_datapath.regs_out[3][12]
+r3[13] <= data_path:prim_datapath.regs_out[3][13]
+r3[14] <= data_path:prim_datapath.regs_out[3][14]
+r3[15] <= data_path:prim_datapath.regs_out[3][15]
+r4[0] <= data_path:prim_datapath.regs_out[4][0]
+r4[1] <= data_path:prim_datapath.regs_out[4][1]
+r4[2] <= data_path:prim_datapath.regs_out[4][2]
+r4[3] <= data_path:prim_datapath.regs_out[4][3]
+r4[4] <= data_path:prim_datapath.regs_out[4][4]
+r4[5] <= data_path:prim_datapath.regs_out[4][5]
+r4[6] <= data_path:prim_datapath.regs_out[4][6]
+r4[7] <= data_path:prim_datapath.regs_out[4][7]
+r4[8] <= data_path:prim_datapath.regs_out[4][8]
+r4[9] <= data_path:prim_datapath.regs_out[4][9]
+r4[10] <= data_path:prim_datapath.regs_out[4][10]
+r4[11] <= data_path:prim_datapath.regs_out[4][11]
+r4[12] <= data_path:prim_datapath.regs_out[4][12]
+r4[13] <= data_path:prim_datapath.regs_out[4][13]
+r4[14] <= data_path:prim_datapath.regs_out[4][14]
+r4[15] <= data_path:prim_datapath.regs_out[4][15]
+r5[0] <= data_path:prim_datapath.regs_out[5][0]
+r5[1] <= data_path:prim_datapath.regs_out[5][1]
+r5[2] <= data_path:prim_datapath.regs_out[5][2]
+r5[3] <= data_path:prim_datapath.regs_out[5][3]
+r5[4] <= data_path:prim_datapath.regs_out[5][4]
+r5[5] <= data_path:prim_datapath.regs_out[5][5]
+r5[6] <= data_path:prim_datapath.regs_out[5][6]
+r5[7] <= data_path:prim_datapath.regs_out[5][7]
+r5[8] <= data_path:prim_datapath.regs_out[5][8]
+r5[9] <= data_path:prim_datapath.regs_out[5][9]
+r5[10] <= data_path:prim_datapath.regs_out[5][10]
+r5[11] <= data_path:prim_datapath.regs_out[5][11]
+r5[12] <= data_path:prim_datapath.regs_out[5][12]
+r5[13] <= data_path:prim_datapath.regs_out[5][13]
+r5[14] <= data_path:prim_datapath.regs_out[5][14]
+r5[15] <= data_path:prim_datapath.regs_out[5][15]
+r6[0] <= data_path:prim_datapath.regs_out[6][0]
+r6[1] <= data_path:prim_datapath.regs_out[6][1]
+r6[2] <= data_path:prim_datapath.regs_out[6][2]
+r6[3] <= data_path:prim_datapath.regs_out[6][3]
+r6[4] <= data_path:prim_datapath.regs_out[6][4]
+r6[5] <= data_path:prim_datapath.regs_out[6][5]
+r6[6] <= data_path:prim_datapath.regs_out[6][6]
+r6[7] <= data_path:prim_datapath.regs_out[6][7]
+r6[8] <= data_path:prim_datapath.regs_out[6][8]
+r6[9] <= data_path:prim_datapath.regs_out[6][9]
+r6[10] <= data_path:prim_datapath.regs_out[6][10]
+r6[11] <= data_path:prim_datapath.regs_out[6][11]
+r6[12] <= data_path:prim_datapath.regs_out[6][12]
+r6[13] <= data_path:prim_datapath.regs_out[6][13]
+r6[14] <= data_path:prim_datapath.regs_out[6][14]
+r6[15] <= data_path:prim_datapath.regs_out[6][15]
+r7[0] <= data_path:prim_datapath.regs_out[7][0]
+r7[1] <= data_path:prim_datapath.regs_out[7][1]
+r7[2] <= data_path:prim_datapath.regs_out[7][2]
+r7[3] <= data_path:prim_datapath.regs_out[7][3]
+r7[4] <= data_path:prim_datapath.regs_out[7][4]
+r7[5] <= data_path:prim_datapath.regs_out[7][5]
+r7[6] <= data_path:prim_datapath.regs_out[7][6]
+r7[7] <= data_path:prim_datapath.regs_out[7][7]
+r7[8] <= data_path:prim_datapath.regs_out[7][8]
+r7[9] <= data_path:prim_datapath.regs_out[7][9]
+r7[10] <= data_path:prim_datapath.regs_out[7][10]
+r7[11] <= data_path:prim_datapath.regs_out[7][11]
+r7[12] <= data_path:prim_datapath.regs_out[7][12]
+r7[13] <= data_path:prim_datapath.regs_out[7][13]
+r7[14] <= data_path:prim_datapath.regs_out[7][14]
+r7[15] <= data_path:prim_datapath.regs_out[7][15]
 
 
-|risc_processor|data_path:prim_datapath
+|DUT|risc_processor:add_instance|data_path:prim_datapath
 clock => reg:ins_register.clock
 clock => reg:temp1.clock
 clock => reg:temp2.clock
@@ -380,7 +465,7 @@ regs_out[0][14] <= registerFile:reg_file.regbank_out[0][14]
 regs_out[0][15] <= registerFile:reg_file.regbank_out[0][15]
 
 
-|risc_processor|data_path:prim_datapath|reg:ins_register
+|DUT|risc_processor:add_instance|data_path:prim_datapath|reg:ins_register
 clock => dout[0]~reg0.CLK
 clock => dout[1]~reg0.CLK
 clock => dout[2]~reg0.CLK
@@ -463,7 +548,7 @@ dout[14] <= dout[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dout[15] <= dout[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|risc_processor|data_path:prim_datapath|reg:temp1
+|DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp1
 clock => dout[0]~reg0.CLK
 clock => dout[1]~reg0.CLK
 clock => dout[2]~reg0.CLK
@@ -546,7 +631,7 @@ dout[14] <= dout[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dout[15] <= dout[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|risc_processor|data_path:prim_datapath|reg:temp2
+|DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp2
 clock => dout[0]~reg0.CLK
 clock => dout[1]~reg0.CLK
 clock => dout[2]~reg0.CLK
@@ -629,7 +714,7 @@ dout[14] <= dout[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dout[15] <= dout[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|risc_processor|data_path:prim_datapath|reg:temp3
+|DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp3
 clock => dout[0]~reg0.CLK
 clock => dout[1]~reg0.CLK
 clock => dout[2]~reg0.CLK
@@ -712,7 +797,7 @@ dout[14] <= dout[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dout[15] <= dout[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|risc_processor|data_path:prim_datapath|reg:temp4
+|DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp4
 clock => dout[0]~reg0.CLK
 clock => dout[1]~reg0.CLK
 clock => dout[2]~reg0.CLK
@@ -795,7 +880,7 @@ dout[14] <= dout[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dout[15] <= dout[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|risc_processor|data_path:prim_datapath|registerFile:reg_file
+|DUT|risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file
 addr_out1[0] => Mux0.IN2
 addr_out1[0] => Mux1.IN2
 addr_out1[0] => Mux2.IN2
@@ -1338,7 +1423,7 @@ regbank_out[0][14] <= registers[0][14].DB_MAX_OUTPUT_PORT_TYPE
 regbank_out[0][15] <= registers[0][15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|risc_processor|data_path:prim_datapath|sign_extender:se6_ent
+|DUT|risc_processor:add_instance|data_path:prim_datapath|sign_extender:se6_ent
 inp[0] => outp[0].DATAIN
 inp[1] => outp[1].DATAIN
 inp[2] => outp[2].DATAIN
@@ -1373,7 +1458,7 @@ outp[14] <= inp[5].DB_MAX_OUTPUT_PORT_TYPE
 outp[15] <= inp[5].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|risc_processor|data_path:prim_datapath|sign_extender:se9_ent
+|DUT|risc_processor:add_instance|data_path:prim_datapath|sign_extender:se9_ent
 inp[0] => outp[0].DATAIN
 inp[1] => outp[1].DATAIN
 inp[2] => outp[2].DATAIN
@@ -1408,7 +1493,7 @@ outp[14] <= inp[8].DB_MAX_OUTPUT_PORT_TYPE
 outp[15] <= inp[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|risc_processor|data_path:prim_datapath|left_shift:left7
+|DUT|risc_processor:add_instance|data_path:prim_datapath|left_shift:left7
 inp[0] => outp[7].DATAIN
 inp[1] => outp[8].DATAIN
 inp[2] => outp[9].DATAIN
@@ -1436,7 +1521,7 @@ outp[14] <= inp[7].DB_MAX_OUTPUT_PORT_TYPE
 outp[15] <= inp[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|risc_processor|data_path:prim_datapath|alu:alu_ent
+|DUT|risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent
 opr1[0] => add_temp[0].IN0
 opr1[0] => carry.IN0
 opr1[0] => dest.IN0
@@ -1684,7 +1769,7 @@ C <= C$latch.DB_MAX_OUTPUT_PORT_TYPE
 Z <= Z$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|risc_processor|data_path:prim_datapath|lsm:lsm_hw
+|DUT|risc_processor:add_instance|data_path:prim_datapath|lsm:lsm_hw
 inc => valid$latch.LATCH_ENABLE
 inc => num[0].LATCH_ENABLE
 inc => num[1].LATCH_ENABLE
@@ -1708,7 +1793,7 @@ addr[1] <= num[1].DB_MAX_OUTPUT_PORT_TYPE
 addr[2] <= num[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|risc_processor|data_path:prim_datapath|ram_mem:ram_memory
+|DUT|risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory
 clock => ram_block[31][0].CLK
 clock => ram_block[31][1].CLK
 clock => ram_block[31][2].CLK
@@ -3487,7 +3572,7 @@ reset => ram_block[0][14].ACLR
 reset => ram_block[0][15].ACLR
 
 
-|risc_processor|state_transition:control_logic
+|DUT|risc_processor:add_instance|state_transition:control_logic
 reset => NS.S0.OUTPUTSELECT
 reset => NS.S1.OUTPUTSELECT
 reset => NS.S2.OUTPUTSELECT

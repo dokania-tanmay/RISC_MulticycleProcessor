@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sun Apr 17 22:39:51 2022
+Analysis & Synthesis Status : Successful - Mon Apr 18 19:40:18 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Risc_Multicycle_Quartus
-Top-level Entity Name : risc_processor
+Top-level Entity Name : DUT
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 130
+Total pins : 82
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

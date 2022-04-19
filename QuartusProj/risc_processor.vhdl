@@ -9,7 +9,7 @@ use work.elem.all;
 entity risc_processor is
     port (
         clock, reset : in std_logic;
-        regs_out : out regBank
+        r0, r1, r2, r3, r4, r5, r6, r7 : out std_logic_vector(15 downto 0)
     );
 end risc_processor;
 
@@ -39,11 +39,19 @@ architecture complete of risc_processor is
         signal flags : std_logic_vector(2 downto 0);
         signal op_code: std_logic_vector(3 downto 0);
         signal condition: std_logic_vector(1 downto 0);
+		  signal regs_out : regBank;
         
 begin
     prim_datapath : data_path
         port map(clock => clock, T => T, flags => flags, op_code => op_code, condition => condition, regs_out => regs_out, reset => reset);
     control_logic : state_transition
         port map(reset => reset, clk => clock, opcode => op_code, C => flags(1), Z => flags(2), valid => flags(0), condition => condition, T => T);
-
+		r0 <= regs_out(0);
+		r1 <= regs_out(1);
+		r2 <= regs_out(2);
+		r3 <= regs_out(3);
+		r4 <= regs_out(4);
+		r5 <= regs_out(5);
+		r6 <= regs_out(6);
+		r7 <= regs_out(7);
 end complete;

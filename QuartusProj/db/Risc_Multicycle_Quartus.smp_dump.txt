@@ -1,5 +1,5 @@
 
-State Machine - |risc_processor|state_transition:control_logic|CS
+State Machine - |DUT|risc_processor:add_instance|state_transition:control_logic|CS
 Name CS.S25 CS.S24 CS.S23 CS.S22 CS.S21 CS.S2p CS.SL3 CS.SL4 CS.SK CS.SU CS.S20 CS.S13 CS.S11 CS.S9 CS.S8 CS.S7 CS.S5 CS.S4 CS.S3 CS.S2 CS.S1 CS.S0 
 CS.S0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 CS.S1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
