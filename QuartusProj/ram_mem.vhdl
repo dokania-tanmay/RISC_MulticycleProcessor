@@ -30,7 +30,7 @@ BEGIN
          END IF;
       END IF;
 		 if(reset = '1') then
-            ram_block(0) <= (others => '0');
+            ram_block(0) <= "0001000001010000";
             ram_block(1) <= (others => '0');
             ram_block(2) <= (others => '0');
             ram_block(3) <= (others => '0');

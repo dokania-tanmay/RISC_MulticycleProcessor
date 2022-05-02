@@ -1,0 +1,218 @@
+# Reading pref.tcl
+# do Risc_Multicycle_Quartus_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/elem.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:13:59 on May 02,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/elem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling package elem
+# -- Compiling entity reg
+# -- Compiling architecture regArch of reg
+# -- Compiling entity sign_extender
+# -- Compiling architecture beh of sign_extender
+# End time: 01:13:59 on May 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:14:00 on May 02,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package elem
+# -- Compiling entity DUT
+# -- Compiling architecture DutWrap of DUT
+# End time: 01:14:00 on May 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:14:00 on May 02,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package elem
+# -- Compiling entity risc_processor
+# -- Compiling architecture complete of risc_processor
+# End time: 01:14:00 on May 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:14:00 on May 02,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package elem
+# -- Compiling entity state_transition
+# -- Compiling architecture state_definition of state_transition
+# End time: 01:14:00 on May 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:14:00 on May 02,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package elem
+# -- Compiling entity registerFile
+# -- Compiling architecture beh of registerFile
+# End time: 01:14:00 on May 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:14:00 on May 02,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package elem
+# -- Compiling entity ram_mem
+# -- Compiling architecture beh of ram_mem
+# End time: 01:14:00 on May 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:14:01 on May 02,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package elem
+# -- Compiling entity lsm
+# -- Compiling architecture beh of lsm
+# End time: 01:14:01 on May 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:14:01 on May 02,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package elem
+# -- Compiling entity left_shift
+# -- Compiling architecture shift_7 of left_shift
+# End time: 01:14:01 on May 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:14:01 on May 02,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package elem
+# -- Compiling entity data_path
+# -- Compiling architecture flow of data_path
+# End time: 01:14:01 on May 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/alu.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:14:01 on May 02,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/alu.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package NUMERIC_STD
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package elem
+# -- Compiling entity alu
+# -- Compiling architecture beh of alu
+# End time: 01:14:01 on May 02,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:14:01 on May 02,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behave of Testbench
+# End time: 01:14:02 on May 02,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 01:14:02 on May 02,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behave)
+# Loading ieee.math_real(body)
+# Loading ieee.numeric_std(body)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading work.elem
+# Loading work.dut(dutwrap)
+# Loading work.risc_processor(complete)
+# Loading work.data_path(flow)
+# Loading work.reg(regarch)
+# Loading work.registerfile(beh)
+# Loading work.sign_extender(beh)
+# Loading work.left_shift(shift_7)
+# Loading work.alu(beh)
+# Loading work.lsm(beh)
+# Loading work.ram_mem(beh)
+# ** Fatal: (vsim-3817) Port "reset" of entity "ram_mem" is not in the component being instantiated.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/prim_datapath/ram_memory File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 16
+# FATAL ERROR while loading design
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./Risc_Multicycle_Quartus_run_msim_rtl_vhdl.do PAUSED at line 21
+# End time: 01:14:25 on May 02,2022, Elapsed time: 0:00:23
+# Errors: 1, Warnings: 0

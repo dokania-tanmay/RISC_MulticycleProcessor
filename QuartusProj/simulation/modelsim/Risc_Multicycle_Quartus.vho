@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "04/18/2022 19:41:16"
+-- DATE "05/01/2022 20:42:29"
 
 -- 
 -- Device: Altera 5CGXFC7C7F23C8 Package FBGA484
@@ -37,7 +37,7 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY 	DUT IS
     PORT (
 	input_vector : IN std_logic_vector(1 DOWNTO 0);
-	output_vector : OUT std_logic_vector(79 DOWNTO 0)
+	output_vector : BUFFER std_logic_vector(79 DOWNTO 0)
 	);
 END DUT;
 
