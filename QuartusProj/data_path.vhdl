@@ -202,6 +202,16 @@ begin
 	 
 	 op_code <= ir_dout(15 downto 12);
 	 condition <= ir_dout(1 downto 0);
-    
+	 
+	 ir_clr <= reset;
+	 rf_clr <= reset;
+	 t1_clr <= reset;
+	 t2_clr <= reset;
+	 t3_clr <= reset;
+	 t4_clr <= reset;
+	 alu_a <= t1_dout;
+	 ir_wr <= T(28);
+	 ir_din <= ram_dout;
+    t2_din <= rf_dout2;
 
 end flow;
