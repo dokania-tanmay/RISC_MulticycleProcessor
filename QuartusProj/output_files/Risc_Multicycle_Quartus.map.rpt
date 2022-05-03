@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Risc_Multicycle_Quartus
-Tue May 03 22:53:14 2022
+Tue May 03 23:16:55 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -59,7 +59,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 03 22:53:14 2022       ;
+; Analysis & Synthesis Status     ; Successful - Tue May 03 23:16:55 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Risc_Multicycle_Quartus                     ;
 ; Top-level Entity Name           ; DUT                                         ;
@@ -208,14 +208,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Estimate of Logic utilization (ALMs needed) ; 548                   ;
+; Estimate of Logic utilization (ALMs needed) ; 584                   ;
 ;                                             ;                       ;
-; Combinational ALUT usage for logic          ; 730                   ;
-;     -- 7 input functions                    ; 9                     ;
-;     -- 6 input functions                    ; 287                   ;
-;     -- 5 input functions                    ; 146                   ;
+; Combinational ALUT usage for logic          ; 793                   ;
+;     -- 7 input functions                    ; 8                     ;
+;     -- 6 input functions                    ; 304                   ;
+;     -- 5 input functions                    ; 161                   ;
 ;     -- 4 input functions                    ; 160                   ;
-;     -- <=3 input functions                  ; 128                   ;
+;     -- <=3 input functions                  ; 160                   ;
 ;                                             ;                       ;
 ; Dedicated logic registers                   ; 614                   ;
 ;                                             ;                       ;
@@ -225,8 +225,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                       ;
 ; Maximum fan-out node                        ; input_vector[0]~input ;
 ; Maximum fan-out                             ; 614                   ;
-; Total fan-out                               ; 5734                  ;
-; Average fan-out                             ; 3.80                  ;
+; Total fan-out                               ; 5997                  ;
+; Average fan-out                             ; 3.82                  ;
 +---------------------------------------------+-----------------------+
 
 
@@ -235,10 +235,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Entity Name      ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+------------------+--------------+
-; |DUT                                   ; 730 (0)             ; 614 (0)                   ; 0                 ; 0          ; 82   ; 0            ; |DUT                                                                           ; DUT              ; work         ;
-;    |risc_processor:add_instance|       ; 730 (0)             ; 614 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance                                               ; risc_processor   ; work         ;
-;       |data_path:prim_datapath|        ; 651 (104)           ; 592 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath                       ; data_path        ; work         ;
-;          |alu:alu_ent|                 ; 87 (87)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent           ; alu              ; work         ;
+; |DUT                                   ; 793 (0)             ; 614 (0)                   ; 0                 ; 0          ; 82   ; 0            ; |DUT                                                                           ; DUT              ; work         ;
+;    |risc_processor:add_instance|       ; 793 (0)             ; 614 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance                                               ; risc_processor   ; work         ;
+;       |data_path:prim_datapath|        ; 715 (110)           ; 592 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath                       ; data_path        ; work         ;
+;          |alu:alu_ent|                 ; 145 (145)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent           ; alu              ; work         ;
 ;          |lsm:lsm_hw|                  ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|lsm:lsm_hw            ; lsm              ; work         ;
 ;          |ram_mem:ram_memory|          ; 212 (212)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory    ; ram_mem          ; work         ;
 ;          |reg:ins_register|            ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:ins_register      ; reg              ; work         ;
@@ -247,7 +247,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |reg:temp3|                   ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp3             ; reg              ; work         ;
 ;          |reg:temp4|                   ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp4             ; reg              ; work         ;
 ;          |registerFile:reg_file|       ; 239 (239)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file ; registerFile     ; work         ;
-;       |state_transition:control_logic| ; 79 (79)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|state_transition:control_logic                ; state_transition ; work         ;
+;       |state_transition:control_logic| ; 78 (78)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|state_transition:control_logic                ; state_transition ; work         ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -369,8 +369,8 @@ Encoding Type:  One-Hot
 ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][14] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
 ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][15] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
 ; risc_processor:add_instance|data_path:prim_datapath|lsm:lsm_hw|num[1]                      ; risc_processor:add_instance|state_transition:control_logic|CS.S22                  ; yes                    ;
-; risc_processor:add_instance|data_path:prim_datapath|lsm:lsm_hw|num[0]                      ; risc_processor:add_instance|state_transition:control_logic|CS.S22                  ; yes                    ;
 ; risc_processor:add_instance|data_path:prim_datapath|lsm:lsm_hw|num[2]                      ; risc_processor:add_instance|state_transition:control_logic|CS.S22                  ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|lsm:lsm_hw|num[0]                      ; risc_processor:add_instance|state_transition:control_logic|CS.S22                  ; yes                    ;
 ; risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[0]                    ; risc_processor:add_instance|state_transition:control_logic|WideOr3                 ; yes                    ;
 ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[4][0]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
 ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[5][0]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
@@ -425,18 +425,18 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp4|dout[5]           ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp1|dout[10]          ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|alu_b[7]                    ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|alu_b[4]                    ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[5]         ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|rf_din[2]                   ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|rf_din[7]                   ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Mux6  ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Mux24 ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp4|dout[3]           ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp1|dout[1]           ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|alu_b[15]                   ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|alu_b[5]                    ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[9]    ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|rf_din[6]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|rf_din[14]                  ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Mux2  ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Mux30 ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|rf_addin[1]                 ;
-; 32:1               ; 16 bits   ; 336 LEs       ; 336 LEs              ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|Mux1     ;
-; 58:1               ; 2 bits    ; 76 LEs        ; 34 LEs               ; 42 LEs                 ; No         ; |DUT|risc_processor:add_instance|state_transition:control_logic|NS.S4                ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 336 LEs              ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|Mux0     ;
+; 58:1               ; 2 bits    ; 76 LEs        ; 34 LEs               ; 42 LEs                 ; No         ; |DUT|risc_processor:add_instance|state_transition:control_logic|NS.S5                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
 
 
@@ -568,20 +568,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR SLD       ; 16                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 12                          ;
-; arriav_lcell_comb     ; 730                         ;
-;     extend            ; 9                           ;
-;         7 data inputs ; 9                           ;
-;     normal            ; 721                         ;
+; arriav_lcell_comb     ; 793                         ;
+;     arith             ; 16                          ;
+;         2 data inputs ; 10                          ;
+;         5 data inputs ; 6                           ;
+;     extend            ; 8                           ;
+;         7 data inputs ; 8                           ;
+;     normal            ; 769                         ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 31                          ;
-;         3 data inputs ; 94                          ;
+;         2 data inputs ; 39                          ;
+;         3 data inputs ; 108                         ;
 ;         4 data inputs ; 160                         ;
-;         5 data inputs ; 146                         ;
-;         6 data inputs ; 287                         ;
+;         5 data inputs ; 155                         ;
+;         6 data inputs ; 304                         ;
 ; boundary_port         ; 82                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.00                        ;
-; Average LUT depth     ; 4.40                        ;
+; Average LUT depth     ; 4.43                        ;
 +-----------------------+-----------------------------+
 
 
@@ -590,7 +593,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -600,7 +603,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 03 22:52:57 2022
+    Info: Processing started: Tue May 03 23:16:41 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Risc_Multicycle_Quartus -c Risc_Multicycle_Quartus
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -825,23 +828,6 @@ Info (10041): Inferred latch for "num[1]" at lsm.vhdl(33) File: D:/Files/EE309/p
 Info (10041): Inferred latch for "num[2]" at lsm.vhdl(33) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl Line: 33
 Info (12128): Elaborating entity "ram_mem" for hierarchy "risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 142
 Info (12128): Elaborating entity "state_transition" for hierarchy "risc_processor:add_instance|state_transition:control_logic" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl Line: 47
-Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[0]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
-    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[1]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[1]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
-    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[2]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[2]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
-    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[3]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[3]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
-    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[4]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[4]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
-    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[5]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[5]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
-    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[6]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[6]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
-    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[7]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[7]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
-    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[8]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[8]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
-    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[9]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[9]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
-    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[10]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[10]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
-    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[11]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[11]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
-    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[12]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[12]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
-    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[13]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[13]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
-    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[14]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[14]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
-    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[15]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[15]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][4] will power up to High File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
@@ -850,15 +836,15 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
 Info (144001): Generated suppressed messages file D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/output_files/Risc_Multicycle_Quartus.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1369 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1432 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 80 output pins
-    Info (21061): Implemented 1287 logic cells
+    Info (21061): Implemented 1350 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4867 megabytes
-    Info: Processing ended: Tue May 03 22:53:14 2022
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Peak virtual memory: 4870 megabytes
+    Info: Processing ended: Tue May 03 23:16:55 2022
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +------------------------------------------+

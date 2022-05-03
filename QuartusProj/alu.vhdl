@@ -82,7 +82,7 @@ begin
 				dest_temp <= opr1 xor opr2;
 			-- ADD
 			elsif unsigned(sel) = 2 then
-				dest <= add_temp(operand_width-1 downto 0);
+				dest <= std_logic_vector(unsigned(opr1)+ unsigned(opr2));
 				dest_temp <= add_temp(operand_width-1 downto 0);
 				C <= add_temp(operand_width);
 			--- ADL

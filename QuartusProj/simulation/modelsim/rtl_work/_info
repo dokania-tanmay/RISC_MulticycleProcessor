@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/simulation/modelsim
 Ealu
-Z1 w1651595578
+Z1 w1651599997
 Z2 DPx4 work 4 elem 0 22 _YGV6AczJBg?CL9kjT4`^3
 Z3 DPx8 synopsys 10 attributes 0 22 dc>JdEHRM@6GGENe5bZ?D1
 Z4 DPx4 ieee 14 std_logic_misc 0 22 dN]HY6l5ohPcZ:TaC@B;53
@@ -28,9 +28,9 @@ VJe3KHWF@Pne1fGh1o3Z;e2
 !s100 ;HTIoHkX2]lSGg5BA0>Hh1
 Z11 OV;C;2020.1;71
 31
-Z12 !s110 1651598895
+Z12 !s110 1651600202
 !i10b 1
-Z13 !s108 1651598895.000000
+Z13 !s108 1651600202.000000
 Z14 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl|
 Z15 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl|
 !i113 1
@@ -48,8 +48,8 @@ DEx4 work 3 alu 0 22 Je3KHWF@Pne1fGh1o3Z;e2
 !i122 9
 l68
 L29 73
-VYhmHDkfW^O_;fjh53Uih@1
-!s100 2>lo]NJCM6HiO416KgblF1
+VkZG;Cd[g3VR99h9^3O5:g0
+!s100 3m_FUFfm6K3NU7h4@Q82W3
 R11
 31
 R12
@@ -81,9 +81,9 @@ R11
 31
 R12
 !i10b 1
-Z21 !s108 1651598893.000000
-Z22 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl|
-Z23 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl|
+R13
+Z21 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl|
+Z22 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl|
 !i113 1
 R16
 R17
@@ -105,14 +105,14 @@ R11
 31
 R12
 !i10b 1
+R13
 R21
 R22
-R23
 !i113 1
 R16
 R17
 Edut
-Z24 w1651553836
+Z23 w1651553836
 R3
 R4
 R2
@@ -122,19 +122,19 @@ R7
 R8
 !i122 1
 R0
-Z25 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl
-Z26 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl
+Z24 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl
+Z25 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl
 l0
 L9 1
 VdXj8`TFQ_A=0^WLg`4DC`2
 !s100 NJ:od0mPM^cOBO0H<_i@l0
 R11
 31
-Z27 !s110 1651598892
+Z26 !s110 1651600201
 !i10b 1
-Z28 !s108 1651598892.000000
-Z29 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl|
-Z30 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl|
+Z27 !s108 1651600201.000000
+Z28 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl|
+Z29 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl|
 !i113 1
 R16
 R17
@@ -154,11 +154,11 @@ VN7iQQkR>JG_8Y[Gd3A<a61
 !s100 Y<_zQT`PfeUh;K=4Z>kOP2
 R11
 31
-R27
+R26
 !i10b 1
+R27
 R28
 R29
-R30
 !i113 1
 R16
 R17
@@ -170,26 +170,26 @@ R6
 R7
 R8
 !i122 0
-Z31 w1650198591
+Z30 w1650198591
 R0
-Z32 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd
-Z33 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd
+Z31 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd
+Z32 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd
 l0
 L8 1
 V_YGV6AczJBg?CL9kjT4`^3
 !s100 8Jh7LKaYgdz][nQnD`Ri;3
 R11
 31
-Z34 !s110 1651598891
+Z33 !s110 1651600200
 !i10b 1
-Z35 !s108 1651598891.000000
-Z36 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd|
-Z37 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd|
+Z34 !s108 1651600200.000000
+Z35 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd|
+Z36 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd|
 !i113 1
 R16
 R17
 Eleft_shift
-Z38 w1651560768
+Z37 w1651560768
 R3
 R4
 R6
@@ -199,19 +199,19 @@ R7
 R8
 !i122 7
 R0
-Z39 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl
-Z40 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl
+Z38 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl
+Z39 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl
 l0
 L15 1
 VW;f0E=<:5a>Din:d9FQ=o3
 !s100 2Y;Q53TTnQ5P1;:cRN>Z53
 R11
 31
-Z41 !s110 1651598893
+R12
 !i10b 1
-R21
-Z42 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl|
-Z43 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl|
+R27
+Z40 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl|
+Z41 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl|
 !i113 1
 R16
 R17
@@ -231,16 +231,16 @@ V=SbITReG2VV1PbgNV?<X;2
 !s100 QK62hWE7^FWW`c>]M`?Q=0
 R11
 31
-R41
+R12
 !i10b 1
-R21
-R42
-R43
+R27
+R40
+R41
 !i113 1
 R16
 R17
 Elsm
-Z44 w1651558576
+Z42 w1651558576
 R2
 R3
 R4
@@ -250,19 +250,19 @@ R7
 R8
 !i122 6
 R0
-Z45 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl
-Z46 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl
+Z43 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl
+Z44 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl
 l0
 L20 1
 Veb;VcoXRcGR4I>Zg:3gh62
 !s100 2cQ@QF<H:B^2bz9U>fA^L1
 R11
 31
-R41
+R26
 !i10b 1
-R21
-Z47 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl|
-Z48 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl|
+R27
+Z45 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl|
+Z46 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl|
 !i113 1
 R16
 R17
@@ -282,16 +282,16 @@ VBNi]ACYfiWeDPa8]U@jdO3
 !s100 lSS9?WbMGSES;2hZH2Nlk0
 R11
 31
-R41
+R26
 !i10b 1
-R21
-R47
-R48
+R27
+R45
+R46
 !i113 1
 R16
 R17
 Eram_mem
-Z49 w1651585767
+Z47 w1651585767
 R3
 R4
 R2
@@ -301,19 +301,19 @@ R7
 R8
 !i122 5
 R0
-Z50 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl
-Z51 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl
+Z48 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl
+Z49 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl
 l0
 L8 1
 VUX`0=Ia[]>az4V[EMlf`N1
 !s100 Gi6mV[B6JIm6IZ8li`D?N1
 R11
 31
-R41
+R26
 !i10b 1
-R21
-Z52 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl|
-Z53 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl|
+R27
+Z50 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl|
+Z51 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl|
 !i113 1
 R16
 R17
@@ -333,34 +333,34 @@ VVA@S61@[YAaQX7IozWW]K0
 !s100 P<;G[M]kGN12lOI4_>3V42
 R11
 31
-R41
+R26
 !i10b 1
-R21
-R52
-R53
+R27
+R50
+R51
 !i113 1
 R16
 R17
 Ereg
-R31
+R30
 R5
 R7
 R8
 !i122 0
 R0
+R31
 R32
-R33
 l0
 L30 1
 VdFYB<=eCYBeVZmZ^6><zb1
 !s100 S5M3k;gA?==:h641>4JU<1
 R11
 31
-R34
+R33
 !i10b 1
+R34
 R35
 R36
-R37
 !i113 1
 R16
 R17
@@ -376,16 +376,16 @@ VEIl=mRiCcNW`5_S2;[KFH3
 !s100 zoIP8?1[IXJXK9aFgzXbY2
 R11
 31
-R34
+R33
 !i10b 1
+R34
 R35
 R36
-R37
 !i113 1
 R16
 R17
 Eregisterfile
-Z54 w1651588096
+Z52 w1651588096
 R3
 R4
 R2
@@ -395,19 +395,19 @@ R7
 R8
 !i122 4
 R0
-Z55 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl
-Z56 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl
+Z53 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl
+Z54 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl
 l0
 L9 1
 VJ2>>2UZ`NL4Eo`XZ==^g`1
 !s100 :j8mHSz=eVJhUd`Xd^^<k3
 R11
 31
-R41
+R26
 !i10b 1
-R21
-Z57 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl|
-Z58 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl|
+R27
+Z55 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl|
+Z56 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl|
 !i113 1
 R16
 R17
@@ -427,16 +427,16 @@ V_HV7I`Jn7fXLGefeLhS3k3
 !s100 ??f1mUcfiLQIb>8nP6fWo3
 R11
 31
-R41
+R26
 !i10b 1
-R21
-R57
-R58
+R27
+R55
+R56
 !i113 1
 R16
 R17
 Erisc_processor
-Z59 w1651560870
+Z57 w1651560870
 R3
 R4
 R2
@@ -446,19 +446,19 @@ R7
 R8
 !i122 2
 R0
-Z60 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl
-Z61 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl
+Z58 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl
+Z59 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl
 l0
 L9 1
 VMFnMHlE^;3APUPelJG3:S3
 !s100 8eAhOG;M4Y`E0hCNe4eDX0
 R11
 31
-R27
+R26
 !i10b 1
-R28
-Z62 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl|
-Z63 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl|
+R27
+Z60 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl|
+Z61 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl|
 !i113 1
 R16
 R17
@@ -478,34 +478,34 @@ VZmgRNd3Xc43Qbm4e=ZYIm3
 !s100 oM3<7nF[REW:bVhc3nV:g0
 R11
 31
-R27
+R26
 !i10b 1
-R28
-R62
-R63
+R27
+R60
+R61
 !i113 1
 R16
 R17
 Esign_extender
-R31
+R30
 R5
 R7
 R8
 !i122 0
 R0
+R31
 R32
-R33
 l0
 L56 1
 V_Xf5b7;8NU>`9;:iZ?[X[1
 !s100 OhPjEZ=>NNjETOlO7[Q?<1
 R11
 31
-R34
+R33
 !i10b 1
+R34
 R35
 R36
-R37
 !i113 1
 R16
 R17
@@ -521,16 +521,16 @@ V2j5cP[4c];GooV^FUbUX01
 !s100 JoYF[0SB75U?5XjI;IB[D3
 R11
 31
-R34
+R33
 !i10b 1
+R34
 R35
 R36
-R37
 !i113 1
 R16
 R17
 Estate_transition
-Z64 w1651598575
+Z62 w1651598575
 R3
 R4
 R2
@@ -540,19 +540,19 @@ R7
 R8
 !i122 3
 R0
-Z65 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl
-Z66 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl
+Z63 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl
+Z64 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl
 l0
 L9 1
 V[ZN:Y:ZMR]C^eIXNU_A_a2
 !s100 Hh7N=SGJLL303LlfEQWTR0
 R11
 31
-R27
+R26
 !i10b 1
-R28
-Z67 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl|
-Z68 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl|
+R27
+Z65 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl|
+Z66 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl|
 !i113 1
 R16
 R17
@@ -572,22 +572,22 @@ VDohjkT_MT[`=TWVE>JfUk2
 !s100 ZC[mT_a>5YZ[M9J[EM]7?1
 R11
 31
-R27
+R26
 !i10b 1
-R28
-R67
-R68
+R27
+R65
+R66
 !i113 1
 R16
 R17
 Etestbench
-Z69 w1650291003
+Z67 w1650291003
 R8
 R7
 !i122 10
 R0
-Z70 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl
-Z71 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl
+Z68 8D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl
+Z69 FD:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl
 l0
 L7 1
 V]iKK_Z9L:G9B:i8c]3eFH0
@@ -597,7 +597,7 @@ R11
 R12
 !i10b 1
 R13
-Z72 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl|
+Z70 !s90 -reportprogress|300|-93|-work|work|D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl|
 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl|
 !i113 1
 R16
@@ -616,8 +616,8 @@ R11
 R12
 !i10b 1
 R13
-R72
-Z73 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl|
+R70
+Z71 !s107 D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl|
 !i113 1
 R16
 R17
