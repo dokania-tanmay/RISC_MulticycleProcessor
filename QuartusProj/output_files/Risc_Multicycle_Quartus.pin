@@ -270,7 +270,7 @@ output_vector[30]            : G16       : output : 2.5 V             :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : G17       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G18       :        :                   :         : 7A        :                
 GND                          : G19       : gnd    :                   :         :           :                
-input_vector[0]              : G20       : input  : 2.5 V             :         : 7A        : N              
+input_vector[1]              : G20       : input  : 2.5 V             :         : 7A        : N              
 output_vector[26]            : G21       : output : 2.5 V             :         : 7A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G22       :        :                   :         : 7A        :                
 GND                          : H1        : gnd    :                   :         :           :                
@@ -485,7 +485,7 @@ output_vector[43]            : U11       : output : 2.5 V             :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : U12       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U13       :        :                   :         : 4A        :                
 VCCIO4A                      : U14       : power  :                   : 2.5V    : 4A        :                
-input_vector[1]              : U15       : input  : 2.5 V             :         : 4A        : N              
+input_vector[0]              : U15       : input  : 2.5 V             :         : 4A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : U16       :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U17       :        :                   :         : 4A        :                
 VCCA_FPLL                    : U18       : power  :                   : 2.5V    :           :                

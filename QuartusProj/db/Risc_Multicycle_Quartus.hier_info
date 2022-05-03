@@ -1,6 +1,6 @@
 |DUT
-input_vector[0] => risc_processor:add_instance.reset
-input_vector[1] => risc_processor:add_instance.clock
+input_vector[0] => risc_processor:add_instance.clock
+input_vector[1] => risc_processor:add_instance.reset
 output_vector[0] << risc_processor:add_instance.r0[0]
 output_vector[1] << risc_processor:add_instance.r0[1]
 output_vector[2] << risc_processor:add_instance.r0[2]
@@ -227,7 +227,7 @@ clock => reg:temp4.clock
 clock => registerFile:reg_file.clock
 clock => lsm:lsm_hw.clock
 clock => ram_mem:ram_memory.clock
-reset => ~NO_FANOUT~
+reset => ram_mem:ram_memory.reset
 T[0] => ram_addr[15].OUTPUTSELECT
 T[0] => ram_addr[14].OUTPUTSELECT
 T[0] => ram_addr[13].OUTPUTSELECT

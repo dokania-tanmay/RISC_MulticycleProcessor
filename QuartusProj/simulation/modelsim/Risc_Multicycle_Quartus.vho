@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "05/01/2022 20:42:29"
+-- DATE "05/03/2022 10:55:35"
 
 -- 
 -- Device: Altera 5CGXFC7C7F23C8 Package FBGA484
@@ -122,8 +122,8 @@ END DUT;
 -- output_vector[77]	=>  Location: PIN_J19,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- output_vector[78]	=>  Location: PIN_M18,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- output_vector[79]	=>  Location: PIN_L17,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- input_vector[1]	=>  Location: PIN_U15,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- input_vector[0]	=>  Location: PIN_G20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- input_vector[0]	=>  Location: PIN_U15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- input_vector[1]	=>  Location: PIN_G20,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF DUT IS
@@ -138,8 +138,8 @@ SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
 SIGNAL ww_input_vector : std_logic_vector(1 DOWNTO 0);
 SIGNAL ww_output_vector : std_logic_vector(79 DOWNTO 0);
-SIGNAL \input_vector[1]~input_o\ : std_logic;
 SIGNAL \input_vector[0]~input_o\ : std_logic;
+SIGNAL \input_vector[1]~input_o\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_GND~I_combout\ : std_logic;
 
 BEGIN
@@ -1191,17 +1191,6 @@ PORT MAP (
 	o => ww_output_vector(79));
 
 -- Location: IOIBUF_X60_Y0_N1
-\input_vector[1]~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_input_vector(1),
-	o => \input_vector[1]~input_o\);
-
--- Location: IOIBUF_X80_Y81_N1
 \input_vector[0]~input\ : cyclonev_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -1211,6 +1200,17 @@ GENERIC MAP (
 PORT MAP (
 	i => ww_input_vector(0),
 	o => \input_vector[0]~input_o\);
+
+-- Location: IOIBUF_X80_Y81_N1
+\input_vector[1]~input\ : cyclonev_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_input_vector(1),
+	o => \input_vector[1]~input_o\);
 
 -- Location: LABCELL_X56_Y52_N3
 \~QUARTUS_CREATED_GND~I\ : cyclonev_lcell_comb

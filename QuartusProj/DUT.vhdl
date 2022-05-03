@@ -25,8 +25,8 @@ begin
    add_instance: risc_processor
 			port map (
 					-- order of inputs Cin B A
-					clock => input_vector(1),
-					reset => input_vector(0),
+					reset => input_vector(1),
+					clock => input_vector(0),
                                         -- order of outputs S Cout
 					r0 => output_vector(15 downto 0),
 					r1 => output_vector(31 downto 16),

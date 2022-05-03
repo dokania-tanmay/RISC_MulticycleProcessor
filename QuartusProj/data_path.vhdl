@@ -82,14 +82,15 @@ architecture flow of data_path is
     end component;
 
     component ram_mem is
-        port(
-        clock: IN   std_logic;
-        ram_data_in:  IN   std_logic_vector (15 DOWNTO 0);
-        ram_address:  IN   std_logic_vector(15 downto 0);
-        ram_write_enable:    IN   std_logic;
-        ram_data_out:     OUT  std_logic_vector (15 DOWNTO 0));
-    -- Define RAM component
-    -- Define Signals
+			PORT
+			(
+			 clock: IN   std_logic;
+			 ram_data_in:  IN   std_logic_vector (15 DOWNTO 0);
+			 ram_address:  IN   std_logic_vector(15 downto 0);
+			 ram_write_enable:    IN   std_logic;
+			 ram_data_out:     OUT  std_logic_vector (15 DOWNTO 0);
+			 reset : in std_logic
+			 );
     end component;
 
     -- 16 bit
@@ -139,7 +140,7 @@ begin
         port map(inc => lsm_inc, reset => lsm_rst, clock => clock, insReg => ir_dout(7 downto 0), valid => lsm_vld, wr => lsm_wr, addr => ls_add);
 
     ram_memory : ram_mem
-        port map(ram_data_out => ram_dout, clock => clock, ram_data_in => ram_din, ram_write_enable => ram_wr, ram_address => ram_addr);
+        port map(ram_data_out => ram_dout, clock => clock, ram_data_in => ram_din, ram_write_enable => ram_wr, ram_address => ram_addr, reset => reset);
 
 
 
