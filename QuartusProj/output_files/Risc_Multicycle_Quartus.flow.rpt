@@ -1,5 +1,5 @@
 Flow report for Risc_Multicycle_Quartus
-Tue May 03 10:55:35 2022
+Tue May 03 12:25:39 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue May 03 10:55:35 2022       ;
+; Flow Status                     ; Successful - Tue May 03 12:25:39 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Risc_Multicycle_Quartus                     ;
 ; Top-level Entity Name           ; DUT                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1 / 56,480 ( < 1 % )                        ;
-; Total registers                 ; 0                                           ;
+; Logic utilization (in ALMs)     ; 5 / 56,480 ( < 1 % )                        ;
+; Total registers                 ; 7                                           ;
 ; Total pins                      ; 82 / 268 ( 31 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 7,024,640 ( 0 % )                       ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+-------------------------+
 ; Option            ; Setting                 ;
 +-------------------+-------------------------+
-; Start date & time ; 05/03/2022 10:54:31     ;
+; Start date & time ; 05/03/2022 12:24:33     ;
 ; Main task         ; Compilation             ;
 ; Revision Name     ; Risc_Multicycle_Quartus ;
 +-------------------+-------------------------+
@@ -79,21 +79,21 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+-------------------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value           ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+-------------------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 1099454436069.165155547123592          ; --                      ; --          ; --                                ;
-; EDA_DESIGN_INSTANCE_NAME             ; dut_instance                           ; --                      ; --          ; Testbench                         ;
+; COMPILER_SIGNATURE_ID                ; 1099454436069.165156087325176          ; --                      ; --          ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; dut_instance                           ; --                      ; --          ; Testbench.vhdl                    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                      ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                      ; --          ; eda_simulation                    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                      ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                      ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                      ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Testbench                              ; --                      ; --          ; eda_simulation                    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Testbench.vhdl                         ; --                      ; --          ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --                      ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                 ; <None>                  ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --                      ; --          ; eda_simulation                    ;
-; EDA_TEST_BENCH_FILE                  ; TRACEFILE.txt                          ; --                      ; --          ; Testbench                         ;
-; EDA_TEST_BENCH_FILE                  ; Testbench.vhdl                         ; --                      ; --          ; Testbench                         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; Testbench                              ; --                      ; --          ; Testbench                         ;
-; EDA_TEST_BENCH_NAME                  ; Testbench                              ; --                      ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; TRACEFILE.txt                          ; --                      ; --          ; Testbench.vhdl                    ;
+; EDA_TEST_BENCH_FILE                  ; Testbench.vhdl                         ; --                      ; --          ; Testbench.vhdl                    ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Testbench                              ; --                      ; --          ; Testbench.vhdl                    ;
+; EDA_TEST_BENCH_NAME                  ; Testbench.vhdl                         ; --                      ; --          ; eda_simulation                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --                      ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --                      ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --                      ; --          ; --                                ;
@@ -113,11 +113,11 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4868 MB             ; 00:00:25                           ;
-; Fitter               ; 00:00:33     ; 1.0                     ; 6660 MB             ; 00:01:01                           ;
-; Assembler            ; 00:00:08     ; 1.0                     ; 4832 MB             ; 00:00:08                           ;
-; Timing Analyzer      ; 00:00:06     ; 1.0                     ; 5141 MB             ; 00:00:06                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4737 MB             ; 00:00:01                           ;
-; Total                ; 00:00:59     ; --                      ; --                  ; 00:01:41                           ;
+; Fitter               ; 00:00:35     ; 1.0                     ; 6686 MB             ; 00:01:07                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 4831 MB             ; 00:00:08                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.0                     ; 5156 MB             ; 00:00:06                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4738 MB             ; 00:00:01                           ;
+; Total                ; 00:01:00     ; --                      ; --                  ; 00:01:47                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

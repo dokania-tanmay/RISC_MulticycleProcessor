@@ -21,7 +21,7 @@ entity registerFile is
 end entity;
 --- Writing is done at clock edges and changes to wr_enable signal
 architecture beh of registerFile is
-    signal registers : regBank;
+    signal registers : regBank  := (others=> (others => '0'));
 begin
     data_out1 <= registers(to_integer(unsigned(addr_out1)));
     data_out2 <= registers(to_integer(unsigned(addr_out2)));

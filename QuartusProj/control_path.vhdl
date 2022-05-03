@@ -19,7 +19,7 @@ end entity;
 
 architecture state_definition of state_transition is
 	type state_definition is (S0, S1, S2, S3, S4, S5, S7, S8, S9, S11, S13, S20, SU, SK, SL4, SL3, S2p, S21, S22, S23, S24, S25);
-	signal CS, NS: state_definition;  --CS Current State
+	signal CS, NS: state_definition := S0;  --CS Current State
 	                                  --NS Next State
 begin
 

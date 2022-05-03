@@ -27,7 +27,7 @@ entity lsm is
 end lsm;
 
 architecture beh of lsm is
-    signal num : std_logic_vector(2 downto 0);
+    signal num : std_logic_vector(2 downto 0)  := (others => '0');
 begin
     addr <= num;
     inc_num : process (inc, reset) is

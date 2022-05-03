@@ -27,7 +27,7 @@ entity left_shift is
 end entity;
 
 architecture shift_7 of left_shift is
-	signal output_temp: std_logic_vector(output_length-1 downto 0);
+	signal output_temp: std_logic_vector(output_length-1 downto 0) := (others => '0');
 begin
 
 	main: process(inp)

@@ -20,7 +20,7 @@ END ram_mem;
 
 ARCHITECTURE beh OF ram_mem IS
    TYPE mem IS ARRAY(0 TO 31) OF std_logic_vector(15 DOWNTO 0);
-   SIGNAL ram_block : mem;
+   SIGNAL ram_block : mem := (others=> (others => '0'));
 BEGIN
    PROCESS (clock)
    BEGIN

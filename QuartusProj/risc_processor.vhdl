@@ -35,11 +35,11 @@ architecture complete of risc_processor is
     end component;
 
 -- Signals
-        signal T : std_logic_vector(29 downto 0);
-        signal flags : std_logic_vector(2 downto 0);
-        signal op_code: std_logic_vector(3 downto 0);
-        signal condition: std_logic_vector(1 downto 0);
-		  signal regs_out : regBank;
+        signal T : std_logic_vector(29 downto 0):= (others => '0');
+        signal flags : std_logic_vector(2 downto 0):= (others => '0');
+        signal op_code: std_logic_vector(3 downto 0):= (others => '0');
+        signal condition: std_logic_vector(1 downto 0):= (others => '0');
+		  signal regs_out : regBank:= (others=>(others => '0'));
         
 begin
     prim_datapath : data_path

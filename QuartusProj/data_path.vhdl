@@ -95,14 +95,14 @@ architecture flow of data_path is
 
     -- 16 bit
     signal ram_dout, ram_din, ram_addr, ir_din, ir_dout, se9, se6, ls7_out, rf_dout1, rf_dout2, rf_din, r7_out, t1_din,
-            t1_dout, t2_din, t2_dout, t3_din, t3_dout, t4_din, t4_dout, alu_a, alu_b, alu_c : std_logic_vector(15 downto 0);
+            t1_dout, t2_din, t2_dout, t3_din, t3_dout, t4_din, t4_dout, alu_a, alu_b, alu_c : std_logic_vector(15 downto 0):= (others => '0');
     -- 3 bit
-    signal rf_add1, rf_add2, rf_addin, ls_add : std_logic_vector(2 downto 0);
+    signal rf_add1, rf_add2, rf_addin, ls_add : std_logic_vector(2 downto 0):= (others => '0');
     -- 2 bit
-    signal alu_sel : std_logic_vector(1 downto 0);
+    signal alu_sel : std_logic_vector(1 downto 0):= (others => '0');
     -- 1 bit
     signal ram_wr, ir_wr, rf_wr, ir_clr, rf_clr, alu_ena, C, Z, lsm_inc, lsm_rst, lsm_vld, lsm_wr, t1_wr, t2_wr, t3_wr, t4_wr,
-             t1_clr, t2_clr, t3_clr, t4_clr : std_logic;
+             t1_clr, t2_clr, t3_clr, t4_clr : std_logic := '0';
 begin
     ins_register: reg
         generic map(16)

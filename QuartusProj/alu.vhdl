@@ -61,9 +61,9 @@ architecture beh of alu is
 	
 
 
-	signal add_temp : std_logic_vector(operand_width downto 0);
-	signal adl_temp : std_logic_vector(operand_width downto 0);
-	signal dest_temp : std_logic_vector(operand_width-1 downto 0); --(Aayush) directly using or reduce is giving some error for zero flag 
+	signal add_temp : std_logic_vector(operand_width downto 0) := (others => '0');
+	signal adl_temp : std_logic_vector(operand_width downto 0) := (others => '0');
+	signal dest_temp : std_logic_vector(operand_width-1 downto 0) := (others => '0'); --(Aayush) directly using or reduce is giving some error for zero flag 
                                                                  -- added a signal for that
 begin
 	add_temp <= add(opr1, opr2);
