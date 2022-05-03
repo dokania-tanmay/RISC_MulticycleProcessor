@@ -41,6 +41,6 @@ BEGIN
         end if;
    END PROCESS;
 	
-   ram_data_out <= ram_block(to_integer(unsigned(ram_address)));
+   ram_data_out <= ram_block(to_integer(unsigned(ram_address(4 downto 0))));
 	-- The instructions can be written below and upon reset, the following instructions will be loaded to RAM.
 END beh;

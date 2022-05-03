@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Risc_Multicycle_Quartus
-Tue May 03 19:05:06 2022
+Tue May 03 22:53:14 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,7 +10,29 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |DUT|risc_processor:add_instance|state_transition:control_logic|CS
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|reg:ins_register
+ 14. Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|reg:temp1
+ 15. Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|reg:temp2
+ 16. Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|reg:temp3
+ 17. Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|reg:temp4
+ 18. Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file
+ 19. Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|sign_extender:se6_ent
+ 20. Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|sign_extender:se9_ent
+ 21. Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|left_shift:left7
+ 22. Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent
+ 23. Port Connectivity Checks: "risc_processor:add_instance"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+ 27. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -34,22 +56,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue May 03 19:05:06 2022           ;
-; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name               ; Risc_Multicycle_Quartus                     ;
-; Top-level Entity Name       ; DUT                                         ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue May 03 22:53:14 2022       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; Risc_Multicycle_Quartus                     ;
+; Top-level Entity Name           ; DUT                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 614                                         ;
+; Total pins                      ; 82                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------+
@@ -148,11 +175,423 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
+; DUT.vhdl                         ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl            ;         ;
+; risc_processor.vhdl              ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl ;         ;
+; control_path.vhdl                ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl   ;         ;
+; registerFile.vhdl                ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl   ;         ;
+; ram_mem.vhdl                     ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl        ;         ;
+; lsm.vhdl                         ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl            ;         ;
+; left_shift.vhdl                  ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl     ;         ;
+; data_path.vhdl                   ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl      ;         ;
+; alu.vhdl                         ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl            ;         ;
+; elem.vhd                         ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd            ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                         ;
++---------------------------------------------+-----------------------+
+; Resource                                    ; Usage                 ;
++---------------------------------------------+-----------------------+
+; Estimate of Logic utilization (ALMs needed) ; 548                   ;
+;                                             ;                       ;
+; Combinational ALUT usage for logic          ; 730                   ;
+;     -- 7 input functions                    ; 9                     ;
+;     -- 6 input functions                    ; 287                   ;
+;     -- 5 input functions                    ; 146                   ;
+;     -- 4 input functions                    ; 160                   ;
+;     -- <=3 input functions                  ; 128                   ;
+;                                             ;                       ;
+; Dedicated logic registers                   ; 614                   ;
+;                                             ;                       ;
+; I/O pins                                    ; 82                    ;
+;                                             ;                       ;
+; Total DSP Blocks                            ; 0                     ;
+;                                             ;                       ;
+; Maximum fan-out node                        ; input_vector[0]~input ;
+; Maximum fan-out                             ; 614                   ;
+; Total fan-out                               ; 5734                  ;
+; Average fan-out                             ; 3.80                  ;
++---------------------------------------------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Entity Name      ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+------------------+--------------+
+; |DUT                                   ; 730 (0)             ; 614 (0)                   ; 0                 ; 0          ; 82   ; 0            ; |DUT                                                                           ; DUT              ; work         ;
+;    |risc_processor:add_instance|       ; 730 (0)             ; 614 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance                                               ; risc_processor   ; work         ;
+;       |data_path:prim_datapath|        ; 651 (104)           ; 592 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath                       ; data_path        ; work         ;
+;          |alu:alu_ent|                 ; 87 (87)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent           ; alu              ; work         ;
+;          |lsm:lsm_hw|                  ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|lsm:lsm_hw            ; lsm              ; work         ;
+;          |ram_mem:ram_memory|          ; 212 (212)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory    ; ram_mem          ; work         ;
+;          |reg:ins_register|            ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:ins_register      ; reg              ; work         ;
+;          |reg:temp1|                   ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp1             ; reg              ; work         ;
+;          |reg:temp2|                   ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp2             ; reg              ; work         ;
+;          |reg:temp3|                   ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp3             ; reg              ; work         ;
+;          |reg:temp4|                   ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp4             ; reg              ; work         ;
+;          |registerFile:reg_file|       ; 239 (239)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file ; registerFile     ; work         ;
+;       |state_transition:control_logic| ; 79 (79)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|state_transition:control_logic                ; state_transition ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |DUT|risc_processor:add_instance|state_transition:control_logic|CS                                                                                                                ;
++--------+--------+--------+--------+--------+--------+--------+--------+--------+-------+-------+--------+--------+--------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+; Name   ; CS.S25 ; CS.S24 ; CS.S23 ; CS.S22 ; CS.S21 ; CS.S2p ; CS.SL3 ; CS.SL4 ; CS.SK ; CS.SU ; CS.S20 ; CS.S13 ; CS.S11 ; CS.S9 ; CS.S8 ; CS.S7 ; CS.S5 ; CS.S4 ; CS.S3 ; CS.S2 ; CS.S1 ; CS.S0 ;
++--------+--------+--------+--------+--------+--------+--------+--------+--------+-------+-------+--------+--------+--------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+; CS.S0  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ;
+; CS.S1  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 1     ;
+; CS.S2  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 1     ;
+; CS.S3  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 1     ;
+; CS.S4  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 1     ;
+; CS.S5  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; CS.S7  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; CS.S8  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; CS.S9  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0      ; 0      ; 0      ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; CS.S11 ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0      ; 0      ; 1      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; CS.S13 ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0      ; 1      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; CS.S20 ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 1      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; CS.SU  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 1     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; CS.SK  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 1     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; CS.SL4 ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 1      ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; CS.SL3 ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 1      ; 0      ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; CS.S2p ; 0      ; 0      ; 0      ; 0      ; 0      ; 1      ; 0      ; 0      ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; CS.S21 ; 0      ; 0      ; 0      ; 0      ; 1      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; CS.S22 ; 0      ; 0      ; 0      ; 1      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; CS.S23 ; 0      ; 0      ; 1      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; CS.S24 ; 0      ; 1      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; CS.S25 ; 1      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
++--------+--------+--------+--------+--------+--------+--------+--------+--------+-------+-------+--------+--------+--------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------------+
+; Latch Name                                                                                 ; Latch Enable Signal                                                                ; Free of Timing Hazards ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------------+
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[0][0]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[0][1]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[0][2]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[0][3]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[0][4]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[0][5]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[0][6]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[0][7]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[0][8]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[0][9]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[0][10] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[0][11] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[0][12] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[0][13] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[0][14] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[0][15] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[1][0]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[1][1]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[1][2]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[1][3]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[1][4]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[1][5]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[1][6]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[1][7]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[1][8]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[1][9]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[1][10] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[1][11] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[1][12] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[1][13] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[1][14] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[1][15] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[2][0]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[2][1]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[2][2]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[2][3]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[2][4]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[2][5]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[2][6]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[2][7]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[2][8]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[2][9]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[2][10] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[2][11] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[2][12] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[2][13] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[2][14] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[2][15] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[3][0]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[3][1]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[3][2]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[3][3]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[3][4]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[3][5]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[3][6]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[3][7]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[3][8]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[3][9]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[3][10] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[3][11] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[3][12] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[3][13] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[3][14] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[3][15] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][0]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][1]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][2]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][3]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][4]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][5]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][6]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][7]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][8]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][9]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][10] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][11] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][12] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][13] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][14] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[7][15] ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|lsm:lsm_hw|num[1]                      ; risc_processor:add_instance|state_transition:control_logic|CS.S22                  ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|lsm:lsm_hw|num[0]                      ; risc_processor:add_instance|state_transition:control_logic|CS.S22                  ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|lsm:lsm_hw|num[2]                      ; risc_processor:add_instance|state_transition:control_logic|CS.S22                  ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[0]                    ; risc_processor:add_instance|state_transition:control_logic|WideOr3                 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[4][0]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[5][0]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[6][0]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|Z                          ; risc_processor:add_instance|state_transition:control_logic|WideOr3                 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|lsm:lsm_hw|valid                       ; risc_processor:add_instance|state_transition:control_logic|CS.S22                  ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|C                          ; risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|C                  ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[1]                    ; risc_processor:add_instance|state_transition:control_logic|WideOr3                 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[4][1]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[5][1]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[6][1]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[2]                    ; risc_processor:add_instance|state_transition:control_logic|WideOr3                 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[4][2]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[5][2]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[6][2]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[3]                    ; risc_processor:add_instance|state_transition:control_logic|WideOr3                 ; yes                    ;
+; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|registers[4][3]  ; risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Decoder0 ; yes                    ;
+; Number of user-specified and inferred latches = 166                                        ;                                                                                    ;                        ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 614   ;
+; Number of registers using Synchronous Clear  ; 10    ;
+; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Asynchronous Clear ; 208   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 592   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                      ;
++-----------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                       ; Fan out ;
++-----------------------------------------------------------------------------------------+---------+
+; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][4]  ; 1       ;
+; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][6]  ; 1       ;
+; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][12] ; 1       ;
+; Total number of inverted registers = 3                                                  ;         ;
++-----------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp4|dout[5]           ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp1|dout[10]          ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|alu_b[7]                    ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|alu_b[4]                    ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[5]         ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|rf_din[2]                   ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|rf_din[7]                   ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Mux6  ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file|Mux24 ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|rf_addin[1]                 ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 336 LEs              ; 0 LEs                  ; No         ; |DUT|risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|Mux1     ;
+; 58:1               ; 2 bits    ; 76 LEs        ; 34 LEs               ; 42 LEs                 ; No         ; |DUT|risc_processor:add_instance|state_transition:control_logic|NS.S4                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|reg:ins_register ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; datasize       ; 16    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|reg:temp1 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; datasize       ; 16    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|reg:temp2 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; datasize       ; 16    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|reg:temp3 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; datasize       ; 16    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|reg:temp4 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; datasize       ; 16    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; datasize       ; 16    ; Signed Integer                                                                                ;
+; numregs        ; 8     ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|sign_extender:se6_ent ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; insize         ; 6     ; Signed Integer                                                                                ;
+; outsize        ; 16    ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|sign_extender:se9_ent ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; insize         ; 9     ; Signed Integer                                                                                ;
+; outsize        ; 16    ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|left_shift:left7 ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; input_length   ; 9     ; Signed Integer                                                                           ;
+; output_length  ; 16    ; Signed Integer                                                                           ;
+; shift_length   ; 7     ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent ;
++----------------+-------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                ;
++----------------+-------+-------------------------------------------------------------------------------------+
+; operand_width  ; 16    ; Signed Integer                                                                      ;
+; sel_line       ; 2     ; Signed Integer                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "risc_processor:add_instance"                                                        ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; r4   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; r5   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; r6   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 614                         ;
+;     ENA               ; 384                         ;
+;     ENA CLR           ; 192                         ;
+;     ENA CLR SLD       ; 16                          ;
+;     SCLR              ; 10                          ;
+;     plain             ; 12                          ;
+; arriav_lcell_comb     ; 730                         ;
+;     extend            ; 9                           ;
+;         7 data inputs ; 9                           ;
+;     normal            ; 721                         ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 94                          ;
+;         4 data inputs ; 160                         ;
+;         5 data inputs ; 146                         ;
+;         6 data inputs ; 287                         ;
+; boundary_port         ; 82                          ;
+;                       ;                             ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 4.40                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -161,7 +600,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 03 19:04:53 2022
+    Info: Processing started: Tue May 03 22:52:57 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Risc_Multicycle_Quartus -c Risc_Multicycle_Quartus
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -201,11 +640,230 @@ Info (12021): Found 5 design units, including 2 entities, in source file elem.vh
     Info (12022): Found design unit 3: sign_extender-beh File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd Line: 63
     Info (12023): Found entity 1: reg File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd Line: 30
     Info (12023): Found entity 2: sign_extender File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd Line: 56
-Error (10482): VHDL error at data_path.vhdl(215): object "rf_dout" is used but not declared File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 215
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4825 megabytes
-    Error: Processing ended: Tue May 03 19:05:06 2022
-    Error: Elapsed time: 00:00:13
-    Error: Total CPU time (on all processors): 00:00:36
+Info (12127): Elaborating entity "DUT" for the top level hierarchy
+Info (12128): Elaborating entity "risc_processor" for hierarchy "risc_processor:add_instance" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl Line: 25
+Info (12128): Elaborating entity "data_path" for hierarchy "risc_processor:add_instance|data_path:prim_datapath" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl Line: 45
+Info (12128): Elaborating entity "reg" for hierarchy "risc_processor:add_instance|data_path:prim_datapath|reg:ins_register" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 107
+Info (12128): Elaborating entity "registerFile" for hierarchy "risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 120
+Warning (10631): VHDL Process Statement warning at registerFile.vhdl(30): inferring latch(es) for signal or variable "registers", which holds its previous value in one or more paths through the process File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[7][0]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[7][1]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[7][2]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[7][3]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[7][4]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[7][5]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[7][6]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[7][7]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[7][8]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[7][9]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[7][10]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[7][11]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[7][12]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[7][13]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[7][14]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[7][15]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[6][0]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[6][1]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[6][2]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[6][3]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[6][4]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[6][5]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[6][6]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[6][7]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[6][8]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[6][9]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[6][10]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[6][11]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[6][12]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[6][13]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[6][14]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[6][15]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[5][0]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[5][1]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[5][2]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[5][3]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[5][4]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[5][5]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[5][6]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[5][7]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[5][8]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[5][9]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[5][10]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[5][11]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[5][12]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[5][13]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[5][14]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[5][15]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[4][0]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[4][1]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[4][2]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[4][3]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[4][4]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[4][5]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[4][6]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[4][7]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[4][8]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[4][9]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[4][10]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[4][11]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[4][12]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[4][13]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[4][14]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[4][15]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[3][0]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[3][1]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[3][2]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[3][3]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[3][4]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[3][5]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[3][6]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[3][7]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[3][8]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[3][9]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[3][10]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[3][11]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[3][12]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[3][13]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[3][14]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[3][15]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[2][0]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[2][1]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[2][2]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[2][3]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[2][4]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[2][5]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[2][6]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[2][7]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[2][8]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[2][9]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[2][10]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[2][11]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[2][12]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[2][13]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[2][14]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[2][15]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[1][0]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[1][1]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[1][2]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[1][3]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[1][4]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[1][5]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[1][6]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[1][7]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[1][8]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[1][9]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[1][10]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[1][11]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[1][12]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[1][13]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[1][14]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[1][15]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[0][0]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[0][1]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[0][2]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[0][3]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[0][4]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[0][5]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[0][6]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[0][7]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[0][8]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[0][9]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[0][10]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[0][11]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[0][12]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[0][13]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[0][14]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (10041): Inferred latch for "registers[0][15]" at registerFile.vhdl(30) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl Line: 30
+Info (12128): Elaborating entity "sign_extender" for hierarchy "risc_processor:add_instance|data_path:prim_datapath|sign_extender:se6_ent" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 125
+Info (12128): Elaborating entity "sign_extender" for hierarchy "risc_processor:add_instance|data_path:prim_datapath|sign_extender:se9_ent" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 129
+Info (12128): Elaborating entity "left_shift" for hierarchy "risc_processor:add_instance|data_path:prim_datapath|left_shift:left7" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 133
+Info (12128): Elaborating entity "alu" for hierarchy "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 136
+Warning (10631): VHDL Process Statement warning at alu.vhdl(72): inferring latch(es) for signal or variable "dest", which holds its previous value in one or more paths through the process File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Warning (10631): VHDL Process Statement warning at alu.vhdl(72): inferring latch(es) for signal or variable "dest_temp", which holds its previous value in one or more paths through the process File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Warning (10631): VHDL Process Statement warning at alu.vhdl(72): inferring latch(es) for signal or variable "C", which holds its previous value in one or more paths through the process File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Warning (10631): VHDL Process Statement warning at alu.vhdl(72): inferring latch(es) for signal or variable "Z", which holds its previous value in one or more paths through the process File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "Z" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "C" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[0]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[1]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[2]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[3]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[4]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[5]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[6]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[7]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[8]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[9]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[10]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[11]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[12]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[13]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[14]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest_temp[15]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[0]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[1]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[2]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[3]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[4]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[5]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[6]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[7]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[8]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[9]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[10]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[11]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[12]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[13]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[14]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (10041): Inferred latch for "dest[15]" at alu.vhdl(72) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (12128): Elaborating entity "lsm" for hierarchy "risc_processor:add_instance|data_path:prim_datapath|lsm:lsm_hw" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 139
+Warning (10631): VHDL Process Statement warning at lsm.vhdl(33): inferring latch(es) for signal or variable "num", which holds its previous value in one or more paths through the process File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl Line: 33
+Warning (10631): VHDL Process Statement warning at lsm.vhdl(33): inferring latch(es) for signal or variable "valid", which holds its previous value in one or more paths through the process File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl Line: 33
+Info (10041): Inferred latch for "valid" at lsm.vhdl(33) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl Line: 33
+Info (10041): Inferred latch for "num[0]" at lsm.vhdl(33) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl Line: 33
+Info (10041): Inferred latch for "num[1]" at lsm.vhdl(33) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl Line: 33
+Info (10041): Inferred latch for "num[2]" at lsm.vhdl(33) File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl Line: 33
+Info (12128): Elaborating entity "ram_mem" for hierarchy "risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl Line: 142
+Info (12128): Elaborating entity "state_transition" for hierarchy "risc_processor:add_instance|state_transition:control_logic" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl Line: 47
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[0]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[0]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[1]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[1]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[2]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[2]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[3]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[3]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[4]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[4]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[5]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[5]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[6]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[6]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[7]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[7]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[8]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[8]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[9]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[9]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[10]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[10]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[11]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[11]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[12]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[12]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[13]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[13]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[14]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[14]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+    Info (13026): Duplicate LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest_temp[15]" merged with LATCH primitive "risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent|dest[15]" File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl Line: 72
+Info (286030): Timing-Driven Synthesis is running
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][4] will power up to High File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
+    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][6] will power up to High File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
+    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][12] will power up to High File: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
+Info (144001): Generated suppressed messages file D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/output_files/Risc_Multicycle_Quartus.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1369 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 80 output pins
+    Info (21061): Implemented 1287 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4867 megabytes
+    Info: Processing ended: Tue May 03 22:53:14 2022
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:34
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/output_files/Risc_Multicycle_Quartus.map.smsg.
 
 

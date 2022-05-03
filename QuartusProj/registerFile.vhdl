@@ -33,8 +33,8 @@ begin
             registers(to_integer(unsigned(addr_in))) <= data_in;
         end if;
 		  if(clear = '1') then
-            registers(0) <= "0000000000000001";
-            registers(1) <= "0000000000000011";
+            registers(0) <= "0000000000000011";
+            registers(1) <= "0000000000001111";
             registers(2) <= (others => '0');
             registers(3) <= (others => '0');
             registers(4) <= (others => '0');
