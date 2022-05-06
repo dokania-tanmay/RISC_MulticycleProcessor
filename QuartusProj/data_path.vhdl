@@ -82,26 +82,27 @@ architecture flow of data_path is
     end component;
 
     component ram_mem is
-        port(
-        clock: IN   std_logic;
-        ram_data_in:  IN   std_logic_vector (15 DOWNTO 0);
-        ram_address:  IN   std_logic_vector(15 downto 0);
-        ram_write_enable:    IN   std_logic;
-        ram_data_out:     OUT  std_logic_vector (15 DOWNTO 0));
-    -- Define RAM component
-    -- Define Signals
+			PORT
+			(
+			 clock: IN   std_logic;
+			 ram_data_in:  IN   std_logic_vector (15 DOWNTO 0);
+			 ram_address:  IN   std_logic_vector(15 downto 0);
+			 ram_write_enable:    IN   std_logic;
+			 ram_data_out:     OUT  std_logic_vector (15 DOWNTO 0);
+			 reset : in std_logic
+			 );
     end component;
 
     -- 16 bit
     signal ram_dout, ram_din, ram_addr, ir_din, ir_dout, se9, se6, ls7_out, rf_dout1, rf_dout2, rf_din, r7_out, t1_din,
-            t1_dout, t2_din, t2_dout, t3_din, t3_dout, t4_din, t4_dout, alu_a, alu_b, alu_c : std_logic_vector(15 downto 0);
+            t1_dout, t2_din, t2_dout, t3_din, t3_dout, t4_din, t4_dout, alu_a, alu_b, alu_c : std_logic_vector(15 downto 0):= (others => '0');
     -- 3 bit
-    signal rf_add1, rf_add2, rf_addin, ls_add : std_logic_vector(2 downto 0);
+    signal rf_add1, rf_add2, rf_addin, ls_add : std_logic_vector(2 downto 0):= (others => '0');
     -- 2 bit
-    signal alu_sel : std_logic_vector(1 downto 0);
+    signal alu_sel : std_logic_vector(1 downto 0):= (others => '0');
     -- 1 bit
     signal ram_wr, ir_wr, rf_wr, ir_clr, rf_clr, alu_ena, C, Z, lsm_inc, lsm_rst, lsm_vld, lsm_wr, t1_wr, t2_wr, t3_wr, t4_wr,
-             t1_clr, t2_clr, t3_clr, t4_clr : std_logic;
+             t1_clr, t2_clr, t3_clr, t4_clr : std_logic := '0';
 begin
     ins_register: reg
         generic map(16)
@@ -139,7 +140,7 @@ begin
         port map(inc => lsm_inc, reset => lsm_rst, clock => clock, insReg => ir_dout(7 downto 0), valid => lsm_vld, wr => lsm_wr, addr => ls_add);
 
     ram_memory : ram_mem
-        port map(ram_data_out => ram_dout, clock => clock, ram_data_in => ram_din, ram_write_enable => ram_wr, ram_address => ram_addr);
+        port map(ram_data_out => ram_dout, clock => clock, ram_data_in => ram_din, ram_write_enable => ram_wr, ram_address => ram_addr, reset => reset);
 
 
 
@@ -152,8 +153,8 @@ begin
                 r7_out;
     ram_wr  <= T(2) when (T(1) = '0') else
                lsm_wr;
-    ram_din <= t4_dout when (T(3) = '0') else
-               t1_dout;
+    ram_din <= t2_dout when (T(3) = '0') else
+               t3_dout;
     rf_wr   <= T(5) when (T(4) = '0') else
                lsm_wr;
     rf_add1 <= ir_dout(11 downto 9);
@@ -178,8 +179,6 @@ begin
     t3_wr <= T(13);
     t4_wr <= T(14);
     alu_ena <= T(16);
-    alu_a <= t1_dout when(T(30) = '0') else
-                t2_dout
     alu_b <= "0000000000000001" when( T( 18 downto 17) = "00") else
                 se6 when( T( 18 downto 17) = "01") else
                 se9 when( T( 18 downto 17) = "10") else
@@ -203,6 +202,16 @@ begin
 	 
 	 op_code <= ir_dout(15 downto 12);
 	 condition <= ir_dout(1 downto 0);
-    
+	 
+	 ir_clr <= reset;
+	 rf_clr <= reset;
+	 t1_clr <= reset;
+	 t2_clr <= reset;
+	 t3_clr <= reset;
+	 t4_clr <= reset;
+	 alu_a <= t1_dout;
+	 ir_wr <= T(28);
+	 ir_din <= ram_dout;
+    t2_din <= rf_dout2;
 
 end flow;
