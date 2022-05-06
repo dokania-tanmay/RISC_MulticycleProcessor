@@ -152,8 +152,8 @@ begin
                 r7_out;
     ram_wr  <= T(2) when (T(1) = '0') else
                lsm_wr;
-    ram_din <= t2_dout when (T(3) = '0') else
-               t3_dout;
+    ram_din <= t4_dout when (T(3) = '0') else
+               t1_dout;
     rf_wr   <= T(5) when (T(4) = '0') else
                lsm_wr;
     rf_add1 <= ir_dout(11 downto 9);
@@ -178,6 +178,8 @@ begin
     t3_wr <= T(13);
     t4_wr <= T(14);
     alu_ena <= T(16);
+    alu_a <= t1_dout when(T(30) = '0') else
+                t2_dout
     alu_b <= "0000000000000001" when( T( 18 downto 17) = "00") else
                 se6 when( T( 18 downto 17) = "01") else
                 se9 when( T( 18 downto 17) = "10") else
