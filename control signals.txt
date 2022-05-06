@@ -6,7 +6,7 @@ T(1)	: RAM write enable select
 			1 = LSM_write_enable
 T(2)	: RAM write enable (works if T(1) == 0)
 T(3)	: RAM Din select
-		`	1 = T2_dout_1
+		`	1 = T1_dout ------------------------------------------------CHANGE!!!!!!!------------------------
 			0 = T4_dout
 T(4)	: Register File Write Enable Select
 		 	0 = T(5)
@@ -42,9 +42,9 @@ T(13) : T3 write enable
 T(14) : T4 write enable
 		0 = do not write
 		1 = write						
-T--Redundant//(15) : ALU_A Select
+T(30) : ALU_A Select ================================!!!!!CHANGE!!!!!!!!!!!============================
 		0 = T1_dout
-		1 = None
+		1 = T2_dout
 T(16) : ALU enable
 
 T(18 downto 17) : ALU_B Select
