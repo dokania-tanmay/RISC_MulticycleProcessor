@@ -18,7 +18,7 @@ ENTITY state_transition IS
 END ENTITY;
 
 ARCHITECTURE state_definition OF state_transition IS
-	TYPE state_definition IS (S0, S1, S2, S3, S4, S5, S7, S8, S9, S11, S13, S20, SU, SK, SL4, SL3, S2p, S21, S22, S23, S24, S25);
+	TYPE state_definition IS (S0, S1, S2, S3, S4, S5, S7, S8, S9, S11, S13, S20, SU, SK, SL4, SL3, S2p, S21, S22, S23, S24, S25, S26);
 	SIGNAL CS, NS : state_definition := S0; --CS Current State
 	--NS Next State
 BEGIN
@@ -41,7 +41,7 @@ BEGIN
 				T(28) <= '1'; -- Instruction Register write enable 
 
 			WHEN S1 =>
-
+				T(30) <= '0'; 
 				T(13) <= '1';
 				T(15) <= '0';
 				T(16) <= '1';
@@ -64,6 +64,7 @@ BEGIN
 				T(14) <= '1';
 
 			WHEN S4 =>
+				T(30) <= '0';
 				T(13) <= '1';
 				T(15) <= '0';
 				T(16) <= '1';
@@ -77,6 +78,7 @@ BEGIN
 							T(27 DOWNTO 26) <= "10";
 						END IF;
 					WHEN "0010" => T(27 DOWNTO 26) <= "00"; --- NAND
+					WHEN "1000" => T(27 DOWNTO 26) <= "01"; --- XOR
 					when others => T(27 DOWNTO 26) <= "00"; --- Doesnt happen
 				END CASE;
 			WHEN S5 =>
@@ -84,9 +86,14 @@ BEGIN
 				T(8 DOWNTO 7) <= "00";
 				T(10 DOWNTO 9) <= "00";
 				T(5) <= '1';
+				T(4) <= '0';
 			WHEN S7 =>
+				T(30) <= '0';
 				T(18 DOWNTO 17) <= "01";
-				T(27 DOWNTO 26) <= "10";
+				if opcode = "0000" then
+					T(27 downto 26) <= "10";
+				else if opcode = "1000" then
+				  T(27 downto 26) <= "01";
 				T(19) <= '1';
 				T(15) <= '0';
 				T(16) <= '1';
@@ -154,7 +161,7 @@ BEGIN
 				T(8 DOWNTO 7) <= "00";
 
 			WHEN S9 =>
-
+				T(1) <= '0';
 				T(2) <= '1';
 				T(3) <= '1';
 				T(0) <= '0';
@@ -181,6 +188,16 @@ BEGIN
 			WHEN SL3 =>
 				T(13) <= '1';
 				T(15) <= '1';
+				T(19) <= '0';
+			
+			when S26 => 
+				T(30) <= '1';
+				T(18 downto 17) <= "01";
+				T(27 downto 26) <= "10";
+				T(19) <= '1';
+				T(15) <= '0';
+				T(16) <= '1';
+				T(13) <= '1'; 
 
 		END CASE;
 	END PROCESS;
@@ -233,7 +250,8 @@ BEGIN
 						WHEN "1100" => NS <= S20;
 						WHEN "1101" => NS <= S20;
 						WHEN "1011" => NS <= S3;
-
+						WHEN "0111" => NS <= S3;
+						WHEN "0101" => NS <= S3;
 						WHEN "0100" => NS <= SU;
 						WHEN OTHERS =>
 
@@ -241,17 +259,11 @@ BEGIN
 
 				WHEN S3 =>
 					CASE opcode IS WHEN "1011" => NS <= S13;
-						WHEN "0111" => NS <= S7;
-						WHEN "0101" => NS <= S7;
+						WHEN "0111" => NS <= S26;
+						WHEN "0101" => NS <= S26;
 						WHEN "0000" => NS <= S7;
 						WHEN "1010" => NS <= S11;
-						WHEN "1000" =>
-							IF (Z = '0') THEN
-								NS <= S0;
-							ELSIF (Z = '1') THEN
-								NS <= SK;
-							END IF;
-
+						WHEN "1000" => NS <= S4;
 						WHEN "0001" =>
 							IF (C = '1') AND (condition = "10") THEN
 								NS <= S4;
@@ -294,7 +306,11 @@ BEGIN
 								NS <= S5;
 
 							END IF;
-
+						WHEN "1000" =>
+							IF (Z = '1') THEN
+								NS <= SK;
+							ELSIF (Z = '0') THEN
+								NS <= S0;	 
 						WHEN OTHERS =>
 					END CASE;
 					-- recheck S4-S11 case 
@@ -304,8 +320,6 @@ BEGIN
 				WHEN S7 =>
 					CASE opcode IS WHEN "0000" => NS <= S8;
 						WHEN "1000" => NS <= S3;
-						WHEN "0101" => NS <= S9;
-						WHEN "0111" => NS <= S21;
 						WHEN OTHERS =>
 					END CASE;
 
@@ -361,7 +375,11 @@ BEGIN
 						WHEN OTHERS =>
 
 					END CASE;
-
+				WHEN S26 => 
+					CASE opcode IS WHEN "0111" => NS <= S21;
+						WHEN "0101" => NS <= S9;
+						WHEN OTHERS =>
+					END CASE;
 			END CASE;
 		END IF;
 	END PROCESS;
