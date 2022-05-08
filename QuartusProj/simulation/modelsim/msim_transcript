@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:00 on May 03,2022
+# Start time: 23:58:37 on May 03,2022
 # vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -26,11 +26,11 @@
 # -- Compiling architecture regArch of reg
 # -- Compiling entity sign_extender
 # -- Compiling architecture beh of sign_extender
-# End time: 23:20:00 on May 03,2022, Elapsed time: 0:00:00
+# End time: 23:58:37 on May 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:01 on May 03,2022
+# Start time: 23:58:38 on May 03,2022
 # vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -42,11 +42,11 @@
 # -- Loading package elem
 # -- Compiling entity DUT
 # -- Compiling architecture DutWrap of DUT
-# End time: 23:20:01 on May 03,2022, Elapsed time: 0:00:00
+# End time: 23:58:38 on May 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:01 on May 03,2022
+# Start time: 23:58:38 on May 03,2022
 # vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -58,11 +58,11 @@
 # -- Loading package elem
 # -- Compiling entity risc_processor
 # -- Compiling architecture complete of risc_processor
-# End time: 23:20:01 on May 03,2022, Elapsed time: 0:00:00
+# End time: 23:58:38 on May 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:01 on May 03,2022
+# Start time: 23:58:38 on May 03,2022
 # vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -74,11 +74,11 @@
 # -- Loading package elem
 # -- Compiling entity state_transition
 # -- Compiling architecture state_definition of state_transition
-# End time: 23:20:01 on May 03,2022, Elapsed time: 0:00:00
+# End time: 23:58:38 on May 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:01 on May 03,2022
+# Start time: 23:58:38 on May 03,2022
 # vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -90,11 +90,11 @@
 # -- Loading package elem
 # -- Compiling entity registerFile
 # -- Compiling architecture beh of registerFile
-# End time: 23:20:01 on May 03,2022, Elapsed time: 0:00:00
+# End time: 23:58:38 on May 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:01 on May 03,2022
+# Start time: 23:58:38 on May 03,2022
 # vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -106,11 +106,11 @@
 # -- Loading package elem
 # -- Compiling entity ram_mem
 # -- Compiling architecture beh of ram_mem
-# End time: 23:20:01 on May 03,2022, Elapsed time: 0:00:00
+# End time: 23:58:38 on May 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:01 on May 03,2022
+# Start time: 23:58:38 on May 03,2022
 # vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -122,11 +122,11 @@
 # -- Loading package elem
 # -- Compiling entity lsm
 # -- Compiling architecture beh of lsm
-# End time: 23:20:01 on May 03,2022, Elapsed time: 0:00:00
+# End time: 23:58:39 on May 03,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:01 on May 03,2022
+# Start time: 23:58:39 on May 03,2022
 # vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -138,11 +138,11 @@
 # -- Loading package elem
 # -- Compiling entity left_shift
 # -- Compiling architecture shift_7 of left_shift
-# End time: 23:20:02 on May 03,2022, Elapsed time: 0:00:01
+# End time: 23:58:39 on May 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:02 on May 03,2022
+# Start time: 23:58:39 on May 03,2022
 # vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -154,11 +154,11 @@
 # -- Loading package elem
 # -- Compiling entity data_path
 # -- Compiling architecture flow of data_path
-# End time: 23:20:02 on May 03,2022, Elapsed time: 0:00:00
+# End time: 23:58:39 on May 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:02 on May 03,2022
+# Start time: 23:58:39 on May 03,2022
 # vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -170,24 +170,24 @@
 # -- Loading package elem
 # -- Compiling entity alu
 # -- Compiling architecture beh of alu
-# End time: 23:20:02 on May 03,2022, Elapsed time: 0:00:00
+# End time: 23:58:39 on May 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:02 on May 03,2022
+# Start time: 23:58:39 on May 03,2022
 # vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Testbench
 # -- Compiling architecture Behave of Testbench
-# End time: 23:20:02 on May 03,2022, Elapsed time: 0:00:00
+# End time: 23:58:39 on May 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  Testbench
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" Testbench 
-# Start time: 23:20:03 on May 03,2022
+# Start time: 23:58:40 on May 03,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -357,21 +357,5 @@
 #    Time: 2860 ns  Iteration: 0  Instance: /testbench
 # ** Note: SUCCESS, all tests passed.
 #    Time: 2904 ns  Iteration: 0  Instance: /testbench
-force -freeze sim:/testbench/input_vector(1) 1 20000 -cancel 20000
-force -freeze sim:/testbench/input_vector(0) 1 0, 0 {50000 ps} -r 100000
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/alu_a
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/alu_b
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/alu_c
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/alu_ena
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/alu_sel
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/ram_addr
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/ram_din
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/ram_dout
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/ir_din
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/ir_dout
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/ir_wr
-run
-run
-run
-# End time: 23:25:19 on May 03,2022, Elapsed time: 0:05:16
+# End time: 00:13:15 on May 04,2022, Elapsed time: 0:14:35
 # Errors: 66, Warnings: 4

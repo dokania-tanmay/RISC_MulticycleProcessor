@@ -86,7 +86,7 @@ BEGIN
 				T(5) <= '1';
 			WHEN S7 =>
 				T(18 DOWNTO 17) <= "01";
-				T(27 DOWNTO 26) <= "10";
+				T(27 DOWNTO 26) <= "10"; --------ADI, BEQ, LOAD, STORE(add)
 				T(19) <= '1';
 				T(15) <= '0';
 				T(16) <= '1';
@@ -173,6 +173,7 @@ BEGIN
 				T(18 DOWNTO 17) <= "10";
 				T(19) <= '1';
 				T(13) <= '1';
+				T(27 DOWNTO 26) <= "10"; ----- JAL, JRI, add
 
 			WHEN SL4 =>
 				T(29) <= '0';
