@@ -1,5 +1,5 @@
 Assembler report for Risc_Multicycle_Quartus
-Tue May 03 23:19:31 2022
+Sun May 08 15:51:49 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/output_files/Risc_Multicycle_Quartus.sof
+  5. Assembler Device Options: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/output_files/Risc_Multicycle_Quartus.sof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue May 03 23:19:31 2022 ;
+; Assembler Status      ; Successful - Sun May 08 15:51:49 2022 ;
 ; Revision Name         ; Risc_Multicycle_Quartus               ;
 ; Top-level Entity Name ; DUT                                   ;
 ; Family                ; Cyclone V                             ;
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                            ;
-+------------------------------------------------------------------------------------------------------+
-; File Name                                                                                            ;
-+------------------------------------------------------------------------------------------------------+
-; D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/output_files/Risc_Multicycle_Quartus.sof ;
-+------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                       ;
++-------------------------------------------------------------------------------------------------+
+; File Name                                                                                       ;
++-------------------------------------------------------------------------------------------------+
+; D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/output_files/Risc_Multicycle_Quartus.sof ;
++-------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/output_files/Risc_Multicycle_Quartus.sof ;
-+----------------+---------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                       ;
-+----------------+---------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x0105F136                                                                                                    ;
-; Checksum       ; 0x0105F136                                                                                                    ;
-+----------------+---------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/output_files/Risc_Multicycle_Quartus.sof ;
++----------------+----------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                  ;
++----------------+----------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x01063A0B                                                                                               ;
+; Checksum       ; 0x01063A0B                                                                                               ;
++----------------+----------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 03 23:19:22 2022
+    Info: Processing started: Sun May 08 15:51:32 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Risc_Multicycle_Quartus -c Risc_Multicycle_Quartus
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Tue May 03 23:19:31 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Peak virtual memory: 4838 megabytes
+    Info: Processing ended: Sun May 08 15:51:49 2022
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:15
 
 

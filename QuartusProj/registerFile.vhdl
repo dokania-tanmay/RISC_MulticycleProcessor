@@ -34,8 +34,8 @@ begin
         end if;
 		  if(clear = '1') then
             registers(0) <= "0000000000000011";
-            registers(1) <= "0000000000001111";
-            registers(2) <= (others => '0');
+            registers(1) <= "0000000000001010";
+            registers(2) <= "0001000000001111";
             registers(3) <= (others => '0');
             registers(4) <= (others => '0');
             registers(5) <= (others => '0');

@@ -30,14 +30,15 @@ BEGIN
          END IF;
       END IF;
 		 if(reset = '1') then
-            ram_block(0) <= "0001000001010000";
-            ram_block(1) <= (others => '0');
-            ram_block(2) <= (others => '0');
-            ram_block(3) <= (others => '0');
-            ram_block(4) <= (others => '0');
+            ram_block(1) <= "0001011001000000";
+            ram_block(0) <= "0111011001000011";
+            ram_block(2) <= "0101000010000011";
+            ram_block(3) <= "1000000001000011";
+            ram_block(4) <= "1000001001000011";
             ram_block(5) <= (others => '0');
             ram_block(6) <= (others => '0');
             ram_block(7) <= (others => '0');
+				ram_block(13) <= "1100000000000011";
         end if;
    END PROCESS;
 	

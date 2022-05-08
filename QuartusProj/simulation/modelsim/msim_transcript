@@ -7,13 +7,13 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying D:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd}
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/elem.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:00 on May 03,2022
-# vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/elem.vhd 
+# Start time: 15:52:42 on May 08,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/elem.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -26,12 +26,12 @@
 # -- Compiling architecture regArch of reg
 # -- Compiling entity sign_extender
 # -- Compiling architecture beh of sign_extender
-# End time: 23:20:00 on May 03,2022, Elapsed time: 0:00:00
+# End time: 15:52:42 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl}
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:01 on May 03,2022
-# vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl 
+# Start time: 15:52:43 on May 08,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -42,12 +42,12 @@
 # -- Loading package elem
 # -- Compiling entity DUT
 # -- Compiling architecture DutWrap of DUT
-# End time: 23:20:01 on May 03,2022, Elapsed time: 0:00:00
+# End time: 15:52:43 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl}
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:01 on May 03,2022
-# vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl 
+# Start time: 15:52:43 on May 08,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -58,12 +58,12 @@
 # -- Loading package elem
 # -- Compiling entity risc_processor
 # -- Compiling architecture complete of risc_processor
-# End time: 23:20:01 on May 03,2022, Elapsed time: 0:00:00
+# End time: 15:52:43 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl}
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:01 on May 03,2022
-# vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl 
+# Start time: 15:52:43 on May 08,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -74,12 +74,12 @@
 # -- Loading package elem
 # -- Compiling entity state_transition
 # -- Compiling architecture state_definition of state_transition
-# End time: 23:20:01 on May 03,2022, Elapsed time: 0:00:00
+# End time: 15:52:43 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl}
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:01 on May 03,2022
-# vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl 
+# Start time: 15:52:43 on May 08,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -90,12 +90,12 @@
 # -- Loading package elem
 # -- Compiling entity registerFile
 # -- Compiling architecture beh of registerFile
-# End time: 23:20:01 on May 03,2022, Elapsed time: 0:00:00
+# End time: 15:52:43 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl}
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:01 on May 03,2022
-# vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl 
+# Start time: 15:52:43 on May 08,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -106,12 +106,12 @@
 # -- Loading package elem
 # -- Compiling entity ram_mem
 # -- Compiling architecture beh of ram_mem
-# End time: 23:20:01 on May 03,2022, Elapsed time: 0:00:00
+# End time: 15:52:43 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl}
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:01 on May 03,2022
-# vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl 
+# Start time: 15:52:43 on May 08,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -122,12 +122,12 @@
 # -- Loading package elem
 # -- Compiling entity lsm
 # -- Compiling architecture beh of lsm
-# End time: 23:20:01 on May 03,2022, Elapsed time: 0:00:00
+# End time: 15:52:43 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl}
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:01 on May 03,2022
-# vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl 
+# Start time: 15:52:43 on May 08,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -138,12 +138,12 @@
 # -- Loading package elem
 # -- Compiling entity left_shift
 # -- Compiling architecture shift_7 of left_shift
-# End time: 23:20:02 on May 03,2022, Elapsed time: 0:00:01
+# End time: 15:52:43 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl}
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:02 on May 03,2022
-# vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl 
+# Start time: 15:52:43 on May 08,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -154,12 +154,12 @@
 # -- Loading package elem
 # -- Compiling entity data_path
 # -- Compiling architecture flow of data_path
-# End time: 23:20:02 on May 03,2022, Elapsed time: 0:00:00
+# End time: 15:52:43 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl}
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/alu.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:02 on May 03,2022
-# vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/alu.vhdl 
+# Start time: 15:52:43 on May 08,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/alu.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -170,24 +170,24 @@
 # -- Loading package elem
 # -- Compiling entity alu
 # -- Compiling architecture beh of alu
-# End time: 23:20:02 on May 03,2022, Elapsed time: 0:00:00
+# End time: 15:52:44 on May 08,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl}
+# vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:20:02 on May 03,2022
-# vcom -reportprogress 300 -93 -work work D:/Files/EE309/project/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl 
+# Start time: 15:52:44 on May 08,2022
+# vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Testbench
 # -- Compiling architecture Behave of Testbench
-# End time: 23:20:02 on May 03,2022, Elapsed time: 0:00:00
+# End time: 15:52:44 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  Testbench
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" Testbench 
-# Start time: 23:20:03 on May 03,2022
+# Start time: 15:52:44 on May 08,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -355,23 +355,167 @@
 #    Time: 2816 ns  Iteration: 0  Instance: /testbench
 # ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
 #    Time: 2860 ns  Iteration: 0  Instance: /testbench
-# ** Note: SUCCESS, all tests passed.
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
 #    Time: 2904 ns  Iteration: 0  Instance: /testbench
-force -freeze sim:/testbench/input_vector(1) 1 20000 -cancel 20000
-force -freeze sim:/testbench/input_vector(0) 1 0, 0 {50000 ps} -r 100000
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/alu_a
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/alu_b
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/alu_c
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/alu_ena
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/alu_sel
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/ram_addr
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/ram_din
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/ram_dout
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/ir_din
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/ir_dout
-add wave -position end  sim:/testbench/dut_instance/add_instance/prim_datapath/ir_wr
-run
-run
-run
-# End time: 23:25:19 on May 03,2022, Elapsed time: 0:05:16
-# Errors: 66, Warnings: 4
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 2948 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 2992 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3036 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3080 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3124 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3168 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3212 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3256 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3300 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3344 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3388 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3432 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3476 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3520 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3564 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3608 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3652 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3696 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3740 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3784 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3828 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3872 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3916 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 3960 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4004 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4048 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4092 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4136 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4180 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4224 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4268 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4312 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4356 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4400 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4444 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4488 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4532 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4576 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4620 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4664 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4708 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4752 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4796 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4840 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4884 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4928 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 4972 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5016 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5060 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5104 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5148 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5192 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5236 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5280 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5324 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5368 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5412 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5456 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5500 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5544 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5588 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5632 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5676 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5720 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5764 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5808 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5852 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5896 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5940 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 5984 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 6028 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 6072 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 6116 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 6160 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 6204 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 6248 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 6292 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 6336 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 80, found 0.
+#    Time: 6380 ns  Iteration: 0  Instance: /testbench
+# ** Note: SUCCESS, all tests passed.
+#    Time: 6424 ns  Iteration: 0  Instance: /testbench
+# End time: 16:14:49 on May 08,2022, Elapsed time: 0:22:05
+# Errors: 146, Warnings: 4

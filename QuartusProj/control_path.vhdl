@@ -12,7 +12,7 @@ ENTITY state_transition IS
 		opcode : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 		C, Z, valid : IN STD_LOGIC;
 		condition : IN STD_LOGIC_VECTOR (1 DOWNTO 0);
-		T : OUT STD_LOGIC_VECTOR(29 DOWNTO 0)
+		T : OUT STD_LOGIC_VECTOR(30 DOWNTO 0)
 	);
 
 END ENTITY;
@@ -36,6 +36,7 @@ BEGIN
 		CASE CS IS
 
 			WHEN S0 =>
+				T(11) <= '1';
 				T(21 DOWNTO 20) <= "10"; --T1 din select r7_out
 				T(0) <= '1'; -- RAM Memory Address select R7_dout
 				T(28) <= '1'; -- Instruction Register write enable 
@@ -53,6 +54,8 @@ BEGIN
 				T(29) <= '0';
 				T(8 DOWNTO 7) <= "11";
 				T(10 DOWNTO 9) <= "00";
+				T(4) <= '0';
+				T(5) <= '1';
 
 			WHEN S3 =>
 
@@ -62,6 +65,7 @@ BEGIN
 				T(6) <= '1';
 				T(12) <= '1';
 				T(14) <= '1';
+			
 
 			WHEN S4 =>
 				T(30) <= '0';
@@ -92,15 +96,15 @@ BEGIN
 				T(18 DOWNTO 17) <= "01";
 				if opcode = "0000" then
 					T(27 downto 26) <= "10";
-				else if opcode = "1000" then
+				elsif opcode = "1000" then
 				  T(27 downto 26) <= "01";
+				END IF;
 				T(19) <= '1';
 				T(15) <= '0';
 				T(16) <= '1';
 				T(13) <= '1';
-
+				
 			WHEN S20 =>
-
 				T(13) <= '1';
 				T(19) <= '0';
 				T(24) <= '1';
@@ -114,6 +118,7 @@ BEGIN
 				T(14) <= '1';
 
 			WHEN S22 =>
+				T(30) <= '0';
 				T(29) <= '0';
 				T(27 DOWNTO 26) <= "10";
 				T(18 DOWNTO 17) <= "00";
@@ -124,6 +129,7 @@ BEGIN
 				T(13) <= '1';
 				T(4) <= '1';
 				T(25) <= '1';
+				T(11) <= '1';
 
 			WHEN S23 =>
 				T(23 DOWNTO 22) <= "01";
@@ -148,14 +154,18 @@ BEGIN
 				T(29) <= '0';
 				T(10 DOWNTO 9) <= "10";
 				T (8 DOWNTO 7) <= "01";
+				T(4) <= '0';
+				T(5) <= '1';
 
 			WHEN SK =>
-
+				T(4) <= '0';
+				T(5) <= '1';
 				T(8 DOWNTO 7) <= "11";
 				T(29) <= '0';
 				T(10 DOWNTO 9) <= "01";
 			WHEN S8 =>
 				T(29) <= '1';
+				T(4) <= '0';
 				T(5) <= '1';
 				T(10 DOWNTO 9) <= "00";
 				T(8 DOWNTO 7) <= "00";
@@ -170,11 +180,15 @@ BEGIN
 				T(29) <= '0';
 				T(8 DOWNTO 7) <= "11";
 				T(10 DOWNTO 9) <= "00";
+				T(4) <= '0';
+				T(5) <= '1';
 
 			WHEN S11 =>
 				T(29) <= '0';
 				T(8 DOWNTO 7) <= "11";
 				T(10 DOWNTO 9) <= "11";
+				T(4) <= '0';
+				T(5) <= '1';
 			WHEN S13 =>
 				T(15) <= '0';
 				T(18 DOWNTO 17) <= "10";
@@ -182,6 +196,8 @@ BEGIN
 				T(13) <= '1';
 
 			WHEN SL4 =>
+				T(4) <= '0';
+				T(5) <= '1';
 				T(29) <= '0';
 				T(8 DOWNTO 7) <= "01";
 				T(10 DOWNTO 9) <= "00";
@@ -310,7 +326,8 @@ BEGIN
 							IF (Z = '1') THEN
 								NS <= SK;
 							ELSIF (Z = '0') THEN
-								NS <= S0;	 
+								NS <= S0;
+							END IF;
 						WHEN OTHERS =>
 					END CASE;
 					-- recheck S4-S11 case 

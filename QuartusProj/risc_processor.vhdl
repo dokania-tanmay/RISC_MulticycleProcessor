@@ -17,7 +17,7 @@ architecture complete of risc_processor is
     component data_path is
         port (
             clock, reset : in std_logic;
-            T : in std_logic_vector(29 downto 0);
+            T : in std_logic_vector(30 downto 0);
             flags: out std_logic_vector(2 downto 0);
             op_code: out std_logic_vector(3 downto 0);
             condition: out std_logic_vector(1 downto 0);
@@ -30,12 +30,12 @@ architecture complete of risc_processor is
             opcode: in std_logic_vector(3 downto 0);
             C, Z, valid: in std_logic;
             condition: in std_logic_vector (1 downto 0);
-            T: out std_logic_vector(29 downto 0)
+            T: out std_logic_vector(30 downto 0)
             );
     end component;
 
 -- Signals
-        signal T : std_logic_vector(29 downto 0):= (others => '0');
+        signal T : std_logic_vector(30 downto 0):= (others => '0');
         signal flags : std_logic_vector(2 downto 0):= (others => '0');
         signal op_code: std_logic_vector(3 downto 0):= (others => '0');
         signal condition: std_logic_vector(1 downto 0):= (others => '0');

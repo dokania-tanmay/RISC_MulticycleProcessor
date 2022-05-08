@@ -9,7 +9,7 @@ use work.elem.all;
 entity data_path is
   port (
     clock, reset : in std_logic;
-    T : in std_logic_vector(29 downto 0);
+    T : in std_logic_vector(30 downto 0);
     flags: out std_logic_vector(2 downto 0);
 	op_code: out std_logic_vector(3 downto 0);
 	condition: out std_logic_vector(1 downto 0);
@@ -185,7 +185,8 @@ begin
                 se6 when( T( 18 downto 17) = "01") else
                 se9 when( T( 18 downto 17) = "10") else
                 t2_dout; 
-    t3_din <= rf_dout1 when( T(19) = '0') else
+    t3_din <= rf_dout1 when( T(19) = '0' and T(15) = '0') else
+                t4_dout when ( T(19) = '0' and T(15) = '1') else
                 alu_c;
     t1_din <= rf_dout1 when( T(21 downto 20) = "00") else
                 t3_dout when( T(21 downto 20) = "01") else
@@ -211,7 +212,6 @@ begin
 	 t2_clr <= reset;
 	 t3_clr <= reset;
 	 t4_clr <= reset;
-	 alu_a <= t1_dout;
 	 ir_wr <= T(28);
 	 ir_din <= ram_dout;
     t2_din <= rf_dout2;
