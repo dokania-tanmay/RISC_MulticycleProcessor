@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISC
-Sun May  8 14:09:11 2022
+Sun May 08 17:53:18 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun May  8 14:09:11 2022       ;
+; Analysis & Synthesis Status     ; Successful - Sun May 08 17:53:18 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; RISC                                        ;
 ; Top-level Entity Name           ; write_enable                                ;
@@ -166,13 +166,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                      ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path               ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
-; write_enable.vhd                 ; yes             ; User VHDL File  ; /home/aayush/Desktop/RISC/write_enable.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
+; write_enable.vhd                 ; yes             ; User VHDL File  ; D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/write_enable.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -258,44 +258,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun May  8 14:09:03 2022
+    Info: Processing started: Sun May 08 17:53:04 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC -c RISC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file lut.vhdl
+    Info (12022): Found design unit 1: LUT-arch File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/LUT.vhdl Line: 15
+    Info (12023): Found entity 1: LUT File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/LUT.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file sel_sign_extender.vhd
+    Info (12022): Found design unit 1: sel_sign_extender-conditon File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/sel_sign_extender.vhd Line: 18
+    Info (12023): Found entity 1: sel_sign_extender File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/sel_sign_extender.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file write_enable.vhd
-    Info (12022): Found design unit 1: write_enable-WB_enable_contol File: /home/aayush/Desktop/RISC/write_enable.vhd Line: 21
-    Info (12023): Found entity 1: write_enable File: /home/aayush/Desktop/RISC/write_enable.vhd Line: 9
+    Info (12022): Found design unit 1: write_enable-WB_enable_contol File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/write_enable.vhd Line: 21
+    Info (12023): Found entity 1: write_enable File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/write_enable.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file alu_oper_sel.vhd
-    Info (12022): Found design unit 1: alu_oper_sel-controller File: /home/aayush/Desktop/RISC/alu_oper_sel.vhd Line: 24
-    Info (12023): Found entity 1: alu_oper_sel File: /home/aayush/Desktop/RISC/alu_oper_sel.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file BEQ_jcheck.vhd
-    Info (12022): Found design unit 1: BEQ_jcheck-jump_controller File: /home/aayush/Desktop/RISC/BEQ_jcheck.vhd Line: 22
-    Info (12023): Found entity 1: BEQ_jcheck File: /home/aayush/Desktop/RISC/BEQ_jcheck.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file Addr_cmp.vhd
-    Info (12022): Found design unit 1: Addr_cmp-comparator File: /home/aayush/Desktop/RISC/Addr_cmp.vhd Line: 22
-    Info (12023): Found entity 1: Addr_cmp File: /home/aayush/Desktop/RISC/Addr_cmp.vhd Line: 9
+    Info (12022): Found design unit 1: alu_oper_sel-controller File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/alu_oper_sel.vhd Line: 24
+    Info (12023): Found entity 1: alu_oper_sel File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/alu_oper_sel.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file beq_jcheck.vhd
+    Info (12022): Found design unit 1: BEQ_jcheck-jump_controller File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/BEQ_jcheck.vhd Line: 22
+    Info (12023): Found entity 1: BEQ_jcheck File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/BEQ_jcheck.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file addr_cmp.vhd
+    Info (12022): Found design unit 1: Addr_cmp-comparator File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/Addr_cmp.vhd Line: 22
+    Info (12023): Found entity 1: Addr_cmp File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/Addr_cmp.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file pc_pred.vhd
-    Info (12022): Found design unit 1: pc_pred-prediction File: /home/aayush/Desktop/RISC/pc_pred.vhd Line: 21
-    Info (12023): Found entity 1: pc_pred File: /home/aayush/Desktop/RISC/pc_pred.vhd Line: 9
+    Info (12022): Found design unit 1: pc_pred-prediction File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pc_pred.vhd Line: 21
+    Info (12023): Found entity 1: pc_pred File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pc_pred.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file cond_left_shift.vhd
-    Info (12022): Found design unit 1: cond_left_shift-cond_shifter File: /home/aayush/Desktop/RISC/cond_left_shift.vhd Line: 21
-    Info (12023): Found entity 1: cond_left_shift File: /home/aayush/Desktop/RISC/cond_left_shift.vhd Line: 9
+    Info (12022): Found design unit 1: cond_left_shift-cond_shifter File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/cond_left_shift.vhd Line: 21
+    Info (12023): Found entity 1: cond_left_shift File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/cond_left_shift.vhd Line: 9
 Info (12021): Found 13 design units, including 7 entities, in source file pipeline_register.vhd
-    Info (12022): Found design unit 1: pipeline_register File: /home/aayush/Desktop/RISC/pipeline_register.vhd Line: 33
-    Info (12022): Found design unit 2: pipe_IFD-reg_1_2 File: /home/aayush/Desktop/RISC/pipeline_register.vhd Line: 165
-    Info (12022): Found design unit 3: pipe_IDRR-reg_2_3 File: /home/aayush/Desktop/RISC/pipeline_register.vhd Line: 229
-    Info (12022): Found design unit 4: pipe_RREX-reg_3_4 File: /home/aayush/Desktop/RISC/pipeline_register.vhd Line: 312
-    Info (12022): Found design unit 5: pipe_EXMOP-reg_4_5 File: /home/aayush/Desktop/RISC/pipeline_register.vhd Line: 405
-    Info (12022): Found design unit 6: pipe_MOPWB-reg_5_6 File: /home/aayush/Desktop/RISC/pipeline_register.vhd Line: 501
-    Info (12023): Found entity 1: pipe_reg File: /home/aayush/Desktop/RISC/pipeline_register.vhd Line: 6
-    Info (12023): Found entity 2: pipe_bit File: /home/aayush/Desktop/RISC/pipeline_register.vhd Line: 19
-    Info (12023): Found entity 3: pipe_IFD File: /home/aayush/Desktop/RISC/pipeline_register.vhd Line: 144
-    Info (12023): Found entity 4: pipe_IDRR File: /home/aayush/Desktop/RISC/pipeline_register.vhd Line: 211
-    Info (12023): Found entity 5: pipe_RREX File: /home/aayush/Desktop/RISC/pipeline_register.vhd Line: 288
-    Info (12023): Found entity 6: pipe_EXMOP File: /home/aayush/Desktop/RISC/pipeline_register.vhd Line: 381
-    Info (12023): Found entity 7: pipe_MOPWB File: /home/aayush/Desktop/RISC/pipeline_register.vhd Line: 477
+    Info (12022): Found design unit 1: pipeline_register File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 33
+    Info (12022): Found design unit 2: pipe_IFD-reg_1_2 File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 165
+    Info (12022): Found design unit 3: pipe_IDRR-reg_2_3 File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 229
+    Info (12022): Found design unit 4: pipe_RREX-reg_3_4 File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 312
+    Info (12022): Found design unit 5: pipe_EXMOP-reg_4_5 File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 405
+    Info (12022): Found design unit 6: pipe_MOPWB-reg_5_6 File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 501
+    Info (12023): Found entity 1: pipe_reg File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 6
+    Info (12023): Found entity 2: pipe_bit File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 19
+    Info (12023): Found entity 3: pipe_IFD File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 144
+    Info (12023): Found entity 4: pipe_IDRR File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 211
+    Info (12023): Found entity 5: pipe_RREX File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 288
+    Info (12023): Found entity 6: pipe_EXMOP File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 381
+    Info (12023): Found entity 7: pipe_MOPWB File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 477
 Info (12127): Elaborating entity "write_enable" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at write_enable.vhd(53): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/aayush/Desktop/RISC/write_enable.vhd Line: 53
+Warning (10492): VHDL Process Statement warning at write_enable.vhd(53): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/write_enable.vhd Line: 53
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -304,9 +310,9 @@ Info (21057): Implemented 11 device resources after synthesis - the final resour
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 2 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 484 megabytes
-    Info: Processing ended: Sun May  8 14:09:11 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Peak virtual memory: 4851 megabytes
+    Info: Processing ended: Sun May 08 17:53:18 2022
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:32
 
 
