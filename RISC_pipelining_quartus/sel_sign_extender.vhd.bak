@@ -1,0 +1,57 @@
+library ieee;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+use ieee.std_logic_1164.all;
+
+
+
+
+entity sel_sign_extender is
+
+	generic(
+	        input_width: integer := 10;
+		output_width: integer := 16);
+
+	port(
+		input: in std_logic_vector(input_width-1 downto 0);
+		output: in std_logic_vector(output_width-1 downto 0);
+
+                );
+           
+end entity;
+
+
+architecture WB_enable_contol of write_enable is
+    signal condition : std_logic ;
+    signal temp_op: std_logic_vector (output_width-1 downto 0);     
+        
+begin
+
+     condition <= input(0);
+
+     
+     if condition is '1' then
+         temp_op(8 down to 0) <= input(9 downto 1)
+	
+	 extend:
+	  for i in 9 to output_width-1 generate
+		output(i) <= input(9);
+	  end generate;
+	  
+     else
+         temp_op(5 down to 0) <= input(6 downto 1)
+	
+	 extend:
+	  for i in 6 to output_width-1 generate
+		output(i) <= input(5);
+	  end generate;
+          
+      end if;
+      
+end architecture;
+        
+        
+          
+          
+          
+    
