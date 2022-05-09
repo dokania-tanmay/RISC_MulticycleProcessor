@@ -11,7 +11,24 @@ entity pipe_reg is
 		Dout: out std_logic_vector(data_width-1 downto 0));
 end entity;
 
-architecture of pipe_r
+
+
+architecture behave of pipe_reg is
+begin
+	process(clk, clr, wr_enable)	
+	begin
+		if(clk'event and clk = '1') then
+			if (wr_enable='1') then
+				Dout <= Din;
+			end if;
+			if(clr = '1') then
+				Dout <= (others => '0');
+			end if;
+		end if;
+	end process;
+	
+end architecture;
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -24,6 +41,22 @@ entity pipe_bit is
 		Din: in std_logic;
 		Dout: out std_logic);
 end entity;
+
+architecture behave of pipe_bit is
+begin
+	process(clk, clr, wr_enable)	
+	begin
+		if(clk'event and clk = '1') then
+			if (wr_enable='1') then
+				Dout <= Din;
+			end if;
+			if(clr = '1') then
+				Dout <= '0';
+			end if;
+		end if;
+	end process;
+	
+end architecture;
 
 
 library ieee;
