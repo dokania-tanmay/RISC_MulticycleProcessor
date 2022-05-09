@@ -32,9 +32,6 @@ use ieee.std_logic_1164.all;
 
 package pipeline_register is
 
-
-	
-	
 	component pipe_IFD is
 		port(
 			pc, pc_2, inst : in std_logic_vector(15 downto 0);
@@ -86,7 +83,7 @@ package pipeline_register is
 
        end component;
        
-	component pipe_EXMOP is  
+	component pipe_EXMEM is  
 		port(
 			pc, pc_2, inst : in std_logic_vector(15 downto 0);
 			D1, D3 : in std_logic_vector(15 downto 0);
@@ -107,7 +104,7 @@ package pipeline_register is
 
        end component;
        
-	component pipe_MOPWB is
+	component pipe_MEMWB is
 		port(
 			pc, pc_2, inst : in std_logic_vector(15 downto 0);
 			D3: in std_logic_vector(15 downto 0);
@@ -155,6 +152,9 @@ entity pipe_IFD is
 
 
 end entity;
+
+
+
 
 
 
@@ -375,7 +375,7 @@ use ieee.std_logic_1164.all;
 library work;
 
 
-entity pipe_EXMOP is 
+entity pipe_EXMEM is 
 
 		port(
 			pc, pc_2, inst : in std_logic_vector(15 downto 0);
@@ -399,7 +399,7 @@ end entity;
 
 
 
-architecture reg_4_5 of pipe_EXMOP is 
+architecture reg_4_5 of pipe_EXMEM is 
 component pipe_reg is
 	generic ( data_width : integer);
 	port(
@@ -471,7 +471,7 @@ use ieee.std_logic_1164.all;
 library work;
 
 
-entity pipe_MOPWB is 
+entity pipe_MEMWB is 
 
 		port(
 			pc, pc_2, inst : in std_logic_vector(15 downto 0);
@@ -495,7 +495,7 @@ end entity;
 
 
 
-architecture reg_5_6 of pipe_MOPWB is 
+architecture reg_5_6 of pipe_MEMWB is 
 component pipe_reg is
 	generic ( data_width : integer);
 	port(
