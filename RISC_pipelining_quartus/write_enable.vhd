@@ -10,7 +10,7 @@ entity write_enable is
 
 	port(
 		opcode: in std_logic_vector(3 downto 0);
-		CZ: in std_logic_vector(1 downto 0);
+		condn: in std_logic_vector(1 downto 0);
                 C,Z: in std_logic;
                 WB_enable: out std_logic
                 );
@@ -24,12 +24,12 @@ architecture WB_enable_contol of write_enable is
 begin
      
      update:
-     process(opcode,CZ,C,Z)
+     process(opcode,condn,C,Z)
      begin
        
        case opcode is 
              when "0001" | "0010" =>
-                case CZ is when "01" => 
+                case condn is when "01" => 
                       if (Z= '1') then enable <= '1';
                       else enable <= '0';
                       

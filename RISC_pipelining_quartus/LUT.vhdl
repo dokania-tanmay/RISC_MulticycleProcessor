@@ -7,7 +7,7 @@ ENTITY LUT IS
 	PORT (
 		IF_M1_OUT, PC_EXE, PC_PRED, PC_RR : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
 		clk : IN STD_LOGIC;
-		match, clr : OUT STD_LOGIC;
+		match, flush : OUT STD_LOGIC;
 		Branch_addr : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
 	);
 
@@ -27,19 +27,19 @@ BEGIN
 		IF PC_PRED = PC_RR THEN
 			match <= '0';
 			Branch_addr <= (OTHERS => '0');
-			clr <= '0';
+			flush <= '0';
 			FOR i IN 0 TO 7 LOOP
 				IF v(i) = '1' THEN
 					IF CA(i) = IF_M1_OUT THEN
 						Branch_addr <= BA(i);
 						match <= '1';
-						clr <= '0';
+						flush <= '0';
 					END IF;
 				END IF;
 			END LOOP;
 		ELSE
 			match <= '0';
-			clr <= '1';
+			flush <= '1';
 			Branch_addr <= (OTHERS => '0');
 			FOR i IN 0 TO 7 LOOP
 				IF v(i) = '1' THEN

@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "05/08/2022 17:54:20"
+-- DATE "05/09/2022 09:15:22"
 
 -- 
 -- Device: Altera 5CGXFC7C7F23C8 Package FBGA484
@@ -37,7 +37,7 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY 	write_enable IS
     PORT (
 	opcode : IN std_logic_vector(3 DOWNTO 0);
-	CZ : IN std_logic_vector(1 DOWNTO 0);
+	condn : IN std_logic_vector(1 DOWNTO 0);
 	C : IN std_logic;
 	Z : IN std_logic;
 	WB_enable : BUFFER std_logic
@@ -48,8 +48,8 @@ END write_enable;
 -- WB_enable	=>  Location: PIN_M20,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- opcode[2]	=>  Location: PIN_M22,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- opcode[3]	=>  Location: PIN_M18,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- CZ[0]	=>  Location: PIN_M16,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- CZ[1]	=>  Location: PIN_N20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- condn[0]	=>  Location: PIN_M16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- condn[1]	=>  Location: PIN_N20,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- C	=>  Location: PIN_N16,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- Z	=>  Location: PIN_N21,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- opcode[0]	=>  Location: PIN_N19,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -67,13 +67,13 @@ SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
 SIGNAL ww_opcode : std_logic_vector(3 DOWNTO 0);
-SIGNAL ww_CZ : std_logic_vector(1 DOWNTO 0);
+SIGNAL ww_condn : std_logic_vector(1 DOWNTO 0);
 SIGNAL ww_C : std_logic;
 SIGNAL ww_Z : std_logic;
 SIGNAL ww_WB_enable : std_logic;
 SIGNAL \~QUARTUS_CREATED_GND~I_combout\ : std_logic;
-SIGNAL \CZ[0]~input_o\ : std_logic;
-SIGNAL \CZ[1]~input_o\ : std_logic;
+SIGNAL \condn[0]~input_o\ : std_logic;
+SIGNAL \condn[1]~input_o\ : std_logic;
 SIGNAL \C~input_o\ : std_logic;
 SIGNAL \Z~input_o\ : std_logic;
 SIGNAL \Mux0~0_combout\ : std_logic;
@@ -86,8 +86,8 @@ SIGNAL \ALT_INV_opcode[1]~input_o\ : std_logic;
 SIGNAL \ALT_INV_opcode[0]~input_o\ : std_logic;
 SIGNAL \ALT_INV_Z~input_o\ : std_logic;
 SIGNAL \ALT_INV_C~input_o\ : std_logic;
-SIGNAL \ALT_INV_CZ[1]~input_o\ : std_logic;
-SIGNAL \ALT_INV_CZ[0]~input_o\ : std_logic;
+SIGNAL \ALT_INV_condn[1]~input_o\ : std_logic;
+SIGNAL \ALT_INV_condn[0]~input_o\ : std_logic;
 SIGNAL \ALT_INV_opcode[3]~input_o\ : std_logic;
 SIGNAL \ALT_INV_opcode[2]~input_o\ : std_logic;
 SIGNAL \ALT_INV_Mux0~0_combout\ : std_logic;
@@ -95,7 +95,7 @@ SIGNAL \ALT_INV_Mux0~0_combout\ : std_logic;
 BEGIN
 
 ww_opcode <= opcode;
-ww_CZ <= CZ;
+ww_condn <= condn;
 ww_C <= C;
 ww_Z <= Z;
 WB_enable <= ww_WB_enable;
@@ -106,8 +106,8 @@ ww_devpor <= devpor;
 \ALT_INV_opcode[0]~input_o\ <= NOT \opcode[0]~input_o\;
 \ALT_INV_Z~input_o\ <= NOT \Z~input_o\;
 \ALT_INV_C~input_o\ <= NOT \C~input_o\;
-\ALT_INV_CZ[1]~input_o\ <= NOT \CZ[1]~input_o\;
-\ALT_INV_CZ[0]~input_o\ <= NOT \CZ[0]~input_o\;
+\ALT_INV_condn[1]~input_o\ <= NOT \condn[1]~input_o\;
+\ALT_INV_condn[0]~input_o\ <= NOT \condn[0]~input_o\;
 \ALT_INV_opcode[3]~input_o\ <= NOT \opcode[3]~input_o\;
 \ALT_INV_opcode[2]~input_o\ <= NOT \opcode[2]~input_o\;
 \ALT_INV_Mux0~0_combout\ <= NOT \Mux0~0_combout\;
@@ -126,26 +126,26 @@ PORT MAP (
 	o => ww_WB_enable);
 
 -- Location: IOIBUF_X89_Y35_N61
-\CZ[0]~input\ : cyclonev_io_ibuf
+\condn[0]~input\ : cyclonev_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_CZ(0),
-	o => \CZ[0]~input_o\);
+	i => ww_condn(0),
+	o => \condn[0]~input_o\);
 
 -- Location: IOIBUF_X89_Y35_N78
-\CZ[1]~input\ : cyclonev_io_ibuf
+\condn[1]~input\ : cyclonev_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_CZ(1),
-	o => \CZ[1]~input_o\);
+	i => ww_condn(1),
+	o => \condn[1]~input_o\);
 
 -- Location: IOIBUF_X89_Y35_N44
 \C~input\ : cyclonev_io_ibuf
@@ -172,7 +172,7 @@ PORT MAP (
 -- Location: LABCELL_X88_Y35_N0
 \Mux0~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \Mux0~0_combout\ = ( \Z~input_o\ & ( (!\CZ[0]~input_o\ & (\CZ[1]~input_o\ & !\C~input_o\)) ) ) # ( !\Z~input_o\ & ( (!\CZ[0]~input_o\ & (\CZ[1]~input_o\ & !\C~input_o\)) # (\CZ[0]~input_o\ & (!\CZ[1]~input_o\)) ) )
+-- \Mux0~0_combout\ = ( \Z~input_o\ & ( (!\condn[0]~input_o\ & (\condn[1]~input_o\ & !\C~input_o\)) ) ) # ( !\Z~input_o\ & ( (!\condn[0]~input_o\ & (\condn[1]~input_o\ & !\C~input_o\)) # (\condn[0]~input_o\ & (!\condn[1]~input_o\)) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -181,8 +181,8 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ALT_INV_CZ[0]~input_o\,
-	datab => \ALT_INV_CZ[1]~input_o\,
+	dataa => \ALT_INV_condn[0]~input_o\,
+	datab => \ALT_INV_condn[1]~input_o\,
 	datac => \ALT_INV_C~input_o\,
 	datae => \ALT_INV_Z~input_o\,
 	combout => \Mux0~0_combout\);

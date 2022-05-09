@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISC
-Sun May 08 17:53:18 2022
+Mon May 09 09:13:56 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun May 08 17:53:18 2022       ;
+; Analysis & Synthesis Status     ; Successful - Mon May 09 09:13:56 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; RISC                                        ;
 ; Top-level Entity Name           ; write_enable                                ;
@@ -258,34 +258,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun May 08 17:53:04 2022
+    Info: Processing started: Mon May 09 09:13:39 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC -c RISC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhdl
+    Info (12022): Found design unit 1: datapath-flow File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/datapath.vhdl Line: 16
+    Info (12023): Found entity 1: datapath File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/datapath.vhdl Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file priority_mux.vhdl
+    Info (12022): Found design unit 1: priority_mux-beh File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/priority_mux.vhdl Line: 15
+    Info (12023): Found entity 1: priority_mux File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/priority_mux.vhdl Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file lut.vhdl
     Info (12022): Found design unit 1: LUT-arch File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/LUT.vhdl Line: 15
     Info (12023): Found entity 1: LUT File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/LUT.vhdl Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file sel_sign_extender.vhd
-    Info (12022): Found design unit 1: sel_sign_extender-conditon File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/sel_sign_extender.vhd Line: 18
-    Info (12023): Found entity 1: sel_sign_extender File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/sel_sign_extender.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file alu_oper_sel.vhdl
+    Info (12022): Found design unit 1: ALU_Oper_Sel-beh File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/ALU_Oper_Sel.vhdl Line: 16
+    Info (12023): Found entity 1: ALU_Oper_Sel File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/ALU_Oper_Sel.vhdl Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file write_enable.vhd
     Info (12022): Found design unit 1: write_enable-WB_enable_contol File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/write_enable.vhd Line: 21
     Info (12023): Found entity 1: write_enable File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/write_enable.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file alu_oper_sel.vhd
-    Info (12022): Found design unit 1: alu_oper_sel-controller File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/alu_oper_sel.vhd Line: 24
-    Info (12023): Found entity 1: alu_oper_sel File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/alu_oper_sel.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file beq_jcheck.vhd
-    Info (12022): Found design unit 1: BEQ_jcheck-jump_controller File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/BEQ_jcheck.vhd Line: 22
-    Info (12023): Found entity 1: BEQ_jcheck File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/BEQ_jcheck.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file addr_cmp.vhd
-    Info (12022): Found design unit 1: Addr_cmp-comparator File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/Addr_cmp.vhd Line: 22
-    Info (12023): Found entity 1: Addr_cmp File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/Addr_cmp.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file pc_pred.vhd
-    Info (12022): Found design unit 1: pc_pred-prediction File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pc_pred.vhd Line: 21
-    Info (12023): Found entity 1: pc_pred File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pc_pred.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file cond_left_shift.vhd
-    Info (12022): Found design unit 1: cond_left_shift-cond_shifter File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/cond_left_shift.vhd Line: 21
-    Info (12023): Found entity 1: cond_left_shift File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/cond_left_shift.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file sel_sign_extender.vhd
+    Info (12022): Found design unit 1: sel_sign_extender-conditon File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/sel_sign_extender.vhd Line: 18
+    Info (12023): Found entity 1: sel_sign_extender File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/sel_sign_extender.vhd Line: 5
 Info (12021): Found 13 design units, including 7 entities, in source file pipeline_register.vhd
     Info (12022): Found design unit 1: pipeline_register File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 33
     Info (12022): Found design unit 2: pipe_IFD-reg_1_2 File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 165
@@ -300,6 +294,21 @@ Info (12021): Found 13 design units, including 7 entities, in source file pipeli
     Info (12023): Found entity 5: pipe_RREX File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 288
     Info (12023): Found entity 6: pipe_EXMOP File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 381
     Info (12023): Found entity 7: pipe_MOPWB File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd Line: 477
+Info (12021): Found 2 design units, including 1 entities, in source file pc_pred.vhd
+    Info (12022): Found design unit 1: pc_pred-prediction File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pc_pred.vhd Line: 21
+    Info (12023): Found entity 1: pc_pred File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/pc_pred.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file cond_left_shift.vhd
+    Info (12022): Found design unit 1: cond_left_shift-cond_shifter File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/cond_left_shift.vhd Line: 21
+    Info (12023): Found entity 1: cond_left_shift File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/cond_left_shift.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file beq_jcheck.vhd
+    Info (12022): Found design unit 1: BEQ_jcheck-jump_controller File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/BEQ_jcheck.vhd Line: 22
+    Info (12023): Found entity 1: BEQ_jcheck File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/BEQ_jcheck.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file alu_oprd_sel.vhd
+    Info (12022): Found design unit 1: ALU_Oprd_Sel-controller File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/ALU_Oprd_Sel.vhd Line: 24
+    Info (12023): Found entity 1: ALU_Oprd_Sel File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/ALU_Oprd_Sel.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file addr_cmp.vhd
+    Info (12022): Found design unit 1: Addr_cmp-comparator File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/Addr_cmp.vhd Line: 22
+    Info (12023): Found entity 1: Addr_cmp File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/Addr_cmp.vhd Line: 9
 Info (12127): Elaborating entity "write_enable" for the top level hierarchy
 Warning (10492): VHDL Process Statement warning at write_enable.vhd(53): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Files/EE309/project/RISC_MulticycleProcessor/RISC_pipelining_quartus/write_enable.vhd Line: 53
 Info (286030): Timing-Driven Synthesis is running
@@ -310,9 +319,9 @@ Info (21057): Implemented 11 device resources after synthesis - the final resour
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 2 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Sun May 08 17:53:18 2022
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:32
+    Info: Peak virtual memory: 4849 megabytes
+    Info: Processing ended: Mon May 09 09:13:56 2022
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:40
 
 

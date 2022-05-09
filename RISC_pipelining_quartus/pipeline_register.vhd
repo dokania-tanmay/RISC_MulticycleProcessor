@@ -111,7 +111,7 @@ package pipeline_register is
 		port(
 			pc, pc_2, inst : in std_logic_vector(15 downto 0);
 			D3: in std_logic_vector(15 downto 0);
-			immd: in std_logic_vector(9 downto 0); --- this is immediate data MSB(9-1) merged with selector bit LSB(0)
+			immd: in std_logic_vector(9 downto 0); --- this is immediate data LSB(8-0) merged with selector bit MSB(9)
 			valid, C, Z, wb_control: in std_logic;
 			clk: in std_logic;
 			cond: in std_logic_vector(1 downto 0);
