@@ -80,19 +80,21 @@ package pipeline_register is
        end component;
       
 	component pipe_IDRR is   
-		port(
+		port(  
 			pc, pc_2, inst : in std_logic_vector(15 downto 0);
 			valid: in std_logic;
 			clk: in std_logic;
 			cond: in std_logic_vector(1 downto 0);
+			immd: in std_logic_vector(9 downto 0); --- this is immediate data LSB(8-0) merged with selector bit MSB(9)
 			AD1, AD2, AD3: in std_logic_vector(2 downto 0);
                         write_enable: in std_logic;
-			clear: in std_logic;
 			valid_out: out std_logic;
 			cond_out: out std_logic_vector(1 downto 0);
+			immd_out: out std_logic_vector(9 downto 0);			
 			AD1_out, AD2_out, AD3_out: out std_logic_vector(2 downto 0);
-                       pc_out, pc_2_out, inst_out : out std_logic_vector(15 downto 0)
-                       );
+			clear: in std_logic;
+			pc_out, pc_2_out, inst_out : out std_logic_vector(15 downto 0)
+			);
 
        end component;
       
@@ -240,15 +242,17 @@ use ieee.std_logic_1164.all;
 
 library work;
 entity pipe_IDRR is  
-		port(
+		port(  
 			pc, pc_2, inst : in std_logic_vector(15 downto 0);
 			valid: in std_logic;
 			clk: in std_logic;
 			cond: in std_logic_vector(1 downto 0);
+			immd: in std_logic_vector(9 downto 0); --- this is immediate data LSB(8-0) merged with selector bit MSB(9)
 			AD1, AD2, AD3: in std_logic_vector(2 downto 0);
                         write_enable: in std_logic;
 			valid_out: out std_logic;
 			cond_out: out std_logic_vector(1 downto 0);
+			immd_out: out std_logic_vector(9 downto 0);			
 			AD1_out, AD2_out, AD3_out: out std_logic_vector(2 downto 0);
 			clear: in std_logic;
 			pc_out, pc_2_out, inst_out : out std_logic_vector(15 downto 0)
@@ -305,6 +309,9 @@ begin
 	cond_reg: pipe_reg
 		generic map(2)
 		port map( Din => cond, Dout => cond_out, wr_enable => write_enable, clk => clk, clr => clear); 
+	immd_reg: pipe_reg
+		generic map(10)
+		port map( Din => immd, Dout => immd_out, wr_enable => write_enable, clk => clk, clr => clear); 
 
 
 end architecture; 
