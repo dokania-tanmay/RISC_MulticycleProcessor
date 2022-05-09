@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Risc_Multicycle_Quartus
-Sun May 08 15:41:07 2022
+Mon May 09 14:28:14 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -59,7 +59,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun May 08 15:41:07 2022       ;
+; Analysis & Synthesis Status     ; Successful - Mon May 09 14:28:14 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Risc_Multicycle_Quartus                     ;
 ; Top-level Entity Name           ; DUT                                         ;
@@ -180,8 +180,8 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.1%      ;
-;     Processor 4            ;   0.1%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -208,14 +208,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Estimate of Logic utilization (ALMs needed) ; 612                   ;
+; Estimate of Logic utilization (ALMs needed) ; 615                   ;
 ;                                             ;                       ;
-; Combinational ALUT usage for logic          ; 839                   ;
+; Combinational ALUT usage for logic          ; 845                   ;
 ;     -- 7 input functions                    ; 7                     ;
-;     -- 6 input functions                    ; 325                   ;
-;     -- 5 input functions                    ; 147                   ;
+;     -- 6 input functions                    ; 326                   ;
+;     -- 5 input functions                    ; 146                   ;
 ;     -- 4 input functions                    ; 171                   ;
-;     -- <=3 input functions                  ; 189                   ;
+;     -- <=3 input functions                  ; 195                   ;
 ;                                             ;                       ;
 ; Dedicated logic registers                   ; 615                   ;
 ;                                             ;                       ;
@@ -225,8 +225,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                       ;
 ; Maximum fan-out node                        ; input_vector[0]~input ;
 ; Maximum fan-out                             ; 615                   ;
-; Total fan-out                               ; 6159                  ;
-; Average fan-out                             ; 3.81                  ;
+; Total fan-out                               ; 6178                  ;
+; Average fan-out                             ; 3.80                  ;
 +---------------------------------------------+-----------------------+
 
 
@@ -235,19 +235,19 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Entity Name      ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+------------------+--------------+
-; |DUT                                   ; 839 (0)             ; 615 (0)                   ; 0                 ; 0          ; 82   ; 0            ; |DUT                                                                           ; DUT              ; work         ;
-;    |risc_processor:add_instance|       ; 839 (0)             ; 615 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance                                               ; risc_processor   ; work         ;
-;       |data_path:prim_datapath|        ; 759 (139)           ; 592 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath                       ; data_path        ; work         ;
+; |DUT                                   ; 845 (0)             ; 615 (0)                   ; 0                 ; 0          ; 82   ; 0            ; |DUT                                                                           ; DUT              ; work         ;
+;    |risc_processor:add_instance|       ; 845 (0)             ; 615 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance                                               ; risc_processor   ; work         ;
+;       |data_path:prim_datapath|        ; 766 (138)           ; 592 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath                       ; data_path        ; work         ;
 ;          |alu:alu_ent|                 ; 133 (133)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|alu:alu_ent           ; alu              ; work         ;
 ;          |lsm:lsm_hw|                  ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|lsm:lsm_hw            ; lsm              ; work         ;
-;          |ram_mem:ram_memory|          ; 239 (239)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory    ; ram_mem          ; work         ;
+;          |ram_mem:ram_memory|          ; 247 (247)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory    ; ram_mem          ; work         ;
 ;          |reg:ins_register|            ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:ins_register      ; reg              ; work         ;
 ;          |reg:temp1|                   ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp1             ; reg              ; work         ;
 ;          |reg:temp2|                   ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp2             ; reg              ; work         ;
 ;          |reg:temp3|                   ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp3             ; reg              ; work         ;
 ;          |reg:temp4|                   ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|reg:temp4             ; reg              ; work         ;
 ;          |registerFile:reg_file|       ; 239 (239)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|data_path:prim_datapath|registerFile:reg_file ; registerFile     ; work         ;
-;       |state_transition:control_logic| ; 80 (80)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|state_transition:control_logic                ; state_transition ; work         ;
+;       |state_transition:control_logic| ; 79 (79)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |DUT|risc_processor:add_instance|state_transition:control_logic                ; state_transition ; work         ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -402,7 +402,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; Total registers                              ; 615   ;
 ; Number of registers using Synchronous Clear  ; 11    ;
 ; Number of registers using Synchronous Load   ; 16    ;
-; Number of registers using Asynchronous Clear ; 224   ;
+; Number of registers using Asynchronous Clear ; 240   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 592   ;
 ; Number of registers using Preset             ; 0     ;
@@ -415,36 +415,44 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; Inverted Register                                                                        ; Fan out ;
 +------------------------------------------------------------------------------------------+---------+
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[13][0]  ; 1       ;
-; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[4][0]   ; 1       ;
+; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[5][0]   ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][0]   ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[2][0]   ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][0]   ; 1       ;
+; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][4]   ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[2][7]   ; 1       ;
+; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][7]   ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][10]  ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[1][10]  ; 1       ;
+; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][8]   ; 1       ;
+; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][3]   ; 1       ;
+; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[12][6]  ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[4][6]   ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][6]   ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[1][6]   ; 1       ;
-; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][6]   ; 1       ;
-; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[4][9]   ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][9]   ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[1][9]   ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[13][1]  ; 1       ;
-; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[4][1]   ; 1       ;
+; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[5][1]   ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][1]   ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[2][1]   ; 1       ;
-; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][1]   ; 1       ;
+; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[4][2]   ; 1       ;
+; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[5][2]   ; 1       ;
+; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[5][12]  ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][12]  ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[1][12]  ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[2][12]  ; 1       ;
+; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[12][13] ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][13]  ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[13][14] ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][14]  ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[2][14]  ; 1       ;
+; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][14]  ; 1       ;
+; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[12][15] ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[13][15] ; 1       ;
 ; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[4][15]  ; 1       ;
-; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][15]  ; 1       ;
-; Total number of inverted registers = 30                                                  ;         ;
+; risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[5][15]  ; 1       ;
+; Total number of inverted registers = 38                                                  ;         ;
 +------------------------------------------------------------------------------------------+---------+
 
 
@@ -592,24 +600,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 615                         ;
-;     ENA               ; 368                         ;
-;     ENA CLR           ; 208                         ;
+;     ENA               ; 352                         ;
+;     ENA CLR           ; 224                         ;
 ;     ENA CLR SLD       ; 16                          ;
 ;     SCLR              ; 11                          ;
 ;     plain             ; 12                          ;
-; arriav_lcell_comb     ; 839                         ;
+; arriav_lcell_comb     ; 845                         ;
 ;     arith             ; 16                          ;
 ;         4 data inputs ; 10                          ;
 ;         5 data inputs ; 6                           ;
 ;     extend            ; 7                           ;
 ;         7 data inputs ; 7                           ;
-;     normal            ; 816                         ;
-;         1 data inputs ; 30                          ;
+;     normal            ; 822                         ;
+;         1 data inputs ; 38                          ;
 ;         2 data inputs ; 32                          ;
-;         3 data inputs ; 127                         ;
+;         3 data inputs ; 125                         ;
 ;         4 data inputs ; 161                         ;
-;         5 data inputs ; 141                         ;
-;         6 data inputs ; 325                         ;
+;         5 data inputs ; 140                         ;
+;         6 data inputs ; 326                         ;
 ; boundary_port         ; 82                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.00                        ;
@@ -622,7 +630,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -632,7 +640,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun May 08 15:40:41 2022
+    Info: Processing started: Mon May 09 14:28:03 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Risc_Multicycle_Quartus -c Risc_Multicycle_Quartus
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -860,47 +868,55 @@ Info (12128): Elaborating entity "state_transition" for hierarchy "risc_processo
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[13][0] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
-    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[4][0] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
+    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[5][0] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][0] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[2][0] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][0] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
+    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][4] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[2][7] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
+    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][7] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][10] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[1][10] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
+    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][8] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
+    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][3] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
+    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[12][6] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[4][6] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][6] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[1][6] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
-    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][6] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
-    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[4][9] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][9] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[1][9] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[13][1] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
-    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[4][1] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
+    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[5][1] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][1] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[2][1] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
-    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][1] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
+    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[4][2] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
+    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[5][2] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
+    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[5][12] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][12] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[1][12] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[2][12] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
+    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[12][13] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][13] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[13][14] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[0][14] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[2][14] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
+    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][14] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
+    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[12][15] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[13][15] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
     Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[4][15] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
-    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[3][15] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
+    Critical Warning (18010): Register risc_processor:add_instance|data_path:prim_datapath|ram_mem:ram_memory|ram_block[5][15] will power up to High File: D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl Line: 27
 Info (144001): Generated suppressed messages file D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/output_files/Risc_Multicycle_Quartus.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1435 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1433 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 80 output pins
-    Info (21061): Implemented 1353 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 4871 megabytes
-    Info: Processing ended: Sun May 08 15:41:07 2022
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:37
+    Info (21061): Implemented 1351 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 47 warnings
+    Info: Peak virtual memory: 4869 megabytes
+    Info: Processing ended: Mon May 09 14:28:14 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+

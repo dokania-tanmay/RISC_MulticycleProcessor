@@ -1,11 +1,11 @@
-Fitter Status : Successful - Sun May 08 15:51:22 2022
+Fitter Status : Successful - Mon May 09 14:30:33 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Risc_Multicycle_Quartus
 Top-level Entity Name : DUT
 Family : Cyclone V
 Device : 5CGXFC7C7F23C8
 Timing Models : Final
-Logic utilization (in ALMs) : 567 / 56,480 ( 1 % )
+Logic utilization (in ALMs) : 579 / 56,480 ( 1 % )
 Total registers : 615
 Total pins : 82 / 268 ( 31 % )
 Total virtual pins : 0

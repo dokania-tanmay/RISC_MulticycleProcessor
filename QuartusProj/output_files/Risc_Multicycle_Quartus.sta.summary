@@ -2,180 +2,180 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
-Slack : -11.815
-TNS   : -359.656
-
 Type  : Slow 1100mV 85C Model Setup 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : -11.723
-TNS   : -1175.268
+Slack : -12.748
+TNS   : -1277.490
+
+Type  : Slow 1100mV 85C Model Setup 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
+Slack : -12.086
+TNS   : -364.329
 
 Type  : Slow 1100mV 85C Model Setup 'input_vector[0]'
-Slack : -10.532
-TNS   : -5309.746
+Slack : -10.666
+TNS   : -5402.174
 
 Type  : Slow 1100mV 85C Model Hold 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : -4.199
-TNS   : -140.883
+Slack : -6.082
+TNS   : -106.343
 
 Type  : Slow 1100mV 85C Model Hold 'input_vector[0]'
-Slack : -3.860
-TNS   : -52.352
+Slack : -2.548
+TNS   : -6.561
 
 Type  : Slow 1100mV 85C Model Hold 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
-Slack : -0.735
-TNS   : -1.231
+Slack : 0.493
+TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : -4.508
-TNS   : -8.964
+Slack : -4.690
+TNS   : -9.014
 
 Type  : Slow 1100mV 85C Model Removal 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : 3.374
+Slack : 3.158
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : -4.817
-TNS   : -2592.683
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
-Slack : -0.965
-TNS   : -5.509
+Slack : -4.172
+TNS   : -2504.056
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'input_vector[0]'
 Slack : -0.724
-TNS   : -685.338
+TNS   : -685.244
 
-Type  : Slow 1100mV 0C Model Setup 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
-Slack : -11.999
-TNS   : -365.980
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
+Slack : -0.099
+TNS   : -0.226
 
 Type  : Slow 1100mV 0C Model Setup 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : -11.679
-TNS   : -1179.727
+Slack : -12.738
+TNS   : -1288.007
+
+Type  : Slow 1100mV 0C Model Setup 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
+Slack : -12.225
+TNS   : -365.682
 
 Type  : Slow 1100mV 0C Model Setup 'input_vector[0]'
-Slack : -10.145
-TNS   : -4953.503
-
-Type  : Slow 1100mV 0C Model Hold 'input_vector[0]'
-Slack : -3.956
-TNS   : -57.259
+Slack : -10.342
+TNS   : -5116.506
 
 Type  : Slow 1100mV 0C Model Hold 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : -3.903
-TNS   : -123.624
+Slack : -5.913
+TNS   : -112.218
+
+Type  : Slow 1100mV 0C Model Hold 'input_vector[0]'
+Slack : -2.747
+TNS   : -7.580
 
 Type  : Slow 1100mV 0C Model Hold 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
-Slack : -0.855
-TNS   : -1.512
+Slack : 0.364
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : -4.711
-TNS   : -9.351
+Slack : -4.833
+TNS   : -9.389
 
 Type  : Slow 1100mV 0C Model Removal 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : 3.516
+Slack : 3.317
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : -4.807
-TNS   : -2565.962
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
-Slack : -0.997
-TNS   : -5.489
+Slack : -4.154
+TNS   : -2510.429
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'input_vector[0]'
 Slack : -0.724
-TNS   : -684.399
+TNS   : -684.664
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
+Slack : -0.145
+TNS   : -0.455
 
 Type  : Fast 1100mV 85C Model Setup 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : -5.825
-TNS   : -553.378
-
-Type  : Fast 1100mV 85C Model Setup 'input_vector[0]'
-Slack : -5.127
-TNS   : -2366.673
+Slack : -6.147
+TNS   : -558.721
 
 Type  : Fast 1100mV 85C Model Setup 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
-Slack : -4.920
-TNS   : -145.328
+Slack : -5.297
+TNS   : -153.188
+
+Type  : Fast 1100mV 85C Model Setup 'input_vector[0]'
+Slack : -5.008
+TNS   : -2482.239
 
 Type  : Fast 1100mV 85C Model Hold 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : -1.993
-TNS   : -61.174
+Slack : -2.790
+TNS   : -42.918
 
 Type  : Fast 1100mV 85C Model Hold 'input_vector[0]'
-Slack : -1.634
-TNS   : -20.695
+Slack : -1.026
+TNS   : -2.066
 
 Type  : Fast 1100mV 85C Model Hold 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
-Slack : -0.312
-TNS   : -0.462
+Slack : 0.272
+TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : -1.424
-TNS   : -2.842
+Slack : -1.458
+TNS   : -2.710
 
 Type  : Fast 1100mV 85C Model Removal 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : 1.642
+Slack : 1.452
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : -1.979
-TNS   : -745.724
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
-Slack : -0.297
-TNS   : -0.829
+Slack : -1.774
+TNS   : -676.012
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'input_vector[0]'
-Slack : -0.094
-TNS   : -55.077
+Slack : -0.093
+TNS   : -51.040
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
+Slack : 0.020
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : -4.996
-TNS   : -475.680
+Slack : -5.516
+TNS   : -503.879
 
 Type  : Fast 1100mV 0C Model Setup 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
-Slack : -4.499
-TNS   : -133.312
+Slack : -4.814
+TNS   : -139.010
 
 Type  : Fast 1100mV 0C Model Setup 'input_vector[0]'
-Slack : -4.339
-TNS   : -1992.980
-
-Type  : Fast 1100mV 0C Model Hold 'input_vector[0]'
-Slack : -1.590
-TNS   : -21.365
+Slack : -4.299
+TNS   : -2099.805
 
 Type  : Fast 1100mV 0C Model Hold 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : -1.588
-TNS   : -40.601
+Slack : -2.484
+TNS   : -36.548
+
+Type  : Fast 1100mV 0C Model Hold 'input_vector[0]'
+Slack : -1.043
+TNS   : -2.129
 
 Type  : Fast 1100mV 0C Model Hold 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
-Slack : -0.285
-TNS   : -0.435
+Slack : 0.229
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : -1.398
-TNS   : -2.790
+Slack : -1.431
+TNS   : -2.678
 
 Type  : Fast 1100mV 0C Model Removal 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : 1.646
+Slack : 1.488
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'risc_processor:add_instance|state_transition:control_logic|CS.S22'
-Slack : -1.719
-TNS   : -622.336
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
-Slack : -0.222
-TNS   : -0.608
+Slack : -1.511
+TNS   : -571.480
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'input_vector[0]'
 Slack : -0.091
-TNS   : -54.120
+TNS   : -52.034
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'risc_processor:add_instance|state_transition:control_logic|CS.S1'
+Slack : 0.090
+TNS   : 0.000
 
 ------------------------------------------------------------
