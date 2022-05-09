@@ -11,6 +11,7 @@ entity pipe_reg is
 		Dout: out std_logic_vector(data_width-1 downto 0));
 end entity;
 
+architecture of pipe_r
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
