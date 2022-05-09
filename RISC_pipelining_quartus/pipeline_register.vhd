@@ -11,6 +11,24 @@ entity pipe_reg is
 		Dout: out std_logic_vector(data_width-1 downto 0));
 end entity;
 
+
+
+architecture behave of pipe_reg is
+begin
+	process(clk, clr, wr_enable)	
+	begin
+		if(clk'event and clk = '1') then
+			if (wr_enable='1') then
+				Dout <= Din;
+			end if;
+			if(clr = '1') then
+				Dout <= (others => '0');
+			end if;
+		end if;
+	end process;
+	
+end architecture;
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -23,6 +41,22 @@ entity pipe_bit is
 		Din: in std_logic;
 		Dout: out std_logic);
 end entity;
+
+architecture behave of pipe_bit is
+begin
+	process(clk, clr, wr_enable)	
+	begin
+		if(clk'event and clk = '1') then
+			if (wr_enable='1') then
+				Dout <= Din;
+			end if;
+			if(clr = '1') then
+				Dout <= '0';
+			end if;
+		end if;
+	end process;
+	
+end architecture;
 
 
 library ieee;
@@ -72,7 +106,7 @@ package pipeline_register is
 			cond: in std_logic_vector(1 downto 0);
 			AD1, AD2, AD3: in std_logic_vector(2 downto 0);
 			clear: in std_logic;
-                        write_enable: in std_logic;
+            write_enable: in std_logic;
 			valid_out: out std_logic;
 			cond_out: out std_logic_vector(1 downto 0);
 			AD1_out, AD2_out, AD3_out: out std_logic_vector(2 downto 0);
@@ -91,12 +125,12 @@ package pipeline_register is
 			valid, C, Z, wb_control: in std_logic;
 			clk: in std_logic;
 			cond: in std_logic_vector(1 downto 0);
-		        AD3: in std_logic_vector(2 downto 0);
+		    AD3: in std_logic_vector(2 downto 0);
 			clear: in std_logic;
                         write_enable: in std_logic;
 			valid_out, C_out, Z_out, wb_control_out: out std_logic;
 			cond_out: out std_logic_vector(1 downto 0);
-		        AD3_out: out std_logic_vector(2 downto 0);
+		    AD3_out: out std_logic_vector(2 downto 0);
 			D1_out, D3_out : out std_logic_vector(15 downto 0);
 			immd_out: out std_logic_vector(9 downto 0);
 			pc_out, pc_2_out, inst_out : out std_logic_vector(15 downto 0)

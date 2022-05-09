@@ -119,11 +119,16 @@ ARCHITECTURE flow OF datapath IS
 
 	END COMPONENT;
 
-	signal WR_IF, WR_ID, valid_IF, valid_out_IF, valid_ID, valid_out_ID : STD_LOGIC; 
+	signal WR_IF, WR_ID, WR_RR, valid_IF, valid_out_IF, valid_ID, valid_out_ID, valid_RR, valid_out_RR, valid_EX, C_EX, Z_EX, wb_control_EX
+			,valid_out_EX, C_out_EX, Z_out_EX, wb_control_out_EX : STD_LOGIC; 
 	signal pc_IF, pc_2_IF, inst_IF, pc_out_IF, pc_2_out_IF, inst_out_IF, pc_ID, pc_2_ID, inst_ID, pc_out_ID, pc_2_out_ID, 
-			inst_out_ID, pc_IF, pc_2_IF, inst_IF, pc_out_IF, pc_2_out_IF, inst_out_IF, D1, D2, D1_out, D2_out: std_logic_vector(15 downto 0);
-	signal cond_ID, cond_out_ID: in std_logic_vector(1 downto 0);
-	signal AD1_ID, AD2_ID, AD3_ID, AD1_out_ID, AD2_out_ID, AD3_out_ID: in std_logic_vector(2 downto 0);
+			inst_out_ID, pc_RR, pc_2_RR, inst_RR, pc_out_RR, pc_2_out_RR, inst_out_RR, D1_RR, D2_RR, D1_out_RR, D2_out_RR,
+			pc_EX, pc_2_EX, inst_EX, pc_out_EX, pc_2_out_EX, inst_out_EX, D1_EX, D3_EX, D1_out_EX, D3_out_EX, 
+			pc_MEM, pc_2_MEM, inst_MEM, pc_out_MEM, pc_2_out_MEM, inst_out_MEM, D3_MEM, D3_out_MEM: std_logic_vector(15 downto 0);
+	signal cond_ID, cond_out_ID, cond_RR, cond_out_RR, cond_EX, cond_out_EX: in std_logic_vector(1 downto 0);
+	signal AD1_ID, AD2_ID, AD3_ID, AD1_out_ID, AD2_out_ID, AD3_out_ID, AD1_RR, AD2_RR, AD3_RR, AD1_out_RR, AD2_out_RR, AD3_out_RR,
+			AD3_EX, AD3_out_EX: in std_logic_vector(2 downto 0);
+	signal immd_RR, immd_out_RR, immd_EX, immd_out_EX: in std_logic_vector(9 downto 0);
 
 BEGIN
 
