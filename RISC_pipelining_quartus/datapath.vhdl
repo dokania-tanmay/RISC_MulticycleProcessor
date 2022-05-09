@@ -149,5 +149,7 @@ BEGIN
 	IF_ID_pipe : pipe_IFD
 		port map(pc, pc_2, inst, valid, clk => clock, write_enable, valid_out, pc_out, pc_2_out, inst_out);
 	ID_RR_pipe : pipe_IDRR
+		port map(pc, pc_2, inst,valid,clk => clock,cond,AD1, AD2, AD3,write_enable,clear,valid_out,cond_out,
+		AD1_out, AD2_out, AD3_out,pc_out, pc_2_out, inst_out);
 
 end flow;
