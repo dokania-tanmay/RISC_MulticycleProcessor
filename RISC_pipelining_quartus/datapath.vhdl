@@ -118,6 +118,13 @@ ARCHITECTURE flow OF datapath IS
 		);
 
 	END COMPONENT;
+
+	signal WR_IF, WR_ID, valid_IF, valid_out_IF, valid_ID, valid_out_ID : STD_LOGIC; 
+	signal pc_IF, pc_2_IF, inst_IF, pc_out_IF, pc_2_out_IF, inst_out_IF, pc_ID, pc_2_ID, inst_ID, pc_out_ID, pc_2_out_ID, 
+			inst_out_ID, pc_IF, pc_2_IF, inst_IF, pc_out_IF, pc_2_out_IF, inst_out_IF, D1, D2, D1_out, D2_out: std_logic_vector(15 downto 0);
+	signal cond_ID, cond_out_ID: in std_logic_vector(1 downto 0);
+	signal AD1_ID, AD2_ID, AD3_ID, AD1_out_ID, AD2_out_ID, AD3_out_ID: in std_logic_vector(2 downto 0);
+
 BEGIN
 
 end flow;

@@ -159,9 +159,6 @@ end entity;
 
 
 
-
-
-
 architecture reg_1_2 of pipe_IFD is 
 component pipe_reg is
 	generic ( data_width : integer);
