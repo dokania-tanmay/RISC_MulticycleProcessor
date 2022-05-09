@@ -34,42 +34,27 @@ begin
 	enable_control:
 	process(CS, NS, opcode, reset, AD1, AD2, AD3 )
         begin
-        
---	 if (reset = '1') then
-	--          NS <= S0;
-	     
-	-- else 
+
         
          case CS is 
          when S0 =>
-	   --    case opcode is 
-	     --   when "0111" => 
-	    
-	       --    if (AD1 = AD3) or (AD2 = AD3) then NS <= S1; 
-	         --   else NS <= S0;
-	        
-	         --  end if;
-	        
-	        -- when others => NS <= S0;
-	    
-	      --  end case;
+
 	    
 	        wr_en <= '1';
 	    
           
          when S1 =>
              
-      --      NS <= S0;
-             wr_en <= '0';
+              wr_en <= '0';
              
          when others => 
          
          end case;
-		--  end if;
+	
        
        end process;
        
-    --end architecture;
+
     
     
         
