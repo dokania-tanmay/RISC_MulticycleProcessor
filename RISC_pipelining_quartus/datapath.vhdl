@@ -120,4 +120,27 @@ ARCHITECTURE flow OF datapath IS
 	END COMPONENT;
 BEGIN
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------- Component Declaration
+	IF_ID_pipe : pipe_IFD
+		port map(pc, pc_2, inst, valid, clk => clock, write_enable, valid_out, pc_out, pc_2_out, inst_out);
+	ID_RR_pipe : pipe_IDRR
+
 end flow;
