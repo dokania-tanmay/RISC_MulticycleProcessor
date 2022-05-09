@@ -4,7 +4,7 @@ USE ieee.std_logic_1164.ALL;
 USE ieee.math_real.ALL;
 
 LIBRARY work;
-USE work.pipeline_register.ALL;
+USE work.ALL;
 
 ENTITY datapath IS
 	PORT (
@@ -17,13 +17,6 @@ LIBRARY ieee;
 USE ieee.numeric_std.ALL;
 USE ieee.std_logic_1164.ALL;
 USE ieee.math_real.ALL;
-
-ENTITY PC is
-		port(
-			clk, wr_enable, clr: in std_logic;
-			Din: in std_logic_vector(15 downto 0);
-			Dout: out std_logic_vector(15 downto 0));
-END PC;
 
 ARCHITECTURE flow OF datapath IS
 	COMPONENT priority_mux IS
@@ -137,7 +130,7 @@ ARCHITECTURE flow OF datapath IS
 	signal pc_IF, pc_2_IF, inst_IF, pc_out_IF, pc_2_out_IF, inst_out_IF, pc_ID, pc_2_ID, inst_ID, pc_out_ID, pc_2_out_ID, 
 			inst_out_ID, pc_RR, pc_2_RR, inst_RR, pc_out_RR, pc_2_out_RR, inst_out_RR, D1_RR, D2_RR, D1_out_RR, D2_out_RR,
 			pc_EX, pc_2_EX, inst_EX, pc_out_EX, pc_2_out_EX, inst_out_EX, D1_EX, D3_EX, D1_out_EX, D3_out_EX, 
-			pc_MEM, pc_2_MEM, inst_MEM, pc_out_MEM, pc_2_out_MEM, inst_out_MEM, D3_MEM, D3_out_MEM, PC_Din, PC_pred, PC_next, branch_addr, IF_M1_out: std_logic_vector(15 downto 0);
+			pc_MEM, pc_2_MEM, inst_MEM, pc_out_MEM, pc_2_out_MEM, inst_out_MEM, D3_MEM, D3_out_MEM, PC_Din, PC_next,PC_Dout, branch_addr, PC_M2_out, alu_1_out: std_logic_vector(15 downto 0);
 	signal cond_ID, cond_out_ID, cond_RR, cond_out_RR, cond_EX, cond_out_EX, cond_MEM, cond_out_MEM: in std_logic_vector(1 downto 0);
 	signal AD1_ID, AD2_ID, AD3_ID, AD1_out_ID, AD2_out_ID, AD3_out_ID, AD1_RR, AD2_RR, AD3_RR, AD1_out_RR, AD2_out_RR, AD3_out_RR,
 			AD3_EX, AD3_out_EX, AD3_MEM, AD3_out_MEM: in std_logic_vector(2 downto 0);
@@ -145,8 +138,19 @@ ARCHITECTURE flow OF datapath IS
 
 BEGIN
 	LUT_FLUSH: LUT
-				port map(flush => flush, match => match, branch_addr => branch_addr, );
-
+				port map(flush => flush, match => match, branch_addr => branch_addr, PC_RR => pc_out_RR, PC_EXE => pc_out_EX, PC_PRED => PC_next, clk => clock, IF_M1_OUT => PC_M2_out );
+	PC: pipe_reg
+		generic map(16)
+		port map(clk => clock, clr => reset, wr_enable => '1', Din => PC_Din, Dout => PC_Dout );
+	alu_1 : ALU_1
+		port map(a => PC_M2_out, c => alu_1_out);	
+	PC_M2_out <= PC_Dout when (FLush = '0') else
+				PC_next;
+	PC_Din <= alu_1_out when(match = '0') else
+				branch_addr;	
+	code_mem: ram_mem
+			port map(clock => clock, reset => reset, ram_address => PC_M2_out, ram_data_out => inst_IF);
+	
 ----------- Component Declaration
 	IF_ID_pipe : pipe_IFD
 		port map(pc=>pc_IF, pc_2=>pc_2_IF, inst=>inst_IF, valid=>valid_IF, clk => clock, clear=>(flush or reset), write_enable=>WR_IF, 
