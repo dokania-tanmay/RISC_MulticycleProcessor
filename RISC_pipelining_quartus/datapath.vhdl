@@ -134,9 +134,14 @@ BEGIN
 
 ----------- Component Declaration
 	IF_ID_pipe : pipe_IFD
-		port map(pc=>pc_IF, pc_2=>pc_2_IF, inst=>inst_IF, valid=>valid_IF, clk => clock, clear=>(flush or reset), write_enable=>WR_IF, valid_out=>valid_out_IF, pc_out=>pc_out_IF, pc_2_out=>pc_out_IF, inst_out=>inst_out_IF);
+		port map(pc=>pc_IF, pc_2=>pc_2_IF, inst=>inst_IF, valid=>valid_IF, clk => clock, clear=>(flush or reset), write_enable=>WR_IF, 
+		valid_out=>valid_out_IF, pc_out=>pc_out_IF, pc_2_out=>pc_2_out_IF, inst_out=>inst_out_IF);
 	ID_RR_pipe : pipe_IDRR
-		port map(pc=>pc_ID, pc_2=>pc_2_ID, inst=>inst_ID,valid=>valid_ID,clk => clock,cond=>cond_ID,AD1=>AD1_ID, AD2=>AD2_ID, AD3=>AD3_ID,write_enable=> WR_ID,clear=>(flush or reset),valid_out=>valid_out_ID,cond_out=>cond_out_ID,
-		AD1_out => AD1_out_ID, AD2_out => AD2_out_ID, AD3_out => AD3_out_ID, pc_out=> pc_out_ID, pc_2_out_ID, inst_out => inst_out_ID);
+		port map(pc=>pc_out_IF, pc_2=>pc_2_out_IF, inst=>inst_out_IF,valid=>valid_out_IF,clk => clock,cond=>cond_ID,AD1=>AD1_ID, AD2=>AD2_ID, AD3=>AD3_ID,
+		write_enable=> WR_ID,clear=>(flush or reset),valid_out=>valid_out_ID,cond_out=>cond_out_ID,
+		AD1_out => AD1_out_ID, AD2_out => AD2_out_ID, AD3_out => AD3_out_ID, pc_out=> pc_out_ID, pc_ou_2t=>pc_2_out_ID, inst_out => inst_out_ID);
+	RR_EXE_pipe : pipe_RREX
+		port map(pc=>pc_out_ID, pc_2=>pc_2_out_ID, inst=>inst_out_ID,valid=>valid_out_ID,clk => clock, cond=>cond_out_ID,
+		AD1=> AD1_out_ID, AD2=> AD2_out_ID, AD3=> AD3_out_ID, write_enable => 1, D1=>, D2=>, immd=> )
 
 end flow;

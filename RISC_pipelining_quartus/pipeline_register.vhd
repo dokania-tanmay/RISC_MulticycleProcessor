@@ -91,7 +91,9 @@ package pipeline_register is
 			valid_out: out std_logic;
 			cond_out: out std_logic_vector(1 downto 0);
 			AD1_out, AD2_out, AD3_out: out std_logic_vector(2 downto 0);
-                       pc_out, pc_2_out, inst_out : out std_logic_vector(15 downto 0)
+                       pc_out, pc_2_out, inst_out : out std_logic_vector(15 downto 0);
+					   immd: in std_logic_vector(9 downto 0); --- this is immediate data LSB(8-0) merged with selector bit MSB(9)
+					   immd_out: out std_logic_vector(9 downto 0)
                        );
 
        end component;
@@ -251,7 +253,9 @@ entity pipe_IDRR is
 			cond_out: out std_logic_vector(1 downto 0);
 			AD1_out, AD2_out, AD3_out: out std_logic_vector(2 downto 0);
 			clear: in std_logic;
-			pc_out, pc_2_out, inst_out : out std_logic_vector(15 downto 0)
+			pc_out, pc_2_out, inst_out : out std_logic_vector(15 downto 0);
+			immd: in std_logic_vector(9 downto 0); --- this is immediate data LSB(8-0) merged with selector bit MSB(9)
+			immd_out: out std_logic_vector(9 downto 0)
 			);
 end entity;
 
@@ -305,6 +309,9 @@ begin
 	cond_reg: pipe_reg
 		generic map(2)
 		port map( Din => cond, Dout => cond_out, wr_enable => write_enable, clk => clk, clr => clear); 
+	immd_reg: pipe_reg
+		generic map(10)
+		port map( Din => immd, Dout => immd_out, wr_enable => write_enable, clk => clk, clr => clear); 
 
 
 end architecture; 
