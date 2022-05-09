@@ -75,7 +75,7 @@ package pipeline_register is
 			cond: in std_logic_vector(1 downto 0);
 			AD1, AD2, AD3: in std_logic_vector(2 downto 0);
 			clear: in std_logic;
-                        write_enable: in std_logic;
+            write_enable: in std_logic;
 			valid_out: out std_logic;
 			cond_out: out std_logic_vector(1 downto 0);
 			AD1_out, AD2_out, AD3_out: out std_logic_vector(2 downto 0);
@@ -94,12 +94,12 @@ package pipeline_register is
 			valid, C, Z, wb_control: in std_logic;
 			clk: in std_logic;
 			cond: in std_logic_vector(1 downto 0);
-		        AD3: in std_logic_vector(2 downto 0);
+		    AD3: in std_logic_vector(2 downto 0);
 			clear: in std_logic;
                         write_enable: in std_logic;
 			valid_out, C_out, Z_out, wb_control_out: out std_logic;
 			cond_out: out std_logic_vector(1 downto 0);
-		        AD3_out: out std_logic_vector(2 downto 0);
+		    AD3_out: out std_logic_vector(2 downto 0);
 			D1_out, D3_out : out std_logic_vector(15 downto 0);
 			immd_out: out std_logic_vector(9 downto 0);
 			pc_out, pc_2_out, inst_out : out std_logic_vector(15 downto 0)
