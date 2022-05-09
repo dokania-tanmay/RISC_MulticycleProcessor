@@ -1,5 +1,5 @@
 Flow report for QuartProj2
-Sun Apr 17 18:40:39 2022
+Fri May  6 14:44:36 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Flow Failed - Sun Apr 17 18:40:39 2022      ;
+; Flow Status           ; Successful - Fri May  6 14:44:36 2022       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; QuartProj2                                  ;
 ; Top-level Entity Name ; risc_processor                              ;
 ; Family                ; MAX V                                       ;
 ; Device                ; 5M1270ZT144C5                               ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 0 / 1,270 ( 0 % )                           ;
-; Total pins            ; 130 / 114 ( 114 % )                         ;
+; Total logic elements  ; 0                                           ;
+; Total pins            ; 130                                         ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -60,30 +60,30 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/17/2022 18:40:23 ;
+; Start date & time ; 05/06/2022 14:44:28 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; QuartProj2          ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                  ;
-+---------------------------------+-------------------------------+---------------+-------------+-----------------------------------+
-; Assignment Name                 ; Value                         ; Default Value ; Entity Name ; Section Id                        ;
-+---------------------------------+-------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID           ; 1098875919571.165020102347284 ; --            ; --          ; --                                ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST ; Off                           ; --            ; --          ; eda_board_design_timing           ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST ; Off                           ; --            ; --          ; eda_board_design_boundary_scan    ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST ; Off                           ; --            ; --          ; eda_board_design_signal_integrity ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST ; Off                           ; --            ; --          ; eda_board_design_symbol           ;
-; EDA_OUTPUT_DATA_FORMAT          ; Vhdl                          ; --            ; --          ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL             ; ModelSim-Altera (VHDL)        ; <None>        ; --          ; --                                ;
-; EDA_TIME_SCALE                  ; 1 ps                          ; --            ; --          ; eda_simulation                    ;
-; MAX_CORE_JUNCTION_TEMP          ; 85                            ; --            ; --          ; --                                ;
-; MIN_CORE_JUNCTION_TEMP          ; 0                             ; --            ; --          ; --                                ;
-; PROJECT_OUTPUT_DIRECTORY        ; output_files                  ; --            ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                ; risc_processor                ; QuartProj2    ; --          ; --                                ;
-+---------------------------------+-------------------------------+---------------+-------------+-----------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                   ;
++---------------------------------+--------------------------------+---------------+-------------+-----------------------------------+
+; Assignment Name                 ; Value                          ; Default Value ; Entity Name ; Section Id                        ;
++---------------------------------+--------------------------------+---------------+-------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID           ; 97444819839403.165182846805506 ; --            ; --          ; --                                ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST ; Off                            ; --            ; --          ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST ; Off                            ; --            ; --          ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST ; Off                            ; --            ; --          ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST ; Off                            ; --            ; --          ; eda_board_design_symbol           ;
+; EDA_OUTPUT_DATA_FORMAT          ; Vhdl                           ; --            ; --          ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL             ; ModelSim-Altera (VHDL)         ; <None>        ; --          ; --                                ;
+; EDA_TIME_SCALE                  ; 1 ps                           ; --            ; --          ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP          ; 85                             ; --            ; --          ; --                                ;
+; MIN_CORE_JUNCTION_TEMP          ; 0                              ; --            ; --          ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY        ; output_files                   ; --            ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                ; risc_processor                 ; QuartProj2    ; --          ; --                                ;
++---------------------------------+--------------------------------+---------------+-------------+-----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -91,27 +91,24 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4762 MB             ; 00:00:34                           ;
-; Fitter               ; 00:00:02     ; 1.0                     ; 4890 MB             ; 00:00:01                           ;
-; Total                ; 00:00:15     ; --                      ; --                  ; 00:00:35                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 403 MB              ; 00:00:23                           ;
+; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:23                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-SV4K3MBU  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LAPTOP-SV4K3MBU  ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++-----------------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                           ;
++----------------------+-------------------------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname                    ; OS Name        ; OS Version ; Processor type ;
++----------------------+-------------------------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; aayush-HP-Pavilion-Laptop-15-cs2xxx ; Ubuntu 20.04.4 ; 20         ; x86_64         ;
++----------------------+-------------------------------------+----------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off QuartProj2 -c QuartProj2
-quartus_fit --read_settings_files=off --write_settings_files=off QuartProj2 -c QuartProj2
 
 
 
