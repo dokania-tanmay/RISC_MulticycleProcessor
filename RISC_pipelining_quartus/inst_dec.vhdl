@@ -5,10 +5,8 @@ use ieee.std_logic_1164.all;
 entity inst_dec is
 	port(
 		inst: in std_logic_vector(15 downto 0);
-		opcode: out std_logic_vector(3 downto 0);
 		CZ: out std_logic_vector(1 downto 0);
 		AD1, AD2, AD3: out std_logic_vector(2 downto 0);
-		valid: out std_logic;
 		immediate: out std_logic_vector(9 downto 0)
 		);
 end entity;
@@ -24,9 +22,7 @@ begin
      junk <= "0000000000";
      reg_junk <= "000";
      con_junk <= "00";
-     opcode <= inst(15 downto 12);
      temp_code <= inst(15 downto 12);
-     valid <= '1';
      AD1 <= inst(11 downto 9);
 
 
