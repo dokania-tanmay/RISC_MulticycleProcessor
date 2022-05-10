@@ -240,4 +240,6 @@ BEGIN
 			ALU_OUTP;
 	id:inst_dec 
 			port map(inst=> inst_out_IF, CZ=> cond_ID, AD1=> AD1_ID, AD2=> AD2_ID, AD3=> AD3_ID, immediate=>immd_ID);
+	cls:cond_left_shift
+			port map(immediate=> immd_out_MEM,opcode=>inst_out_MEM(15 downto 12) ,d3=> D3_out_MEM,d3_out=> RF_D3);
 end flow;
