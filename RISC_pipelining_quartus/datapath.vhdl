@@ -139,7 +139,8 @@ ARCHITECTURE flow OF datapath IS
 	signal AD1_ID, AD2_ID, AD3_ID, AD1_out_ID, AD2_out_ID, AD3_out_ID, AD1_RR, AD2_RR, AD3_RR, AD1_out_RR, AD2_out_RR, AD3_out_RR,
 			AD3_EX, AD3_out_EX, AD3_MEM, AD3_out_MEM, x, y: in std_logic_vector(2 downto 0);
 	signal immd_RR, immd_out_RR, immd_EX, immd_out_EX, immd_MEM, immd_out_MEM: in std_logic_vector(9 downto 0);
-
+	signal data_mem_out, data_mem_addr, data_mem_in : std_logic_vector(15 downto 0);
+	signal data_mem_wr std_logic;
 BEGIN
 	LUT_FLUSH: LUT
 				port map(flush => flush, match => match, branch_addr => branch_addr, PC_RR => pc_out_RR, PC_EXE => pc_out_EX, PC_PRED => PC_next, clk => clock, IF_M1_OUT => PC_M2_out );
@@ -228,7 +229,8 @@ BEQ_JCHECK: BEQ_jcheck
 		C_out => C_out_EX, Z_out => Z_out_EX, wb_control_out => wb_control_out_EX, cond_out => cond_out_EX, AD3_out => AD3_out_EX, D1_out => D1_out_EX, D3_out => D3_out_EX, immd_out => immd_out_EX,
 		pc_out => pc_out_EX, pc_2_out => pc_2_out_EX, inst_out =>inst_out_EX
 		);
-
+		mi:mem_interfacer
+			port map( opcode=> inst_out_EX, Exe_d3=> D3_out_EX, Exe_d1=> D1_out_EX, Mem_out=> data_mem_out, WB_d3=> , Mem_in=> data_mem_in, Mem_wr=> data_mem_wr, Mem_addr=> data_mem_addr);
 	D3_EX <= pc_2_out_RR when (inst_out_RR(15 downto 12) = "1001" or inst_out_RR(15 downto 12) = "1010") else
 			ALU_OUTP;
 end flow;
