@@ -223,7 +223,7 @@ BEGIN
 		 
 ----------- Component Declaration
 	IF_ID_pipe : pipe_IFD
-		port map(pc=>pc_IF, pc_2=>pc_2_IF, inst=>inst_IF, valid=>valid_IF, clk => clock, clear=>(flush or reset), write_enable=>staller_wr, 
+		port map(pc=>pc_IF, pc_2=>pc_2_IF, inst=>inst_IF, valid=>1, clk => clock, clear=>(flush or reset), write_enable=>staller_wr, 
 		valid_out=>valid_out_IF, pc_out=>pc_out_IF, pc_2_out=>pc_2_out_IF, inst_out=>inst_out_IF);
 	ID_RR_pipe : pipe_IDRR
 		port map(pc=>pc_out_IF, pc_2=>pc_2_out_IF, inst=>inst_out_IF,valid=>valid_out_IF,clk => clock,cond=>cond_ID,AD1=>AD1_ID, AD2=>AD2_ID, AD3=>AD3_ID,
@@ -241,11 +241,19 @@ BEGIN
 		port map(pc=>pc_out_RR, pc_2=>pc_2_out_RR, inst=>inst_out_RR,valid=>valid_out_RR,clk => clock, cond=>cond_out_RR,
 		D1 => D1_out_RR, D3 => D3_EX, immd => immd_out_RR, C=>ALU_C , Z=>ALU_Z, wb_control => wb_control_EX, AD3=> AD3_out_RR, clear => reset, write_enable => 1,
 		C_out => C_out_EX, Z_out => Z_out_EX, wb_control_out => wb_control_out_EX, cond_out => cond_out_EX, AD3_out => AD3_out_EX, D1_out => D1_out_EX, D3_out => D3_out_EX, immd_out => immd_out_EX,
-		pc_out => pc_out_EX, pc_2_out => pc_2_out_EX, inst_out =>inst_out_EX
+		pc_out => pc_out_EX, pc_2_out => pc_2_out_EX, inst_out =>inst_out_EX, valid_out => valid_out_EX
 		);
+	p_mem_wb:pipe_MEMWB
+		port map(pc=> pc_out_EX, pc_2=> pc_2_out_EX, inst=> inst_out_EX, D3=> D3_MEM, immd=> immd_out_EX, valid=> valid_out_EX, C=> C_out_EX, Z=> Z_out_EX, wb_control=> wb_control_out_EX,  clk=> clock, 
+		cond=> cond_out_EX, AD3=> AD3_out_EX, clear=> reset, 
+		write_enable=> 1, valid_out=> valid_out_MEM, C_out=> C_out_MEM, Z_out => Z_out_MEM, wb_control_out=> wb_control_out_MEM, Cond_out => Cond_out_MEM, AD3_out=> AD3_out_MEM, D3_out=> D3_out_MEM, 
+		immd_out=> immd_out_MEM, pc_out=> pc_out_MEM, pc_2_out=> pc_2_out_MEM, inst_out => inst_out_MEM);
 	mi:mem_interfacer
-			port map( opcode=> inst_out_EX, Exe_d3=> D3_out_EX, Exe_d1=> D1_out_EX, Mem_out=> data_mem_out, WB_d3=> ,
-			 Mem_in=> data_mem_in, Mem_wr=> data_mem_wr, Mem_addr=> data_mem_addr);
+		port map( opcode=> inst_out_EX, Exe_d3=> D3_out_EX, Exe_d1=> D1_out_EX, Mem_out=> data_mem_out, WB_d3=> D3_MEM, Mem_in=> data_mem_in, Mem_wr=> data_mem_wr, Mem_addr=> data_mem_addr);
 	D3_EX <= pc_2_out_RR when (inst_out_RR(15 downto 12) = "1001" or inst_out_RR(15 downto 12) = "1010") else
 			ALU_OUTP;
+	id:inst_dec 
+			port map(inst=> inst_out_IF, CZ=> cond_ID, AD1=> AD1_ID, AD2=> AD2_ID, AD3=> AD3_ID, immediate=>immd_ID);
+	cls:cond_left_shift
+			port map(immediate=> immd_out_MEM,opcode=>inst_out_MEM(15 downto 12) ,d3=> D3_out_MEM,d3_out=> RF_D3);
 end flow;
