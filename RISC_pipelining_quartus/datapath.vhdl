@@ -191,17 +191,18 @@ BEGIN
 	y(3 downto 3) <= wb_control_out_MEM and Addr_cmp6;
 	D2_RR <= RF_D2 when(y(3) = '0') else
 			D3_out_MEM;
-	alu_oper_sel: ALU_Oper_Sel
-		port map(opcode => inst_out_RR(15 downto 12), alu_en => ALU_EN, alu_op => ALU_OP, condn => cond_out_RR);
-	
-	WB_WR_EN : write_enable
-			port map(opcode => inst_out_RR(15 downto 12), condn => cond_out_RR , C => ALU_C, Z => ALU_Z, WB_enable => WB_ENABLE);
-	main_alu: alu
-			port map(opr1 => RA_ALU, opr2 => RB_ALU, dest => ALU_OUTP, sel => ALU_OP, enable => ALU_EN,  C => ALU_C, Z => ALU_Z );
-	pc_predictor: pc_pred 
-			port map();
-	BEQ_JCHECK: BEQ_jcheck
-			port map();
+------- Forwarding logic will auto connect RF_D1 to pipeline reg
+alu_oper_sel: ALU_Oper_Sel
+port map(opcode => inst_out_RR(15 downto 12), alu_en => ALU_EN, alu_op => ALU_OP, condn => cond_out_RR);
+
+WB_WR_EN : write_enable
+	port map(opcode => inst_out_RR(15 downto 12), condn => cond_out_RR , C => ALU_C, Z => ALU_Z, WB_enable => WB_ENABLE);
+main_alu: alu
+	port map(opr1 => RA_ALU, opr2 => RB_ALU, dest => ALU_OUTP, sel => ALU_OP, enable => ALU_EN,  C => ALU_C, Z => ALU_Z );
+pc_predictor: pc_pred 
+	port map();
+BEQ_JCHECK: BEQ_jcheck
+	port map();
 
 
 
@@ -223,11 +224,9 @@ BEGIN
 		AD1_out => AD1_out_RR, AD2_out => AD2_out_RR, AD3_out => AD3_out_RR, pc_out=> pc_out_RR, pc_2_out=>pc_2_out_RR, inst_out => inst_out_RR);
 	EXE_MEM_pipe : pipe_EXMEM
 		port map(pc=>pc_out_RR, pc_2=>pc_2_out_RR, inst=>inst_out_RR,valid=>valid_out_RR,clk => clock, cond=>cond_out_RR,
-		D1 => D1_out_RR, D3 => D3_EX, immd => immd_out_RR, C=>ALU_C , Z=>ALU_Z
-
-
-
-
+		D1 => D1_out_RR, D3 => D3_EX, immd => immd_out_RR, C=>ALU_C , Z=>ALU_Z, wb_control => wb_control_EX, AD3=> AD3_out_RR, clear => reset, write_enable => 1,
+		C_out => C_out_EX, Z_out => Z_out_EX, wb_control_out => wb_control_out_EX, cond_out => cond_out_EX, AD3_out => AD3_out_EX, D1_out => D1_out_EX, D3_out => D3_out_EX, immd_out => immd_out_EX,
+		pc_out => pc_out_EX, pc_2_out => pc_2_out_EX, inst_out =>inst_out_EX
 		);
 
 	D3_EX <= pc_2_out_RR when (inst_out_RR(15 downto 12) = "1001" or inst_out_RR(15 downto 12) = "1010") else
