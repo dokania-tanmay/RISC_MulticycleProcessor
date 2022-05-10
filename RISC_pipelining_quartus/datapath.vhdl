@@ -8,8 +8,8 @@ USE work.ALL;
 
 ENTITY datapath IS
 	PORT (
-		reset, clock : IN STD_LOGIC
-
+		reset, clock : IN STD_LOGIC;
+		output_bank: out regBank
 	);
 END datapath;
 
@@ -134,7 +134,7 @@ ARCHITECTURE flow OF datapath IS
 			pc_EX, pc_2_EX, inst_EX, pc_out_EX, pc_2_out_EX, inst_out_EX, D1_EX, D3_EX, D1_out_EX, D3_out_EX, 
 			pc_MEM, pc_2_MEM, inst_MEM, pc_out_MEM, pc_2_out_MEM, inst_out_MEM, D3_MEM, D3_out_MEM, PC_Din, PC_next,PC_Dout, 
 			branch_addr, PC_M2_out, alu_1_out, R1_ALU_OPDR_SEL, R2_ALU_OPDR_SEL, RA_ALU, RB_ALU, Imm16, RF_D1
-			, RF_D2, ALU_OUTP: std_logic_vector(15 downto 0);
+			, RF_D2, RF_D3, ALU_OUTP: std_logic_vector(15 downto 0);
 	signal cond_ID, cond_out_ID, cond_RR, cond_out_RR, cond_EX, cond_out_EX, cond_MEM, cond_out_MEM, ALU_OP: std_logic_vector(1 downto 0);
 	signal AD1_ID, AD2_ID, AD3_ID, AD1_out_ID, AD2_out_ID, AD3_out_ID, AD1_RR, AD2_RR, AD3_RR, AD1_out_RR, AD2_out_RR, AD3_out_RR,
 			AD3_EX, AD3_out_EX, AD3_MEM, AD3_out_MEM, x, y: std_logic_vector(2 downto 0);
@@ -205,8 +205,22 @@ BEGIN
 	BEQ_JCHECK: BEQ_jcheck
 			port map(RA => R1_ALU_OPDR_SEL, RB => R2_ALU_OPDR_SEL, jump_enable => JMP_EN);
 
+	data_mem: data_mem
+		port map(clock => clock,
+		ram_data_in => data_mem_in ,
+		ram_address => data_mem_addr,
+		ram_write_enable => data_mem_wr,
+		ram_data_out => data_mem_out,
+		 reset => reset);
 
-
+	stl:staller
+		port map(opcode=> inst_out_RR(15 downto 12), AD1=> AD1_out_ID, AD2=> AD2_out_ID, AD3=>  AD3_out_RR ,clk=> clock, reset=> reset,
+			wr_en=>);
+	
+	RF: registerFile
+		port map(addr_out1 => AD1_out_ID, addr_out2 => AD2_out_ID, addr_in => AD3_out_MEM ,data_out1 => RF_D1, data_out2 => RF_D2,
+		data_in => RF_D3, clock => clock, wr_enable => wb_control_MEM, clear => reset ,regbank_out => output_bank);
+		 
 ----------- Component Declaration
 	IF_ID_pipe : pipe_IFD
 		port map(pc=>pc_IF, pc_2=>pc_2_IF, inst=>inst_IF, valid=>valid_IF, clk => clock, clear=>(flush or reset), write_enable=>staller_wr, 
@@ -229,8 +243,9 @@ BEGIN
 		C_out => C_out_EX, Z_out => Z_out_EX, wb_control_out => wb_control_out_EX, cond_out => cond_out_EX, AD3_out => AD3_out_EX, D1_out => D1_out_EX, D3_out => D3_out_EX, immd_out => immd_out_EX,
 		pc_out => pc_out_EX, pc_2_out => pc_2_out_EX, inst_out =>inst_out_EX
 		);
-		mi:mem_interfacer
-			port map( opcode=> inst_out_EX, Exe_d3=> D3_out_EX, Exe_d1=> D1_out_EX, Mem_out=> data_mem_out, WB_d3=> , Mem_in=> data_mem_in, Mem_wr=> data_mem_wr, Mem_addr=> data_mem_addr);
+	mi:mem_interfacer
+			port map( opcode=> inst_out_EX, Exe_d3=> D3_out_EX, Exe_d1=> D1_out_EX, Mem_out=> data_mem_out, WB_d3=> ,
+			 Mem_in=> data_mem_in, Mem_wr=> data_mem_wr, Mem_addr=> data_mem_addr);
 	D3_EX <= pc_2_out_RR when (inst_out_RR(15 downto 12) = "1001" or inst_out_RR(15 downto 12) = "1010") else
 			ALU_OUTP;
 end flow;

@@ -65,7 +65,7 @@ use ieee.numeric_std.all;
 use ieee.std_logic_1164.all;
 
 package pipeline_register is
-
+	type regBank is array(0 to 7) of std_logic_vector(15 downto 0);
 	component pipe_IFD is
 		port(
 			pc, pc_2, inst : in std_logic_vector(15 downto 0);
