@@ -185,7 +185,7 @@ END component;
 			inst_out_ID, pc_RR, pc_2_RR, inst_RR, pc_out_RR, pc_2_out_RR, inst_out_RR, D1_RR, D2_RR, D1_out_RR, D2_out_RR,
 			pc_EX, pc_2_EX, inst_EX, pc_out_EX, pc_2_out_EX, inst_out_EX, D1_EX, D3_EX, D1_out_EX, D3_out_EX, 
 			pc_MEM, pc_2_MEM, inst_MEM, pc_out_MEM, pc_2_out_MEM, inst_out_MEM, D3_MEM, D3_out_MEM, PC_Din, PC_next,PC_Dout, 
-			branch_addr, PC_M2_out, alu_1_out, R1_ALU_OPDR_SEL, R2_ALU_OPDR_SEL, RA_ALU, RB_ALU, Imm16, RF_D1
+			branch_addr, R1_ALU_OPDR_SEL, R2_ALU_OPDR_SEL, RA_ALU, RB_ALU, Imm16, RF_D1
 			, RF_D2, RF_D3, ALU_OUTP: std_logic_vector(15 downto 0) := (others => '0');
 	signal cond_ID, cond_out_ID, cond_RR, cond_out_RR, cond_EX, cond_out_EX, cond_MEM, cond_out_MEM, ALU_OP: std_logic_vector(1 downto 0) := (others => '0') ;
 	signal AD1_ID, AD2_ID, AD3_ID, AD1_out_ID, AD2_out_ID, AD3_out_ID, AD1_RR, AD2_RR, AD3_RR, AD1_out_RR, AD2_out_RR, AD3_out_RR,
@@ -196,18 +196,18 @@ END component;
 BEGIN
 	LUT_FLUSH: LUT
 				port map(fush => flush, match => match, branch_addr => branch_addr, PC_RR => pc_out_RR, PC_EXE => pc_out_EX, 
-				PC_PRED => PC_next, clk => clock, IF_M1_OUT => PC_M2_out, reset => reset );
+				PC_PRED => PC_next, clk => clock, IF_M1_OUT => pc_IF, reset => reset );
 	PC: pipe_reg
 		generic map(16)
 		port map(clk => clock, clr => reset, wr_enable => '1', Din => PC_Din, Dout => PC_Dout );
 	main_alu_1 : ALU_1
-		port map(a => PC_M2_out, c => alu_1_out);	
-	PC_M2_out <= PC_Dout when (FLush = '0') else
+		port map(a => pc_IF, c => pc_2_IF);	
+	pc_IF <= PC_Dout when (FLush = '0') else
 				PC_next;
-	PC_Din <= alu_1_out when(match = '0') else
+	PC_Din <= pc_2_IF when(match = '0') else
 				branch_addr;	
 	code_mem: ram_mem
-		port map(clock => clock, reset => reset, ram_address => PC_M2_out, ram_data_out => inst_IF);
+		port map(clock => clock, reset => reset, ram_address => pc_IF, ram_data_out => inst_IF);
 	sign_extender: sel_sign_extender
 		port map(inp => immd_out_RR, outp => Imm16);
 	Alu_Oprd_sel1 : ALU_Oprd_Sel
@@ -272,7 +272,7 @@ BEGIN
 	
 	RF: registerFile
 		port map(addr_out1 => AD1_out_ID, addr_out2 => AD2_out_ID, addr_in => AD3_out_MEM ,data_out1 => RF_D1, data_out2 => RF_D2,
-		data_in => RF_D3, clock => clock, wr_enable => wb_control_MEM, clear => reset ,regbank_out => output_bank);
+		data_in => RF_D3, clock => clock, wr_enable => wb_control_out_MEM, clear => reset ,regbank_out => output_bank);
 		 
 ----------- Component Declaration
 	IF_ID_pipe : pipe_IFD
@@ -309,4 +309,7 @@ BEGIN
 			port map(inst=> inst_out_IF, CZ=> cond_ID, AD1=> AD1_ID, AD2=> AD2_ID, AD3=> AD3_ID, immediate=>immd_ID);
 	cls:cond_left_shift
 			port map(immediate=> immd_out_MEM(8 downto 0),opcode=>inst_out_MEM(15 downto 12) ,d3=> D3_out_MEM,d3_out=> RF_D3);
-end flow;
+	--PC_M2_out <= pc_IF;
+	--alu_1_out <= pc_2_IF;
+	WB_control_EX <= (WB_ENABLE and valid_out_RR);
+			end flow;
