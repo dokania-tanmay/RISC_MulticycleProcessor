@@ -28,7 +28,7 @@ begin
       
          Mem_addr <= Exe_d3;
          WB_d3 <= Mem_out;  
-           
+         Mem_wr <= '0';
            
       when "0101" =>
       
@@ -40,11 +40,11 @@ begin
       when others =>
       
          WB_d3 <= Exe_d3;
+         Mem_wr <= '0';
          
       end case;
     
     end process;
-    
  end architecture;
  
  
