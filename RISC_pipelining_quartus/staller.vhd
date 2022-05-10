@@ -6,9 +6,9 @@ use ieee.numeric_std.all;
 
 entity staller is
 	port(   opcode: in std_logic_vector(3 downto 0);
-                AD1:    in std_logic_vector(2 downto 0);
-                AD2:    in std_logic_vector(2 downto 0);
-                AD3:    in std_logic_vector(2 downto 0);
+                AD1_ID_RR:    in std_logic_vector(2 downto 0);
+                AD2_ID_RR:    in std_logic_vector(2 downto 0);
+                AD3_RR_EX:    in std_logic_vector(2 downto 0);
                 clk, reset:    in std_logic;
                 wr_en:  out std_logic
                 
@@ -32,7 +32,7 @@ begin
 	end process;
 	
 	enable_control:
-	process(CS, NS, opcode, reset, AD1, AD2, AD3 )
+	process(CS, NS, opcode, reset, AD1_ID_RR, AD2_ID_RR, AD3_RR_EX )
         begin
 
         
@@ -68,7 +68,7 @@ begin
 	
 	
   transistion:
-	process(opcode, AD1, AD2, AD3, clk, reset) 
+	process(opcode, AD1_ID_RR, AD2_ID_RR, AD3_RR_EX, clk, reset) 
 	begin	         
 
 	      
@@ -80,7 +80,7 @@ begin
 	    case opcode is 
 	    when "0111" => 
 	    
-	        if (AD1 = AD3) or (AD2 = AD3) then NS <= S1; 
+	        if (AD1_ID_RR = AD3_RR_EX) or (AD2_ID_RR = AD3_RR_EX) then NS <= S1; 
 	        else NS <= S0;
 	        
 	        end if;
