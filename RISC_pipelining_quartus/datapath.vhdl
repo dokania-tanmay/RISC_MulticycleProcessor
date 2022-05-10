@@ -163,31 +163,31 @@ BEGIN
 		port map(inp1 => D3_out_MEM, inp2 => D3_out_MEM, inp3 => D1_out_RR, sel => x , output => R1_ALU_OPDR_SEL);
 	Addr_cmp_1: Addr_cmp
 		port map(addr1 => AD1_out_RR, addr2 => AD3_out_EX, output_match => Addr_cmp1);
-	x(1 downto 1) <= wb_control_out_MEM or Addr_cmp1;
+	x(1 downto 1) <= wb_control_out_MEM and Addr_cmp1;
 	Addr_cmp_2 : Addr_cmp
 		port map(addr1 => AD1_out_RR, addr2 => AD3_out_MEM, output_match => Addr_cmp2);
-	x(0 downto 0) <= wb_control_out_MEM or Addr_cmp2;
+	x(0 downto 0) <= wb_control_out_MEM and Addr_cmp2;
 
 
 	Prio_mux_2: priority_mux
 		port map(inp1 => D3_out_MEM, inp2 => D3_out_MEM, inp3 => D2_out_RR, sel => y , output => R2_ALU_OPDR_SEL);
 	Addr_cmp_3: Addr_cmp
 		port map(addr1 => AD2_out_RR, addr2 => AD3_out_EX, output_match => Addr_cmp3);
-	y(1 downto 1) <= wb_control_out_MEM or Addr_cmp3;
+	y(1 downto 1) <= wb_control_out_MEM and Addr_cmp3;
 	Addr_cmp_4 : Addr_cmp
 		port map(addr1 => AD2_out_RR, addr2 => AD3_out_MEM, output_match => Addr_cmp4);
-	y(0 downto 0) <= wb_control_out_MEM or Addr_cmp4;
+	y(0 downto 0) <= wb_control_out_MEM and Addr_cmp4;
 
 
 	Addr_cmp_5 : Addr_cmp
 		port map(addr1 => AD1_out_ID, addr2 => AD3_out_MEM, output_match => Addr_cmp5);
-	x(3 downto 3) <= wb_control_out_MEM or Addr_cmp5;
+	x(3 downto 3) <= wb_control_out_MEM and Addr_cmp5;
 	D1_RR <= RF_D1 when(x(3) = '0') else
 			D3_out_MEM;
 	
 	Addr_cmp_6 : Addr_cmp
 		port map(addr1 => AD2_out_ID, addr2 => AD3_out_MEM, output_match => Addr_cmp6);
-	y(3 downto 3) <= wb_control_out_MEM or Addr_cmp6;
+	y(3 downto 3) <= wb_control_out_MEM and Addr_cmp6;
 	D2_RR <= RF_D2 when(y(3) = '0') else
 			D3_out_MEM;
 
