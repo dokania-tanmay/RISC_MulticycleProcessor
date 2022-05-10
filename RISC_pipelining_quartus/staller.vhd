@@ -6,9 +6,9 @@ use ieee.numeric_std.all;
 
 entity staller is
 	port(   opcode: in std_logic_vector(3 downto 0);
-                AD1:    in std_logic_vector(3 downto 0);
-                AD2:    in std_logic_vector(3 downto 0);
-                AD3:    in std_logic_vector(3 downto 0);
+                AD1:    in std_logic_vector(2 downto 0);
+                AD2:    in std_logic_vector(2 downto 0);
+                AD3:    in std_logic_vector(2 downto 0);
                 clk, reset:    in std_logic;
                 wr_en:  out std_logic
                 

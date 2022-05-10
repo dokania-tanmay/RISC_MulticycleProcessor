@@ -4,8 +4,9 @@ use ieee.math_real.all;
 use ieee.numeric_std.all;
 
 library work;
-use work.all;
+use work.elem.all;
 
+ 
 entity registerFile is
     generic(
             dataSize: integer := 16;
@@ -21,7 +22,6 @@ entity registerFile is
 end entity;
 --- Writing is done at clock edges and changes to wr_enable signal
 architecture beh of registerFile is
-    type regBank is array(0 to 7) of std_logic_vector(15 downto 0);
     signal registers : regBank  := (others=> (others => '0'));
 begin
     data_out1 <= registers(to_integer(unsigned(addr_out1)));
