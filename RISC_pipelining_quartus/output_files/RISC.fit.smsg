@@ -1,3 +1,4 @@
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Extra Info (176236): Started Fast Input/Output/OE register processing
 Extra Info (176237): Finished Fast Input/Output/OE register processing
 Extra Info (176238): Start inferring scan chains for DSP blocks
