@@ -125,7 +125,7 @@ ARCHITECTURE flow OF datapath IS
 	END COMPONENT;
 
 	signal WR_IF, WR_ID, WR_RR, WR_EX, WR_MEM, valid_IF, valid_out_IF, valid_ID, valid_out_ID, valid_RR, valid_out_RR, valid_EX, C_EX,
-			Z_EX, wb_control_EX
+			Z_EX, wb_control_EX, staller_wr
 			,valid_out_EX, C_out_EX, Z_out_EX, wb_control_out_EX,
 			valid_MEM, C_MEM, Z_MEM, wb_control_MEM,valid_out_MEM, C_out_MEM, Z_out_MEM, wb_control_out_MEM, flush, match, Addr_cmp1, Addr_cmp2, Addr_cmp3, Addr_cmp4, Addr_cmp5, Addr_cmp6 : STD_LOGIC; 
 	signal pc_IF, pc_2_IF, inst_IF, pc_out_IF, pc_2_out_IF, inst_out_IF, pc_ID, pc_2_ID, inst_ID, pc_out_ID, pc_2_out_ID, 
@@ -190,27 +190,35 @@ BEGIN
 	y(3 downto 3) <= wb_control_out_MEM and Addr_cmp6;
 	D2_RR <= RF_D2 when(y(3) = '0') else
 			D3_out_MEM;
-
+------- Forwarding logic will auto connect RF_D1 to pipeline reg
 
 
 
 
 ----------- Component Declaration
 	IF_ID_pipe : pipe_IFD
-		port map(pc=>pc_IF, pc_2=>pc_2_IF, inst=>inst_IF, valid=>valid_IF, clk => clock, clear=>(flush or reset), write_enable=>WR_IF, 
+		port map(pc=>pc_IF, pc_2=>pc_2_IF, inst=>inst_IF, valid=>valid_IF, clk => clock, clear=>(flush or reset), write_enable=>staller_wr, 
 		valid_out=>valid_out_IF, pc_out=>pc_out_IF, pc_2_out=>pc_2_out_IF, inst_out=>inst_out_IF);
 	ID_RR_pipe : pipe_IDRR
 		port map(pc=>pc_out_IF, pc_2=>pc_2_out_IF, inst=>inst_out_IF,valid=>valid_out_IF,clk => clock,cond=>cond_ID,AD1=>AD1_ID, AD2=>AD2_ID, AD3=>AD3_ID,
-		write_enable=> WR_ID,clear=>(flush or reset),
+		write_enable=> staller_wr,clear=>(flush or reset),
 		valid_out=>valid_out_ID,cond_out=>cond_out_ID,
 		AD1_out => AD1_out_ID, AD2_out => AD2_out_ID, AD3_out => AD3_out_ID, pc_out=> pc_out_ID, pc_2_out=>pc_2_out_ID, inst_out => inst_out_ID);
 	RR_EXE_pipe : pipe_RREX
 		port map(pc=>pc_out_ID, pc_2=>pc_2_out_ID, inst=>inst_out_ID,valid=>valid_out_ID,clk => clock, cond=>cond_out_ID,
 		AD1=> AD1_out_ID, AD2=> AD2_out_ID, AD3=> AD3_out_ID, write_enable => '1', 
-		D1=>D1_RR, D2=> D2_RR, immd=>immd_RR, clear=> reset, 
+		D1=>D1_RR, D2=> D2_RR, immd=>immd_RR, clear=> (reset or (not (staller_wr))), 
 		D1_out => D1_out_RR, D2_out => D2_out_RR, immd_out => immd_out_RR,
 		valid_out=>valid_out_RR,cond_out=>cond_out_RR,
 		AD1_out => AD1_out_RR, AD2_out => AD2_out_RR, AD3_out => AD3_out_RR, pc_out=> pc_out_RR, pc_2_out=>pc_2_out_RR, inst_out => inst_out_RR);
- 
+	EXE_MEM_pipe : pipe_EXMEM
+		port map(pc=>pc_out_RR, pc_2=>pc_2_out_RR, inst=>inst_out_RR,valid=>valid_out_RR,clk => clock, cond=>cond_out_RR,
+		D1 => D1_out_RR, D3 => D3_EX, -- Need to define it
+
+
+
+
+
+		);
 
 end flow;
