@@ -128,17 +128,17 @@ ARCHITECTURE flow OF datapath IS
 			Z_EX, wb_control_EX, staller_wr
 			,valid_out_EX, C_out_EX, Z_out_EX, wb_control_out_EX,
 			valid_MEM, C_MEM, Z_MEM, wb_control_MEM,valid_out_MEM, C_out_MEM, Z_out_MEM, wb_control_out_MEM, flush, match,
-			Addr_cmp1, Addr_cmp2, Addr_cmp3, Addr_cmp4, Addr_cmp5, Addr_cmp6 : STD_LOGIC; 
+			Addr_cmp1, Addr_cmp2, Addr_cmp3, Addr_cmp4, Addr_cmp5, Addr_cmp6, JMP_EN, ALU_EN, ALU_C, ALU_Z, WB_ENABLE  : STD_LOGIC; 
 	signal pc_IF, pc_2_IF, inst_IF, pc_out_IF, pc_2_out_IF, inst_out_IF, pc_ID, pc_2_ID, immd_ID, inst_ID, pc_out_ID, pc_2_out_ID, 
 			inst_out_ID, pc_RR, pc_2_RR, inst_RR, pc_out_RR, pc_2_out_RR, inst_out_RR, D1_RR, D2_RR, D1_out_RR, D2_out_RR,
 			pc_EX, pc_2_EX, inst_EX, pc_out_EX, pc_2_out_EX, inst_out_EX, D1_EX, D3_EX, D1_out_EX, D3_out_EX, 
 			pc_MEM, pc_2_MEM, inst_MEM, pc_out_MEM, pc_2_out_MEM, inst_out_MEM, D3_MEM, D3_out_MEM, PC_Din, PC_next,PC_Dout, 
 			branch_addr, PC_M2_out, alu_1_out, R1_ALU_OPDR_SEL, R2_ALU_OPDR_SEL, RA_ALU, RB_ALU, Imm16, RF_D1
 			, RF_D2, ALU_OUTP: std_logic_vector(15 downto 0);
-	signal cond_ID, cond_out_ID, cond_RR, cond_out_RR, cond_EX, cond_out_EX, cond_MEM, cond_out_MEM, ALU_OP: in std_logic_vector(1 downto 0);
+	signal cond_ID, cond_out_ID, cond_RR, cond_out_RR, cond_EX, cond_out_EX, cond_MEM, cond_out_MEM, ALU_OP: std_logic_vector(1 downto 0);
 	signal AD1_ID, AD2_ID, AD3_ID, AD1_out_ID, AD2_out_ID, AD3_out_ID, AD1_RR, AD2_RR, AD3_RR, AD1_out_RR, AD2_out_RR, AD3_out_RR,
-			AD3_EX, AD3_out_EX, AD3_MEM, AD3_out_MEM, x, y: in std_logic_vector(2 downto 0);
-	signal immd_RR, immd_out_RR, immd_EX, immd_out_EX, immd_MEM, immd_out_MEM: in std_logic_vector(9 downto 0);
+			AD3_EX, AD3_out_EX, AD3_MEM, AD3_out_MEM, x, y: std_logic_vector(2 downto 0);
+	signal immd_RR, immd_out_RR, immd_EX, immd_out_EX, immd_MEM, immd_out_MEM: std_logic_vector(9 downto 0);
 
 BEGIN
 	LUT_FLUSH: LUT
@@ -199,9 +199,10 @@ BEGIN
 	main_alu: alu
 			port map(opr1 => RA_ALU, opr2 => RB_ALU, dest => ALU_OUTP, sel => ALU_OP, enable => ALU_EN,  C => ALU_C, Z => ALU_Z );
 	pc_predictor: pc_pred 
-			port map();
+			port map(pc_2 => pc_2_out_RR, RB => R2_ALU_OPDR_SEL, alu_out => ALU_OUTP, opcode=> inst_out_RR(15 downto 12), 
+						jump_enable => JMP_EN, pc_next => PC_next);
 	BEQ_JCHECK: BEQ_jcheck
-			port map();
+			port map(RA => R1_ALU_OPDR_SEL, RB => R2_ALU_OPDR_SEL, jump_enable => JMP_EN);
 
 
 
@@ -224,10 +225,6 @@ BEGIN
 	EXE_MEM_pipe : pipe_EXMEM
 		port map(pc=>pc_out_RR, pc_2=>pc_2_out_RR, inst=>inst_out_RR,valid=>valid_out_RR,clk => clock, cond=>cond_out_RR,
 		D1 => D1_out_RR, D3 => D3_EX, immd => immd_out_RR, C=>ALU_C , Z=>ALU_Z
-
-
-
-
 		);
 
 	D3_EX <= pc_2_out_RR when (inst_out_RR(15 downto 12) = "1001" or inst_out_RR(15 downto 12) = "1010") else
