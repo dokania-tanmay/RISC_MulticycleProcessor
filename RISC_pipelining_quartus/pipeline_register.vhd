@@ -243,7 +243,7 @@ entity pipe_IDRR is
 		port(
 			pc, pc_2, inst : in std_logic_vector(15 downto 0);
 			valid: in std_logic;
-			clk: in std_logic;
+			clk, clear: in std_logic;
 			cond: in std_logic_vector(1 downto 0);
 			immd: in std_logic_vector(9 downto 0); --- this is immediate data LSB(8-0) merged with selector bit MSB(9)
 			AD1, AD2, AD3: in std_logic_vector(2 downto 0);
@@ -252,7 +252,6 @@ entity pipe_IDRR is
 			cond_out: out std_logic_vector(1 downto 0);
 			immd_out: out std_logic_vector(9 downto 0);
 			AD1_out, AD2_out, AD3_out: out std_logic_vector(2 downto 0);
-			clear: in std_logic;
 			pc_out, pc_2_out, inst_out : out std_logic_vector(15 downto 0)
 			
 			);

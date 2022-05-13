@@ -18,6 +18,7 @@ architecture DutWrap of DUT is
 		output_bank: out regBank
 	);
 END component;
+signal dummy4, dummy5, dummy6: std_logic_vector(15 downto 0);
 
 begin
 
@@ -31,6 +32,9 @@ begin
 					output_bank(1) => output_vector(31 downto 16),
 					output_bank(2) => output_vector(47 downto 32),
 					output_bank(3) => output_vector(63 downto 48),
+					output_bank(4) => dummy4,
+					output_bank(5) => dummy5,
+					output_bank(6) =>dummy6,
 					output_bank(7) => output_vector(79 downto 64)
 					);
 

@@ -28,9 +28,9 @@ VJe3KHWF@Pne1fGh1o3Z;e2
 !s100 ;HTIoHkX2]lSGg5BA0>Hh1
 Z11 OV;C;2020.1;71
 31
-Z12 !s110 1652086948
+Z12 !s110 1652428597
 !i10b 1
-Z13 !s108 1652086948.000000
+Z13 !s108 1652428597.000000
 Z14 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/alu.vhdl|
 Z15 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/alu.vhdl|
 !i113 1
@@ -61,7 +61,7 @@ R15
 R16
 R17
 Edata_path
-Z18 w1651998552
+Z18 w1652204228
 R3
 R4
 R2
@@ -74,9 +74,9 @@ R0
 Z19 8D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl
 Z20 FD:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl
 l0
-L9 1
-V8zkGDV[B[Z?iPU`5SLYTc1
-!s100 55H6KOgCk;?3B_@zaW_hF3
+L10 1
+V<P35Z^fSKRMCT1ZcX0_CK2
+!s100 WGn@aVR05l>GGbl<2k<XE0
 R11
 31
 R12
@@ -95,12 +95,12 @@ R5
 R6
 R7
 R8
-DEx4 work 9 data_path 0 22 8zkGDV[B[Z?iPU`5SLYTc1
+DEx4 work 9 data_path 0 22 <P35Z^fSKRMCT1ZcX0_CK2
 !i122 8
-l106
-L20 200
-Vce4Le4be9]JEW4EiN3;>=1
-!s100 RQ]1T2JWL=c72X:9Gb?9K2
+l107
+L21 200
+VC[YfAf9WIa]zAHW=afPBA0
+!s100 7oNTU:@Q;j^h2DcgF]^0J0
 R11
 31
 R12
@@ -130,9 +130,9 @@ VdXj8`TFQ_A=0^WLg`4DC`2
 !s100 NJ:od0mPM^cOBO0H<_i@l0
 R11
 31
-Z25 !s110 1652086946
+Z25 !s110 1652428596
 !i10b 1
-Z26 !s108 1652086946.000000
+Z26 !s108 1652428596.000000
 Z27 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl|
 Z28 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl|
 !i113 1
@@ -170,7 +170,7 @@ R6
 R7
 R8
 !i122 0
-Z29 w1651819996
+Z29 w1652200959
 R0
 Z30 8D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/elem.vhd
 Z31 FD:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/elem.vhd
@@ -189,7 +189,7 @@ Z33 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/elem.vhd|
 R16
 R17
 Eleft_shift
-R29
+Z34 w1651819996
 R3
 R4
 R6
@@ -199,19 +199,19 @@ R7
 R8
 !i122 7
 R0
-Z34 8D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl
-Z35 FD:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl
+Z35 8D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl
+Z36 FD:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl
 l0
 L15 1
 VW;f0E=<:5a>Din:d9FQ=o3
 !s100 2Y;Q53TTnQ5P1;:cRN>Z53
 R11
 31
-Z36 !s110 1652086947
+R12
 !i10b 1
-Z37 !s108 1652086947.000000
-Z38 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl|
-Z39 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl|
+R13
+Z37 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl|
+Z38 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl|
 !i113 1
 R16
 R17
@@ -231,16 +231,16 @@ V=SbITReG2VV1PbgNV?<X;2
 !s100 QK62hWE7^FWW`c>]M`?Q=0
 R11
 31
-R36
+R12
 !i10b 1
+R13
 R37
 R38
-R39
 !i113 1
 R16
 R17
 Elsm
-R29
+R34
 R2
 R3
 R4
@@ -250,19 +250,19 @@ R7
 R8
 !i122 6
 R0
-Z40 8D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl
-Z41 FD:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl
+Z39 8D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl
+Z40 FD:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl
 l0
 L20 1
 Veb;VcoXRcGR4I>Zg:3gh62
 !s100 2cQ@QF<H:B^2bz9U>fA^L1
 R11
 31
-R36
+R12
 !i10b 1
-R37
-Z42 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl|
-Z43 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl|
+R13
+Z41 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl|
+Z42 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl|
 !i113 1
 R16
 R17
@@ -282,16 +282,16 @@ VBNi]ACYfiWeDPa8]U@jdO3
 !s100 lSS9?WbMGSES;2hZH2Nlk0
 R11
 31
-R36
+R12
 !i10b 1
-R37
+R13
+R41
 R42
-R43
 !i113 1
 R16
 R17
 Eram_mem
-Z44 w1652086682
+Z43 w1652427881
 R3
 R4
 R2
@@ -301,19 +301,19 @@ R7
 R8
 !i122 5
 R0
-Z45 8D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl
-Z46 FD:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl
+Z44 8D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl
+Z45 FD:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl
 l0
 L8 1
 VUX`0=Ia[]>az4V[EMlf`N1
 !s100 Gi6mV[B6JIm6IZ8li`D?N1
 R11
 31
-R36
+R12
 !i10b 1
-R37
-Z47 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl|
-Z48 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl|
+R13
+Z46 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl|
+Z47 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl|
 !i113 1
 R16
 R17
@@ -328,16 +328,16 @@ R8
 DEx4 work 7 ram_mem 0 22 UX`0=Ia[]>az4V[EMlf`N1
 !i122 5
 l24
-L21 28
-VY[FIUU@m;JPfKmjJ_?e=o2
-!s100 c]le[J4BlSec2k`bA6Y5K3
+L21 29
+VUdD9nP6bbKS5I<d;mSzC<2
+!s100 M;DS5oda01O>Hzg?U1?<z2
 R11
 31
-R36
+R12
 !i10b 1
-R37
+R13
+R46
 R47
-R48
 !i113 1
 R16
 R17
@@ -385,7 +385,7 @@ R33
 R16
 R17
 Eregisterfile
-Z49 w1652000148
+Z48 w1652000148
 R3
 R4
 R2
@@ -395,19 +395,19 @@ R7
 R8
 !i122 4
 R0
-Z50 8D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl
-Z51 FD:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl
+Z49 8D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl
+Z50 FD:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl
 l0
 L9 1
 VJ2>>2UZ`NL4Eo`XZ==^g`1
 !s100 :j8mHSz=eVJhUd`Xd^^<k3
 R11
 31
-R36
+R12
 !i10b 1
-R37
-Z52 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl|
-Z53 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl|
+R13
+Z51 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl|
+Z52 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl|
 !i113 1
 R16
 R17
@@ -427,16 +427,16 @@ Vk5ZL=V8VE?@TgZlGDkB^f1
 !s100 Jjn;0mFal[TE;bJnVAACj3
 R11
 31
-R36
+R12
 !i10b 1
-R37
+R13
+R51
 R52
-R53
 !i113 1
 R16
 R17
 Erisc_processor
-Z54 w1651946275
+Z53 w1651946275
 R3
 R4
 R2
@@ -446,19 +446,19 @@ R7
 R8
 !i122 2
 R0
-Z55 8D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl
-Z56 FD:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl
+Z54 8D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl
+Z55 FD:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl
 l0
 L9 1
 VMFnMHlE^;3APUPelJG3:S3
 !s100 8eAhOG;M4Y`E0hCNe4eDX0
 R11
 31
-R36
+R12
 !i10b 1
-R37
-Z57 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl|
-Z58 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl|
+R26
+Z56 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl|
+Z57 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl|
 !i113 1
 R16
 R17
@@ -478,11 +478,11 @@ Vz^A@j9[QjzColZAXS]:kP1
 !s100 GnB1[C_PYm0hnM2NK1Az82
 R11
 31
-R36
+R12
 !i10b 1
-R37
+R26
+R56
 R57
-R58
 !i113 1
 R16
 R17
@@ -530,7 +530,7 @@ R33
 R16
 R17
 Estate_transition
-Z59 w1652085185
+Z58 w1652428367
 R3
 R4
 R2
@@ -540,19 +540,19 @@ R7
 R8
 !i122 3
 R0
-Z60 8D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl
-Z61 FD:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl
+Z59 8D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl
+Z60 FD:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl
 l0
 L9 1
 Vln>b?TMW6m@TG[9AKZe8Z3
 !s100 DGiHa7F7W?Dg?hThVV@AD3
 R11
 31
-R36
+R12
 !i10b 1
-R37
-Z62 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl|
-Z63 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl|
+R13
+Z61 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl|
+Z62 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl|
 !i113 1
 R16
 R17
@@ -568,15 +568,15 @@ DEx4 work 16 state_transition 0 22 ln>b?TMW6m@TG[9AKZe8Z3
 !i122 3
 l24
 L20 386
-VOGlV:FUNb1^L4lKl8KW7T2
-!s100 66N=S7@o<ZDWNaVI<ON^Z0
+V8@Bb0LNE3Uake@fGJbR?82
+!s100 6PjdBXj0X<gR05]JJW7fm3
 R11
 31
-R36
+R12
 !i10b 1
-R37
+R13
+R61
 R62
-R63
 !i113 1
 R16
 R17
@@ -586,8 +586,8 @@ R8
 R7
 !i122 10
 R0
-Z64 8D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl
-Z65 FD:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl
+Z63 8D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl
+Z64 FD:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl
 l0
 L7 1
 V]iKK_Z9L:G9B:i8c]3eFH0
@@ -597,7 +597,7 @@ R11
 R12
 !i10b 1
 R13
-Z66 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl|
+Z65 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl|
 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl|
 !i113 1
 R16
@@ -616,8 +616,8 @@ R11
 R12
 !i10b 1
 R13
-R66
-Z67 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl|
+R65
+Z66 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl|
 !i113 1
 R16
 R17

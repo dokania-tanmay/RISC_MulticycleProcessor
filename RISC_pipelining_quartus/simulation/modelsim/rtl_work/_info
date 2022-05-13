@@ -1,0 +1,1326 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/simulation/modelsim
+Eaddr_cmp
+Z1 w1652113382
+Z2 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+!i122 14
+R0
+Z6 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/Addr_cmp.vhd
+Z7 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/Addr_cmp.vhd
+l0
+L9 1
+VMKE[Oh`X?ImidXjG_:>WX1
+!s100 <oF=M75AMUL^d;V:=zlzh2
+Z8 OV;C;2020.1;71
+31
+Z9 !s110 1652214400
+!i10b 1
+Z10 !s108 1652214400.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/Addr_cmp.vhd|
+Z12 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/Addr_cmp.vhd|
+!i113 1
+Z13 o-93 -work work
+Z14 tExplicit 1 CvgOpt 0
+Acomparator
+R2
+R3
+R4
+R5
+DEx4 work 8 addr_cmp 0 22 MKE[Oh`X?ImidXjG_:>WX1
+!i122 14
+l23
+Z15 L22 27
+VGfYJCfaO<T9WBRUBgK_;a1
+!s100 A`bJP:IooI<Sh3l0?A=oR1
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Ealu
+Z16 w1652175539
+Z17 DPx8 synopsys 10 attributes 0 22 dc>JdEHRM@6GGENe5bZ?D1
+Z18 DPx4 ieee 14 std_logic_misc 0 22 dN]HY6l5ohPcZ:TaC@B;53
+R5
+R2
+R4
+R3
+!i122 19
+R0
+Z19 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/alu.vhdl
+Z20 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/alu.vhdl
+l0
+L14 1
+VSl<i<7kclR:l7HICB6WJe2
+!s100 PaXZ7Q`Xbcz9>_gAHI_nl3
+R8
+31
+Z21 !s110 1652214401
+!i10b 1
+Z22 !s108 1652214401.000000
+Z23 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/alu.vhdl|
+Z24 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/alu.vhdl|
+!i113 1
+R13
+R14
+Abeh
+R17
+R18
+R5
+R2
+R4
+R3
+DEx4 work 3 alu 0 22 Sl<i<7kclR:l7HICB6WJe2
+!i122 19
+l68
+L29 73
+VkZG;Cd[g3VR99h9^3O5:g0
+!s100 3m_FUFfm6K3NU7h4@Q82W3
+R8
+31
+R21
+!i10b 1
+R22
+R23
+R24
+!i113 1
+R13
+R14
+Ealu_1
+Z25 w1652187746
+R2
+R3
+R4
+R5
+!i122 1
+R0
+Z26 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/Alu_1.vhdl
+Z27 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/Alu_1.vhdl
+l0
+L6 1
+VE^d11dSC;0AHXY@E]]?S:0
+!s100 D?MCnl4I:_z3cS;lj6h3G1
+R8
+31
+Z28 !s110 1652214397
+!i10b 1
+Z29 !s108 1652214397.000000
+Z30 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/Alu_1.vhdl|
+Z31 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/Alu_1.vhdl|
+!i113 1
+R13
+R14
+Astr
+R2
+R3
+R4
+R5
+DEx4 work 5 alu_1 0 22 E^d11dSC;0AHXY@E]]?S:0
+!i122 1
+l12
+L11 4
+VgI<QJ;;l[C9J4:E0<>EUe2
+!s100 PO1873MeGOzPl@b<iSAX]1
+R8
+31
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 1
+R13
+R14
+Ealu_oper_sel
+R1
+R5
+R2
+R4
+R3
+!i122 21
+R0
+Z32 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/ALU_Oper_Sel.vhdl
+Z33 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/ALU_Oper_Sel.vhdl
+l0
+L9 1
+V=A[M4K1gGO]K6Tl5^RYO53
+!s100 2imejT94gAzz4Jk?lkM:N0
+R8
+31
+R21
+!i10b 1
+R22
+Z34 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/ALU_Oper_Sel.vhdl|
+Z35 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/ALU_Oper_Sel.vhdl|
+!i113 1
+R13
+R14
+Abeh
+R5
+R2
+R4
+R3
+DEx4 work 12 alu_oper_sel 0 22 =A[M4K1gGO]K6Tl5^RYO53
+!i122 21
+l17
+L16 25
+VeGC;9DjaNDT79TY@2MNik3
+!s100 0InQa?[Z7zcOzg5dZln;]1
+R8
+31
+R21
+!i10b 1
+R22
+R34
+R35
+!i113 1
+R13
+R14
+Ealu_oprd_sel
+R1
+R2
+R3
+R4
+R5
+!i122 13
+R0
+Z36 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/ALU_Oprd_Sel.vhd
+Z37 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/ALU_Oprd_Sel.vhd
+l0
+L9 1
+VRUG;z>^YJVNBVQoYTK1fW2
+!s100 RCkbW0i>o[G9h87<gDhc51
+R8
+31
+Z38 !s110 1652214399
+!i10b 1
+Z39 !s108 1652214399.000000
+Z40 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/ALU_Oprd_Sel.vhd|
+Z41 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/ALU_Oprd_Sel.vhd|
+!i113 1
+R13
+R14
+Acontroller
+R2
+R3
+R4
+R5
+DEx4 work 12 alu_oprd_sel 0 22 RUG;z>^YJVNBVQoYTK1fW2
+!i122 13
+l27
+L24 33
+VL_THJ3=[b9M=G55?D;aZG0
+!s100 2;DNEQddc9::e:@^Um:Kb3
+R8
+31
+R38
+!i10b 1
+R39
+R40
+R41
+!i113 1
+R13
+R14
+Ebeq_jcheck
+R1
+R2
+R3
+R4
+R5
+!i122 12
+R0
+Z42 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/BEQ_jcheck.vhd
+Z43 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/BEQ_jcheck.vhd
+l0
+L9 1
+V50VaTCJ6Bo9Azgfe8z?0c2
+!s100 GbQ5C@IoL3=g];cZQG3`K0
+R8
+31
+R38
+!i10b 1
+R39
+Z44 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/BEQ_jcheck.vhd|
+Z45 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/BEQ_jcheck.vhd|
+!i113 1
+R13
+R14
+Ajump_controller
+R2
+R3
+R4
+R5
+DEx4 work 10 beq_jcheck 0 22 50VaTCJ6Bo9Azgfe8z?0c2
+!i122 12
+l23
+R15
+V`7PMiHX3LEI_g;4X>05AB1
+!s100 aRn<aB3l8PAoJzjzJ`L3Z0
+R8
+31
+R38
+!i10b 1
+R39
+R44
+R45
+!i113 1
+R13
+R14
+Econd_left_shift
+Z46 w1652209311
+R2
+R3
+R4
+R5
+!i122 11
+R0
+Z47 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/cond_left_shift.vhd
+Z48 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/cond_left_shift.vhd
+l0
+L9 1
+Veih]aLfi`XCO=UTc3PHoW0
+!s100 ?<0oM>g@z3jzZZlDDho071
+R8
+31
+R38
+!i10b 1
+R39
+Z49 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/cond_left_shift.vhd|
+Z50 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/cond_left_shift.vhd|
+!i113 1
+R13
+R14
+Acond_shifter
+R2
+R3
+R4
+R5
+DEx4 work 15 cond_left_shift 0 22 eih]aLfi`XCO=UTc3PHoW0
+!i122 11
+l23
+L21 26
+VVFR9Y[fBdGm3K7mElO[0O0
+!s100 z7JVhTGmm0T23K0T]]DQF0
+R8
+31
+R38
+!i10b 1
+R39
+R49
+R50
+!i113 1
+R13
+R14
+Edata_mem
+Z51 w1652209567
+R17
+R18
+Z52 DPx4 work 4 elem 0 22 h8CYA8S4=OA^Ad0M^ULMG2
+R5
+R2
+R4
+R3
+!i122 17
+R0
+Z53 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/data_mem.vhdl
+Z54 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/data_mem.vhdl
+l0
+L8 1
+VBe@WZ5E0RLkQU7WjU6bA]0
+!s100 0TAgfaBZC3;gI_LIoKPff2
+R8
+31
+R9
+!i10b 1
+R10
+Z55 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/data_mem.vhdl|
+Z56 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/data_mem.vhdl|
+!i113 1
+R13
+R14
+Abeh
+R17
+R18
+R52
+R5
+R2
+R4
+R3
+DEx4 work 8 data_mem 0 22 Be@WZ5E0RLkQU7WjU6bA]0
+!i122 17
+l24
+L21 28
+VN`T]X@`mfFJO]]J3GA?Zn2
+!s100 O]LNWmW^z5V:iHUPJbXDX3
+R8
+31
+R9
+!i10b 1
+R10
+R55
+R56
+!i113 1
+R13
+R14
+Edatapath
+Z57 w1652213968
+R17
+R18
+R52
+R2
+R3
+R4
+R5
+!i122 18
+R0
+Z58 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/datapath.vhdl
+Z59 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/datapath.vhdl
+l0
+Z60 L10 1
+Vm7Gf;T[ln9Y_36O9J^LIM1
+!s100 EQPQ4cHKCbOz`D[bn_oH>1
+R8
+31
+R21
+!i10b 1
+R10
+Z61 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/datapath.vhdl|
+Z62 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/datapath.vhdl|
+!i113 1
+R13
+R14
+Aflow
+R17
+R18
+R52
+DEx4 work 8 datapath 0 22 m7Gf;T[ln9Y_36O9J^LIM1
+R2
+R3
+R4
+R5
+!i122 18
+l359
+L26 457
+V[oLZlIAEWX0GbARHOgS;_1
+!s100 `DYCXi3`Ue[jdki^n2AN[1
+R8
+31
+R21
+!i10b 1
+R10
+R61
+R62
+!i113 1
+R13
+R14
+Edut
+Z63 w1652203186
+R17
+R18
+R52
+R5
+R2
+R4
+R3
+!i122 15
+R0
+Z64 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/DUT.vhdl
+Z65 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/DUT.vhdl
+l0
+L9 1
+VdXj8`TFQ_A=0^WLg`4DC`2
+!s100 NJ:od0mPM^cOBO0H<_i@l0
+R8
+31
+R9
+!i10b 1
+R10
+Z66 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/DUT.vhdl|
+Z67 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/DUT.vhdl|
+!i113 1
+R13
+R14
+Adutwrap
+R17
+R18
+R52
+R5
+R2
+R4
+R3
+DEx4 work 3 dut 0 22 dXj8`TFQ_A=0^WLg`4DC`2
+!i122 15
+l23
+L14 28
+VGPd6Wn:IigYLLO>0CCS1e0
+!s100 RPaU@7AgXi0_D;KGB[;jR3
+R8
+31
+R9
+!i10b 1
+R10
+R66
+R67
+!i113 1
+R13
+R14
+Pelem
+R17
+R18
+R5
+R2
+R4
+R3
+!i122 2
+w1652185587
+R0
+8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/elem.vhdl
+FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/elem.vhdl
+l0
+L8 1
+Vh8CYA8S4=OA^Ad0M^ULMG2
+!s100 hiH`0S0^AGil=T0WW_5@T1
+R8
+31
+R28
+!i10b 1
+R29
+!s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/elem.vhdl|
+!s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/elem.vhdl|
+!i113 1
+R13
+R14
+Einst_dec
+Z68 w1652200959
+R3
+R4
+R5
+!i122 5
+R0
+Z69 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/inst_dec.vhdl
+Z70 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/inst_dec.vhdl
+l0
+L5 1
+VI=P7h0ON1bfd1dMO7dSB_2
+!s100 :FYeQ?bTB2Q^V2@gbL9e]0
+R8
+31
+Z71 !s110 1652214398
+!i10b 1
+Z72 !s108 1652214398.000000
+Z73 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/inst_dec.vhdl|
+Z74 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/inst_dec.vhdl|
+!i113 1
+R13
+R14
+Adecode
+R3
+R4
+R5
+DEx4 work 8 inst_dec 0 22 I=P7h0ON1bfd1dMO7dSB_2
+!i122 5
+l23
+L17 92
+VUNac73>@dZ>??OTWHo7352
+!s100 fAj9TzCJUH@8<D6PA71l_0
+R8
+31
+R71
+!i10b 1
+R72
+R73
+R74
+!i113 1
+R13
+R14
+Elut
+Z75 w1652207915
+R2
+R3
+R4
+R5
+!i122 6
+R0
+Z76 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/LUT.vhdl
+Z77 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/LUT.vhdl
+l0
+L5 1
+V`gEYV<?^dWIn1<X<WS_gA2
+!s100 ]T_4:z3mTLN@kEZ2@ZA4l2
+R8
+31
+R71
+!i10b 1
+R72
+Z78 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/LUT.vhdl|
+Z79 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/LUT.vhdl|
+!i113 1
+R13
+R14
+Aarch
+R2
+R3
+R4
+R5
+DEx4 work 3 lut 0 22 `gEYV<?^dWIn1<X<WS_gA2
+!i122 6
+l21
+L15 54
+Vd>h0enR43Bg9^e_CAOO980
+!s100 e_nkTe7MgGMXL692GDb2b2
+R8
+31
+R71
+!i10b 1
+R72
+R78
+R79
+!i113 1
+R13
+R14
+Emem_interfacer
+Z80 w1652179046
+R3
+R4
+R5
+!i122 3
+R0
+Z81 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/mem_interfacer.vhdl
+Z82 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/mem_interfacer.vhdl
+l0
+L5 1
+Vn;4Yld1B1b9nA^kd7Ca]f1
+!s100 2BFLJ0:f5B]`dJ?hPm4>a2
+R8
+31
+R28
+!i10b 1
+R29
+Z83 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/mem_interfacer.vhdl|
+Z84 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/mem_interfacer.vhdl|
+!i113 1
+R13
+R14
+Ainterface
+R3
+R4
+R5
+DEx4 work 14 mem_interfacer 0 22 n;4Yld1B1b9nA^kd7Ca]f1
+!i122 3
+l20
+L18 31
+V4DYE::3j]05>=SnFUn71m3
+!s100 ?0]DhKPCbI4=YHfiTHlzW1
+R8
+31
+R28
+!i10b 1
+R29
+R83
+R84
+!i113 1
+R13
+R14
+Epc_pred
+R1
+R2
+R3
+R4
+R5
+!i122 10
+R0
+Z85 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/pc_pred.vhd
+Z86 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/pc_pred.vhd
+l0
+L9 1
+VjaPT_8iMzY[jQ8oBXzWA^0
+!s100 Xc=:KoUdPkSz4WZ`:Tj6I3
+R8
+31
+R38
+!i10b 1
+R39
+Z87 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/pc_pred.vhd|
+Z88 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/pc_pred.vhd|
+!i113 1
+R13
+R14
+Aprediction
+R2
+R3
+R4
+R5
+DEx4 work 7 pc_pred 0 22 jaPT_8iMzY[jQ8oBXzWA^0
+!i122 10
+l22
+L21 32
+Vf<7oQP:[_J>om^GPQ[oJ41
+!s100 RaGlGW[_OzePjRWbE6oGm1
+R8
+31
+R38
+!i10b 1
+R39
+R87
+R88
+!i113 1
+R13
+R14
+Epipe_bit
+Z89 w1652204962
+R5
+R4
+R3
+!i122 9
+R0
+Z90 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd
+Z91 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd
+l0
+L37 1
+V?WWX_jT`4id:nV^RR^:]S2
+!s100 FnBPP5EDIY91TYOfjLgOJ0
+R8
+31
+R71
+!i10b 1
+R72
+Z92 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd|
+Z93 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd|
+!i113 1
+R13
+R14
+Abehave
+R5
+R4
+R3
+DEx4 work 8 pipe_bit 0 22 ?WWX_jT`4id:nV^RR^:]S2
+!i122 9
+l46
+L45 15
+V:]`LzKkchIEa^zSAeijlb2
+!s100 bLJ6>j:TO;iNWzdCBe9jE3
+R8
+31
+R71
+!i10b 1
+R72
+R92
+R93
+!i113 1
+R13
+R14
+Epipe_exmem
+R89
+R5
+R4
+R3
+!i122 9
+R0
+R90
+R91
+l0
+L417 1
+ViSm=libf^4[1gI4>K064b2
+!s100 ^nFR^m1V23jMH5GN9oI:00
+R8
+31
+R71
+!i10b 1
+R72
+R92
+R93
+!i113 1
+R13
+R14
+Areg_4_5
+R5
+R4
+R3
+DEx4 work 10 pipe_exmem 0 22 iSm=libf^4[1gI4>K064b2
+!i122 9
+l457
+L441 61
+V^jkPCcbFdncaImHdSL2540
+!s100 5<28ih[0Toz[zZ[==;m^V3
+R8
+31
+R71
+!i10b 1
+R72
+R92
+R93
+!i113 1
+R13
+R14
+Epipe_idrr
+R89
+R5
+R4
+R3
+!i122 9
+R0
+R90
+R91
+l0
+L242 1
+V1BBKooUiG<<<LQaTU6]Yi3
+!s100 KC`C[[BmChck6zCYB1jHT0
+R8
+31
+R71
+!i10b 1
+R72
+R92
+R93
+!i113 1
+R13
+R14
+Areg_2_3
+R5
+R4
+R3
+DEx4 work 9 pipe_idrr 0 22 1BBKooUiG<<<LQaTU6]Yi3
+!i122 9
+l278
+L262 54
+V7oAjf5_<d6HVR6lSSlTZ03
+!s100 6=N@UTUdRazdjI<Sc0FW]1
+R8
+31
+R71
+!i10b 1
+R72
+R92
+R93
+!i113 1
+R13
+R14
+Epipe_ifd
+R89
+R5
+R4
+R3
+!i122 9
+R0
+R90
+R91
+l0
+L175 1
+V7W0lUX1gNgd^8IJFYgS8D3
+!s100 @_n<XTkMLIK8R`;@NQInI1
+R8
+31
+R71
+!i10b 1
+R72
+R92
+R93
+!i113 1
+R13
+R14
+Areg_1_2
+R5
+R4
+R3
+DEx4 work 8 pipe_ifd 0 22 7W0lUX1gNgd^8IJFYgS8D3
+!i122 9
+l212
+L196 37
+VHg5hkWnU7WT3V5VW<3ZB93
+!s100 E4h6OZdHBO;Zj?>73YP>c1
+R8
+31
+R71
+!i10b 1
+R72
+R92
+R93
+!i113 1
+R13
+R14
+Epipe_memwb
+R89
+R5
+R4
+R3
+!i122 9
+R0
+R90
+R91
+l0
+L513 1
+VhZ<gaEAm7RBTonjSK>GN<2
+!s100 ZS2ShNoCT4gN8G2ASfBzi0
+R8
+31
+R71
+!i10b 1
+R72
+R92
+R93
+!i113 1
+R13
+R14
+Areg_5_6
+R5
+R4
+R3
+DEx4 work 10 pipe_memwb 0 22 hZ<gaEAm7RBTonjSK>GN<2
+!i122 9
+l553
+L537 58
+V7MZ8RkVWDWbe2<YchdniS3
+!s100 ][M8ddP3Pk0jNMHLn;zA90
+R8
+31
+R71
+!i10b 1
+R72
+R92
+R93
+!i113 1
+R13
+R14
+Epipe_reg
+R89
+R5
+R4
+R3
+!i122 9
+R0
+R90
+R91
+l0
+L6 1
+V;HDo>TZmU:?YdiCVn@eg32
+!s100 be?1a5dAL2U4=CzYMc_Ha3
+R8
+31
+R71
+!i10b 1
+R72
+R92
+R93
+!i113 1
+R13
+R14
+Abehave
+R5
+R4
+R3
+DEx4 work 8 pipe_reg 0 22 ;HDo>TZmU:?YdiCVn@eg32
+!i122 9
+l17
+L16 15
+Vh2X^coFRMF^QIiNHAD@`O1
+!s100 @1F2KHI=5_@G7c3X9`DZ30
+R8
+31
+R71
+!i10b 1
+R72
+R92
+R93
+!i113 1
+R13
+R14
+Epipe_rrex
+R89
+R5
+R4
+R3
+!i122 9
+R0
+R90
+R91
+l0
+L324 1
+ViJ^Hmdo]ND@1H`3blkMji2
+!s100 =9D2JBQJzPCIjc?kHmdRf1
+R8
+31
+R71
+!i10b 1
+R72
+R92
+R93
+!i113 1
+R13
+R14
+Areg_3_4
+R5
+R4
+R3
+DEx4 work 9 pipe_rrex 0 22 iJ^Hmdo]ND@1H`3blkMji2
+!i122 9
+l364
+L348 59
+VfF?[3>0oVe5cGJC>SNQbQ1
+!s100 9=YiA9K7`c`3iD];cLj0>0
+R8
+31
+R71
+!i10b 1
+R72
+R92
+R93
+!i113 1
+R13
+R14
+Ppipeline_register
+R5
+R4
+R3
+!i122 9
+R89
+R0
+R90
+R91
+l0
+L67 1
+VSCoR9U:maEhDH:=hDlB:d0
+!s100 YKLO>Xh2PSmNF7Joiahnz2
+R8
+31
+R71
+!i10b 1
+R72
+R92
+R93
+!i113 1
+R13
+R14
+Epriority_mux
+R1
+R5
+R2
+R4
+R3
+!i122 20
+R0
+Z94 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/priority_mux.vhdl
+Z95 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/priority_mux.vhdl
+l0
+L9 1
+VZh7zTVWA?6Xd=gGCEnC]83
+!s100 g^5lH>TR3m??nlbFRoHSD1
+R8
+31
+R21
+!i10b 1
+R22
+Z96 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/priority_mux.vhdl|
+Z97 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/priority_mux.vhdl|
+!i113 1
+R13
+R14
+Abeh
+R5
+R2
+R4
+R3
+DEx4 work 12 priority_mux 0 22 Zh7zTVWA?6Xd=gGCEnC]83
+!i122 20
+l16
+L15 15
+VQ>O6Zn5Z0zgA3Im;]Ja2i1
+!s100 M3;Oc1P5ZF>iYcbYU2[`N1
+R8
+31
+R21
+!i10b 1
+R22
+R96
+R97
+!i113 1
+R13
+R14
+Eram_mem
+Z98 w1652214228
+R5
+R2
+R4
+R3
+!i122 22
+R0
+Z99 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/ram_mem.vhdl
+Z100 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/ram_mem.vhdl
+l0
+L8 1
+V7TRen:R=`dP0;YGfz?`8i1
+!s100 =8>K:ZAB`BXX9l2Xl^Qiz2
+R8
+31
+Z101 !s110 1652214402
+!i10b 1
+Z102 !s108 1652214402.000000
+Z103 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/ram_mem.vhdl|
+Z104 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/ram_mem.vhdl|
+!i113 1
+R13
+R14
+Abeh
+R5
+R2
+R4
+R3
+DEx4 work 7 ram_mem 0 22 7TRen:R=`dP0;YGfz?`8i1
+!i122 22
+l22
+L19 23
+V9hE6[=;OfKY1GeSB2dXzi0
+!s100 UmZFm^EzInCbO[1aVfCVY1
+R8
+31
+R101
+!i10b 1
+R102
+R103
+R104
+!i113 1
+R13
+R14
+Eregisterfile
+Z105 w1652185944
+R17
+R18
+R52
+R5
+R2
+R4
+R3
+!i122 16
+R0
+Z106 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/registerFile.vhdl
+Z107 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/registerFile.vhdl
+l0
+R60
+VioZ>>bMV`:Jjz>0;k9[ZX1
+!s100 ekJYH4b`D?ffE9C[hQGjh1
+R8
+31
+R9
+!i10b 1
+R10
+Z108 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/registerFile.vhdl|
+Z109 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/registerFile.vhdl|
+!i113 1
+R13
+R14
+Abeh
+R17
+R18
+R52
+R5
+R2
+R4
+R3
+DEx4 work 12 registerfile 0 22 ioZ>>bMV`:Jjz>0;k9[ZX1
+!i122 16
+l26
+L24 23
+V834]?LNQzl>UbbTUF3gca1
+!s100 gV@=3;<H5Ea@4HONMomkb0
+R8
+31
+R9
+!i10b 1
+R10
+R108
+R109
+!i113 1
+R13
+R14
+Esel_sign_extender
+Z110 w1652202509
+R2
+R3
+R4
+R5
+!i122 8
+R0
+Z111 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/sel_sign_extender.vhd
+Z112 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/sel_sign_extender.vhd
+l0
+L5 1
+VfGOKaE;Ykmg]dcCHE16oP3
+!s100 oMG42ba;BGA4_86j<Rcmb0
+R8
+31
+R71
+!i10b 1
+R72
+Z113 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/sel_sign_extender.vhd|
+Z114 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/sel_sign_extender.vhd|
+!i113 1
+R13
+R14
+Aconditon
+R2
+R3
+R4
+R5
+DEx4 work 17 sel_sign_extender 0 22 fGOKaE;Ykmg]dcCHE16oP3
+!i122 8
+l22
+L18 35
+VZmhaSQJG3dD3^@<ij1Rcg2
+!s100 UZl_BUkOQ3fS>le9aLUC:3
+R8
+31
+R71
+!i10b 1
+R72
+R113
+R114
+!i113 1
+R13
+R14
+Estaller
+R68
+R5
+R2
+R4
+R3
+!i122 4
+R0
+Z115 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/staller.vhd
+Z116 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/staller.vhd
+l0
+L7 1
+VnFA]H_@[HkYGK=fDX78;W2
+!s100 K7W=gCn:zCPg@[6X4HIMX0
+R8
+31
+R71
+!i10b 1
+R29
+Z117 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/staller.vhd|
+Z118 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/staller.vhd|
+!i113 1
+R13
+R14
+Awrite_enable
+R5
+R2
+R4
+R3
+DEx4 work 7 staller 0 22 nFA]H_@[HkYGK=fDX78;W2
+!i122 4
+l23
+L19 78
+V0bc6HS@m>COZfPGS`@hRb2
+!s100 kCimf7feTMm?HiCMaKF_W3
+R8
+31
+R71
+!i10b 1
+R29
+R117
+R118
+!i113 1
+R13
+R14
+Etestbench
+Z119 w1652195944
+R3
+R4
+!i122 23
+R0
+Z120 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/Testbench.vhdl
+Z121 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/Testbench.vhdl
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R8
+31
+R101
+!i10b 1
+R102
+Z122 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/Testbench.vhdl|
+Z123 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/Testbench.vhdl|
+!i113 1
+R13
+R14
+Abehave
+R3
+R4
+Z124 DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 23
+l69
+Z125 L9 132
+Z126 VgRZnNzW>Dh07zXmIUg]]I3
+Z127 !s100 ne>@<jN6hB7;jjb]An_jB3
+R8
+31
+R101
+!i10b 1
+R102
+R122
+R123
+!i113 1
+R13
+R14
+Ewrite_enable
+R1
+R2
+R3
+R4
+R5
+!i122 7
+R0
+Z128 8D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/write_enable.vhd
+Z129 FD:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/write_enable.vhd
+l0
+L9 1
+VVNmKLBi]al914>BciJ:BL1
+!s100 <7`lQmQMI1?2X]UEn:4>h1
+R8
+31
+R71
+!i10b 1
+R72
+Z130 !s90 -reportprogress|300|-93|-work|work|D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/write_enable.vhd|
+Z131 !s107 D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/write_enable.vhd|
+!i113 1
+R13
+R14
+Awb_enable_contol
+R2
+R3
+R4
+R5
+DEx4 work 12 write_enable 0 22 VNmKLBi]al914>BciJ:BL1
+!i122 7
+l24
+L21 38
+V5cEBZR?iU2bLLCHmlRhIY0
+!s100 @k]^`SY^Fmh`oH95Decjd3
+R8
+31
+R71
+!i10b 1
+R72
+R130
+R131
+!i113 1
+R13
+R14

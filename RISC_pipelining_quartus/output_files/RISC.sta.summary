@@ -2,372 +2,100 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'datapath:add_instance|LUT:LUT_FLUSH|v[0]'
-Slack : -32.549
-TNS   : -5879.662
-
-Type  : Slow 1100mV 85C Model Setup 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -29.357
-TNS   : -4973.694
-
 Type  : Slow 1100mV 85C Model Setup 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
-Slack : -28.846
-TNS   : -5514.216
+Slack : -5.039
+TNS   : -146.453
 
 Type  : Slow 1100mV 85C Model Setup 'input_vector[0]'
-Slack : -22.471
-TNS   : -6071.771
-
-Type  : Slow 1100mV 85C Model Setup 'datapath:add_instance|ALU_Oper_Sel:alu_oper_sel1|alu_en'
-Slack : -15.639
-TNS   : -447.762
-
-Type  : Slow 1100mV 85C Model Setup 'datapath:add_instance|pipe_EXMEM:EXE_MEM_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -9.228
-TNS   : -225.395
-
-Type  : Slow 1100mV 85C Model Setup 'datapath:add_instance|pipe_IFD:IF_ID_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -7.143
-TNS   : -50.251
-
-Type  : Slow 1100mV 85C Model Hold 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
-Slack : -9.965
-TNS   : -142.869
-
-Type  : Slow 1100mV 85C Model Hold 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -4.642
-TNS   : -32.353
+Slack : -2.240
+TNS   : -45.396
 
 Type  : Slow 1100mV 85C Model Hold 'input_vector[0]'
-Slack : -2.928
-TNS   : -58.639
-
-Type  : Slow 1100mV 85C Model Hold 'datapath:add_instance|pipe_IFD:IF_ID_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.353
+Slack : 0.426
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Hold 'datapath:add_instance|ALU_Oper_Sel:alu_oper_sel1|alu_en'
-Slack : 0.962
+Type  : Slow 1100mV 85C Model Hold 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
+Slack : 2.940
 TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'datapath:add_instance|pipe_EXMEM:EXE_MEM_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 1.032
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'datapath:add_instance|LUT:LUT_FLUSH|v[0]'
-Slack : 2.433
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Recovery 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -6.534
-TNS   : -19.428
-
-Type  : Slow 1100mV 85C Model Removal 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.681
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
-Slack : -7.986
-TNS   : -16061.971
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -3.367
-TNS   : -4824.424
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'input_vector[0]'
 Slack : -0.724
-TNS   : -864.224
+TNS   : -52.042
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'datapath:add_instance|LUT:LUT_FLUSH|v[0]'
-Slack : -0.336
-TNS   : -4.176
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'datapath:add_instance|ALU_Oper_Sel:alu_oper_sel1|alu_en'
-Slack : -0.190
-TNS   : -0.255
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'datapath:add_instance|pipe_EXMEM:EXE_MEM_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.105
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
+Slack : 0.311
 TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'datapath:add_instance|pipe_IFD:IF_ID_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.294
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Setup 'datapath:add_instance|LUT:LUT_FLUSH|v[0]'
-Slack : -31.795
-TNS   : -5788.911
-
-Type  : Slow 1100mV 0C Model Setup 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -28.823
-TNS   : -4919.178
 
 Type  : Slow 1100mV 0C Model Setup 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
-Slack : -28.261
-TNS   : -5457.344
+Slack : -5.217
+TNS   : -151.751
 
 Type  : Slow 1100mV 0C Model Setup 'input_vector[0]'
-Slack : -22.218
-TNS   : -5910.825
-
-Type  : Slow 1100mV 0C Model Setup 'datapath:add_instance|ALU_Oper_Sel:alu_oper_sel1|alu_en'
-Slack : -15.356
-TNS   : -449.657
-
-Type  : Slow 1100mV 0C Model Setup 'datapath:add_instance|pipe_EXMEM:EXE_MEM_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -9.354
-TNS   : -229.872
-
-Type  : Slow 1100mV 0C Model Setup 'datapath:add_instance|pipe_IFD:IF_ID_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -7.062
-TNS   : -51.112
-
-Type  : Slow 1100mV 0C Model Hold 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
-Slack : -9.837
-TNS   : -320.210
-
-Type  : Slow 1100mV 0C Model Hold 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -4.374
-TNS   : -29.917
+Slack : -2.413
+TNS   : -48.747
 
 Type  : Slow 1100mV 0C Model Hold 'input_vector[0]'
-Slack : -3.012
-TNS   : -61.532
-
-Type  : Slow 1100mV 0C Model Hold 'datapath:add_instance|pipe_IFD:IF_ID_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.370
+Slack : 0.417
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'datapath:add_instance|ALU_Oper_Sel:alu_oper_sel1|alu_en'
-Slack : 0.746
+Type  : Slow 1100mV 0C Model Hold 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
+Slack : 3.027
 TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'datapath:add_instance|pipe_EXMEM:EXE_MEM_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.833
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'datapath:add_instance|LUT:LUT_FLUSH|v[0]'
-Slack : 2.654
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Recovery 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -6.673
-TNS   : -19.866
-
-Type  : Slow 1100mV 0C Model Removal 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.639
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
-Slack : -8.074
-TNS   : -16266.411
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -3.425
-TNS   : -5179.970
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'input_vector[0]'
 Slack : -0.724
-TNS   : -865.938
+TNS   : -52.284
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'datapath:add_instance|LUT:LUT_FLUSH|v[0]'
-Slack : -0.278
-TNS   : -2.446
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'datapath:add_instance|ALU_Oper_Sel:alu_oper_sel1|alu_en'
-Slack : -0.150
-TNS   : -0.209
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'datapath:add_instance|pipe_EXMEM:EXE_MEM_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.105
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
+Slack : 0.304
 TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'datapath:add_instance|pipe_IFD:IF_ID_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.346
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Setup 'datapath:add_instance|LUT:LUT_FLUSH|v[0]'
-Slack : -16.886
-TNS   : -2998.998
-
-Type  : Fast 1100mV 85C Model Setup 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -15.343
-TNS   : -2599.777
 
 Type  : Fast 1100mV 85C Model Setup 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
-Slack : -15.212
-TNS   : -2787.133
+Slack : -1.733
+TNS   : -49.034
 
 Type  : Fast 1100mV 85C Model Setup 'input_vector[0]'
-Slack : -10.611
-TNS   : -2543.053
-
-Type  : Fast 1100mV 85C Model Setup 'datapath:add_instance|ALU_Oper_Sel:alu_oper_sel1|alu_en'
-Slack : -6.598
-TNS   : -186.830
-
-Type  : Fast 1100mV 85C Model Setup 'datapath:add_instance|pipe_EXMEM:EXE_MEM_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -3.712
-TNS   : -80.887
-
-Type  : Fast 1100mV 85C Model Setup 'datapath:add_instance|pipe_IFD:IF_ID_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -2.629
-TNS   : -16.507
-
-Type  : Fast 1100mV 85C Model Hold 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
-Slack : -4.628
-TNS   : -36.969
-
-Type  : Fast 1100mV 85C Model Hold 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -2.264
-TNS   : -16.110
+Slack : -0.360
+TNS   : -2.595
 
 Type  : Fast 1100mV 85C Model Hold 'input_vector[0]'
-Slack : -1.272
-TNS   : -26.005
-
-Type  : Fast 1100mV 85C Model Hold 'datapath:add_instance|pipe_IFD:IF_ID_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.212
+Slack : 0.193
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'datapath:add_instance|ALU_Oper_Sel:alu_oper_sel1|alu_en'
-Slack : 0.298
+Type  : Fast 1100mV 85C Model Hold 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
+Slack : 1.465
 TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'datapath:add_instance|pipe_EXMEM:EXE_MEM_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.566
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'datapath:add_instance|LUT:LUT_FLUSH|v[0]'
-Slack : 0.880
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Recovery 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -2.491
-TNS   : -7.048
-
-Type  : Fast 1100mV 85C Model Removal 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.308
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
-Slack : -3.796
-TNS   : -6493.434
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -1.488
-TNS   : -1339.811
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'datapath:add_instance|LUT:LUT_FLUSH|v[0]'
-Slack : -0.204
-TNS   : -2.038
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'input_vector[0]'
-Slack : -0.094
-TNS   : -63.543
+Slack : -0.085
+TNS   : -3.914
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'datapath:add_instance|ALU_Oper_Sel:alu_oper_sel1|alu_en'
-Slack : 0.000
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
+Slack : 0.335
 TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'datapath:add_instance|pipe_EXMEM:EXE_MEM_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.214
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'datapath:add_instance|pipe_IFD:IF_ID_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.334
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Setup 'datapath:add_instance|LUT:LUT_FLUSH|v[0]'
-Slack : -14.886
-TNS   : -2645.026
-
-Type  : Fast 1100mV 0C Model Setup 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -13.500
-TNS   : -2282.150
 
 Type  : Fast 1100mV 0C Model Setup 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
-Slack : -13.372
-TNS   : -2459.698
+Slack : -1.659
+TNS   : -47.505
 
 Type  : Fast 1100mV 0C Model Setup 'input_vector[0]'
-Slack : -9.309
-TNS   : -2174.110
-
-Type  : Fast 1100mV 0C Model Setup 'datapath:add_instance|ALU_Oper_Sel:alu_oper_sel1|alu_en'
-Slack : -5.963
-TNS   : -170.395
-
-Type  : Fast 1100mV 0C Model Setup 'datapath:add_instance|pipe_EXMEM:EXE_MEM_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -3.326
-TNS   : -74.922
-
-Type  : Fast 1100mV 0C Model Setup 'datapath:add_instance|pipe_IFD:IF_ID_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -2.365
-TNS   : -15.200
-
-Type  : Fast 1100mV 0C Model Hold 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
-Slack : -4.004
-TNS   : -33.379
-
-Type  : Fast 1100mV 0C Model Hold 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -1.942
-TNS   : -13.699
+Slack : -0.272
+TNS   : -1.652
 
 Type  : Fast 1100mV 0C Model Hold 'input_vector[0]'
-Slack : -1.260
-TNS   : -26.082
-
-Type  : Fast 1100mV 0C Model Hold 'datapath:add_instance|pipe_IFD:IF_ID_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.200
+Slack : 0.172
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'datapath:add_instance|ALU_Oper_Sel:alu_oper_sel1|alu_en'
-Slack : 0.327
+Type  : Fast 1100mV 0C Model Hold 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
+Slack : 1.478
 TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'datapath:add_instance|pipe_EXMEM:EXE_MEM_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.483
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'datapath:add_instance|LUT:LUT_FLUSH|v[0]'
-Slack : 0.921
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Recovery 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -2.328
-TNS   : -6.637
-
-Type  : Fast 1100mV 0C Model Removal 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.267
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
-Slack : -3.261
-TNS   : -5790.338
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'datapath:add_instance|pipe_RREX:RR_EXE_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : -1.227
-TNS   : -1169.738
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'input_vector[0]'
-Slack : -0.091
-TNS   : -64.398
+Slack : -0.086
+TNS   : -3.949
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'datapath:add_instance|LUT:LUT_FLUSH|v[0]'
-Slack : -0.049
-TNS   : -0.091
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'datapath:add_instance|ALU_Oper_Sel:alu_oper_sel1|alu_en'
-Slack : 0.106
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'datapath:add_instance|pipe_EXMEM:EXE_MEM_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.256
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'datapath:add_instance|pipe_IFD:IF_ID_pipe|pipe_reg:inst_reg|Dout[12]'
-Slack : 0.363
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'datapath:add_instance|pipe_MEMWB:p_mem_wb|pipe_bit:wb_cont|Dout'
+Slack : 0.360
 TNS   : 0.000
 
 ------------------------------------------------------------

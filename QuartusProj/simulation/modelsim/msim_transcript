@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/elem.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:32:26 on May 09,2022
+# Start time: 13:26:36 on May 13,2022
 # vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/elem.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -26,11 +26,11 @@
 # -- Compiling architecture regArch of reg
 # -- Compiling entity sign_extender
 # -- Compiling architecture beh of sign_extender
-# End time: 14:32:26 on May 09,2022, Elapsed time: 0:00:00
+# End time: 13:26:36 on May 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:32:26 on May 09,2022
+# Start time: 13:26:36 on May 13,2022
 # vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/DUT.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -42,11 +42,11 @@
 # -- Loading package elem
 # -- Compiling entity DUT
 # -- Compiling architecture DutWrap of DUT
-# End time: 14:32:26 on May 09,2022, Elapsed time: 0:00:00
+# End time: 13:26:36 on May 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:32:27 on May 09,2022
+# Start time: 13:26:36 on May 13,2022
 # vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/risc_processor.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -58,11 +58,11 @@
 # -- Loading package elem
 # -- Compiling entity risc_processor
 # -- Compiling architecture complete of risc_processor
-# End time: 14:32:27 on May 09,2022, Elapsed time: 0:00:00
+# End time: 13:26:37 on May 13,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:32:27 on May 09,2022
+# Start time: 13:26:37 on May 13,2022
 # vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/control_path.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -74,11 +74,11 @@
 # -- Loading package elem
 # -- Compiling entity state_transition
 # -- Compiling architecture state_definition of state_transition
-# End time: 14:32:27 on May 09,2022, Elapsed time: 0:00:00
+# End time: 13:26:37 on May 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:32:27 on May 09,2022
+# Start time: 13:26:37 on May 13,2022
 # vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/registerFile.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -90,11 +90,11 @@
 # -- Loading package elem
 # -- Compiling entity registerFile
 # -- Compiling architecture beh of registerFile
-# End time: 14:32:27 on May 09,2022, Elapsed time: 0:00:00
+# End time: 13:26:37 on May 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:32:27 on May 09,2022
+# Start time: 13:26:37 on May 13,2022
 # vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/ram_mem.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -106,11 +106,11 @@
 # -- Loading package elem
 # -- Compiling entity ram_mem
 # -- Compiling architecture beh of ram_mem
-# End time: 14:32:27 on May 09,2022, Elapsed time: 0:00:00
+# End time: 13:26:37 on May 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:32:27 on May 09,2022
+# Start time: 13:26:37 on May 13,2022
 # vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/lsm.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -122,11 +122,11 @@
 # -- Loading package elem
 # -- Compiling entity lsm
 # -- Compiling architecture beh of lsm
-# End time: 14:32:27 on May 09,2022, Elapsed time: 0:00:00
+# End time: 13:26:37 on May 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:32:27 on May 09,2022
+# Start time: 13:26:37 on May 13,2022
 # vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/left_shift.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -138,11 +138,11 @@
 # -- Loading package elem
 # -- Compiling entity left_shift
 # -- Compiling architecture shift_7 of left_shift
-# End time: 14:32:27 on May 09,2022, Elapsed time: 0:00:00
+# End time: 13:26:37 on May 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:32:28 on May 09,2022
+# Start time: 13:26:37 on May 13,2022
 # vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/data_path.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -154,11 +154,11 @@
 # -- Loading package elem
 # -- Compiling entity data_path
 # -- Compiling architecture flow of data_path
-# End time: 14:32:28 on May 09,2022, Elapsed time: 0:00:00
+# End time: 13:26:37 on May 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/alu.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:32:28 on May 09,2022
+# Start time: 13:26:37 on May 13,2022
 # vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/alu.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -170,24 +170,24 @@
 # -- Loading package elem
 # -- Compiling entity alu
 # -- Compiling architecture beh of alu
-# End time: 14:32:28 on May 09,2022, Elapsed time: 0:00:00
+# End time: 13:26:37 on May 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 14:32:28 on May 09,2022
+# Start time: 13:26:37 on May 13,2022
 # vcom -reportprogress 300 -93 -work work D:/Desktop/GitHub/RISC_MulticycleProcessor/QuartusProj/Testbench.vhdl 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Testbench
 # -- Compiling architecture Behave of Testbench
-# End time: 14:32:28 on May 09,2022, Elapsed time: 0:00:00
+# End time: 13:26:37 on May 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  Testbench
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" Testbench 
-# Start time: 14:32:28 on May 09,2022
+# Start time: 13:26:38 on May 13,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -517,123 +517,8 @@
 #    Time: 6380 ns  Iteration: 0  Instance: /testbench
 # ** Note: SUCCESS, all tests passed.
 #    Time: 6424 ns  Iteration: 0  Instance: /testbench
-# WARNING: No extended dataflow license exists
-#  Trace back: invalid command name ""
-#     while executing
-# "$wo GetData showwave"
-#     (object "::.main_pane.dataflow.interior.cs.body.pw.df.c" method "::vsimwidgets::Dataflow::Base::UserChangedActiveTime" body line 6)
-#     invoked from within
-# "::.main_pane.dataflow.interior.cs.body.pw.df.c UserChangedActiveTime"
-#     (in namespace inscope "::vsimwidgets::Dataflow::Base" script line 1)
-#     invoked from within
-# "namespace inscope ::vsimwidgets::Dataflow::Base {::.main_pane.dataflow.interior.cs.body.pw.df.c UserChangedActiveTime}"
-#     ("eval" body line 1)
-#     invoked from within
-# "eval [$timebar cget -timechangecb]"
-#     (procedure "::vsimwidgets::TimeBar::TimeChangeHandler" body line 17)
-#     invoked from within
-# "::vsimwidgets::TimeBar::TimeChangeHandler ::vsimPriv acttime write"
-#     (write trace on "::vsimPriv(acttime)")
-#     invoked from within
-# "set ::vsimPriv(acttime) $t"
-#     (procedure "::TimeBarCmd::SetActiveTime" line 10)
-#     invoked from within
-# "::TimeBarCmd::SetActiveTime $t "--store""
-#     (procedure "::vsimwidgets::TimeBar::SetActiveTime" body line 18)
-#     invoked from within
-# "SetActiveTime $_acttimeAfterDrag --postdrag"
-#     (procedure "::vsimwidgets::TimeBar::WaveCursorDragChange" body line 23)
-#     invoked from within
-# "::vsimwidgets::TimeBar::WaveCursorDragChange vsimPriv dragging_cursor write"
-#     (write trace on "vsimPriv(dragging_cursor)")
-#     invoked from within
-# "set vsimPriv(dragging_cursor) 0"
-#     (procedure "Wave::1Up" line 76)
-#     invoked from within
-# "Wave::1Up $widget $x $y"
-#     (procedure "Wave::SelectUp" line 4)
-#     invoked from within
-# "Wave::SelectUp	 .main_pane.wave.interior.cs.body.pw.wf.grid.row0,wave.data 434 32 1115 224 "
-#     (command bound to event)
-#    <2:D:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {can't set "vsimPriv(dragging_cursor)": can't set "::vsimPriv(acttime)": invalid command name ""}
-#    <1:eval:1: ::tk::dialog::error::bgerror {can't set "vsimPriv(dragging_cursor)": can't set "::vsimPriv(acttime)": invalid command name ""}
-#  Trace back: invalid command name ""
-#     while executing
-# "$wo GetData showwave"
-#     (object "::.main_pane.dataflow.interior.cs.body.pw.df.c" method "::vsimwidgets::Dataflow::Base::UserChangedActiveTime" body line 6)
-#     invoked from within
-# "::.main_pane.dataflow.interior.cs.body.pw.df.c UserChangedActiveTime"
-#     (in namespace inscope "::vsimwidgets::Dataflow::Base" script line 1)
-#     invoked from within
-# "namespace inscope ::vsimwidgets::Dataflow::Base {::.main_pane.dataflow.interior.cs.body.pw.df.c UserChangedActiveTime}"
-#     ("eval" body line 1)
-#     invoked from within
-# "eval [$timebar cget -timechangecb]"
-#     (procedure "::vsimwidgets::TimeBar::TimeChangeHandler" body line 17)
-#     invoked from within
-# "::vsimwidgets::TimeBar::TimeChangeHandler ::vsimPriv acttime write"
-#     (write trace on "::vsimPriv(acttime)")
-#     invoked from within
-# "set ::vsimPriv(acttime) $t"
-#     (procedure "::TimeBarCmd::SetActiveTime" line 10)
-#     invoked from within
-# "::TimeBarCmd::SetActiveTime $t "--store""
-#     (procedure "::vsimwidgets::TimeBar::SetActiveTime" body line 18)
-#     invoked from within
-# "SetActiveTime $_acttimeAfterDrag --postdrag"
-#     (procedure "::vsimwidgets::TimeBar::WaveCursorDragChange" body line 23)
-#     invoked from within
-# "::vsimwidgets::TimeBar::WaveCursorDragChange vsimPriv dragging_cursor write"
-#     (write trace on "vsimPriv(dragging_cursor)")
-#     invoked from within
-# "set vsimPriv(dragging_cursor) 0"
-#     (procedure "Wave::1Up" line 76)
-#     invoked from within
-# "Wave::1Up $widget $x $y"
-#     (procedure "Wave::SelectUp" line 4)
-#     invoked from within
-# "Wave::SelectUp	 .main_pane.wave.interior.cs.body.pw.wf.grid.row0,wave.data 483 80 1164 272 "
-#     (command bound to event)
-#    <2:D:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {can't set "vsimPriv(dragging_cursor)": can't set "::vsimPriv(acttime)": invalid command name ""}
-#    <1:D:/mtitcl/vsim/dataflow.tc_:24053: ::tk::dialog::error::bgerror {can't set "vsimPriv(dragging_cursor)": can't set "::vsimPriv(acttime)": invalid command name ""}
-#  Trace back: invalid command name ""
-#     while executing
-# "$wo GetData showwave"
-#     (object "::.main_pane.dataflow.interior.cs.body.pw.df.c" method "::vsimwidgets::Dataflow::Base::UserChangedActiveTime" body line 6)
-#     invoked from within
-# "::.main_pane.dataflow.interior.cs.body.pw.df.c UserChangedActiveTime"
-#     (in namespace inscope "::vsimwidgets::Dataflow::Base" script line 1)
-#     invoked from within
-# "namespace inscope ::vsimwidgets::Dataflow::Base {::.main_pane.dataflow.interior.cs.body.pw.df.c UserChangedActiveTime}"
-#     ("eval" body line 1)
-#     invoked from within
-# "eval [$timebar cget -timechangecb]"
-#     (procedure "::vsimwidgets::TimeBar::TimeChangeHandler" body line 17)
-#     invoked from within
-# "::vsimwidgets::TimeBar::TimeChangeHandler ::vsimPriv acttime write"
-#     (write trace on "::vsimPriv(acttime)")
-#     invoked from within
-# "set ::vsimPriv(acttime) $t"
-#     (procedure "::TimeBarCmd::SetActiveTime" line 10)
-#     invoked from within
-# "::TimeBarCmd::SetActiveTime $t "--store""
-#     (procedure "::vsimwidgets::TimeBar::SetActiveTime" body line 18)
-#     invoked from within
-# "SetActiveTime $_acttimeAfterDrag --postdrag"
-#     (procedure "::vsimwidgets::TimeBar::WaveCursorDragChange" body line 23)
-#     invoked from within
-# "::vsimwidgets::TimeBar::WaveCursorDragChange vsimPriv dragging_cursor write"
-#     (write trace on "vsimPriv(dragging_cursor)")
-#     invoked from within
-# "set vsimPriv(dragging_cursor) 0"
-#     (procedure "Wave::1Up" line 76)
-#     invoked from within
-# "Wave::1Up $widget $x $y"
-#     (procedure "Wave::SelectUp" line 4)
-#     invoked from within
-# "Wave::SelectUp	 .main_pane.wave.interior.cs.body.pw.wf.grid.row0,wave.data 566 59 1247 251 "
-#     (command bound to event)
-#    <2:D:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {can't set "vsimPriv(dragging_cursor)": can't set "::vsimPriv(acttime)": invalid command name ""}
-#    <1:D:/mtitcl/vsim/dataflow.tc_:24053: ::tk::dialog::error::bgerror {can't set "vsimPriv(dragging_cursor)": can't set "::vsimPriv(acttime)": invalid command name ""}
-# End time: 14:50:10 on May 09,2022, Elapsed time: 0:17:42
+add wave -position insertpoint  \
+sim:/testbench/dut_instance/add_instance/prim_datapath/ram_memory/ram_block
+run
+# End time: 13:38:48 on May 13,2022, Elapsed time: 0:12:10
 # Errors: 146, Warnings: 4

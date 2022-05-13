@@ -1,0 +1,39 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/Testbench.vhdl}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/Alu_1.vhdl}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/elem.vhdl}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/mem_interfacer.vhdl}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/staller.vhd}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/inst_dec.vhdl}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/LUT.vhdl}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/write_enable.vhd}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/sel_sign_extender.vhd}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/pipeline_register.vhd}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/pc_pred.vhd}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/cond_left_shift.vhd}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/BEQ_jcheck.vhd}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/ALU_Oprd_Sel.vhd}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/Addr_cmp.vhd}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/DUT.vhdl}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/registerFile.vhdl}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/data_mem.vhdl}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/datapath.vhdl}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/ram_mem.vhdl}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/alu.vhdl}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/ALU_Oper_Sel.vhdl}
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/priority_mux.vhdl}
+
+vcom -93 -work work {D:/Desktop/GitHub/RISC_MulticycleProcessor/RISC_pipelining_quartus/Testbench.vhdl}
+
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  Testbench
+
+add wave *
+view structure
+view signals
+run -all

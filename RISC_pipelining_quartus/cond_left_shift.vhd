@@ -19,7 +19,7 @@ end entity;
 
 
 architecture cond_shifter of cond_left_shift is
-signal out_temp: std_logic_vector(15 downto 0);
+signal out_temp: std_logic_vector(15 downto 0) := (others => '0');
 begin
      
      shifter:

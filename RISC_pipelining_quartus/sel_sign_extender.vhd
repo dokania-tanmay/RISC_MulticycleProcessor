@@ -32,7 +32,7 @@ BEGIN
 				extend_1 :
 				FOR i IN 9 TO (outp_width - 1) loop
 					temp_op(i) <= inp(8);
-				END loop extend_1;
+				END loop;-- extend_1;
 
 			WHEN '0' =>
 				temp_op(5 DOWNTO 0) <= inp(5 DOWNTO 0);
@@ -40,8 +40,9 @@ BEGIN
 				extend_2 :
 				FOR i IN 6 TO (outp_width - 1) loop
 					temp_op(i) <= inp(5);
-				END loop extend_2;
-
+				END loop;-- extend_2;
+			
+			WHEN others => 
 		END CASE;
 
 		outp(outp_width - 1 DOWNTO 0) <= temp_op(outp_width - 1 DOWNTO 0);

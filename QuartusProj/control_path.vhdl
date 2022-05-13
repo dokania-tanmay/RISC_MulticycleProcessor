@@ -97,7 +97,7 @@ BEGIN
 				if opcode = "0000" then
 					T(27 downto 26) <= "10";
 				elsif opcode = "1000" then
-				  T(27 downto 26) <= "01";
+				  T(27 downto 26) <= "10";
 				END IF;
 				T(19) <= '1';
 				T(15) <= '0';
