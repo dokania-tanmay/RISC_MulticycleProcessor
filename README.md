@@ -2,7 +2,7 @@
 Team Members
 * Tanmay Dokania
 * Vansh Kapoor
-* Naveneet
+* Navneet
 * Aayush Gopal\
   \
 In the first phase of the task we designed the architecture of a **RISC type Multi-cycle processor** which is an 8-register, 16-bit computer system and is
