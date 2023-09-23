@@ -1,4 +1,4 @@
-# RISC_Multicycle Processor
+# RISC Multicycle Processor
 Team Members
 * Tanmay Dokania
 * Vansh Kapoor
